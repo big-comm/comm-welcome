@@ -1,0 +1,528 @@
+# Translations for comm-welcome.
+# Distributed under the project MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: comm-welcome 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
+"POT-Creation-Date: 2026-09-16 23:37-0300\n"
+"PO-Revision-Date: 2026-09-16 23:40-0300\n"
+"Last-Translator: BigCommunity contributors\n"
+"Language-Team: he <https://github.com/big-comm/comm-welcome>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Luna (gpt-5.6-luna, xhigh)\n"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:17
+msgid "Which browser suits you?"
+msgstr "איזה דפדפן מתאים לך?"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:18
+msgid "Keep your current browser or choose another one to install."
+msgstr "השאר את הדפדפן הנוכחי שלך או בחר דפדפן אחר להתקנה."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:31
+msgid "View details"
+msgstr "הצגת פרטים"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:39
+msgid "Other options"
+msgstr "אפשרויות נוספות"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:44
+msgid "Installing another browser keeps your existing browsers."
+msgstr "התקנת דפדפן נוסף תשאיר את הדפדפנים הקיימים שלך."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:48
+msgid "Continue with my current browser"
+msgstr "המשך עם הדפדפן הנוכחי שלי"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:51
+msgid "Open Software"
+msgstr "פתיחת תוכנה"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+msgid "Installed"
+msgstr "מותקן"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not installed"
+msgstr "לא מותקן"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:97
+msgid "Current default"
+msgstr "ברירת המחדל הנוכחית"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:104
+#: usr/share/comm-welcome/comm_welcome/widgets.py:136
+msgid "Open"
+msgstr "פתיחה"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:106
+msgid "Set as default"
+msgstr "הגדרה כברירת מחדל"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:108
+msgid "Choose and install"
+msgstr "בחירה והתקנה"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:124
+msgid "The default browser could not be changed."
+msgstr "לא ניתן לשנות את דפדפן ברירת המחדל."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:127
+#, python-brace-format
+msgid "{browser} is now your default browser."
+msgstr "{browser} הוא כעת דפדפן ברירת המחדל שלך."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:149
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not available in your repositories."
+msgstr "לא זמין במאגרי החבילות שלך."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
+msgid "Try again"
+msgstr "ניסיון חוזר"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Everyday"
+msgstr "יום-יום"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Audio and video"
+msgstr "שמע ווידאו"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "System and family"
+msgstr "מערכת ומשפחה"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:22
+msgid "Use your favorite websites as apps."
+msgstr "השתמש באתרים המועדפים עליך כאפליקציות."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:28
+msgid "Make scanned documents searchable and copyable."
+msgstr "הפוך מסמכים סרוקים לניתנים לחיפוש ולהעתקה."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:34
+msgid "Explore a terminal that helps organize your sessions."
+msgstr "גלה מסוף שעוזר לארגן את ההפעלות שלך."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:37
+msgid "Enjoy a block puzzle game."
+msgstr "שחק במשחק פאזל לבנים."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:40
+msgid "Noise filter"
+msgstr "מסנן רעשים"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:41
+msgid "Reduce noise from your microphone and audio."
+msgstr "הפחת את הרעש מהמיקרופון ומהשמע."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:46
+msgid "Audio converter"
+msgstr "ממיר שמע"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:47
+msgid "Convert audio files to other formats."
+msgstr "המרת קובצי שמע לפורמטים אחרים."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:52
+msgid "Video converter"
+msgstr "ממיר וידאו"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:53
+msgid "Convert your videos to other formats."
+msgstr "המרת הסרטונים שלך לפורמטים אחרים."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:59
+msgid "Record and organize voice notes."
+msgstr "הקלט וארגן תזכורות קוליות."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:64
+msgid "General settings"
+msgstr "הגדרות כלליות"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:65
+msgid "Explore your system settings."
+msgstr "גלה את הגדרות המערכת שלך."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:70
+msgid "Hardware information"
+msgstr "מידע על חומרה"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:71
+msgid "Get to know your computer's components."
+msgstr "הכר את רכיבי המחשב שלך."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:76
+msgid "Hardware management"
+msgstr "ניהול חומרה"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:77
+msgid "Access driver and kernel options."
+msgstr "גישה לאפשרויות מנהלי התקנים וליבה."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:82
+msgid "Parental controls"
+msgstr "בקרת הורים"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:83
+msgid "Explore controls for computer use."
+msgstr "גלה את אמצעי הבקרה לשימוש במחשב."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:88
+msgid "Network information"
+msgstr "מידע על רשת"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:89
+msgid "View details about your network connections."
+msgstr "הצגת פרטים על חיבורי הרשת שלך."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:17
+msgid "Support BigCommunity"
+msgstr "תמיכה ב-BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:24
+msgid "Your support makes a difference"
+msgstr "התמיכה שלך עושה את ההבדל"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:25
+msgid ""
+"Help maintain our servers, develop new features, and support the community."
+msgstr "עזור לתחזק את השרתים שלנו, לפתח תכונות חדשות ולתמוך בקהילה."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:28
+msgid "Choose how you would like to contribute."
+msgstr "בחר כיצד תרצה לתרום."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX — email key"
+msgstr "PIX — מפתח דוא״ל"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "Copy PIX key"
+msgstr "העתקת מפתח PIX"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX key copied"
+msgstr "מפתח PIX הועתק"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:38
+msgid "Paste this key into your banking app and choose the amount."
+msgstr "הדבק את המפתח הזה באפליקציית הבנק שלך ובחר את הסכום."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:40
+msgid "Cryptocurrency"
+msgstr "מטבע קריפטוגרפי"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:44
+msgid "USDT — TRC20 network"
+msgstr "USDT — רשת TRC20"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:46
+msgid "Copy USDT address"
+msgstr "העתקת כתובת USDT"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:47
+msgid "USDT address copied"
+msgstr "כתובת USDT הועתקה"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:51
+msgid "Bitcoin — BTC network"
+msgstr "Bitcoin — רשת BTC"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:53
+msgid "Copy Bitcoin address"
+msgstr "העתקת כתובת Bitcoin"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:54
+msgid "Bitcoin address copied"
+msgstr "כתובת Bitcoin הועתקה"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:60
+msgid "Other ways to give"
+msgstr "דרכים נוספות לתרום"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:63
+msgid "Telegram donation bot"
+msgstr "בוט התרומות של Telegram"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:64
+msgid "Continue in Telegram."
+msgstr "המשך ב-Telegram."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:70
+msgid "Patreon"
+msgstr "Patreon"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:71
+msgid "Monthly support. Continue on Patreon in your browser."
+msgstr "תמיכה חודשית. המשך ל-Patreon בדפדפן שלך."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:102
+msgid "The installer connection was lost. Check Software before retrying."
+msgstr "החיבור למתקין נותק. בדוק את תוכנה לפני ניסיון חוזר."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:108
+msgid "Another installation is in progress."
+msgstr "מתבצעת התקנה נוספת."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:110
+msgid "Connect to the internet to install another browser."
+msgstr "התחבר לאינטרנט כדי להתקין דפדפן נוסף."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:112
+msgid "Another package operation is in progress. Try again when it finishes."
+msgstr "מתבצעת פעולת חבילה נוספת. נסה שוב כשהיא תסתיים."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:114
+msgid "Checking available browsers…"
+msgstr "בדיקת הדפדפנים הזמינים…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:116
+msgid "Browser installation requires a compatible Pamac session service."
+msgstr "התקנת דפדפן דורשת שירות הפעלה תואם של Pamac."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:132
+msgid "Preparing installation…"
+msgstr "הכנה להתקנה…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:207
+msgid "The installation could not be completed."
+msgstr "לא ניתן להשלים את ההתקנה."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:171
+msgid "This installation needs additional review. Open Software to continue."
+msgstr "ההתקנה הזו דורשת בדיקה נוספת. פתח את תוכנה כדי להמשיך."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:174
+msgid "Complete any authentication requested by the system."
+msgstr "השלם כל אימות שהמערכת מבקשת."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:188
+#: usr/share/comm-welcome/comm_welcome/installer.py:190
+#, python-brace-format
+msgid "Installing {browser}…"
+msgstr "מתקין את {browser}…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:200
+msgid ""
+"Additional review is required. Open Software after this operation finishes."
+msgstr "נדרשת בדיקה נוספת. פתח את תוכנה לאחר שהפעולה הזו תסתיים."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:205
+#, python-brace-format
+msgid "{browser} installed."
+msgstr "{browser} הותקן."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:24
+#: usr/share/comm-welcome/comm_welcome/window.py:14
+msgid "Welcome to BigCommunity"
+msgstr "ברוכים הבאים ל-BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:25
+msgid "Your new system, your way."
+msgstr "המערכת החדשה שלך, בדרך שלך."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:36
+msgid ""
+"Discover apps, personalize your desktop, and find what you need to get "
+"started."
+msgstr ""
+"גלה אפליקציות, התאם אישית את שולחן העבודה ומצא את מה שצריך כדי להתחיל."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:47
+msgid "PERSONALIZE YOUR DESKTOP"
+msgstr "התאמה אישית של שולחן העבודה"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:48
+msgid "Make yourself at home"
+msgstr "תרגיש בבית"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:52
+msgid "Explore layouts, themes, panels, docks, and personalization."
+msgstr "גלה פריסות, ערכות נושא, לוחות, מעגנים ואפשרויות התאמה אישית."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:54
+msgid "Explore the personalization options for your desktop."
+msgstr "גלה את אפשרויות ההתאמה האישית לשולחן העבודה שלך."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open Big Gnome Center"
+msgstr "פתיחת Big Gnome Center"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open settings"
+msgstr "פתיחת הגדרות"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:73
+msgid "Start here"
+msgstr "מתחילים כאן"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:76
+msgid "Discover apps"
+msgstr "גילוי אפליקציות"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:77
+msgid "Choose a browser"
+msgstr "בחירת דפדפן"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:78
+msgid "Find help"
+msgstr "קבלת עזרה"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:96
+msgid "Made for your everyday life"
+msgstr "נוצר בשביל היום-יום שלך"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:119
+msgid "Do not show again"
+msgstr "לא להציג שוב"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:128
+msgid "Your preference could not be saved."
+msgstr "לא ניתן לשמור את ההעדפה שלך."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:133
+msgid "You can reopen Welcome from the application menu."
+msgstr "אפשר לפתוח מחדש את אפליקציית ברוכים הבאים מתפריט האפליקציות."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:145
+msgid "Find what you need"
+msgstr "מצא את מה שדרוש לך"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:146
+msgid "System apps, ready for you to explore."
+msgstr "אפליקציות מערכת, מוכנות לגילוי."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:171
+msgid "No compatible apps are installed in this category."
+msgstr "אין אפליקציות תואמות מותקנות בקטגוריה הזו."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:176
+msgid "Install more apps"
+msgstr "התקנת אפליקציות נוספות"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
+msgid "A community ready to help"
+msgstr "קהילה שמוכנה לעזור"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
+msgid "Find guidance and share your questions."
+msgstr "מצא הדרכה ושתף את השאלות שלך."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:188
+msgid "These links open in your browser and need internet access."
+msgstr "הקישורים האלה נפתחים בדפדפן ודורשים חיבור לאינטרנט."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:192
+msgid "BigCommunity website"
+msgstr "אתר BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:193
+msgid "Get to know the project and its news."
+msgstr "הכר את הפרויקט ואת החדשות שלו."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:198
+msgid "Community on Telegram"
+msgstr "הקהילה ב-Telegram"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:199
+msgid "Talk with other members of the community."
+msgstr "שוחח עם חברים אחרים בקהילה."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
+msgid "Ask the forum"
+msgstr "שאל בפורום"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:205
+msgid "Search for answers and share your questions."
+msgstr "חפש תשובות ושתף את השאלות שלך."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:39
+msgid "Support the project"
+msgstr "תמיכה בפרויקט"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:219
+msgid "Discover ways to donate to BigCommunity."
+msgstr "גלה דרכים לתרום ל-BigCommunity."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
+msgid "Useful information when asking for help"
+msgstr "מידע שימושי בעת בקשת עזרה"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:243
+msgid "Opening these apps does not send your information to anyone."
+msgstr "פתיחת האפליקציות האלה לא שולחת את המידע שלך לאף אחד."
+
+#: usr/share/comm-welcome/comm_welcome/widgets.py:137
+#, python-brace-format
+msgid "Open {app}"
+msgstr "פתיחת {app}"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:34
+#: usr/share/comm-welcome/comm_welcome/window.py:58
+msgid "Welcome"
+msgstr "ברוכים הבאים"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:40
+msgid "About Welcome"
+msgstr "על ברוכים הבאים"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:41
+#: usr/share/comm-welcome/comm_welcome/window.py:157
+msgid "Close"
+msgstr "סגירה"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:43
+msgid "Main menu"
+msgstr "תפריט ראשי"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:59
+msgid "Apps"
+msgstr "אפליקציות"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:60
+msgid "Browsers"
+msgstr "דפדפנים"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:61
+msgid "Help"
+msgstr "עזרה"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:86
+msgid "View installation"
+msgstr "הצגת ההתקנה"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:137
+msgid "The application could not be opened."
+msgstr "לא ניתן לפתוח את האפליקציה."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:146
+msgid "The link could not be opened."
+msgstr "לא ניתן לפתוח את הקישור."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:165
+#: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
+#: data/org.bigcommunity.CommWelcome.desktop.in:3
+msgid "BigCommunity Welcome"
+msgstr "BigCommunity ברוכים הבאים"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:171
+msgid "Discover your desktop and the apps that come with it."
+msgstr "גלה את שולחן העבודה שלך ואת האפליקציות שמגיעות איתו."
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:4
+msgid "Discover your desktop and applications"
+msgstr "גלה את שולחן העבודה והאפליקציות שלך"
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:10
+msgid "welcome;getting started;community;browser;"
+msgstr "ברוכים הבאים;תחילת העבודה;קהילה;דפדפן;"

@@ -5,3 +5,5 @@ usr/share/comm-welcome/comm_welcome/installer.py
 usr/share/comm-welcome/comm_welcome/pages.py
 usr/share/comm-welcome/comm_welcome/widgets.py
 usr/share/comm-welcome/comm_welcome/window.py
+data/org.bigcommunity.CommWelcome.desktop.in
+data/org.bigcommunity.CommWelcome-autostart.desktop.in

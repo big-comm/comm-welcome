@@ -1,0 +1,537 @@
+# Translations for comm-welcome.
+# Distributed under the project MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: comm-welcome 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
+"POT-Creation-Date: 2026-09-16 23:37-0300\n"
+"PO-Revision-Date: 2026-09-16 23:40-0300\n"
+"Last-Translator: BigCommunity contributors\n"
+"Language-Team: is <https://github.com/big-comm/comm-welcome>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Luna (gpt-5.6-luna, xhigh)\n"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:17
+msgid "Which browser suits you?"
+msgstr "Hvaða vafri hentar þér?"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:18
+msgid "Keep your current browser or choose another one to install."
+msgstr "Haltu núverandi vafra eða veldu annan til að setja upp."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:31
+msgid "View details"
+msgstr "Skoða nánar"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:39
+msgid "Other options"
+msgstr "Aðrir valkostir"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:44
+msgid "Installing another browser keeps your existing browsers."
+msgstr "Uppsetning annars vafra heldur núverandi vöfrum þínum til haga."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:48
+msgid "Continue with my current browser"
+msgstr "Halda áfram með núverandi vafra"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:51
+msgid "Open Software"
+msgstr "Opna Hugbúnað"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+msgid "Installed"
+msgstr "Uppsett"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not installed"
+msgstr "Ekki uppsett"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:97
+msgid "Current default"
+msgstr "Núverandi sjálfgefið"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:104
+#: usr/share/comm-welcome/comm_welcome/widgets.py:136
+msgid "Open"
+msgstr "Opna"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:106
+msgid "Set as default"
+msgstr "Setja sem sjálfgefið"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:108
+msgid "Choose and install"
+msgstr "Velja og setja upp"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:124
+msgid "The default browser could not be changed."
+msgstr "Ekki tókst að breyta sjálfgefnum vafra."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:127
+#, python-brace-format
+msgid "{browser} is now your default browser."
+msgstr "{browser} er nú sjálfgefinn vafri."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:149
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not available in your repositories."
+msgstr "Ekki tiltækt í hugbúnaðargeymslunum þínum."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
+msgid "Try again"
+msgstr "Reyna aftur"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Everyday"
+msgstr "Daglegt líf"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Audio and video"
+msgstr "Hljóð og mynd"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "System and family"
+msgstr "Kerfi og fjölskylda"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:22
+msgid "Use your favorite websites as apps."
+msgstr "Notaðu uppáhaldsvefsíðurnar þínar sem forrit."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:28
+msgid "Make scanned documents searchable and copyable."
+msgstr "Gerðu skönnuð skjöl leitanleg og afritanleg."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:34
+msgid "Explore a terminal that helps organize your sessions."
+msgstr "Kynntu þér skjáhermi sem hjálpar þér að skipuleggja loturnar þínar."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:37
+msgid "Enjoy a block puzzle game."
+msgstr "Njóttu kubbaþrautaleiks."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:40
+msgid "Noise filter"
+msgstr "Suðsía"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:41
+msgid "Reduce noise from your microphone and audio."
+msgstr "Dragðu úr suði frá hljóðnemanum og hljóðinu."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:46
+msgid "Audio converter"
+msgstr "Hljóðbreytir"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:47
+msgid "Convert audio files to other formats."
+msgstr "Breyttu hljóðskrám í önnur snið."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:52
+msgid "Video converter"
+msgstr "Myndbandsbreytir"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:53
+msgid "Convert your videos to other formats."
+msgstr "Breyttu myndböndunum þínum í önnur snið."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:59
+msgid "Record and organize voice notes."
+msgstr "Taktu upp og skipuleggðu raddglósur."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:64
+msgid "General settings"
+msgstr "Almennar stillingar"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:65
+msgid "Explore your system settings."
+msgstr "Kynntu þér kerfisstillingarnar þínar."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:70
+msgid "Hardware information"
+msgstr "Vélbúnaðarupplýsingar"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:71
+msgid "Get to know your computer's components."
+msgstr "Kynntu þér íhluti tölvunnar þinnar."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:76
+msgid "Hardware management"
+msgstr "Umsjón með vélbúnaði"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:77
+msgid "Access driver and kernel options."
+msgstr "Fáðu aðgang að reklum og kjarnastillingum."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:82
+msgid "Parental controls"
+msgstr "Foreldraeftirlit"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:83
+msgid "Explore controls for computer use."
+msgstr "Kynntu þér stýringar á tölvunotkun."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:88
+msgid "Network information"
+msgstr "Netupplýsingar"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:89
+msgid "View details about your network connections."
+msgstr "Skoðaðu upplýsingar um nettengingarnar þínar."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:17
+msgid "Support BigCommunity"
+msgstr "Styðja BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:24
+msgid "Your support makes a difference"
+msgstr "Stuðningur þinn skiptir máli"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:25
+msgid ""
+"Help maintain our servers, develop new features, and support the community."
+msgstr ""
+"Hjálpaðu til við að viðhalda netþjónum okkar, þróa nýja eiginleika og styðja"
+" samfélagið."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:28
+msgid "Choose how you would like to contribute."
+msgstr "Veldu hvernig þú vilt leggja þitt af mörkum."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX — email key"
+msgstr "PIX — netfangslykill"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "Copy PIX key"
+msgstr "Afrita PIX-lykil"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX key copied"
+msgstr "PIX-lykill afritaður"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:38
+msgid "Paste this key into your banking app and choose the amount."
+msgstr "Límdu þennan lykil inn í bankaappið þitt og veldu upphæðina."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:40
+msgid "Cryptocurrency"
+msgstr "Rafmynt"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:44
+msgid "USDT — TRC20 network"
+msgstr "USDT — TRC20-net"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:46
+msgid "Copy USDT address"
+msgstr "Afrita USDT-vistfang"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:47
+msgid "USDT address copied"
+msgstr "USDT-vistfang afritað"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:51
+msgid "Bitcoin — BTC network"
+msgstr "Bitcoin — BTC-net"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:53
+msgid "Copy Bitcoin address"
+msgstr "Afrita Bitcoin-vistfang"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:54
+msgid "Bitcoin address copied"
+msgstr "Bitcoin-vistfang afritað"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:60
+msgid "Other ways to give"
+msgstr "Aðrar leiðir til að gefa"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:63
+msgid "Telegram donation bot"
+msgstr "Telegram-gjafabott"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:64
+msgid "Continue in Telegram."
+msgstr "Halda áfram í Telegram."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:70
+msgid "Patreon"
+msgstr "Patreon"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:71
+msgid "Monthly support. Continue on Patreon in your browser."
+msgstr "Mánaðarlegur stuðningur. Haltu áfram á Patreon í vafranum þínum."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:102
+msgid "The installer connection was lost. Check Software before retrying."
+msgstr ""
+"Tenging við uppsetningarforritið rofnaði. Athugaðu Hugbúnað áður en þú "
+"reynir aftur."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:108
+msgid "Another installation is in progress."
+msgstr "Önnur uppsetning er í gangi."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:110
+msgid "Connect to the internet to install another browser."
+msgstr "Tengstu internetinu til að setja upp annan vafra."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:112
+msgid "Another package operation is in progress. Try again when it finishes."
+msgstr "Önnur pakkavinnsla er í gangi. Reyndu aftur þegar henni lýkur."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:114
+msgid "Checking available browsers…"
+msgstr "Athuga tiltæka vafra…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:116
+msgid "Browser installation requires a compatible Pamac session service."
+msgstr "Uppsetning vafra krefst samhæfrar Pamac-setuþjónustu."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:132
+msgid "Preparing installation…"
+msgstr "Undirbý uppsetningu…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:207
+msgid "The installation could not be completed."
+msgstr "Ekki tókst að ljúka uppsetningunni."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:171
+msgid "This installation needs additional review. Open Software to continue."
+msgstr ""
+"Þessi uppsetning þarfnast frekari yfirferðar. Opnaðu Hugbúnað til að halda "
+"áfram."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:174
+msgid "Complete any authentication requested by the system."
+msgstr "Ljúktu við alla auðkenningu sem kerfið biður um."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:188
+#: usr/share/comm-welcome/comm_welcome/installer.py:190
+#, python-brace-format
+msgid "Installing {browser}…"
+msgstr "Set upp {browser}…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:200
+msgid ""
+"Additional review is required. Open Software after this operation finishes."
+msgstr ""
+"Frekari yfirferð er nauðsynleg. Opnaðu Hugbúnað eftir að þessari aðgerð "
+"lýkur."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:205
+#, python-brace-format
+msgid "{browser} installed."
+msgstr "{browser} uppsettur."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:24
+#: usr/share/comm-welcome/comm_welcome/window.py:14
+msgid "Welcome to BigCommunity"
+msgstr "Velkomin í BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:25
+msgid "Your new system, your way."
+msgstr "Nýja kerfið þitt, á þinn hátt."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:36
+msgid ""
+"Discover apps, personalize your desktop, and find what you need to get "
+"started."
+msgstr ""
+"Kynntu þér forrit, sérsníddu skjáborðið og finndu það sem þú þarft til að "
+"byrja."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:47
+msgid "PERSONALIZE YOUR DESKTOP"
+msgstr "SÉRSNÍÐU SKJÁBORÐIÐ ÞITT"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:48
+msgid "Make yourself at home"
+msgstr "Láttu þér líða eins og heima hjá þér"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:52
+msgid "Explore layouts, themes, panels, docks, and personalization."
+msgstr "Kynntu þér útlit, þemu, stikur, bryggjur og sérsnið."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:54
+msgid "Explore the personalization options for your desktop."
+msgstr "Kynntu þér sérsniðsvalkosti skjáborðsins þíns."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open Big Gnome Center"
+msgstr "Opna Big Gnome Center"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open settings"
+msgstr "Opna stillingar"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:73
+msgid "Start here"
+msgstr "Byrjaðu hér"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:76
+msgid "Discover apps"
+msgstr "Kynntu þér forrit"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:77
+msgid "Choose a browser"
+msgstr "Veldu vafra"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:78
+msgid "Find help"
+msgstr "Fáðu hjálp"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:96
+msgid "Made for your everyday life"
+msgstr "Gert fyrir daglegt líf"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:119
+msgid "Do not show again"
+msgstr "Ekki sýna aftur"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:128
+msgid "Your preference could not be saved."
+msgstr "Ekki tókst að vista kjörstillinguna þína."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:133
+msgid "You can reopen Welcome from the application menu."
+msgstr "Þú getur opnað Velkomin aftur í forritavalmyndinni."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:145
+msgid "Find what you need"
+msgstr "Finndu það sem þú þarft"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:146
+msgid "System apps, ready for you to explore."
+msgstr "Kerfisforrit, tilbúin til skoðunar."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:171
+msgid "No compatible apps are installed in this category."
+msgstr "Engin samhæf forrit eru uppsett í þessum flokki."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:176
+msgid "Install more apps"
+msgstr "Setja upp fleiri forrit"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
+msgid "A community ready to help"
+msgstr "Samfélag sem er tilbúið að hjálpa"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
+msgid "Find guidance and share your questions."
+msgstr "Finndu leiðbeiningar og deildu spurningunum þínum."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:188
+msgid "These links open in your browser and need internet access."
+msgstr "Þessir tenglar opnast í vafranum þínum og þurfa nettengingu."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:192
+msgid "BigCommunity website"
+msgstr "Vefsvæði BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:193
+msgid "Get to know the project and its news."
+msgstr "Kynntu þér verkefnið og fréttir þess."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:198
+msgid "Community on Telegram"
+msgstr "Samfélagið á Telegram"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:199
+msgid "Talk with other members of the community."
+msgstr "Talaðu við aðra meðlimi samfélagsins."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
+msgid "Ask the forum"
+msgstr "Spyrðu á spjallborðinu"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:205
+msgid "Search for answers and share your questions."
+msgstr "Leitaðu að svörum og deildu spurningunum þínum."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:39
+msgid "Support the project"
+msgstr "Styðja verkefnið"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:219
+msgid "Discover ways to donate to BigCommunity."
+msgstr "Kynntu þér leiðir til að styrkja BigCommunity."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
+msgid "Useful information when asking for help"
+msgstr "Gagnlegar upplýsingar þegar þú biður um hjálp"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:243
+msgid "Opening these apps does not send your information to anyone."
+msgstr ""
+"Þegar þessi forrit eru opnuð eru upplýsingarnar þínar ekki sendar neinum."
+
+#: usr/share/comm-welcome/comm_welcome/widgets.py:137
+#, python-brace-format
+msgid "Open {app}"
+msgstr "Opna {app}"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:34
+#: usr/share/comm-welcome/comm_welcome/window.py:58
+msgid "Welcome"
+msgstr "Velkomin"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:40
+msgid "About Welcome"
+msgstr "Um Velkomin"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:41
+#: usr/share/comm-welcome/comm_welcome/window.py:157
+msgid "Close"
+msgstr "Loka"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:43
+msgid "Main menu"
+msgstr "Aðalvalmynd"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:59
+msgid "Apps"
+msgstr "Forrit"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:60
+msgid "Browsers"
+msgstr "Vafrar"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:61
+msgid "Help"
+msgstr "Hjálp"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:86
+msgid "View installation"
+msgstr "Skoða uppsetningu"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:137
+msgid "The application could not be opened."
+msgstr "Ekki tókst að opna forritið."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:146
+msgid "The link could not be opened."
+msgstr "Ekki tókst að opna tengilinn."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:165
+#: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
+#: data/org.bigcommunity.CommWelcome.desktop.in:3
+msgid "BigCommunity Welcome"
+msgstr "BigCommunity Velkomin"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:171
+msgid "Discover your desktop and the apps that come with it."
+msgstr "Kynntu þér skjáborðið og forritin sem fylgja því."
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:4
+msgid "Discover your desktop and applications"
+msgstr "Kynntu þér skjáborðið og forritin"
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:10
+msgid "welcome;getting started;community;browser;"
+msgstr "velkomin;að byrja;samfélag;vafri;"

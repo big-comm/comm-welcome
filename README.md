@@ -65,18 +65,20 @@ install packages or change real browser defaults. Visual checks are separate:
 
 ## Localization
 
-English source strings use gettext. `locale/LINGUAS` lists 29 target locales
-shared with Big Gnome Center; this is a target list, not a coverage claim.
-Missing translations fall back to English. Empty template catalogs are
-preserved. Brazilian Portuguese uses the gettext identifier `pt_BR`.
+English source strings use gettext. `locale/LINGUAS` lists 29 locales shared
+with Big Gnome Center: English and 28 translated languages. Each catalog covers
+123 UI and desktop messages. Brazilian Portuguese uses `pt_BR`; Hebrew uses
+RTL layout. Missing translations fall back to English.
 
 ```sh
 python3 scripts/i18n.py extract
 python3 scripts/i18n.py compile
 ```
 
-Compiled catalogs install to `/usr/share/locale/<locale>/LC_MESSAGES/`.
-Production translations remain subject to the agreed workflow.
+Reviewed catalogs are compiled locally and versioned under
+`usr/share/locale/<locale>/LC_MESSAGES/`, so the unchanged package template
+ships them directly. No translation service is called by these commands.
+Workflow and validation: [localization](docs/LOCALIZATION.md).
 
 ## License
 

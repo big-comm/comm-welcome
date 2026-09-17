@@ -1,0 +1,527 @@
+# Translations for comm-welcome.
+# Distributed under the project MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: comm-welcome 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
+"POT-Creation-Date: 2026-09-16 23:37-0300\n"
+"PO-Revision-Date: 2026-09-16 23:40-0300\n"
+"Last-Translator: BigCommunity contributors\n"
+"Language-Team: ja <https://github.com/big-comm/comm-welcome>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Luna (gpt-5.6-luna, xhigh)\n"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:17
+msgid "Which browser suits you?"
+msgstr "どのブラウザーが適していますか？"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:18
+msgid "Keep your current browser or choose another one to install."
+msgstr "現在のブラウザーを使い続けるか、別のブラウザーを選んでインストールします。"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:31
+msgid "View details"
+msgstr "詳細を表示"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:39
+msgid "Other options"
+msgstr "その他のオプション"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:44
+msgid "Installing another browser keeps your existing browsers."
+msgstr "別のブラウザーをインストールしても、現在のブラウザーはそのまま残ります。"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:48
+msgid "Continue with my current browser"
+msgstr "現在のブラウザーを使い続ける"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:51
+msgid "Open Software"
+msgstr "ソフトウェアを開く"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+msgid "Installed"
+msgstr "インストール済み"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not installed"
+msgstr "未インストール"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:97
+msgid "Current default"
+msgstr "現在の既定"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:104
+#: usr/share/comm-welcome/comm_welcome/widgets.py:136
+msgid "Open"
+msgstr "開く"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:106
+msgid "Set as default"
+msgstr "既定に設定"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:108
+msgid "Choose and install"
+msgstr "選択してインストール"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:124
+msgid "The default browser could not be changed."
+msgstr "既定のブラウザーを変更できませんでした。"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:127
+#, python-brace-format
+msgid "{browser} is now your default browser."
+msgstr "{browser} が既定のブラウザーになりました。"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:149
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not available in your repositories."
+msgstr "リポジトリでは利用できません。"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
+msgid "Try again"
+msgstr "再試行"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Everyday"
+msgstr "日常"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Audio and video"
+msgstr "オーディオとビデオ"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "System and family"
+msgstr "システムとファミリー"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:22
+msgid "Use your favorite websites as apps."
+msgstr "お気に入りのウェブサイトをアプリとして使えます。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:28
+msgid "Make scanned documents searchable and copyable."
+msgstr "スキャンした文書を検索・コピーできるようにします。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:34
+msgid "Explore a terminal that helps organize your sessions."
+msgstr "セッションの整理に役立つターミナルをお試しください。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:37
+msgid "Enjoy a block puzzle game."
+msgstr "ブロックパズルゲームを楽しみましょう。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:40
+msgid "Noise filter"
+msgstr "ノイズフィルター"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:41
+msgid "Reduce noise from your microphone and audio."
+msgstr "マイクと音声のノイズを低減します。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:46
+msgid "Audio converter"
+msgstr "オーディオ変換"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:47
+msgid "Convert audio files to other formats."
+msgstr "オーディオファイルを別の形式に変換します。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:52
+msgid "Video converter"
+msgstr "ビデオ変換"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:53
+msgid "Convert your videos to other formats."
+msgstr "動画を別の形式に変換します。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:59
+msgid "Record and organize voice notes."
+msgstr "音声メモを録音・整理します。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:64
+msgid "General settings"
+msgstr "一般設定"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:65
+msgid "Explore your system settings."
+msgstr "システム設定を確認できます。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:70
+msgid "Hardware information"
+msgstr "ハードウェア情報"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:71
+msgid "Get to know your computer's components."
+msgstr "コンピューターのコンポーネントを確認できます。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:76
+msgid "Hardware management"
+msgstr "ハードウェア管理"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:77
+msgid "Access driver and kernel options."
+msgstr "ドライバーとカーネルのオプションにアクセスします。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:82
+msgid "Parental controls"
+msgstr "ペアレンタルコントロール"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:83
+msgid "Explore controls for computer use."
+msgstr "コンピューターの使用制限を確認できます。"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:88
+msgid "Network information"
+msgstr "ネットワーク情報"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:89
+msgid "View details about your network connections."
+msgstr "ネットワーク接続の詳細を表示します。"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:17
+msgid "Support BigCommunity"
+msgstr "BigCommunityを支援"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:24
+msgid "Your support makes a difference"
+msgstr "ご支援が大きな力になります"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:25
+msgid ""
+"Help maintain our servers, develop new features, and support the community."
+msgstr "サーバーの保守、新機能の開発、コミュニティの支援にご協力ください。"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:28
+msgid "Choose how you would like to contribute."
+msgstr "支援方法を選択してください。"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX — email key"
+msgstr "PIX — メールキー"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "Copy PIX key"
+msgstr "PIXキーをコピー"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX key copied"
+msgstr "PIXキーをコピーしました"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:38
+msgid "Paste this key into your banking app and choose the amount."
+msgstr "このキーを銀行アプリに貼り付けて、金額を選択してください。"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:40
+msgid "Cryptocurrency"
+msgstr "暗号資産"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:44
+msgid "USDT — TRC20 network"
+msgstr "USDT — TRC20ネットワーク"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:46
+msgid "Copy USDT address"
+msgstr "USDTアドレスをコピー"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:47
+msgid "USDT address copied"
+msgstr "USDTアドレスをコピーしました"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:51
+msgid "Bitcoin — BTC network"
+msgstr "Bitcoin — BTCネットワーク"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:53
+msgid "Copy Bitcoin address"
+msgstr "Bitcoinアドレスをコピー"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:54
+msgid "Bitcoin address copied"
+msgstr "Bitcoinアドレスをコピーしました"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:60
+msgid "Other ways to give"
+msgstr "その他の寄付方法"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:63
+msgid "Telegram donation bot"
+msgstr "Telegram寄付ボット"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:64
+msgid "Continue in Telegram."
+msgstr "Telegramで続行します。"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:70
+msgid "Patreon"
+msgstr "Patreon"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:71
+msgid "Monthly support. Continue on Patreon in your browser."
+msgstr "継続的な支援。ブラウザーでPatreonに進んでください。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:102
+msgid "The installer connection was lost. Check Software before retrying."
+msgstr "インストーラーとの接続が切れました。再試行する前にソフトウェアを確認してください。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:108
+msgid "Another installation is in progress."
+msgstr "別のインストールが進行中です。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:110
+msgid "Connect to the internet to install another browser."
+msgstr "別のブラウザーをインストールするにはインターネットに接続してください。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:112
+msgid "Another package operation is in progress. Try again when it finishes."
+msgstr "別のパッケージ操作が進行中です。完了後に再試行してください。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:114
+msgid "Checking available browsers…"
+msgstr "利用可能なブラウザーを確認しています…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:116
+msgid "Browser installation requires a compatible Pamac session service."
+msgstr "ブラウザーのインストールには互換性のあるPamacセッションサービスが必要です。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:132
+msgid "Preparing installation…"
+msgstr "インストールを準備しています…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:207
+msgid "The installation could not be completed."
+msgstr "インストールを完了できませんでした。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:171
+msgid "This installation needs additional review. Open Software to continue."
+msgstr "このインストールには追加の確認が必要です。続行するにはソフトウェアを開いてください。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:174
+msgid "Complete any authentication requested by the system."
+msgstr "システムから求められた認証をすべて完了してください。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:188
+#: usr/share/comm-welcome/comm_welcome/installer.py:190
+#, python-brace-format
+msgid "Installing {browser}…"
+msgstr "{browser}をインストールしています…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:200
+msgid ""
+"Additional review is required. Open Software after this operation finishes."
+msgstr "追加の確認が必要です。この操作の完了後にソフトウェアを開いてください。"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:205
+#, python-brace-format
+msgid "{browser} installed."
+msgstr "{browser}をインストールしました。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:24
+#: usr/share/comm-welcome/comm_welcome/window.py:14
+msgid "Welcome to BigCommunity"
+msgstr "BigCommunityへようこそ"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:25
+msgid "Your new system, your way."
+msgstr "新しいシステムを、自分らしく。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:36
+msgid ""
+"Discover apps, personalize your desktop, and find what you need to get "
+"started."
+msgstr "アプリを見つけ、デスクトップをカスタマイズして、使い始めるために必要なものを見つけましょう。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:47
+msgid "PERSONALIZE YOUR DESKTOP"
+msgstr "デスクトップをカスタマイズ"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:48
+msgid "Make yourself at home"
+msgstr "自分らしい環境を作りましょう"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:52
+msgid "Explore layouts, themes, panels, docks, and personalization."
+msgstr "レイアウト、テーマ、パネル、ドックなどのカスタマイズをお試しください。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:54
+msgid "Explore the personalization options for your desktop."
+msgstr "デスクトップのカスタマイズオプションを確認できます。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open Big Gnome Center"
+msgstr "Big Gnome Centerを開く"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open settings"
+msgstr "設定を開く"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:73
+msgid "Start here"
+msgstr "ここから始めましょう"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:76
+msgid "Discover apps"
+msgstr "アプリを探す"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:77
+msgid "Choose a browser"
+msgstr "ブラウザーを選ぶ"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:78
+msgid "Find help"
+msgstr "ヘルプを探す"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:96
+msgid "Made for your everyday life"
+msgstr "毎日の暮らしにぴったり"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:119
+msgid "Do not show again"
+msgstr "次回から表示しない"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:128
+msgid "Your preference could not be saved."
+msgstr "設定を保存できませんでした。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:133
+msgid "You can reopen Welcome from the application menu."
+msgstr "アプリケーションメニューから「ようこそ」を再度開けます。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:145
+msgid "Find what you need"
+msgstr "必要なものを見つける"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:146
+msgid "System apps, ready for you to explore."
+msgstr "システムアプリをチェックしましょう。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:171
+msgid "No compatible apps are installed in this category."
+msgstr "このカテゴリには対応アプリがインストールされていません。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:176
+msgid "Install more apps"
+msgstr "アプリを追加でインストール"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
+msgid "A community ready to help"
+msgstr "コミュニティがサポートします"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
+msgid "Find guidance and share your questions."
+msgstr "ガイドを探して質問を共有しましょう。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:188
+msgid "These links open in your browser and need internet access."
+msgstr "これらのリンクはブラウザーで開き、インターネット接続が必要です。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:192
+msgid "BigCommunity website"
+msgstr "BigCommunityのウェブサイト"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:193
+msgid "Get to know the project and its news."
+msgstr "プロジェクトや最新情報を確認できます。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:198
+msgid "Community on Telegram"
+msgstr "Telegramのコミュニティ"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:199
+msgid "Talk with other members of the community."
+msgstr "コミュニティのメンバーと交流しましょう。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
+msgid "Ask the forum"
+msgstr "フォーラムで質問"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:205
+msgid "Search for answers and share your questions."
+msgstr "回答を検索して質問を共有しましょう。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:39
+msgid "Support the project"
+msgstr "プロジェクトを支援"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:219
+msgid "Discover ways to donate to BigCommunity."
+msgstr "BigCommunityへの寄付方法を確認できます。"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
+msgid "Useful information when asking for help"
+msgstr "ヘルプを求める際に役立つ情報"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:243
+msgid "Opening these apps does not send your information to anyone."
+msgstr "これらのアプリを開いても、情報が誰かに送信されることはありません。"
+
+#: usr/share/comm-welcome/comm_welcome/widgets.py:137
+#, python-brace-format
+msgid "Open {app}"
+msgstr "{app}を開く"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:34
+#: usr/share/comm-welcome/comm_welcome/window.py:58
+msgid "Welcome"
+msgstr "ようこそ"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:40
+msgid "About Welcome"
+msgstr "「ようこそ」について"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:41
+#: usr/share/comm-welcome/comm_welcome/window.py:157
+msgid "Close"
+msgstr "閉じる"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:43
+msgid "Main menu"
+msgstr "メインメニュー"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:59
+msgid "Apps"
+msgstr "アプリ"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:60
+msgid "Browsers"
+msgstr "ブラウザー"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:61
+msgid "Help"
+msgstr "ヘルプ"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:86
+msgid "View installation"
+msgstr "インストールを表示"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:137
+msgid "The application could not be opened."
+msgstr "アプリケーションを開けませんでした。"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:146
+msgid "The link could not be opened."
+msgstr "リンクを開けませんでした。"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:165
+#: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
+#: data/org.bigcommunity.CommWelcome.desktop.in:3
+msgid "BigCommunity Welcome"
+msgstr "BigCommunity ようこそ"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:171
+msgid "Discover your desktop and the apps that come with it."
+msgstr "デスクトップと付属アプリを確認できます。"
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:4
+msgid "Discover your desktop and applications"
+msgstr "デスクトップとアプリを確認"
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:10
+msgid "welcome;getting started;community;browser;"
+msgstr "ようこそ;はじめに;コミュニティ;ブラウザー;"

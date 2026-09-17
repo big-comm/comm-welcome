@@ -1,0 +1,540 @@
+# Translations for comm-welcome.
+# Distributed under the project MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: comm-welcome 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
+"POT-Creation-Date: 2026-09-16 23:37-0300\n"
+"PO-Revision-Date: 2026-09-16 23:42-0300\n"
+"Last-Translator: BigCommunity contributors\n"
+"Language-Team: da <https://github.com/big-comm/comm-welcome>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Luna (gpt-5.6-luna, xhigh)\n"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:17
+msgid "Which browser suits you?"
+msgstr "Hvilken browser passer til dig?"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:18
+msgid "Keep your current browser or choose another one to install."
+msgstr "Behold din nuværende browser, eller vælg en anden, du vil installere."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:31
+msgid "View details"
+msgstr "Vis oplysninger"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:39
+msgid "Other options"
+msgstr "Andre muligheder"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:44
+msgid "Installing another browser keeps your existing browsers."
+msgstr ""
+"Hvis du installerer en anden browser, beholder du dine nuværende browsere."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:48
+msgid "Continue with my current browser"
+msgstr "Fortsæt med min nuværende browser"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:51
+msgid "Open Software"
+msgstr "Åbn Software"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+msgid "Installed"
+msgstr "Installeret"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not installed"
+msgstr "Ikke installeret"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:97
+msgid "Current default"
+msgstr "Nuværende standard"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:104
+#: usr/share/comm-welcome/comm_welcome/widgets.py:136
+msgid "Open"
+msgstr "Åbn"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:106
+msgid "Set as default"
+msgstr "Angiv som standard"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:108
+msgid "Choose and install"
+msgstr "Vælg og installer"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:124
+msgid "The default browser could not be changed."
+msgstr "Standardbrowseren kunne ikke ændres."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:127
+#, python-brace-format
+msgid "{browser} is now your default browser."
+msgstr "{browser} er nu din standardbrowser."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:149
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not available in your repositories."
+msgstr "Findes ikke i dine pakkearkiver."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
+msgid "Try again"
+msgstr "Prøv igen"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Everyday"
+msgstr "Hverdag"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Audio and video"
+msgstr "Lyd og video"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "System and family"
+msgstr "System og familie"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:22
+msgid "Use your favorite websites as apps."
+msgstr "Brug dine yndlingswebsteder som apps."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:28
+msgid "Make scanned documents searchable and copyable."
+msgstr "Gør scannede dokumenter søgbare og indholdet kopierbart."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:34
+msgid "Explore a terminal that helps organize your sessions."
+msgstr ""
+"Udforsk en terminal, der hjælper dig med at organisere dine sessioner."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:37
+msgid "Enjoy a block puzzle game."
+msgstr "Spil et underholdende blokpuslespil."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:40
+msgid "Noise filter"
+msgstr "Støjfilter"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:41
+msgid "Reduce noise from your microphone and audio."
+msgstr "Reducer baggrundsstøj fra mikrofonen og lyden."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:46
+msgid "Audio converter"
+msgstr "Lydkonverter"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:47
+msgid "Convert audio files to other formats."
+msgstr "Konverter lydfiler til andre formater."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:52
+msgid "Video converter"
+msgstr "Videokonverter"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:53
+msgid "Convert your videos to other formats."
+msgstr "Konverter dine videoer til andre formater."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:59
+msgid "Record and organize voice notes."
+msgstr "Optag og organiser stemmenotater."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:64
+msgid "General settings"
+msgstr "Generelle indstillinger"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:65
+msgid "Explore your system settings."
+msgstr "Udforsk systemindstillingerne."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:70
+msgid "Hardware information"
+msgstr "Hardwareoplysninger"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:71
+msgid "Get to know your computer's components."
+msgstr "Lær computerens komponenter at kende."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:76
+msgid "Hardware management"
+msgstr "Hardwareadministration"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:77
+msgid "Access driver and kernel options."
+msgstr "Få adgang til driver- og kerneindstillinger."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:82
+msgid "Parental controls"
+msgstr "Forældrekontrol"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:83
+msgid "Explore controls for computer use."
+msgstr "Udforsk mulighederne for at styre computerbrug."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:88
+msgid "Network information"
+msgstr "Netværksoplysninger"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:89
+msgid "View details about your network connections."
+msgstr "Se oplysninger om dine netværksforbindelser."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:17
+msgid "Support BigCommunity"
+msgstr "Støt BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:24
+msgid "Your support makes a difference"
+msgstr "Din støtte gør en forskel"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:25
+msgid ""
+"Help maintain our servers, develop new features, and support the community."
+msgstr ""
+"Hjælp med at vedligeholde serverne, udvikle nye funktioner og støtte "
+"fællesskabet."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:28
+msgid "Choose how you would like to contribute."
+msgstr "Vælg, hvordan du vil bidrage."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX — email key"
+msgstr "PIX — e-mailnøgle"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "Copy PIX key"
+msgstr "Kopiér PIX-nøgle"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX key copied"
+msgstr "PIX-nøgle kopieret"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:38
+msgid "Paste this key into your banking app and choose the amount."
+msgstr "Indsæt nøglen i din bankapp, og vælg beløbet."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:40
+msgid "Cryptocurrency"
+msgstr "Kryptovaluta"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:44
+msgid "USDT — TRC20 network"
+msgstr "USDT — TRC20-netværk"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:46
+msgid "Copy USDT address"
+msgstr "Kopiér USDT-adresse"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:47
+msgid "USDT address copied"
+msgstr "USDT-adresse kopieret"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:51
+msgid "Bitcoin — BTC network"
+msgstr "Bitcoin — BTC-netværk"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:53
+msgid "Copy Bitcoin address"
+msgstr "Kopiér Bitcoin-adresse"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:54
+msgid "Bitcoin address copied"
+msgstr "Bitcoin-adresse kopieret"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:60
+msgid "Other ways to give"
+msgstr "Andre måder at give på"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:63
+msgid "Telegram donation bot"
+msgstr "Telegram-donationsbot"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:64
+msgid "Continue in Telegram."
+msgstr "Fortsæt i Telegram."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:70
+msgid "Patreon"
+msgstr "Patreon"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:71
+msgid "Monthly support. Continue on Patreon in your browser."
+msgstr "Månedlig støtte. Fortsæt på Patreon i din browser."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:102
+msgid "The installer connection was lost. Check Software before retrying."
+msgstr ""
+"Forbindelsen til installationsprogrammet blev afbrudt. Tjek Software, før du"
+" prøver igen."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:108
+msgid "Another installation is in progress."
+msgstr "En anden installation er i gang."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:110
+msgid "Connect to the internet to install another browser."
+msgstr "Opret forbindelse til internettet for at installere en anden browser."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:112
+msgid "Another package operation is in progress. Try again when it finishes."
+msgstr "En anden pakkehandling er i gang. Prøv igen, når den er færdig."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:114
+msgid "Checking available browsers…"
+msgstr "Søger efter tilgængelige browsere…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:116
+msgid "Browser installation requires a compatible Pamac session service."
+msgstr "Browserinstallationen kræver en kompatibel Pamac-sessionstjeneste."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:132
+msgid "Preparing installation…"
+msgstr "Forbereder installationen…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:207
+msgid "The installation could not be completed."
+msgstr "Installationen kunne ikke fuldføres."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:171
+msgid "This installation needs additional review. Open Software to continue."
+msgstr ""
+"Denne installation kræver ekstra gennemgang. Åbn Software for at fortsætte."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:174
+msgid "Complete any authentication requested by the system."
+msgstr "Fuldfør den godkendelse, som systemet eventuelt beder om."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:188
+#: usr/share/comm-welcome/comm_welcome/installer.py:190
+#, python-brace-format
+msgid "Installing {browser}…"
+msgstr "Installerer {browser}…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:200
+msgid ""
+"Additional review is required. Open Software after this operation finishes."
+msgstr ""
+"Der kræves ekstra gennemgang. Åbn Software, når denne handling er færdig."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:205
+#, python-brace-format
+msgid "{browser} installed."
+msgstr "{browser} er installeret."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:24
+#: usr/share/comm-welcome/comm_welcome/window.py:14
+msgid "Welcome to BigCommunity"
+msgstr "Velkommen til BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:25
+msgid "Your new system, your way."
+msgstr "Dit nye system på din måde."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:36
+msgid ""
+"Discover apps, personalize your desktop, and find what you need to get "
+"started."
+msgstr ""
+"Find apps, tilpas skrivebordet, og find det, du skal bruge for at komme i "
+"gang."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:47
+msgid "PERSONALIZE YOUR DESKTOP"
+msgstr "PERSONALISER DIT SKRIVEBORD"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:48
+msgid "Make yourself at home"
+msgstr "Føl dig hjemme"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:52
+msgid "Explore layouts, themes, panels, docks, and personalization."
+msgstr ""
+"Udforsk layouts, temaer, paneler, docks og muligheder for personlig "
+"tilpasning."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:54
+msgid "Explore the personalization options for your desktop."
+msgstr "Udforsk mulighederne for at tilpasse skrivebordet."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open Big Gnome Center"
+msgstr "Åbn Big Gnome Center"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open settings"
+msgstr "Åbn indstillinger"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:73
+msgid "Start here"
+msgstr "Start her"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:76
+msgid "Discover apps"
+msgstr "Find apps"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:77
+msgid "Choose a browser"
+msgstr "Vælg en browser"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:78
+msgid "Find help"
+msgstr "Find hjælp"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:96
+msgid "Made for your everyday life"
+msgstr "Skabt til din hverdag"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:119
+msgid "Do not show again"
+msgstr "Vis ikke igen"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:128
+msgid "Your preference could not be saved."
+msgstr "Din indstilling kunne ikke gemmes."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:133
+msgid "You can reopen Welcome from the application menu."
+msgstr "Du kan åbne Velkommen igen fra programmenuen."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:145
+msgid "Find what you need"
+msgstr "Find det, du har brug for"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:146
+msgid "System apps, ready for you to explore."
+msgstr "Systemapps, klar til at du kan udforske dem."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:171
+msgid "No compatible apps are installed in this category."
+msgstr "Der er ingen kompatible apps installeret i denne kategori."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:176
+msgid "Install more apps"
+msgstr "Installer flere apps"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
+msgid "A community ready to help"
+msgstr "Et fællesskab, der gerne hjælper"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
+msgid "Find guidance and share your questions."
+msgstr "Find vejledning, og del dine spørgsmål."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:188
+msgid "These links open in your browser and need internet access."
+msgstr "Disse links åbnes i din browser og kræver internetadgang."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:192
+msgid "BigCommunity website"
+msgstr "BigCommunity-websted"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:193
+msgid "Get to know the project and its news."
+msgstr "Lær projektet og dets nyheder at kende."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:198
+msgid "Community on Telegram"
+msgstr "Fællesskab på Telegram"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:199
+msgid "Talk with other members of the community."
+msgstr "Tal med andre medlemmer af fællesskabet."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
+msgid "Ask the forum"
+msgstr "Spørg i forummet"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:205
+msgid "Search for answers and share your questions."
+msgstr "Søg efter svar, og del dine spørgsmål."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:39
+msgid "Support the project"
+msgstr "Støt projektet"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:219
+msgid "Discover ways to donate to BigCommunity."
+msgstr "Se, hvordan du kan donere til BigCommunity."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
+msgid "Useful information when asking for help"
+msgstr "Nyttige oplysninger, når du beder om hjælp"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:243
+msgid "Opening these apps does not send your information to anyone."
+msgstr ""
+"Når du åbner disse apps, bliver dine oplysninger ikke sendt til nogen."
+
+#: usr/share/comm-welcome/comm_welcome/widgets.py:137
+#, python-brace-format
+msgid "Open {app}"
+msgstr "Åbn {app}"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:34
+#: usr/share/comm-welcome/comm_welcome/window.py:58
+msgid "Welcome"
+msgstr "Velkommen"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:40
+msgid "About Welcome"
+msgstr "Om Velkommen"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:41
+#: usr/share/comm-welcome/comm_welcome/window.py:157
+msgid "Close"
+msgstr "Luk"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:43
+msgid "Main menu"
+msgstr "Hovedmenu"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:59
+msgid "Apps"
+msgstr "Programmer"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:60
+msgid "Browsers"
+msgstr "Browsere"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:61
+msgid "Help"
+msgstr "Hjælp"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:86
+msgid "View installation"
+msgstr "Vis installation"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:137
+msgid "The application could not be opened."
+msgstr "Programmet kunne ikke åbnes."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:146
+msgid "The link could not be opened."
+msgstr "Linket kunne ikke åbnes."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:165
+#: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
+#: data/org.bigcommunity.CommWelcome.desktop.in:3
+msgid "BigCommunity Welcome"
+msgstr "Velkommen fra BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:171
+msgid "Discover your desktop and the apps that come with it."
+msgstr "Udforsk skrivebordet og de apps, der følger med."
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:4
+msgid "Discover your desktop and applications"
+msgstr "Udforsk skrivebordet og dine programmer"
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:10
+msgid "welcome;getting started;community;browser;"
+msgstr "velkommen;kom godt i gang;fællesskab;browser;"

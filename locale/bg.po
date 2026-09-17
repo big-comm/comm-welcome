@@ -1,0 +1,540 @@
+# Translations for comm-welcome.
+# Distributed under the project MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: comm-welcome 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
+"POT-Creation-Date: 2026-09-16 23:37-0300\n"
+"PO-Revision-Date: 2026-09-16 23:49-0300\n"
+"Last-Translator: BigCommunity contributors\n"
+"Language-Team: bg <https://github.com/big-comm/comm-welcome>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Luna (gpt-5.6-luna, xhigh)\n"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:17
+msgid "Which browser suits you?"
+msgstr "Кой браузър е подходящ за вас?"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:18
+msgid "Keep your current browser or choose another one to install."
+msgstr "Запазете текущия си браузър или изберете друг за инсталиране."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:31
+msgid "View details"
+msgstr "Преглед на подробностите"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:39
+msgid "Other options"
+msgstr "Други възможности"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:44
+msgid "Installing another browser keeps your existing browsers."
+msgstr "Инсталирането на друг браузър ще запази наличните ви браузъри."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:48
+msgid "Continue with my current browser"
+msgstr "Продължете с текущия ми браузър"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:51
+msgid "Open Software"
+msgstr "Отваряне на Софтуер"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+msgid "Installed"
+msgstr "Инсталиран"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not installed"
+msgstr "Не е инсталиран"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:97
+msgid "Current default"
+msgstr "Текущ браузър по подразбиране"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:104
+#: usr/share/comm-welcome/comm_welcome/widgets.py:136
+msgid "Open"
+msgstr "Отваряне"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:106
+msgid "Set as default"
+msgstr "Задаване по подразбиране"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:108
+msgid "Choose and install"
+msgstr "Изберете и инсталирайте"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:124
+msgid "The default browser could not be changed."
+msgstr "Браузърът по подразбиране не можа да бъде променен."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:127
+#, python-brace-format
+msgid "{browser} is now your default browser."
+msgstr "{browser} вече е браузърът ви по подразбиране."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:149
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not available in your repositories."
+msgstr "Не е налично във вашите хранилища."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
+msgid "Try again"
+msgstr "Опитайте отново"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Everyday"
+msgstr "Ежедневие"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "Audio and video"
+msgstr "Звук и видео"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:17
+msgid "System and family"
+msgstr "Система и семейство"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:22
+msgid "Use your favorite websites as apps."
+msgstr "Използвайте любимите си уебсайтове като приложения."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:28
+msgid "Make scanned documents searchable and copyable."
+msgstr "Направете сканираните документи достъпни за търсене и копиране."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:34
+msgid "Explore a terminal that helps organize your sessions."
+msgstr "Разгледайте терминал, който помага да организирате сесиите си."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:37
+msgid "Enjoy a block puzzle game."
+msgstr "Насладете се на игра с блокови пъзели."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:40
+msgid "Noise filter"
+msgstr "Филтър за шум"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:41
+msgid "Reduce noise from your microphone and audio."
+msgstr "Намалете шума от микрофона и аудиото."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:46
+msgid "Audio converter"
+msgstr "Аудио конвертор"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:47
+msgid "Convert audio files to other formats."
+msgstr "Преобразувайте аудиофайлове в други формати."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:52
+msgid "Video converter"
+msgstr "Видео конвертор"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:53
+msgid "Convert your videos to other formats."
+msgstr "Преобразувайте видеоклиповете си в други формати."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:59
+msgid "Record and organize voice notes."
+msgstr "Записвайте и организирайте гласови бележки."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:64
+msgid "General settings"
+msgstr "Общи настройки"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:65
+msgid "Explore your system settings."
+msgstr "Разгледайте системните настройки."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:70
+msgid "Hardware information"
+msgstr "Информация за хардуера"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:71
+msgid "Get to know your computer's components."
+msgstr "Научете повече за компонентите на компютъра си."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:76
+msgid "Hardware management"
+msgstr "Управление на хардуера"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:77
+msgid "Access driver and kernel options."
+msgstr "Достъп до настройките за драйвери и ядрото."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:82
+msgid "Parental controls"
+msgstr "Родителски контрол"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:83
+msgid "Explore controls for computer use."
+msgstr "Разгледайте настройките за използване на компютъра."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:88
+msgid "Network information"
+msgstr "Информация за мрежата"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:89
+msgid "View details about your network connections."
+msgstr "Прегледайте подробности за мрежовите си връзки."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:17
+msgid "Support BigCommunity"
+msgstr "Подкрепете BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:24
+msgid "Your support makes a difference"
+msgstr "Вашата подкрепа има значение"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:25
+msgid ""
+"Help maintain our servers, develop new features, and support the community."
+msgstr ""
+"Помогнете за поддръжката на сървърите ни, разработването на нови функции и "
+"подкрепата за общността."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:28
+msgid "Choose how you would like to contribute."
+msgstr "Изберете как бихте искали да допринесете."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX — email key"
+msgstr "PIX — ключ по имейл"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "Copy PIX key"
+msgstr "Копиране на PIX ключ"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX key copied"
+msgstr "PIX ключът е копиран"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:38
+msgid "Paste this key into your banking app and choose the amount."
+msgstr "Поставете този ключ в банковото си приложение и изберете сумата."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:40
+msgid "Cryptocurrency"
+msgstr "Криптовалута"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:44
+msgid "USDT — TRC20 network"
+msgstr "USDT — мрежа TRC20"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:46
+msgid "Copy USDT address"
+msgstr "Копиране на адреса за USDT"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:47
+msgid "USDT address copied"
+msgstr "Адресът за USDT е копиран"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:51
+msgid "Bitcoin — BTC network"
+msgstr "Bitcoin — мрежа BTC"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:53
+msgid "Copy Bitcoin address"
+msgstr "Копиране на адреса за Bitcoin"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:54
+msgid "Bitcoin address copied"
+msgstr "Адресът за Bitcoin е копиран"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:60
+msgid "Other ways to give"
+msgstr "Други начини за дарение"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:63
+msgid "Telegram donation bot"
+msgstr "Бот за дарения в Telegram"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:64
+msgid "Continue in Telegram."
+msgstr "Продължете в Telegram."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:70
+msgid "Patreon"
+msgstr "Patreon"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:71
+msgid "Monthly support. Continue on Patreon in your browser."
+msgstr "Месечна подкрепа. Продължете в Patreon през браузъра си."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:102
+msgid "The installer connection was lost. Check Software before retrying."
+msgstr ""
+"Връзката с инсталатора е прекъсната. Проверете Софтуер, преди да опитате "
+"отново."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:108
+msgid "Another installation is in progress."
+msgstr "Извършва се друга инсталация."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:110
+msgid "Connect to the internet to install another browser."
+msgstr "Свържете се с интернет, за да инсталирате друг браузър."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:112
+msgid "Another package operation is in progress. Try again when it finishes."
+msgstr ""
+"Извършва се друга операция с пакети. Опитайте отново, след като приключи."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:114
+msgid "Checking available browsers…"
+msgstr "Проверка за налични браузъри…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:116
+msgid "Browser installation requires a compatible Pamac session service."
+msgstr "Инсталирането на браузър изисква съвместима услуга за сесии на Pamac."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:132
+msgid "Preparing installation…"
+msgstr "Подготовка на инсталацията…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:207
+msgid "The installation could not be completed."
+msgstr "Инсталацията не можа да бъде завършена."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:171
+msgid "This installation needs additional review. Open Software to continue."
+msgstr ""
+"Тази инсталация изисква допълнителна проверка. Отворете Софтуер, за да "
+"продължите."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:174
+msgid "Complete any authentication requested by the system."
+msgstr "Завършете удостоверяването, поискано от системата."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:188
+#: usr/share/comm-welcome/comm_welcome/installer.py:190
+#, python-brace-format
+msgid "Installing {browser}…"
+msgstr "Инсталиране на {browser}…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:200
+msgid ""
+"Additional review is required. Open Software after this operation finishes."
+msgstr ""
+"Необходима е допълнителна проверка. Отворете Софтуер, след като операцията "
+"приключи."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:205
+#, python-brace-format
+msgid "{browser} installed."
+msgstr "{browser} е инсталиран."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:24
+#: usr/share/comm-welcome/comm_welcome/window.py:14
+msgid "Welcome to BigCommunity"
+msgstr "Добре дошли в BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:25
+msgid "Your new system, your way."
+msgstr "Вашата нова система, по ваш вкус."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:36
+msgid ""
+"Discover apps, personalize your desktop, and find what you need to get "
+"started."
+msgstr ""
+"Откривайте приложения, персонализирайте работния плот и намерете всичко "
+"необходимо, за да започнете."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:47
+msgid "PERSONALIZE YOUR DESKTOP"
+msgstr "ПЕРСОНАЛИЗИРАЙТЕ РАБОТНИЯ СИ ПЛОТ"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:48
+msgid "Make yourself at home"
+msgstr "Почувствайте се като у дома си"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:52
+msgid "Explore layouts, themes, panels, docks, and personalization."
+msgstr ""
+"Разгледайте оформления, теми, панели, докове и възможности за "
+"персонализиране."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:54
+msgid "Explore the personalization options for your desktop."
+msgstr "Разгледайте възможностите за персонализиране на работния плот."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open Big Gnome Center"
+msgstr "Отваряне на Big Gnome Center"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open settings"
+msgstr "Отваряне на настройките"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:73
+msgid "Start here"
+msgstr "Започнете оттук"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:76
+msgid "Discover apps"
+msgstr "Открийте приложения"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:77
+msgid "Choose a browser"
+msgstr "Изберете браузър"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:78
+msgid "Find help"
+msgstr "Намерете помощ"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:96
+msgid "Made for your everyday life"
+msgstr "Създадено за ежедневието ви"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:119
+msgid "Do not show again"
+msgstr "Не показвайте отново"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:128
+msgid "Your preference could not be saved."
+msgstr "Предпочитанието ви не можа да бъде запазено."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:133
+msgid "You can reopen Welcome from the application menu."
+msgstr "Можете да отворите отново „Добре дошли“ от менюто с приложения."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:145
+msgid "Find what you need"
+msgstr "Намерете каквото ви трябва"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:146
+msgid "System apps, ready for you to explore."
+msgstr "Системни приложения, готови за разглеждане."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:171
+msgid "No compatible apps are installed in this category."
+msgstr "В тази категория няма инсталирани съвместими приложения."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:176
+msgid "Install more apps"
+msgstr "Инсталирайте още приложения"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
+msgid "A community ready to help"
+msgstr "Общност, готова да помогне"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
+msgid "Find guidance and share your questions."
+msgstr "Намерете насоки и задайте въпросите си."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:188
+msgid "These links open in your browser and need internet access."
+msgstr "Тези връзки се отварят в браузъра ви и изискват достъп до интернет."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:192
+msgid "BigCommunity website"
+msgstr "Уебсайт на BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:193
+msgid "Get to know the project and its news."
+msgstr "Научете повече за проекта и новините около него."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:198
+msgid "Community on Telegram"
+msgstr "Общността в Telegram"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:199
+msgid "Talk with other members of the community."
+msgstr "Разговаряйте с останалите членове на общността."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
+msgid "Ask the forum"
+msgstr "Попитайте във форума"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:205
+msgid "Search for answers and share your questions."
+msgstr "Потърсете отговори и задайте въпросите си."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:39
+msgid "Support the project"
+msgstr "Подкрепете проекта"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:219
+msgid "Discover ways to donate to BigCommunity."
+msgstr "Научете как да дарите на BigCommunity."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
+msgid "Useful information when asking for help"
+msgstr "Полезна информация при търсене на помощ"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:243
+msgid "Opening these apps does not send your information to anyone."
+msgstr "Отварянето на тези приложения не изпраща информацията ви на никого."
+
+#: usr/share/comm-welcome/comm_welcome/widgets.py:137
+#, python-brace-format
+msgid "Open {app}"
+msgstr "Отваряне на {app}"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:34
+#: usr/share/comm-welcome/comm_welcome/window.py:58
+msgid "Welcome"
+msgstr "Добре дошли"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:40
+msgid "About Welcome"
+msgstr "За приложението „Добре дошли“"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:41
+#: usr/share/comm-welcome/comm_welcome/window.py:157
+msgid "Close"
+msgstr "Затваряне"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:43
+msgid "Main menu"
+msgstr "Главно меню"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:59
+msgid "Apps"
+msgstr "Приложения"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:60
+msgid "Browsers"
+msgstr "Браузъри"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:61
+msgid "Help"
+msgstr "Помощ"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:86
+msgid "View installation"
+msgstr "Преглед на инсталацията"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:137
+msgid "The application could not be opened."
+msgstr "Приложението не можа да бъде отворено."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:146
+msgid "The link could not be opened."
+msgstr "Връзката не можа да бъде отворена."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:165
+#: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
+#: data/org.bigcommunity.CommWelcome.desktop.in:3
+msgid "BigCommunity Welcome"
+msgstr "BigCommunity Добре дошли"
+
+#: usr/share/comm-welcome/comm_welcome/window.py:171
+msgid "Discover your desktop and the apps that come with it."
+msgstr "Открийте работния плот и приложенията, които идват с него."
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:4
+msgid "Discover your desktop and applications"
+msgstr "Открийте работния плот и приложенията"
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:10
+msgid "welcome;getting started;community;browser;"
+msgstr "добре дошли;първи стъпки;общност;браузър;"

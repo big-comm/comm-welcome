@@ -108,6 +108,7 @@ class DonationDialog(Adw.Dialog):
         address.set_wrap_mode(Pango.WrapMode.CHAR)
         address.set_selectable(True)
         address.set_direction(Gtk.TextDirection.LTR)
+        address.set_xalign(0)
         texts.append(address)
         action = button(action_title, lambda: self._copy(value, confirmation))
         action.set_halign(Gtk.Align.START)

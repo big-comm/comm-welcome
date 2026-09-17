@@ -2,6 +2,7 @@
 """Extract and compile gettext catalogs with standard gettext tools."""
 
 import argparse
+import os
 import subprocess
 from pathlib import Path
 
@@ -27,17 +28,48 @@ def extract() -> None:
         cwd=ROOT,
         check=True,
     )
+    subprocess.run(
+        [
+            "xgettext",
+            "--language=Desktop",
+            "--from-code=UTF-8",
+            "--join-existing",
+            "--package-name=comm-welcome",
+            "--package-version=0.1.0",
+            "--msgid-bugs-address=https://github.com/big-comm/comm-welcome/issues",
+            "--output=locale/comm-welcome.pot",
+            *[str(p.relative_to(ROOT)) for p in sorted((ROOT / "data").glob("*.desktop.in"))],
+        ],
+        cwd=ROOT,
+        check=True,
+    )
 
 
 def compile_catalogs() -> None:
-    for language in (LOCALE / "LINGUAS").read_text().split():
+    languages = (LOCALE / "LINGUAS").read_text().split()
+    for language in languages:
         source = LOCALE / f"{language}.po"
         if not source.exists() or not source.stat().st_size:
-            continue
-        target = ROOT / "build/locale" / language / "LC_MESSAGES/comm-welcome.mo"
+            raise SystemExit(f"Missing translation catalog: {source}")
+        target = ROOT / "usr/share/locale" / language / "LC_MESSAGES/comm-welcome.mo"
         target.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(["msgfmt", "--check", str(source), "-o", str(target)], check=True)
-    (ROOT / "build/locale").mkdir(parents=True, exist_ok=True)
+    for template, destination in (
+        (
+            "data/org.bigcommunity.CommWelcome.desktop.in",
+            "usr/share/applications/org.bigcommunity.CommWelcome.desktop",
+        ),
+        (
+            "data/org.bigcommunity.CommWelcome-autostart.desktop.in",
+            "etc/xdg/autostart/org.bigcommunity.CommWelcome.desktop",
+        ),
+    ):
+        subprocess.run(
+            ["msgfmt", "--desktop", f"--template={template}", "-d", "locale", "-o", destination],
+            cwd=ROOT,
+            env={**os.environ, "LINGUAS": " ".join(languages)},
+            check=True,
+        )
 
 
 if __name__ == "__main__":

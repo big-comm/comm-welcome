@@ -13,6 +13,7 @@ from comm_welcome import pages  # noqa: E402
 from comm_welcome.catalog import APPS, GNOME_CENTER, SOFTWARE  # noqa: E402
 from comm_welcome.donations import DonationDialog  # noqa: E402
 from comm_welcome.gtk import Adw, Gio, GLib, Gtk  # noqa: E402
+from comm_welcome.i18n import _  # noqa: E402
 from comm_welcome.preferences import Preferences  # noqa: E402
 
 
@@ -74,9 +75,9 @@ def check_donations(window):
         for widget in descendants(help_page)
         if isinstance(widget, Gtk.Button)
         and isinstance(widget.get_child(), Gtk.Label)
-        and widget.get_child().get_text() == "Open"
+        and widget.get_child().get_text() == _("Open")
         and any(
-            isinstance(child, Gtk.Label) and child.get_text() == "Support the project"
+            isinstance(child, Gtk.Label) and child.get_text() == _("Support the project")
             for child in descendants(widget.get_parent())
         )
     )
@@ -95,7 +96,7 @@ def check_donations(window):
         ("Copy USDT address", "TJ1oi64r5jaaybNYxYureFyre12LE8diRU"),
         ("Copy Bitcoin address", "3GKZcDeJppcWsSuH9SnPTNA5qizw4uzk7r"),
     ):
-        actions[title].emit("clicked")
+        actions[_(title)].emit("clicked")
         result = []
         loop = GLib.MainLoop()
 
@@ -115,7 +116,7 @@ def check_donations(window):
         ("Patreon", "https://www.patreon.com/bigcommunity"),
     ):
         window.open_uri.reset_mock()
-        actions[title].emit("clicked")
+        actions[_(title)].emit("clicked")
         window.open_uri.assert_called_once_with(expected)
     print("Donations: internal entry, three clipboard values and two external destinations passed")
 

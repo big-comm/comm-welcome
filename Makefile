@@ -24,7 +24,7 @@ install: all
 	done
 	install -Dm644 etc/xdg/autostart/org.bigcommunity.CommWelcome.desktop $(DESTDIR)/etc/xdg/autostart/org.bigcommunity.CommWelcome.desktop
 	install -d $(DESTDIR)$(PREFIX)/share/locale
-	cp -a build/locale/. $(DESTDIR)$(PREFIX)/share/locale/
+	cp -a usr/share/locale/. $(DESTDIR)$(PREFIX)/share/locale/
 	install -Dm644 LICENSE $(DESTDIR)$(PREFIX)/share/licenses/comm-welcome/LICENSE
 	install -Dm644 docs/ASSETS.md $(DESTDIR)$(PREFIX)/share/licenses/comm-welcome/ASSETS.md
 	install -Dm644 README.md $(DESTDIR)$(PREFIX)/share/doc/comm-welcome/README.md

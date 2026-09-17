@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
-"POT-Creation-Date: 2026-09-16 18:52-0300\n"
+"POT-Creation-Date: 2026-09-16 23:37-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgid "Current default"
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:104
-#: usr/share/comm-welcome/comm_welcome/widgets.py:87
+#: usr/share/comm-welcome/comm_welcome/widgets.py:136
 msgid "Open"
 msgstr ""
 
@@ -189,80 +189,80 @@ msgstr ""
 msgid "Support BigCommunity"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:23
+#: usr/share/comm-welcome/comm_welcome/donations.py:24
 msgid "Your support makes a difference"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:24
+#: usr/share/comm-welcome/comm_welcome/donations.py:25
 msgid ""
 "Help maintain our servers, develop new features, and support the community."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:27
+#: usr/share/comm-welcome/comm_welcome/donations.py:28
 msgid "Choose how you would like to contribute."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:30
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
 msgid "PIX — email key"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:30
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
 msgid "Copy PIX key"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:30
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
 msgid "PIX key copied"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:35
+#: usr/share/comm-welcome/comm_welcome/donations.py:38
 msgid "Paste this key into your banking app and choose the amount."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:37
+#: usr/share/comm-welcome/comm_welcome/donations.py:40
 msgid "Cryptocurrency"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:41
+#: usr/share/comm-welcome/comm_welcome/donations.py:44
 msgid "USDT — TRC20 network"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:43
+#: usr/share/comm-welcome/comm_welcome/donations.py:46
 msgid "Copy USDT address"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:44
+#: usr/share/comm-welcome/comm_welcome/donations.py:47
 msgid "USDT address copied"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:47
+#: usr/share/comm-welcome/comm_welcome/donations.py:51
 msgid "Bitcoin — BTC network"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:49
+#: usr/share/comm-welcome/comm_welcome/donations.py:53
 msgid "Copy Bitcoin address"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:50
+#: usr/share/comm-welcome/comm_welcome/donations.py:54
 msgid "Bitcoin address copied"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:55
+#: usr/share/comm-welcome/comm_welcome/donations.py:60
 msgid "Other ways to give"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:57
+#: usr/share/comm-welcome/comm_welcome/donations.py:63
 msgid "Telegram donation bot"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:57
+#: usr/share/comm-welcome/comm_welcome/donations.py:64
 msgid "Continue in Telegram."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:58
+#: usr/share/comm-welcome/comm_welcome/donations.py:70
 msgid "Patreon"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/donations.py:58
+#: usr/share/comm-welcome/comm_welcome/donations.py:71
 msgid "Monthly support. Continue on Patreon in your browser."
 msgstr ""
 
@@ -323,197 +323,207 @@ msgstr ""
 msgid "{browser} installed."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:12
+#: usr/share/comm-welcome/comm_welcome/pages.py:24
 #: usr/share/comm-welcome/comm_welcome/window.py:14
 msgid "Welcome to BigCommunity"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:13
+#: usr/share/comm-welcome/comm_welcome/pages.py:25
 msgid "Your new system, your way."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:24
+#: usr/share/comm-welcome/comm_welcome/pages.py:36
 msgid ""
 "Discover apps, personalize your desktop, and find what you need to get "
 "started."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:35
+#: usr/share/comm-welcome/comm_welcome/pages.py:47
 msgid "PERSONALIZE YOUR DESKTOP"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:36
+#: usr/share/comm-welcome/comm_welcome/pages.py:48
 msgid "Make yourself at home"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:40
+#: usr/share/comm-welcome/comm_welcome/pages.py:52
 msgid "Explore layouts, themes, panels, docks, and personalization."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:42
+#: usr/share/comm-welcome/comm_welcome/pages.py:54
 msgid "Explore the personalization options for your desktop."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:47
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
 msgid "Open Big Gnome Center"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:47
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
 msgid "Open settings"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:61
+#: usr/share/comm-welcome/comm_welcome/pages.py:73
 msgid "Start here"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:64
+#: usr/share/comm-welcome/comm_welcome/pages.py:76
 msgid "Discover apps"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:65
+#: usr/share/comm-welcome/comm_welcome/pages.py:77
 msgid "Choose a browser"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:66
+#: usr/share/comm-welcome/comm_welcome/pages.py:78
 msgid "Find help"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:84
+#: usr/share/comm-welcome/comm_welcome/pages.py:96
 msgid "Made for your everyday life"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:107
+#: usr/share/comm-welcome/comm_welcome/pages.py:119
 msgid "Do not show again"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:116
+#: usr/share/comm-welcome/comm_welcome/pages.py:128
 msgid "Your preference could not be saved."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:121
+#: usr/share/comm-welcome/comm_welcome/pages.py:133
 msgid "You can reopen Welcome from the application menu."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:132
+#: usr/share/comm-welcome/comm_welcome/pages.py:145
 msgid "Find what you need"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:133
+#: usr/share/comm-welcome/comm_welcome/pages.py:146
 msgid "System apps, ready for you to explore."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:158
+#: usr/share/comm-welcome/comm_welcome/pages.py:171
 msgid "No compatible apps are installed in this category."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:163
+#: usr/share/comm-welcome/comm_welcome/pages.py:176
 msgid "Install more apps"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:171
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
 msgid "A community ready to help"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:172
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
 msgid "Find guidance and share your questions."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:175
+#: usr/share/comm-welcome/comm_welcome/pages.py:188
 msgid "These links open in your browser and need internet access."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:179
+#: usr/share/comm-welcome/comm_welcome/pages.py:192
 msgid "BigCommunity website"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:180
+#: usr/share/comm-welcome/comm_welcome/pages.py:193
 msgid "Get to know the project and its news."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:185
+#: usr/share/comm-welcome/comm_welcome/pages.py:198
 msgid "Community on Telegram"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:186
+#: usr/share/comm-welcome/comm_welcome/pages.py:199
 msgid "Talk with other members of the community."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:191
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
 msgid "Ask the forum"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:192
+#: usr/share/comm-welcome/comm_welcome/pages.py:205
 msgid "Search for answers and share your questions."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:205
-#: usr/share/comm-welcome/comm_welcome/window.py:35
+#: usr/share/comm-welcome/comm_welcome/pages.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:39
 msgid "Support the project"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:206
+#: usr/share/comm-welcome/comm_welcome/pages.py:219
 msgid "Discover ways to donate to BigCommunity."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:212
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
 msgid "Useful information when asking for help"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:229
+#: usr/share/comm-welcome/comm_welcome/pages.py:243
 msgid "Opening these apps does not send your information to anyone."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/widgets.py:88
+#: usr/share/comm-welcome/comm_welcome/widgets.py:137
 #, python-brace-format
 msgid "Open {app}"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:30
-#: usr/share/comm-welcome/comm_welcome/window.py:54
+#: usr/share/comm-welcome/comm_welcome/window.py:34
+#: usr/share/comm-welcome/comm_welcome/window.py:58
 msgid "Welcome"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:36
+#: usr/share/comm-welcome/comm_welcome/window.py:40
 msgid "About Welcome"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:37
-#: usr/share/comm-welcome/comm_welcome/window.py:142
+#: usr/share/comm-welcome/comm_welcome/window.py:41
+#: usr/share/comm-welcome/comm_welcome/window.py:157
 msgid "Close"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:39
+#: usr/share/comm-welcome/comm_welcome/window.py:43
 msgid "Main menu"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:55
+#: usr/share/comm-welcome/comm_welcome/window.py:59
 msgid "Apps"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:56
+#: usr/share/comm-welcome/comm_welcome/window.py:60
 msgid "Browsers"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:57
+#: usr/share/comm-welcome/comm_welcome/window.py:61
 msgid "Help"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:82
+#: usr/share/comm-welcome/comm_welcome/window.py:86
 msgid "View installation"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:123
+#: usr/share/comm-welcome/comm_welcome/window.py:137
 msgid "The application could not be opened."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:132
+#: usr/share/comm-welcome/comm_welcome/window.py:146
 msgid "The link could not be opened."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:150
+#: usr/share/comm-welcome/comm_welcome/window.py:165
+#: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
+#: data/org.bigcommunity.CommWelcome.desktop.in:3
 msgid "BigCommunity Welcome"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/window.py:156
+#: usr/share/comm-welcome/comm_welcome/window.py:171
 msgid "Discover your desktop and the apps that come with it."
+msgstr ""
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:4
+msgid "Discover your desktop and applications"
+msgstr ""
+
+#: data/org.bigcommunity.CommWelcome.desktop.in:10
+msgid "welcome;getting started;community;browser;"
 msgstr ""

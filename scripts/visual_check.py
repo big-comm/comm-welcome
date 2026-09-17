@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "usr/share/comm-welcome"))
 from comm_welcome.application import WelcomeApplication  # noqa: E402
 from comm_welcome.catalog import BROWSERS  # noqa: E402
 from comm_welcome.gtk import Adw, GLib, Gtk  # noqa: E402
+from comm_welcome.i18n import IS_RTL  # noqa: E402
 
 app = WelcomeApplication()
 app.send_notification = lambda *_: None
@@ -50,6 +51,16 @@ SCENARIOS = [
 ]
 if "--dialogs-only" in sys.argv[1:]:
     SCENARIOS = [scenario for scenario in SCENARIOS if scenario[1] in {"donate", "about"}]
+if "--localized-only" in sys.argv[1:]:
+    names = {
+        "welcome-dark",
+        "apps-narrow",
+        "browsers-narrow",
+        "help-small",
+        "donations-narrow",
+        "about-dark",
+    }
+    SCENARIOS = [scenario for scenario in SCENARIOS if scenario[0] in names]
 index = 0
 failed = False
 retries = 0
@@ -112,6 +123,7 @@ def capture():
     name = SCENARIOS[index][0]
     try:
         window = app.window
+        assert (window.get_direction() == Gtk.TextDirection.RTL) == IS_RTL
         width, height = window.get_width(), window.get_height()
         narrow_expected = SCENARIOS[index][3] < 650
         narrow_ready = window.header.get_title_widget() is window.title_widget
@@ -157,7 +169,11 @@ def capture():
             return GLib.SOURCE_CONTINUE
         texture = window.get_renderer().render_texture(node, None)
         texture.save_to_png(str(OUT / f"{name}.png"))
-        print(f"{name}: {width}x{height}, narrow={narrow_ready}", flush=True)
+        print(
+            f"{name}: {width}x{height}, narrow={narrow_ready}, "
+            f"direction={window.get_direction().value_nick}",
+            flush=True,
+        )
     except Exception as exc:
         print(f"{name}: {exc}", flush=True)
         failed = True

@@ -40,7 +40,16 @@ accessibility-bus or GNOME-shell integration correctness.
   No browser was installed. Apply/authentication still needs a disposable VM.
 - `makepkg --noextract --force` built the package from a local source copy.
   No system installation was performed.
-- Translation catalogs remain pending; screenshots currently use English.
+- All 29 catalogs cover 123 messages, including the English source catalog.
+  115 pytest cases passed after localization, including PO/MO equality,
+  placeholder preservation, desktop translations and runtime language selection.
+- 24 localized Broadway snapshots passed in pt_BR, de, he and ja, covering
+  Welcome, Apps, Browsers, Help, donations and About. All four Welcome snapshots
+  have zero vertical overflow at 900×730. Hebrew layout is RTL; payment values
+  stay LTR. Translated button callbacks and clipboard checks passed in pt_BR.
+- Local staging through both Makefile and the unchanged PKGBUILD includes all
+  29 compiled catalogs, each with 123 messages. Native-speaker review of every
+  language and actual GNOME/Wayland checks remain separate.
 - Approved owl PNG verified in Welcome and About through Broadway snapshots.
   Nine icon sizes (16–1024) retain transparency; 900×730 Welcome has no overflow.
   Both Makefile installation and template package staging include the icons,

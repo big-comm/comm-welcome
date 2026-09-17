@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=BigCommunity Welcome
+Exec=comm-welcome --autostart
+TryExec=comm-welcome
+Icon=org.bigcommunity.CommWelcome
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

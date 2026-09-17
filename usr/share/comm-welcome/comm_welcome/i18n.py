@@ -9,9 +9,11 @@ try:
 except locale.Error:
     pass
 
-ROOT = Path(__file__).resolve().parents[4]
-LOCALE_DIR = ROOT / "build/locale" if (ROOT / "pkgbuild").is_dir() else Path("/usr/share/locale")
-_ = gettext.translation("comm-welcome", localedir=LOCALE_DIR, fallback=True).gettext
+LOCALE_DIR = Path(__file__).resolve().parents[2] / "locale"
+translation = gettext.translation("comm-welcome", localedir=LOCALE_DIR, fallback=True)
+_ = translation.gettext
+# Hebrew is the only RTL language in LINGUAS.
+IS_RTL = translation.info().get("language", "en").split("_")[0] == "he"
 
 
 def N_(message: str) -> str:

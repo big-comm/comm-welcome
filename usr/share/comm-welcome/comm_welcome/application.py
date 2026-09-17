@@ -2,6 +2,7 @@
 
 from . import APP_ID
 from .gtk import Adw, Gdk, Gio, Gtk
+from .i18n import IS_RTL
 from .installer import Installer
 from .preferences import Preferences
 from .widgets import DATA_DIR
@@ -19,6 +20,7 @@ class WelcomeApplication(Adw.Application):
 
     def do_startup(self):
         Adw.Application.do_startup(self)
+        Gtk.Widget.set_default_direction(Gtk.TextDirection.RTL if IS_RTL else Gtk.TextDirection.LTR)
         provider = Gtk.CssProvider()
         provider.load_from_path(str(DATA_DIR / "style.css"))
         display = Gdk.Display.get_default()
