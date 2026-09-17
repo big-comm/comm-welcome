@@ -1,0 +1,42 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.tox/
+.nox/
+
+# Test and lint output
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Generated builds and translations
+build/
+dist/
+*.egg-info/
+*.mo
+
+# makepkg work directories, source cache and archives
+pkgbuild/src/
+pkgbuild/pkg/
+pkgbuild/comm-welcome/
+*.pkg.tar
+*.pkg.tar.*
+*.src.tar
+*.src.tar.*
+
+# Local settings and temporary files
+.env
+.env.*
+!.env.example
+!.env.sample
+*.log
+*.swp
+*.swo
+*~
+.DS_Store

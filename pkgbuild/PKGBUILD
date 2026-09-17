@@ -1,11 +1,13 @@
 # Maintainer: Tales A. Mendonça <talesam@gmail.com>
 
-pkgname=pkgbuild-template-translate
-pkgdesc="Package template for BigCommunity"
+pkgname=comm-welcome
+pkgdesc="Adaptive BigCommunity welcome and application discovery"
 # Uncomment and edit the following lines as needed
-#depends=('')
-#makedepends=('')
-#optdepends=('')
+depends=('python' 'python-gobject' 'glib2>=2.80' 'gtk4>=4.14' 'libadwaita>=1.7'
+         'gdk-pixbuf2' 'librsvg' 'pacman' 'pamac-cli')
+makedepends=('git' 'gettext')
+optdepends=('pamac-gtk: software management and advanced installation review'
+            'big-gnome-center: GNOME personalization')
 #conflicts=('')
 #provides=('')
 #replaces=('')

@@ -1,11 +1,83 @@
-# pkgbuild-template-translator
+# comm-welcome
 
-Template for Arch Linux packages with automatic translation support.
+Adaptive BigCommunity welcome application. Python, GTK4 and libadwaita.
 
-## Description
+## Run
 
-Package description
+Requires Python 3.11+, PyGObject, GTK 4.14+, libadwaita 1.7+, GdkPixbuf and librsvg.
+
+```sh
+make
+python3 usr/share/comm-welcome/main.py
+```
+
+Local desktop launchers determine available apps. Personalization adapts to
+the session. Local content works offline; actions launch apps through GIO.
+
+## Browsers
+
+Brave, Firefox, Chrome, Chromium, Vivaldi and Opera are catalog candidates.
+Only packages in configured native repository databases can be installed.
+No AUR builds, repository changes, shell commands or custom root helper.
+
+Installation uses `org.manjaro.pamac.session.Transactions2`, supplied by the
+Pamac implementation on the development system. Older versions lacking this
+API keep discovery and launching, but cannot install through Welcome. The UI
+explains this and offers Software when available.
+
+Pamac owns resolution, authentication and package operations. Optional
+dependencies are declined; required dependencies remain in the plan. Welcome accepts
+native installation plans without removals, downgrades or unresolved
+interactions. Plans requiring additional review are discarded before apply.
+Runtime questions are declined. No automatic replacement, key import, reboot
+or service restart is requested.
+
+Installed launchers and effective HTTP/HTTPS defaults determine the UI.
+Installing does not change the default; that is a separate user action.
+Closing the window during installation hides it while the application keeps
+observing the transaction. Reopen it from the menu.
+
+## Donations
+
+Help and the main menu open a native donation dialog. PIX and cryptocurrency
+addresses are bundled for offline display and copying. Telegram and Patreon
+open their respective services only on request. No payments are submitted by
+Welcome. Source and update procedure: [donations](docs/DONATIONS.md).
+
+## Startup
+
+`comm-welcome --autostart` opens only on eligible installed systems, outside
+live sessions, unless the current user suppressed it. Manual launch always
+works. Preferences: `$XDG_CONFIG_HOME/comm-welcome/settings.json`.
+Updates never reset them. See [ISO integration](docs/ISO-INTEGRATION.md).
+
+## Validation
+
+```sh
+make check
+ruff check .
+ruff format --check .
+```
+
+Tests use temporary preferences and simulated package services. They never
+install packages or change real browser defaults. Visual checks are separate:
+[validation](docs/VALIDATION.md).
+
+## Localization
+
+English source strings use gettext. `locale/LINGUAS` lists 29 target locales
+shared with Big Gnome Center; this is a target list, not a coverage claim.
+Missing translations fall back to English. Empty template catalogs are
+preserved. Brazilian Portuguese uses the gettext identifier `pt_BR`.
+
+```sh
+python3 scripts/i18n.py extract
+python3 scripts/i18n.py compile
+```
+
+Compiled catalogs install to `/usr/share/locale/<locale>/LC_MESSAGES/`.
+Production translations remain subject to the agreed workflow.
 
 ## License
 
-This project is under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT. Asset provenance: [ASSETS.md](docs/ASSETS.md).

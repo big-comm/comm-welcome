@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=BigCommunity Welcome
+Name[pt_BR]=Boas-vindas ao BigCommunity
+Comment=Discover your desktop and applications
+Comment[pt_BR]=Conheça seu ambiente e seus aplicativos
+Exec=comm-welcome
+TryExec=comm-welcome
+Icon=org.bigcommunity.CommWelcome
+Terminal=false
+Categories=Utility;GTK;
+Keywords=welcome;getting started;community;browser;
+Keywords[pt_BR]=boas-vindas;primeiros passos;comunidade;navegador;
+StartupNotify=true
+X-GNOME-UsesNotifications=true
