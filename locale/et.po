@@ -1,5 +1,6 @@
 # Translations for comm-welcome.
 # Distributed under the project MIT license.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome 0.1.0\n"
@@ -10,524 +11,531 @@ msgstr ""
 "Language-Team: et <https://github.com/big-comm/comm-welcome>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Luna (gpt-5.6-luna, xhigh)\n"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:17
-msgid "Which browser suits you?"
-msgstr "Milline brauser sulle sobib?"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:18
-msgid "Keep your current browser or choose another one to install."
-msgstr "Jäta praegune brauser alles või vali paigaldamiseks mõni muu."
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:31
-msgid "View details"
-msgstr "Vaata üksikasju"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:39
-msgid "Other options"
-msgstr "Muud valikud"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:44
-msgid "Installing another browser keeps your existing browsers."
-msgstr "Teise brauseri paigaldamine jätab olemasolevad brauserid alles."
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:48
-msgid "Continue with my current browser"
-msgstr "Jätka praeguse brauseriga"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:51
-msgid "Open Software"
-msgstr "Ava Tarkvara"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
-msgid "Installed"
-msgstr "Paigaldatud"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
-msgid "Not installed"
-msgstr "Paigaldamata"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:97
-msgid "Current default"
-msgstr "Praegune vaikevalik"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:104
-#: usr/share/comm-welcome/comm_welcome/widgets.py:136
-msgid "Open"
-msgstr "Ava"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:106
-msgid "Set as default"
-msgstr "Määra vaikebrauseriks"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:108
-msgid "Choose and install"
-msgstr "Vali ja paigalda"
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:124
-msgid "The default browser could not be changed."
-msgstr "Vaikebrauserit ei õnnestunud muuta."
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:127
-#, python-brace-format
-msgid "{browser} is now your default browser."
-msgstr "{browser} on nüüd sinu vaikebrauser."
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:149
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
-msgid "Not available in your repositories."
-msgstr "Pole sinu tarkvarahoidlates saadaval."
-
-#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
-msgid "Try again"
-msgstr "Proovi uuesti"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:17
-msgid "Everyday"
-msgstr "Igapäevaelu"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:17
-msgid "Audio and video"
-msgstr "Heli ja video"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:17
-msgid "System and family"
-msgstr "Süsteem ja pere"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:22
-msgid "Use your favorite websites as apps."
-msgstr "Kasuta oma lemmikveebisaite rakendustena."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:28
-msgid "Make scanned documents searchable and copyable."
-msgstr "Muuda skannitud dokumendid otsitavaks ja kopeeritavaks."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:34
-msgid "Explore a terminal that helps organize your sessions."
-msgstr "Tutvu terminaliga, mis aitab seansse korraldada."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:37
-msgid "Enjoy a block puzzle game."
-msgstr "Naudi klotsidega puslemängu."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:40
-msgid "Noise filter"
-msgstr "Mürasummuti"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:41
-msgid "Reduce noise from your microphone and audio."
-msgstr "Vähenda mikrofoni- ja helimüra."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:46
-msgid "Audio converter"
-msgstr "Helimuundur"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:47
-msgid "Convert audio files to other formats."
-msgstr "Teisenda helifaile teistesse vormingutesse."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:52
-msgid "Video converter"
-msgstr "Videomuundur"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:53
-msgid "Convert your videos to other formats."
-msgstr "Teisenda videod teistesse vormingutesse."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:59
-msgid "Record and organize voice notes."
-msgstr "Salvesta ja korralda helimärkmeid."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:64
-msgid "General settings"
-msgstr "Üldised seaded"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:65
-msgid "Explore your system settings."
-msgstr "Tutvu süsteemiseadetega."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:70
-msgid "Hardware information"
-msgstr "Riistvarateave"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:71
-msgid "Get to know your computer's components."
-msgstr "Tutvu arvuti komponentidega."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:76
-msgid "Hardware management"
-msgstr "Riistvara haldus"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:77
-msgid "Access driver and kernel options."
-msgstr "Ava draiveri- ja tuumavalikud."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:82
-msgid "Parental controls"
-msgstr "Vanemlik järelevalve"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:83
-msgid "Explore controls for computer use."
-msgstr "Tutvu arvuti kasutamise piirangutega."
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:88
-msgid "Network information"
-msgstr "Võrguteave"
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:89
-msgid "View details about your network connections."
-msgstr "Vaata võrguühenduste üksikasju."
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:17
-msgid "Support BigCommunity"
-msgstr "Toeta BigCommunity"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:24
-msgid "Your support makes a difference"
-msgstr "Sinu toetus muudab palju"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:25
-msgid ""
-"Help maintain our servers, develop new features, and support the community."
-msgstr ""
-"Aita hooldada servereid, arendada uusi funktsioone ja toetada kogukonda."
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:28
-msgid "Choose how you would like to contribute."
-msgstr "Vali, kuidas soovid panustada."
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:32
-msgid "PIX — email key"
-msgstr "PIX — e-posti võti"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:32
-msgid "Copy PIX key"
-msgstr "Kopeeri PIX-i võti"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:32
-msgid "PIX key copied"
-msgstr "PIX-i võti kopeeritud"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:38
-msgid "Paste this key into your banking app and choose the amount."
-msgstr "Kleebi see võti pangarakendusse ja vali summa."
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:40
-msgid "Cryptocurrency"
-msgstr "Krüptoraha"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:44
-msgid "USDT — TRC20 network"
-msgstr "USDT — TRC20 võrk"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:46
-msgid "Copy USDT address"
-msgstr "Kopeeri USDT-aadress"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:47
-msgid "USDT address copied"
-msgstr "USDT-aadress kopeeritud"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:51
-msgid "Bitcoin — BTC network"
-msgstr "Bitcoin — BTC võrk"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:53
-msgid "Copy Bitcoin address"
-msgstr "Kopeeri Bitcoin-aadress"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:54
-msgid "Bitcoin address copied"
-msgstr "Bitcoin-aadress kopeeritud"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:60
-msgid "Other ways to give"
-msgstr "Muud annetamisvõimalused"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:63
-msgid "Telegram donation bot"
-msgstr "Telegrami annetamisrobot"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:64
-msgid "Continue in Telegram."
-msgstr "Jätka Telegramis."
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:70
-msgid "Patreon"
-msgstr "Patreon"
-
-#: usr/share/comm-welcome/comm_welcome/donations.py:71
-msgid "Monthly support. Continue on Patreon in your browser."
-msgstr "Igakuine toetus. Jätka Patreonis brauseris."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:102
-msgid "The installer connection was lost. Check Software before retrying."
-msgstr ""
-"Paigaldaja ühendus katkes. Kontrolli enne uuesti proovimist rakendust "
-"Tarkvara."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:108
-msgid "Another installation is in progress."
-msgstr "Teine paigaldus on pooleli."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:110
-msgid "Connect to the internet to install another browser."
-msgstr "Teise brauseri paigaldamiseks loo internetiühendus."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:112
-msgid "Another package operation is in progress. Try again when it finishes."
-msgstr "Teine paketitoiming on pooleli. Proovi uuesti, kui see lõpeb."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:114
-msgid "Checking available browsers…"
-msgstr "Saadaolevate brauserite kontrollimine…"
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:116
-msgid "Browser installation requires a compatible Pamac session service."
-msgstr "Brauseri paigaldamiseks on vaja ühilduvat Pamac-seansiteenust."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:132
-msgid "Preparing installation…"
-msgstr "Paigalduse ettevalmistamine…"
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:143
-#: usr/share/comm-welcome/comm_welcome/installer.py:207
-msgid "The installation could not be completed."
-msgstr "Paigaldamist ei õnnestunud lõpule viia."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:171
-msgid "This installation needs additional review. Open Software to continue."
-msgstr "See paigaldus vajab lisakontrolli. Jätkamiseks ava Tarkvara."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:174
-msgid "Complete any authentication requested by the system."
-msgstr "Lõpeta kõik süsteemi küsitud autentimistoimingud."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:188
-#: usr/share/comm-welcome/comm_welcome/installer.py:190
-#, python-brace-format
-msgid "Installing {browser}…"
-msgstr "{browser} paigaldamine…"
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:200
-msgid ""
-"Additional review is required. Open Software after this operation finishes."
-msgstr "Vaja on lisakontrolli. Ava Tarkvara pärast selle toimingu lõppu."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:205
-#, python-brace-format
-msgid "{browser} installed."
-msgstr "{browser} on paigaldatud."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:24
-#: usr/share/comm-welcome/comm_welcome/window.py:14
-msgid "Welcome to BigCommunity"
-msgstr "Tere tulemast BigCommunity-sse"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:25
-msgid "Your new system, your way."
-msgstr "Sinu uus süsteem, sinu moodi."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:36
-msgid ""
-"Discover apps, personalize your desktop, and find what you need to get "
-"started."
-msgstr ""
-"Avasta rakendusi, isikupärasta töölauda ja leia kõik, mida alustamiseks "
-"vajad."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:47
-msgid "PERSONALIZE YOUR DESKTOP"
-msgstr "ISIKUPÄRASTA OMA TÖÖLAUDA"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:48
-msgid "Make yourself at home"
-msgstr "Tunne end nagu kodus"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:52
-msgid "Explore layouts, themes, panels, docks, and personalization."
-msgstr ""
-"Avasta paigutusi, teemasid, paneele, dokke ja isikupärastamisvõimalusi."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:54
-msgid "Explore the personalization options for your desktop."
-msgstr "Tutvu töölaua isikupärastamisvalikutega."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:59
-msgid "Open Big Gnome Center"
-msgstr "Ava Big Gnome Center"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:59
-msgid "Open settings"
-msgstr "Ava seaded"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:73
-msgid "Start here"
-msgstr "Alusta siit"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:76
-msgid "Discover apps"
-msgstr "Avasta rakendusi"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:77
-msgid "Choose a browser"
-msgstr "Vali brauser"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:78
-msgid "Find help"
-msgstr "Leia abi"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:96
-msgid "Made for your everyday life"
-msgstr "Loodud sinu igapäevaeluks"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:119
-msgid "Do not show again"
-msgstr "Ära näita uuesti"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:128
-msgid "Your preference could not be saved."
-msgstr "Eelistust ei õnnestunud salvestada."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:133
-msgid "You can reopen Welcome from the application menu."
-msgstr "Rakenduste menüüst saad Tere tulemast uuesti avada."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:145
-msgid "Find what you need"
-msgstr "Leia vajalik"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:146
-msgid "System apps, ready for you to explore."
-msgstr "Süsteemirakendused, valmis avastamiseks."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:171
-msgid "No compatible apps are installed in this category."
-msgstr "Selles kategoorias pole ühtegi ühilduvat rakendust paigaldatud."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:176
-msgid "Install more apps"
-msgstr "Paigalda veel rakendusi"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:184
-msgid "A community ready to help"
-msgstr "Kogukond on valmis aitama"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:185
-msgid "Find guidance and share your questions."
-msgstr "Leia juhiseid ja jaga oma küsimusi."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:188
-msgid "These links open in your browser and need internet access."
-msgstr "Need lingid avanevad brauseris ja vajavad internetiühendust."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:192
-msgid "BigCommunity website"
-msgstr "BigCommunity veebisait"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:193
-msgid "Get to know the project and its news."
-msgstr "Tutvu projektiga ja loe selle uudiseid."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:198
-msgid "Community on Telegram"
-msgstr "Kogukond Telegramis"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:199
-msgid "Talk with other members of the community."
-msgstr "Vestle teiste kogukonna liikmetega."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:204
-msgid "Ask the forum"
-msgstr "Küsi foorumist"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:205
-msgid "Search for answers and share your questions."
-msgstr "Otsi vastuseid ja jaga oma küsimusi."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:218
-#: usr/share/comm-welcome/comm_welcome/window.py:39
-msgid "Support the project"
-msgstr "Toeta projekti"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:219
-msgid "Discover ways to donate to BigCommunity."
-msgstr "Vaata, kuidas saad BigCommunityle annetada."
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:226
-msgid "Useful information when asking for help"
-msgstr "Kasulik teave abi küsimiseks"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:243
-msgid "Opening these apps does not send your information to anyone."
-msgstr "Nende rakenduste avamine ei saada sinu teavet kellelegi."
-
-#: usr/share/comm-welcome/comm_welcome/widgets.py:137
-#, python-brace-format
-msgid "Open {app}"
-msgstr "Ava {app}"
-
+"X-Generator: attranslate\n"
+# 
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# File: tests/test_localization.py, line: 59
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 34
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 58
 #: usr/share/comm-welcome/comm_welcome/window.py:34
 #: usr/share/comm-welcome/comm_welcome/window.py:58
 msgid "Welcome"
 msgstr "Tere tulemast"
-
+# 
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# File: scripts/check_actions.py, line: 78
+# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 136
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 104
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:104
+#: usr/share/comm-welcome/comm_welcome/widgets.py:136
+msgid "Open"
+msgstr "Ava"
+# 
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# File: scripts/check_actions.py, line: 80
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 39
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 218
+#: usr/share/comm-welcome/comm_welcome/pages.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:39
+msgid "Support the project"
+msgstr "Toeta projekti"
+# 
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 14
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 24
+#: usr/share/comm-welcome/comm_welcome/pages.py:24
+#: usr/share/comm-welcome/comm_welcome/window.py:14
+msgid "Welcome to BigCommunity"
+msgstr "Tere tulemast BigCommunity-sse"
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 40
 #: usr/share/comm-welcome/comm_welcome/window.py:40
 msgid "About Welcome"
 msgstr "Teave rakenduse Tere tulemast kohta"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 41
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 157
 #: usr/share/comm-welcome/comm_welcome/window.py:41
 #: usr/share/comm-welcome/comm_welcome/window.py:157
 msgid "Close"
 msgstr "Sulge"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 43
 #: usr/share/comm-welcome/comm_welcome/window.py:43
 msgid "Main menu"
 msgstr "Peamenüü"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 59
 #: usr/share/comm-welcome/comm_welcome/window.py:59
 msgid "Apps"
 msgstr "Rakendused"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 60
 #: usr/share/comm-welcome/comm_welcome/window.py:60
 msgid "Browsers"
 msgstr "Brauserid"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 61
 #: usr/share/comm-welcome/comm_welcome/window.py:61
 msgid "Help"
 msgstr "Abi"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 86
 #: usr/share/comm-welcome/comm_welcome/window.py:86
 msgid "View installation"
 msgstr "Vaata paigaldust"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 137
 #: usr/share/comm-welcome/comm_welcome/window.py:137
 msgid "The application could not be opened."
 msgstr "Rakendust ei õnnestunud avada."
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 146
 #: usr/share/comm-welcome/comm_welcome/window.py:146
 msgid "The link could not be opened."
 msgstr "Linki ei õnnestunud avada."
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 165
 #: usr/share/comm-welcome/comm_welcome/window.py:165
 #: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
 #: data/org.bigcommunity.CommWelcome.desktop.in:3
 msgid "BigCommunity Welcome"
 msgstr "BigCommunity Tere tulemast"
-
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 171
 #: usr/share/comm-welcome/comm_welcome/window.py:171
 msgid "Discover your desktop and the apps that come with it."
 msgstr "Avasta oma töölauda ja sellega kaasas olevaid rakendusi."
-
-#: data/org.bigcommunity.CommWelcome.desktop.in:4
-msgid "Discover your desktop and applications"
-msgstr "Avasta töölauda ja rakendusi"
-
-#: data/org.bigcommunity.CommWelcome.desktop.in:10
-msgid "welcome;getting started;community;browser;"
-msgstr "tere tulemast;alustamine;kogukond;brauser;"
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 102
+#: usr/share/comm-welcome/comm_welcome/installer.py:102
+msgid "The installer connection was lost. Check Software before retrying."
+msgstr "Paigaldaja ühendus katkes. Kontrolli enne uuesti proovimist rakendust Tarkvara."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 108
+#: usr/share/comm-welcome/comm_welcome/installer.py:108
+msgid "Another installation is in progress."
+msgstr "Teine paigaldus on pooleli."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 110
+#: usr/share/comm-welcome/comm_welcome/installer.py:110
+msgid "Connect to the internet to install another browser."
+msgstr "Teise brauseri paigaldamiseks loo internetiühendus."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 112
+#: usr/share/comm-welcome/comm_welcome/installer.py:112
+msgid "Another package operation is in progress. Try again when it finishes."
+msgstr "Teine paketitoiming on pooleli. Proovi uuesti, kui see lõpeb."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 114
+#: usr/share/comm-welcome/comm_welcome/installer.py:114
+msgid "Checking available browsers…"
+msgstr "Saadaolevate brauserite kontrollimine…"
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 116
+#: usr/share/comm-welcome/comm_welcome/installer.py:116
+msgid "Browser installation requires a compatible Pamac session service."
+msgstr "Brauseri paigaldamiseks on vaja ühilduvat Pamac-seansiteenust."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 132
+#: usr/share/comm-welcome/comm_welcome/installer.py:132
+msgid "Preparing installation…"
+msgstr "Paigalduse ettevalmistamine…"
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 143
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 207
+#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:207
+msgid "The installation could not be completed."
+msgstr "Paigaldamist ei õnnestunud lõpule viia."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 171
+#: usr/share/comm-welcome/comm_welcome/installer.py:171
+msgid "This installation needs additional review. Open Software to continue."
+msgstr "See paigaldus vajab lisakontrolli. Jätkamiseks ava Tarkvara."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 174
+#: usr/share/comm-welcome/comm_welcome/installer.py:174
+msgid "Complete any authentication requested by the system."
+msgstr "Lõpeta kõik süsteemi küsitud autentimistoimingud."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 188
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 190
+#: usr/share/comm-welcome/comm_welcome/installer.py:188
+#: usr/share/comm-welcome/comm_welcome/installer.py:190
+#, python-brace-format
+msgid "Installing {browser}…"
+msgstr "{browser} paigaldamine…"
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 200
+#: usr/share/comm-welcome/comm_welcome/installer.py:200
+msgid "Additional review is required. Open Software after this operation finishes."
+msgstr "Vaja on lisakontrolli. Ava Tarkvara pärast selle toimingu lõppu."
+# 
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 205
+#: usr/share/comm-welcome/comm_welcome/installer.py:205
+#, python-brace-format
+msgid "{browser} installed."
+msgstr "{browser} on paigaldatud."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 25
+#: usr/share/comm-welcome/comm_welcome/pages.py:25
+msgid "Your new system, your way."
+msgstr "Sinu uus süsteem, sinu moodi."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 36
+#: usr/share/comm-welcome/comm_welcome/pages.py:36
+msgid "Discover apps, personalize your desktop, and find what you need to get started."
+msgstr "Avasta rakendusi, isikupärasta töölauda ja leia kõik, mida alustamiseks vajad."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 47
+#: usr/share/comm-welcome/comm_welcome/pages.py:47
+msgid "PERSONALIZE YOUR DESKTOP"
+msgstr "ISIKUPÄRASTA OMA TÖÖLAUDA"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 48
+#: usr/share/comm-welcome/comm_welcome/pages.py:48
+msgid "Make yourself at home"
+msgstr "Tunne end nagu kodus"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 52
+#: usr/share/comm-welcome/comm_welcome/pages.py:52
+msgid "Explore layouts, themes, panels, docks, and personalization."
+msgstr "Avasta paigutusi, teemasid, paneele, dokke ja isikupärastamisvõimalusi."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 54
+#: usr/share/comm-welcome/comm_welcome/pages.py:54
+msgid "Explore the personalization options for your desktop."
+msgstr "Tutvu töölaua isikupärastamisvalikutega."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 59
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open Big Gnome Center"
+msgstr "Ava Big Gnome Center"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 59
+#: usr/share/comm-welcome/comm_welcome/pages.py:59
+msgid "Open settings"
+msgstr "Ava seaded"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 73
+#: usr/share/comm-welcome/comm_welcome/pages.py:73
+msgid "Start here"
+msgstr "Alusta siit"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 76
+#: usr/share/comm-welcome/comm_welcome/pages.py:76
+msgid "Discover apps"
+msgstr "Avasta rakendusi"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 77
+#: usr/share/comm-welcome/comm_welcome/pages.py:77
+msgid "Choose a browser"
+msgstr "Vali brauser"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 78
+#: usr/share/comm-welcome/comm_welcome/pages.py:78
+msgid "Find help"
+msgstr "Leia abi"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 96
+#: usr/share/comm-welcome/comm_welcome/pages.py:96
+msgid "Made for your everyday life"
+msgstr "Loodud sinu igapäevaeluks"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 119
+#: usr/share/comm-welcome/comm_welcome/pages.py:119
+msgid "Do not show again"
+msgstr "Ära näita uuesti"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 128
+#: usr/share/comm-welcome/comm_welcome/pages.py:128
+msgid "Your preference could not be saved."
+msgstr "Eelistust ei õnnestunud salvestada."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 133
+#: usr/share/comm-welcome/comm_welcome/pages.py:133
+msgid "You can reopen Welcome from the application menu."
+msgstr "Rakenduste menüüst saad Tere tulemast uuesti avada."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 145
+#: usr/share/comm-welcome/comm_welcome/pages.py:145
+msgid "Find what you need"
+msgstr "Leia vajalik"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 146
+#: usr/share/comm-welcome/comm_welcome/pages.py:146
+msgid "System apps, ready for you to explore."
+msgstr "Süsteemirakendused, valmis avastamiseks."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 171
+#: usr/share/comm-welcome/comm_welcome/pages.py:171
+msgid "No compatible apps are installed in this category."
+msgstr "Selles kategoorias pole ühtegi ühilduvat rakendust paigaldatud."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 176
+#: usr/share/comm-welcome/comm_welcome/pages.py:176
+msgid "Install more apps"
+msgstr "Paigalda veel rakendusi"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 184
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
+msgid "A community ready to help"
+msgstr "Kogukond on valmis aitama"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 185
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
+msgid "Find guidance and share your questions."
+msgstr "Leia juhiseid ja jaga oma küsimusi."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 188
+#: usr/share/comm-welcome/comm_welcome/pages.py:188
+msgid "These links open in your browser and need internet access."
+msgstr "Need lingid avanevad brauseris ja vajavad internetiühendust."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 192
+#: usr/share/comm-welcome/comm_welcome/pages.py:192
+msgid "BigCommunity website"
+msgstr "BigCommunity veebisait"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 193
+#: usr/share/comm-welcome/comm_welcome/pages.py:193
+msgid "Get to know the project and its news."
+msgstr "Tutvu projektiga ja loe selle uudiseid."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 198
+#: usr/share/comm-welcome/comm_welcome/pages.py:198
+msgid "Community on Telegram"
+msgstr "Kogukond Telegramis"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 199
+#: usr/share/comm-welcome/comm_welcome/pages.py:199
+msgid "Talk with other members of the community."
+msgstr "Vestle teiste kogukonna liikmetega."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 204
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
+msgid "Ask the forum"
+msgstr "Küsi foorumist"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 205
+#: usr/share/comm-welcome/comm_welcome/pages.py:205
+msgid "Search for answers and share your questions."
+msgstr "Otsi vastuseid ja jaga oma küsimusi."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 219
+#: usr/share/comm-welcome/comm_welcome/pages.py:219
+msgid "Discover ways to donate to BigCommunity."
+msgstr "Vaata, kuidas saad BigCommunityle annetada."
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 226
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
+msgid "Useful information when asking for help"
+msgstr "Kasulik teave abi küsimiseks"
+# 
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 243
+#: usr/share/comm-welcome/comm_welcome/pages.py:243
+msgid "Opening these apps does not send your information to anyone."
+msgstr "Nende rakenduste avamine ei saada sinu teavet kellelegi."
+# 
+# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
+#: usr/share/comm-welcome/comm_welcome/widgets.py:137
+#, python-brace-format
+msgid "Open {app}"
+msgstr "Ava {app}"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 17
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:17
+msgid "Which browser suits you?"
+msgstr "Milline brauser sulle sobib?"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 18
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:18
+msgid "Keep your current browser or choose another one to install."
+msgstr "Jäta praegune brauser alles või vali paigaldamiseks mõni muu."
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 31
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:31
+msgid "View details"
+msgstr "Vaata üksikasju"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 39
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:39
+msgid "Other options"
+msgstr "Muud valikud"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 44
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:44
+msgid "Installing another browser keeps your existing browsers."
+msgstr "Teise brauseri paigaldamine jätab olemasolevad brauserid alles."
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 48
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:48
+msgid "Continue with my current browser"
+msgstr "Jätka praeguse brauseriga"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 51
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:51
+msgid "Open Software"
+msgstr "Ava Tarkvara"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+msgid "Installed"
+msgstr "Paigaldatud"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 93
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 152
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not installed"
+msgstr "Paigaldamata"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 97
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:97
+msgid "Current default"
+msgstr "Praegune vaikevalik"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 106
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:106
+msgid "Set as default"
+msgstr "Määra vaikebrauseriks"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 108
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:108
+msgid "Choose and install"
+msgstr "Vali ja paigalda"
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 124
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:124
+msgid "The default browser could not be changed."
+msgstr "Vaikebrauserit ei õnnestunud muuta."
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 127
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:127
+#, python-brace-format
+msgid "{browser} is now your default browser."
+msgstr "{browser} on nüüd sinu vaikebrauser."
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 149
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 152
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:149
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:152
+msgid "Not available in your repositories."
+msgstr "Pole sinu tarkvarahoidlates saadaval."
+# 
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 160
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
+msgid "Try again"
+msgstr "Proovi uuesti"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 17
+#: usr/share/comm-welcome/comm_welcome/donations.py:17
+msgid "Support BigCommunity"
+msgstr "Toeta BigCommunity"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 24
+#: usr/share/comm-welcome/comm_welcome/donations.py:24
+msgid "Your support makes a difference"
+msgstr "Sinu toetus muudab palju"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 25
+#: usr/share/comm-welcome/comm_welcome/donations.py:25
+msgid "Help maintain our servers, develop new features, and support the community."
+msgstr "Aita hooldada servereid, arendada uusi funktsioone ja toetada kogukonda."
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 28
+#: usr/share/comm-welcome/comm_welcome/donations.py:28
+msgid "Choose how you would like to contribute."
+msgstr "Vali, kuidas soovid panustada."
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX — email key"
+msgstr "PIX — e-posti võti"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "Copy PIX key"
+msgstr "Kopeeri PIX-i võti"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+#: usr/share/comm-welcome/comm_welcome/donations.py:32
+msgid "PIX key copied"
+msgstr "PIX-i võti kopeeritud"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 38
+#: usr/share/comm-welcome/comm_welcome/donations.py:38
+msgid "Paste this key into your banking app and choose the amount."
+msgstr "Kleebi see võti pangarakendusse ja vali summa."
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 40
+#: usr/share/comm-welcome/comm_welcome/donations.py:40
+msgid "Cryptocurrency"
+msgstr "Krüptoraha"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 44
+#: usr/share/comm-welcome/comm_welcome/donations.py:44
+msgid "USDT — TRC20 network"
+msgstr "USDT — TRC20 võrk"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 46
+#: usr/share/comm-welcome/comm_welcome/donations.py:46
+msgid "Copy USDT address"
+msgstr "Kopeeri USDT-aadress"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 47
+#: usr/share/comm-welcome/comm_welcome/donations.py:47
+msgid "USDT address copied"
+msgstr "USDT-aadress kopeeritud"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 51
+#: usr/share/comm-welcome/comm_welcome/donations.py:51
+msgid "Bitcoin — BTC network"
+msgstr "Bitcoin — BTC võrk"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 53
+#: usr/share/comm-welcome/comm_welcome/donations.py:53
+msgid "Copy Bitcoin address"
+msgstr "Kopeeri Bitcoin-aadress"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 54
+#: usr/share/comm-welcome/comm_welcome/donations.py:54
+msgid "Bitcoin address copied"
+msgstr "Bitcoin-aadress kopeeritud"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 60
+#: usr/share/comm-welcome/comm_welcome/donations.py:60
+msgid "Other ways to give"
+msgstr "Muud annetamisvõimalused"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 63
+#: usr/share/comm-welcome/comm_welcome/donations.py:63
+msgid "Telegram donation bot"
+msgstr "Telegrami annetamisrobot"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 64
+#: usr/share/comm-welcome/comm_welcome/donations.py:64
+msgid "Continue in Telegram."
+msgstr "Jätka Telegramis."
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 70
+#: usr/share/comm-welcome/comm_welcome/donations.py:70
+msgid "Patreon"
+msgstr "Patreon"
+# 
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 71
+#: usr/share/comm-welcome/comm_welcome/donations.py:71
+msgid "Monthly support. Continue on Patreon in your browser."
+msgstr "Igakuine toetus. Jätka Patreonis brauseris."
