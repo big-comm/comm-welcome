@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: comm-welcome\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2026-09-17 02:56+0000\n"
+        "POT-Creation-Date: 2026-09-18 03:08+0000\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr  ""
 # #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
 #
 # File: scripts/check_actions.py, line: 78
-# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 136
+# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 104
 msgid   "Open"
 msgstr  ""
@@ -43,7 +43,7 @@ msgstr  ""
 #
 # File: scripts/check_actions.py, line: 80
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 39
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 218
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 226
 msgid   "Support the project"
 msgstr  ""
 
@@ -51,7 +51,7 @@ msgstr  ""
 # #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
 #
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 14
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 24
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 26
 msgid   "Welcome to BigCommunity"
 msgstr  ""
 
@@ -182,168 +182,168 @@ msgid   "{browser} installed."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 25
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 27
 msgid   "Your new system, your way."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 36
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 38
 msgid   "Discover apps, personalize your desktop, and find what you need to "
         "get started."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 47
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 49
 msgid   "PERSONALIZE YOUR DESKTOP"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 48
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 50
 msgid   "Make yourself at home"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 52
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 54
 msgid   "Explore layouts, themes, panels, docks, and personalization."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 54
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 56
 msgid   "Explore the personalization options for your desktop."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 59
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 61
 msgid   "Open Big Gnome Center"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 59
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 61
 msgid   "Open settings"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 73
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 75
 msgid   "Start here"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 76
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 78
 msgid   "Discover apps"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 77
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 79
 msgid   "Choose a browser"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 78
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 80
 msgid   "Find help"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 96
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 98
 msgid   "Made for your everyday life"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 119
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 121
 msgid   "Do not show again"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 128
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 130
 msgid   "Your preference could not be saved."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 133
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 135
 msgid   "You can reopen Welcome from the application menu."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 145
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 147
 msgid   "Find what you need"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 146
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 148
 msgid   "System apps, ready for you to explore."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 171
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 180
 msgid   "No compatible apps are installed in this category."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 176
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 185
 msgid   "Install more apps"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 184
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 193
 msgid   "A community ready to help"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 185
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 194
 msgid   "Find guidance and share your questions."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 188
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 197
 msgid   "These links open in your browser and need internet access."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 192
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 203
 msgid   "BigCommunity website"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 193
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 204
 msgid   "Get to know the project and its news."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 198
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 209
 msgid   "Community on Telegram"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 199
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 210
 msgid   "Talk with other members of the community."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 204
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 215
 msgid   "Ask the forum"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 205
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 216
 msgid   "Search for answers and share your questions."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 219
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 227
 msgid   "Discover ways to donate to BigCommunity."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 226
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 232
 msgid   "Useful information when asking for help"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 243
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 249
 msgid   "Opening these apps does not send your information to anyone."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
+# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 138
 #, python-brace-format
 msgid   "Open {app}"
 msgstr  ""
@@ -390,7 +390,7 @@ msgstr  ""
 
 #
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 93
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 152
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 153
 msgid   "Not installed"
 msgstr  ""
 
@@ -410,24 +410,24 @@ msgid   "Choose and install"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 124
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 125
 msgid   "The default browser could not be changed."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 127
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 128
 #, python-brace-format
 msgid   "{browser} is now your default browser."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 149
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 152
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 150
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 153
 msgid   "Not available in your repositories."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 160
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 161
 msgid   "Try again"
 msgstr  ""
 
@@ -437,97 +437,97 @@ msgid   "Support BigCommunity"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 24
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 25
 msgid   "Your support makes a difference"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 25
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 26
 msgid   "Help maintain our servers, develop new features, and support the "
         "community."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 28
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 36
 msgid   "Choose how you would like to contribute."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 40
 msgid   "PIX — email key"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 40
 msgid   "Copy PIX key"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 40
 msgid   "PIX key copied"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 38
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 46
 msgid   "Paste this key into your banking app and choose the amount."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 40
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 48
 msgid   "Cryptocurrency"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 44
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 52
 msgid   "USDT — TRC20 network"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 46
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 54
 msgid   "Copy USDT address"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 47
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 55
 msgid   "USDT address copied"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 51
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 59
 msgid   "Bitcoin — BTC network"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 53
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 61
 msgid   "Copy Bitcoin address"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 54
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 62
 msgid   "Bitcoin address copied"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 60
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 68
 msgid   "Other ways to give"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 63
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 71
 msgid   "Telegram donation bot"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 64
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 72
 msgid   "Continue in Telegram."
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 70
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 78
 msgid   "Patreon"
 msgstr  ""
 
 #
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 71
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 79
 msgid   "Monthly support. Continue on Patreon in your browser."
 msgstr  ""
