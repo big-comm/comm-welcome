@@ -110,6 +110,7 @@ class BrowserPage:
                 self.cards[browser.key] = (install, state)
             card.append(actions)
             if current:
+                card.add_css_class("welcome-current-browser")
                 self.installed_group.append(card)
             else:
                 card.set_size_request(270, -1)

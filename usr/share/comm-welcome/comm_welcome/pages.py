@@ -9,12 +9,14 @@ from .widgets import (
     app_row,
     box,
     button,
+    card_grid,
     group,
     group_append,
     icon,
     icon_badge,
     label,
     page,
+    resource_card,
     wrap,
 )
 
@@ -147,16 +149,22 @@ def apps_page(window):
     )
     stack = Adw.ViewStack()
     switcher = Adw.InlineViewSwitcher(stack=stack)
+    switcher.set_display_mode(Adw.InlineViewSwitcherDisplayMode.BOTH)
+    switcher.add_css_class("welcome-categories")
     content.append(switcher)
     available = launchers.available_apps()
-    for key, title in zip(("everyday", "media", "system"), CATEGORIES):
+    for key, title, symbol in zip(
+        ("everyday", "media", "system"),
+        CATEGORIES,
+        ("view-grid-symbolic", "audio-x-generic-symbolic", "preferences-system-symbolic"),
+    ):
         category = box(14)
         category.append(label(_(title), "title-2"))
-        rows = group()
+        rows = box(10)
         for item, app in available:
             if item.category == key:
-                group_append(
-                    rows,
+                card = group()
+                card.append(
                     app_row(
                         _(item.name),
                         _(item.summary),
@@ -164,13 +172,14 @@ def apps_page(window):
                         lambda a=app: window.open_app(a),
                     ),
                 )
+                rows.append(card)
         if rows.get_first_child():
             category.append(rows)
         else:
             category.append(
                 label(_("No compatible apps are installed in this category."), "dim-label")
             )
-        stack.add_titled(category, key, _(title))
+        stack.add_titled_with_icon(category, key, _(title), symbol)
     content.append(stack)
     if app := launchers.find(SOFTWARE):
         action = button(_("Install more apps"), lambda: window.open_app(app))
@@ -187,6 +196,8 @@ def help_page(window):
     content.append(
         label(_("These links open in your browser and need internet access."), "dim-label")
     )
+    links = card_grid()
+    content.append(links)
     for title, subtitle, uri, symbol in (
         (
             _("BigCommunity website"),
@@ -207,22 +218,17 @@ def help_page(window):
             "help-browser-symbolic",
         ),
     ):
-        card = group()
-        row = app_row(title, subtitle, symbol, lambda url=uri: window.open_uri(url), decorated=True)
-        row.get_last_child().set_tooltip_text(uri)
-        card.append(row)
-        content.append(card)
-    donation = group()
-    donation.append(
-        app_row(
+        card = resource_card(title, subtitle, symbol, lambda url=uri: window.open_uri(url))
+        card.get_first_child().get_last_child().set_tooltip_text(uri)
+        links.append(card)
+    links.append(
+        resource_card(
             _("Support the project"),
             _("Discover ways to donate to BigCommunity."),
             Gio.FileIcon.new(Gio.File.new_for_path(str(DATA_DIR / "assets/heart-symbolic.svg"))),
             window.donate,
-            decorated=True,
         )
     )
-    content.append(donation)
     content.append(label(_("Useful information when asking for help"), "title-2"))
     rows = group()
     for item, app in launchers.available_apps():

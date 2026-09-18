@@ -56,3 +56,8 @@ accessibility-bus or GNOME-shell integration correctness.
   executable launcher and desktop entries. Package template defaults are preserved.
   The latest full visual run reached its 45-second limit after 19 snapshots;
   dialogs were checked separately.
+- Startup policy: 137 tests passed. Live/manual/autostart combinations exit
+  before GTK when blocked; existing preferences remain unchanged. New-account
+  eligibility follows the packaged skeleton marker. Makefile and unchanged
+  PKGBUILD staging include that marker without system-wide opt-in or user
+  preferences. Actual live ISO and installed first-login checks remain pending.

@@ -51,6 +51,16 @@ SCENARIOS = [
 ]
 if "--dialogs-only" in sys.argv[1:]:
     SCENARIOS = [scenario for scenario in SCENARIOS if scenario[1] in {"donate", "about"}]
+if "--design-only" in sys.argv[1:]:
+    names = {
+        "welcome-light",
+        "welcome-dark",
+        "apps-light",
+        "help-light",
+        "donations-dark",
+        "donations-narrow",
+    }
+    SCENARIOS = [scenario for scenario in SCENARIOS if scenario[0] in names]
 if "--localized-only" in sys.argv[1:]:
     names = {
         "welcome-dark",
@@ -94,6 +104,8 @@ def configure():
     retries = 0
     settled = 0
     Gtk.Settings.get_default().set_property("gtk-enable-animations", False)
+    if theme := os.environ.get("WELCOME_ICON_THEME"):
+        Gtk.Settings.get_default().set_property("gtk-icon-theme-name", theme)
     app.get_style_manager().set_color_scheme(
         Adw.ColorScheme.FORCE_DARK if dark else Adw.ColorScheme.FORCE_LIGHT
     )
@@ -147,6 +159,7 @@ def capture():
             adjustment = scroll.get_vadjustment()
             overflow = adjustment.get_upper() - adjustment.get_page_size()
             print(f"{name}: vertical overflow={overflow:g}px", flush=True)
+            assert overflow <= 0, "Welcome page requires scrolling"
         if name == "welcome-narrow":
             pending = [window.stack.get_child_by_name("welcome")]
             while pending:

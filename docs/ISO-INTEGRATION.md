@@ -13,26 +13,33 @@ The four current `Packages-Root` entries link to the shared file. Preserve
 those symlinks. The package does not require Big Gnome Center or
 comm-improve-compatibility.
 
-## Installation marker
+## Account eligibility
 
-Include an empty, root-owned, mode-0644 file at
-`shared/root-overlay/etc/comm-welcome/installation-enabled` for eligible new
-ISOs. Scope the overlay to selected editions for an incremental rollout.
-This marker is deliberately not owned or created by the package.
+The package ships `/etc/skel/.config/comm-welcome/autostart-enabled`.
+Account creation copies it into `$HOME/.config/comm-welcome/`. No installer
+hook or desktop startup script is required. The installer must populate new
+homes from the installed system's `/etc/skel`.
 
-Each account on that installation is eligible on its first graphical login.
+Each new account with that marker is eligible on its first graphical login.
 Subsequent logins open Welcome until that account selects "Do not show again".
-A retained home directory retains its prior preference.
+A retained home directory retains its prior marker and preference. New
+accounts on existing installations are also eligible.
 
-Existing systems receiving only the package have no marker and do not
-auto-open. Manual launch always works. Do not distribute the marker through
-package updates or write defaults into existing user homes.
+Installing or updating the package does not copy the skeleton into existing
+homes. Existing accounts without a marker remain manual-only. No package
+hook writes user preferences. The marker uses the standard home skeleton
+path even when `XDG_CONFIG_HOME` points elsewhere.
+
+The optional `/etc/comm-welcome/installation-enabled` marker remains supported
+for administrators enabling all accounts. The package does not create it.
 
 ## Live sessions
 
-Autostart exits when MISO/archiso boot arguments or `/run/miso` indicate live
-media. Manual launch remains available. Verify the installer does not copy
-live-user `~/.config/comm-welcome` into the destination home.
+Both manual launch and autostart exit successfully before importing GTK when
+`/usr/bin/startbiglive`, `/run/miso`, or MISO/archiso boot arguments indicate
+live media. The live account's skeleton marker cannot bypass this guard.
+No preference is written. Verify the installer removes live-only components,
+including `startbiglive`, from the destination system.
 
 ## Session integration
 

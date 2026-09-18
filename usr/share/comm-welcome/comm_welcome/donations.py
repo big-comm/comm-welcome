@@ -2,7 +2,7 @@
 
 from .gtk import Adw, Gio, Gtk, Pango
 from .i18n import _
-from .widgets import DATA_DIR, box, button, group, group_append, icon_badge, label, page
+from .widgets import DATA_DIR, box, button, group, group_append, icon_badge, label, page, wrap
 
 # Source: https://communitybig.org/doar.html, verified 2026-09-16.
 PIX_KEY = "tales@talesam.org"
@@ -16,6 +16,7 @@ class DonationDialog(Adw.Dialog):
     def __init__(self, window):
         super().__init__(title=_("Support BigCommunity"), content_width=560, content_height=650)
         self.add_css_class("welcome-dialog")
+        self.set_size_request(300, 280)
         self.toasts = Adw.ToastOverlay()
         toolbar = Adw.ToolbarView(content=self.toasts)
         toolbar.add_top_bar(Adw.HeaderBar())
@@ -25,6 +26,13 @@ class DonationDialog(Adw.Dialog):
             _("Help maintain our servers, develop new features, and support the community."),
         )
         self.toasts.set_child(scroll)
+        heading = content.get_first_child()
+        hero = box(14, horizontal=True)
+        hero.add_css_class("welcome-donation-hero")
+        content.remove(heading)
+        hero.append(self._badge("heart", "accent"))
+        hero.append(heading)
+        content.prepend(hero)
         content.append(label(_("Choose how you would like to contribute."), "dim-label"))
         pix = group()
         pix.append(
@@ -93,15 +101,16 @@ class DonationDialog(Adw.Dialog):
         return icon_badge(Gio.FileIcon.new(source), tone)
 
     def _address_row(self, title, value, action_title, confirmation, method):
-        row = box(10)
+        row = wrap([], 10)
         row.add_css_class("welcome-row")
         header = box(12, horizontal=True)
+        header.set_size_request(240, -1)
         header.append(self._badge(method, method))
         texts = box(6)
         texts.append(label(title, "heading"))
         header.append(texts)
-        row.append(header)
         address = label(value, "monospace", "donation-address")
+        address.set_max_width_chars(24)
         attributes = Pango.AttrList()
         attributes.insert(Pango.attr_insert_hyphens_new(False))
         address.set_attributes(attributes)
@@ -110,6 +119,7 @@ class DonationDialog(Adw.Dialog):
         address.set_direction(Gtk.TextDirection.LTR)
         address.set_xalign(0)
         texts.append(address)
+        row.append(header)
         action = button(action_title, lambda: self._copy(value, confirmation))
         action.set_halign(Gtk.Align.START)
         row.append(action)

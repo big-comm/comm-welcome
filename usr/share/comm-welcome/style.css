@@ -1,64 +1,47 @@
 .welcome-header {
-  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .06) 58%, alpha(#8b5cf6, .10));
+  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .16), alpha(@accent_bg_color, .03));
   box-shadow: none;
 }
 .welcome-home {
-  background-image:
-    linear-gradient(to bottom, alpha(@window_bg_color, 0), @window_bg_color 210px),
-    linear-gradient(120deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .06) 58%, alpha(#8b5cf6, .10));
-  background-size: 100% 210px;
+  background-image: linear-gradient(to bottom, alpha(@accent_bg_color, .10), alpha(@accent_bg_color, 0) 260px);
   background-repeat: no-repeat;
 }
 .welcome-content { padding: 24px; }
 .welcome-title { font-size: 28px; font-weight: 800; }
 .welcome-subtitle { font-size: 17px; }
+.welcome-page-heading {
+  padding: 18px;
+  border-radius: 18px;
+  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .12), alpha(@accent_bg_color, .02));
+}
+.welcome-home .welcome-page-heading { padding: 0; background-image: none; }
 .welcome-feature {
-  padding: 22px;
-  background: linear-gradient(120deg, alpha(@accent_bg_color, .16), alpha(@accent_bg_color, .06) 62%, alpha(#8b5cf6, .10));
-  border: 1px solid alpha(@accent_color, .24);
-  border-radius: 16px;
-  box-shadow: 0 3px 12px alpha(black, .04);
+  padding: 20px;
+  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .20), alpha(@accent_bg_color, .06));
+  border: 1px solid alpha(@accent_color, .26);
+  border-radius: 20px;
+  box-shadow: inset 0 1px alpha(@window_fg_color, .04), 0 4px 14px alpha(@shade_color, .12);
 }
 .welcome-feature .title-2 { font-size: 23px; }
 .welcome-eyebrow { font-size: 11px; font-weight: 700; color: @accent_color; }
-.welcome-card { padding: 18px; border-radius: 14px; }
-button.welcome-shortcut { padding: 10px 14px; border-radius: 14px; }
+.welcome-card { padding: 18px; border-radius: 18px; }
+button.welcome-shortcut { padding: 10px 14px; border-radius: 16px; }
 .welcome-icon {
   padding: 8px;
-  border-radius: 12px;
+  border-radius: 13px;
   color: @accent_color;
-  background: linear-gradient(135deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .07));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .13);
-}
-.welcome-icon-pix,
-.welcome-icon-usdt {
-  color: mix(@window_fg_color, #26b89e, .65);
-  background: linear-gradient(135deg, alpha(#26b89e, .22), alpha(#26b89e, .08));
-  box-shadow: inset 0 0 0 1px alpha(#26b89e, .22);
-}
-.welcome-icon-bitcoin {
-  color: mix(@window_fg_color, #f7931a, .65);
-  background: linear-gradient(135deg, alpha(#f7931a, .22), alpha(#f7931a, .08));
-  box-shadow: inset 0 0 0 1px alpha(#f7931a, .22);
-}
-.welcome-icon-telegram {
-  color: mix(@window_fg_color, #37a9e8, .65);
-  background: linear-gradient(135deg, alpha(#37a9e8, .22), alpha(#37a9e8, .08));
-  box-shadow: inset 0 0 0 1px alpha(#37a9e8, .22);
-}
-.welcome-icon-patreon {
-  color: mix(@window_fg_color, #ef6685, .65);
-  background: linear-gradient(135deg, alpha(#ef6685, .22), alpha(#ef6685, .08));
-  box-shadow: inset 0 0 0 1px alpha(#ef6685, .22);
+  background-image: linear-gradient(145deg, alpha(@accent_bg_color, .24), alpha(@accent_bg_color, .08));
+  box-shadow: inset 0 0 0 1px alpha(@accent_color, .20), 0 2px 5px alpha(@shade_color, .08);
 }
 dialog.welcome-dialog sheet,
 window.welcome-dialog {
-  background-color: alpha(@dialog_bg_color, .96);
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .045), alpha(@accent_bg_color, 0) 60%);
+  background-color: @dialog_bg_color;
+  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .07), alpha(@accent_bg_color, 0) 60%);
   color: @dialog_fg_color;
 }
 .welcome-dialog headerbar { background: transparent; box-shadow: none; }
-.welcome-dialog .welcome-surface { background-color: alpha(@card_bg_color, .95); }
+.welcome-donation-hero { padding: 4px 0; }
+.welcome-donation-hero .welcome-page-heading { padding: 0; background-image: none; }
 .donation-address {
   padding: 6px 10px;
   border-radius: 8px;
@@ -68,22 +51,35 @@ window.welcome-dialog {
 .welcome-surface,
 .welcome-card,
 button.welcome-shortcut {
-  background-color: alpha(@card_bg_color, .82);
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .045), alpha(@accent_bg_color, 0) 65%);
-  box-shadow: inset 0 0 0 1px alpha(currentColor, .07), 0 2px 8px alpha(black, .06);
+  border-radius: 16px;
+  background-color: alpha(@card_bg_color, .76);
+  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .07), alpha(@accent_bg_color, .01) 75%);
+  box-shadow: inset 0 0 0 1px alpha(@window_fg_color, .09), 0 3px 10px alpha(@shade_color, .14);
 }
 button.welcome-shortcut:hover {
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .13), alpha(@accent_bg_color, .04));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .35), 0 4px 12px alpha(black, .08);
+  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .07));
+  box-shadow: inset 0 0 0 1px alpha(@accent_color, .42), 0 4px 12px alpha(@shade_color, .18);
 }
 button.welcome-shortcut:active {
-  background-image: linear-gradient(alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .18));
+  background-image: linear-gradient(alpha(@accent_bg_color, .24), alpha(@accent_bg_color, .24));
 }
-button.welcome-shortcut:focus-visible {
-  outline: 2px solid @accent_color;
-  outline-offset: 2px;
+button.welcome-shortcut:focus-visible { outline: 2px solid @accent_color; outline-offset: 2px; }
+viewswitcher button:checked,
+.welcome-categories toggle:checked {
+  color: @accent_color;
+  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .24), alpha(@accent_bg_color, .12));
+  box-shadow: inset 0 0 0 1px alpha(@accent_color, .22);
 }
+.welcome-categories { padding: 4px; border-radius: 14px; }
 .welcome-row { padding: 16px; }
+.welcome-resource { padding: 16px; }
+.welcome-resource .welcome-row { padding: 0; }
+.welcome-grid { padding: 0; }
+.welcome-grid > flowboxchild { padding: 0; }
+.welcome-current-browser {
+  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .17), alpha(@accent_bg_color, .03));
+  box-shadow: inset 0 0 0 1px alpha(@accent_color, .30), 0 3px 10px alpha(@shade_color, .14);
+}
 .welcome-badge { padding: 4px 9px; border-radius: 7px; font-size: 11px; font-weight: 600; }
 .welcome-badge.installed { background: alpha(@success_color, .12); color: @success_color; }
 .welcome-badge.default { background: alpha(@accent_bg_color, .12); color: @accent_color; }
@@ -95,10 +91,13 @@ window.narrow .welcome-content { padding: 18px; }
 window.narrow .welcome-feature { padding: 18px; }
 .welcome-contrast .welcome-header,
 .welcome-contrast .welcome-home,
+.welcome-contrast .welcome-page-heading,
 .welcome-contrast .welcome-feature,
 .welcome-contrast .welcome-surface,
 .welcome-contrast .welcome-card,
-.welcome-contrast button.welcome-shortcut {
+.welcome-contrast button.welcome-shortcut,
+.welcome-contrast viewswitcher button:checked,
+.welcome-contrast .welcome-categories toggle:checked {
   background-image: none;
 }
 .welcome-contrast .welcome-surface,
@@ -108,9 +107,7 @@ window.narrow .welcome-feature { padding: 18px; }
   box-shadow: inset 0 0 0 1px alpha(currentColor, .5);
 }
 .welcome-contrast .welcome-feature { border-color: @accent_color; }
-.welcome-contrast .welcome-dialog sheet {
-  background: @dialog_bg_color;
-}
+.welcome-contrast .welcome-dialog sheet { background: @dialog_bg_color; }
 .welcome-contrast .welcome-icon,
 .welcome-contrast .donation-address {
   background: @view_bg_color;

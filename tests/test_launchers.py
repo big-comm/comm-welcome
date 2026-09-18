@@ -21,10 +21,37 @@ def test_hidden_incompatible_or_missing_executable_is_omitted(
     app = Mock()
     app.get_is_hidden.return_value = hidden
     app.should_show.return_value = visible
-    app.get_executable.return_value = "example"
+    app.get_commandline.return_value = "example"
     monkeypatch.setattr(launchers.GioUnix.DesktopAppInfo, "new", lambda _: app)
     monkeypatch.setattr(launchers.shutil, "which", lambda _: "/bin/example" if executable else None)
     assert launchers.find("example.desktop") is None
+
+
+@pytest.mark.parametrize("installed", [True, False])
+def test_quoted_appimage_launcher(monkeypatch, tmp_path, installed):
+    executable = tmp_path / "Voice Recorder.AppImage"
+    executable.write_text("#!/bin/sh\nexit 0\n")
+    executable.chmod(0o755)
+    desktop = tmp_path / "recorder.desktop"
+    desktop.write_text(
+        f'[Desktop Entry]\nType=Application\nName=Recorder\nExec="{executable}" %F\n'
+    )
+    app = launchers.GioUnix.DesktopAppInfo.new_from_filename(str(desktop))
+    assert app is not None
+    if not installed:
+        executable.unlink()
+    monkeypatch.setattr(launchers.GioUnix.DesktopAppInfo, "new", lambda _: app)
+    assert launchers.find("recorder.desktop") == (app if installed else None)
+
+
+@pytest.mark.parametrize("command", [None, "", '"unterminated'])
+def test_invalid_command_is_omitted(monkeypatch, command):
+    app = Mock()
+    app.get_is_hidden.return_value = False
+    app.should_show.return_value = True
+    app.get_commandline.return_value = command
+    monkeypatch.setattr(launchers.GioUnix.DesktopAppInfo, "new", lambda _: app)
+    assert launchers.find("invalid.desktop") is None
 
 
 def test_gnome_center_is_never_offered_on_kde(monkeypatch):

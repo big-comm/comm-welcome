@@ -23,6 +23,7 @@ install: all
 			$(DESTDIR)$(PREFIX)/share/icons/hicolor/$${size}x$${size}/apps/org.bigcommunity.CommWelcome.png; \
 	done
 	install -Dm644 etc/xdg/autostart/org.bigcommunity.CommWelcome.desktop $(DESTDIR)/etc/xdg/autostart/org.bigcommunity.CommWelcome.desktop
+	install -Dm644 etc/skel/.config/comm-welcome/autostart-enabled $(DESTDIR)/etc/skel/.config/comm-welcome/autostart-enabled
 	install -d $(DESTDIR)$(PREFIX)/share/locale
 	cp -a usr/share/locale/. $(DESTDIR)$(PREFIX)/share/locale/
 	install -Dm644 LICENSE $(DESTDIR)$(PREFIX)/share/licenses/comm-welcome/LICENSE

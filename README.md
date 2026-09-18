@@ -46,10 +46,12 @@ Welcome. Source and update procedure: [donations](docs/DONATIONS.md).
 
 ## Startup
 
-`comm-welcome --autostart` opens only on eligible installed systems, outside
-live sessions, unless the current user suppressed it. Manual launch always
-works. Preferences: `$XDG_CONFIG_HOME/comm-welcome/settings.json`.
-Updates never reset them. See [ISO integration](docs/ISO-INTEGRATION.md).
+Live sessions cannot open Welcome, including manual launches. New accounts
+inherit an autostart marker from `/etc/skel`; existing accounts receiving
+the package remain manual-only unless already enabled. Installed systems
+allow manual launch regardless of the marker or suppression preference.
+Preferences: `$XDG_CONFIG_HOME/comm-welcome/settings.json`. Updates never
+reset them. See [ISO integration](docs/ISO-INTEGRATION.md).
 
 ## Validation
 

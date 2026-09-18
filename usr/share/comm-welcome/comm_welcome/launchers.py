@@ -14,8 +14,14 @@ def find(desktop_id: str) -> GioUnix.DesktopAppInfo | None:
         return None
     if not app or app.get_is_hidden() or not app.should_show():
         return None
-    executable = app.get_executable()
-    if not executable or not shutil.which(executable):
+    command = app.get_commandline()
+    if not command:
+        return None
+    try:
+        _, argv = GLib.shell_parse_argv(command)
+    except GLib.Error:
+        return None
+    if not argv or not shutil.which(argv[0]):
         return None
     return app
 

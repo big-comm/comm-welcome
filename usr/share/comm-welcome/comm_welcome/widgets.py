@@ -106,6 +106,7 @@ def page(title: str, subtitle: str) -> tuple[Gtk.ScrolledWindow, Gtk.Box]:
     content = box(22)
     content.add_css_class("welcome-content")
     heading = box(8)
+    heading.add_css_class("welcome-page-heading")
     heading.append(label(title, "welcome-title"))
     heading.append(label(subtitle, "welcome-subtitle", "dim-label"))
     content.append(heading)
@@ -144,6 +145,38 @@ def group() -> Gtk.Box:
     widget.add_css_class("card")
     widget.add_css_class("welcome-surface")
     return widget
+
+
+def resource_card(name: str, summary: str, app_icon, callback) -> Gtk.Box:
+    card = group()
+    card.set_size_request(280, -1)
+    row = app_row(name, summary, app_icon, callback, decorated=True)
+    text = row.get_first_child().get_next_sibling().get_first_child()
+    while text:
+        text.set_max_width_chars(26)
+        text = text.get_next_sibling()
+    action = row.get_last_child()
+    row.remove(action)
+    body = box(10)
+    body.add_css_class("welcome-resource")
+    body.append(row)
+    action.set_halign(Gtk.Align.END)
+    body.append(action)
+    card.append(body)
+    return card
+
+
+def card_grid() -> Gtk.FlowBox:
+    grid = Gtk.FlowBox(
+        selection_mode=Gtk.SelectionMode.NONE,
+        min_children_per_line=1,
+        max_children_per_line=2,
+        homogeneous=True,
+        column_spacing=12,
+        row_spacing=12,
+    )
+    grid.add_css_class("welcome-grid")
+    return grid
 
 
 def group_append(widget: Gtk.Box, row: Gtk.Widget) -> None:
