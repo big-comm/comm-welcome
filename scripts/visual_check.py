@@ -51,6 +51,11 @@ SCENARIOS = [
 ]
 if "--dialogs-only" in sys.argv[1:]:
     SCENARIOS = [scenario for scenario in SCENARIOS if scenario[1] in {"donate", "about"}]
+if "--media-only" in sys.argv[1:]:
+    SCENARIOS = [
+        ("apps-media-light", "apps", False, 900, 730, "idle"),
+        ("apps-media-dark", "apps", True, 900, 730, "idle"),
+    ]
 if "--design-only" in sys.argv[1:]:
     names = {
         "welcome-light",
@@ -111,6 +116,17 @@ def configure():
     )
     app.window.set_default_size(width, height)
     app.window.show_page("help" if page == "donate" else "welcome" if page == "about" else page)
+    if name.startswith("apps-media-"):
+        pending = [app.window.stack.get_child_by_name("apps")]
+        while pending:
+            widget = pending.pop()
+            if isinstance(widget, Adw.ViewStack):
+                widget.set_visible_child_name("media")
+                break
+            child = widget.get_first_child()
+            while child:
+                pending.append(child)
+                child = child.get_next_sibling()
     if page == "donate":
         app.window.activate_action("win.donate", None)
     elif page == "about":

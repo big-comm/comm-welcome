@@ -538,3 +538,7 @@ msgstr "Descubra sua área de trabalho e os aplicativos"
 #: data/org.bigcommunity.CommWelcome.desktop.in:10
 msgid "welcome;getting started;community;browser;"
 msgstr "boas-vindas;primeiros passos;comunidade;navegador;"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:65
+msgid "Share your screen with a TV, projector or Chromecast."
+msgstr "Compartilhe sua tela com uma TV, projetor ou Chromecast."

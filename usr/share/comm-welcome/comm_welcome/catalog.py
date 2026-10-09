@@ -60,6 +60,12 @@ APPS = (
         "media",
     ),
     App(
+        "br.com.biglinux.BigNetScreen.desktop",
+        "BigNetScreen",
+        N_("Share your screen with a TV, projector or Chromecast."),
+        "media",
+    ),
+    App(
         "br.com.biglinux-settings.desktop",
         N_("General settings"),
         N_("Explore your system settings."),

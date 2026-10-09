@@ -19,3 +19,10 @@ IS_RTL = translation.info().get("language", "en").split("_")[0] == "he"
 def N_(message: str) -> str:
     """Mark catalog strings for extraction without early translation."""
     return message
+
+
+# Desktop entry strings; marked here so Python-only extraction keeps them.
+DESKTOP_STRINGS = (
+    N_("Discover your desktop and applications"),
+    N_("welcome;getting started;community;browser;"),
+)
