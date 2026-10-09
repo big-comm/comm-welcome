@@ -28,6 +28,18 @@ def test_session_fallback():
     assert desktop_kind({"XDG_SESSION_DESKTOP": "gnome"}) == "gnome"
 
 
+@pytest.fixture
+def live_paths(tmp_path):
+    mounts = tmp_path / "mounts"
+    mounts.write_text("overlay / overlay rw 0 0\n")
+    return {
+        "runtime": tmp_path / "miso",
+        "arch_runtime": tmp_path / "archiso",
+        "live_launcher": tmp_path / "startbiglive",
+        "mounts": mounts,
+    }
+
+
 @pytest.mark.parametrize(
     "argument",
     [
@@ -37,19 +49,48 @@ def test_session_fallback():
         "archisolabel=ARCH",
     ],
 )
-def test_live_arguments(tmp_path, argument):
-    assert is_live(f"quiet {argument} rw", tmp_path / "missing", tmp_path / "startbiglive")
+def test_live_arguments(live_paths, argument):
+    assert is_live(f"quiet {argument} rw", **live_paths)
 
 
-def test_installed_system_is_not_live(tmp_path):
-    assert not is_live("quiet root=UUID=123 rw", tmp_path / "missing", tmp_path / "startbiglive")
-    assert is_live("quiet", tmp_path, tmp_path / "startbiglive")
+@pytest.mark.parametrize("filesystem", ["btrfs", "ext4", "xfs"])
+@pytest.mark.parametrize("launcher_exists", [True, False])
+def test_installed_system_with_stale_iso_arguments(live_paths, filesystem, launcher_exists):
+    live_paths["mounts"].write_text(f"/dev/nvme0n1p2 / {filesystem} rw 0 0\n")
+    if launcher_exists:
+        live_paths["live_launcher"].touch()
+    assert not is_live(
+        "root=UUID=123 rootflags=subvol=@ misobasedir=bigcommunity "
+        "misolabel=BIGCOMMUNITY_LIVE_GNOME archisobasedir=arch archisolabel=ARCH rw",
+        **live_paths,
+    )
 
 
-def test_live_launcher_blocks_without_live_kernel_arguments(tmp_path):
-    launcher = tmp_path / "startbiglive"
-    launcher.touch()
-    assert is_live("quiet root=UUID=123 rw", tmp_path / "missing", launcher)
+def test_live_launcher_with_live_root_blocks_without_kernel_arguments(live_paths):
+    live_paths["live_launcher"].touch()
+    assert is_live("quiet", **live_paths)
+
+
+@pytest.mark.parametrize("runtime", ["runtime", "arch_runtime"])
+def test_live_runtime_blocks_without_other_evidence(live_paths, runtime):
+    live_paths[runtime].mkdir()
+    live_paths["mounts"].unlink()
+    assert is_live("quiet", **live_paths)
+
+
+@pytest.mark.parametrize("filesystem", ["overlay", "aufs", "squashfs", "tmpfs", "rootfs"])
+def test_live_root_with_boot_arguments(live_paths, filesystem):
+    live_paths["mounts"].write_text(f"live / {filesystem} rw 0 0\n")
+    assert is_live("misobasedir=bigcommunity", **live_paths)
+
+
+def test_overlay_without_live_evidence_is_not_live(live_paths):
+    assert not is_live("quiet", **live_paths)
+
+
+def test_iso_arguments_without_root_evidence_are_not_enough(live_paths):
+    live_paths["mounts"].unlink()
+    assert not is_live("misolabel=BIGCOMMUNITY", **live_paths)
 
 
 def test_eligibility_requires_iso_marker_and_nonlive(monkeypatch, tmp_path):
@@ -96,6 +137,7 @@ def test_startup_policy_before_gtk(tmp_path, live, autostart, enabled, suppresse
     allowed = not live and (not autostart or (enabled and not suppressed))
     code = f"""
 import runpy
+import os
 import sys
 import types
 from pathlib import Path
@@ -113,6 +155,7 @@ if {allowed}:
 sys.modules['gi'] = None
 script = sys.argv[2]
 config = sys.argv[3]
+os.environ['XDG_DATA_HOME'] = str(Path(config) / 'data')
 preferences.Preferences = lambda: original_preferences(Path(config))
 sys.argv = [script] + (['--autostart'] if {autostart} else [])
 runpy.run_path(script, run_name='__main__')

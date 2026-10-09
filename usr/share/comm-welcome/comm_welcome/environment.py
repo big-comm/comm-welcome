@@ -29,19 +29,30 @@ def is_live(
     cmdline: str | None = None,
     runtime: Path = Path("/run/miso"),
     live_launcher: Path = Path("/usr/bin/startbiglive"),
+    arch_runtime: Path = Path("/run/archiso"),
+    mounts: Path = Path("/proc/mounts"),
 ) -> bool:
+    if runtime.exists() or arch_runtime.exists():
+        return True
+    try:
+        root_types = {
+            fields[2]
+            for line in mounts.read_text().splitlines()
+            if len(fields := line.split()) >= 3 and fields[1] == "/"
+        }
+    except OSError:
+        root_types = set()
+    # Installed bootloaders can retain ISO arguments and live utilities.
+    if not root_types & {"overlay", "aufs", "squashfs", "tmpfs", "rootfs"}:
+        return False
     if cmdline is None:
         try:
             cmdline = Path("/proc/cmdline").read_text()
         except OSError:
             cmdline = ""
-    return (
-        runtime.exists()
-        or live_launcher.exists()
-        or any(
-            arg.startswith(("misobasedir=", "misolabel=", "archisobasedir=", "archisolabel="))
-            for arg in cmdline.split()
-        )
+    return live_launcher.exists() or any(
+        arg.startswith(("misobasedir=", "misolabel=", "archisobasedir=", "archisolabel="))
+        for arg in cmdline.split()
     )
 
 

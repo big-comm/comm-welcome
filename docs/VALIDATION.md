@@ -19,6 +19,18 @@ accessibility-bus or GNOME-shell integration correctness.
 
 ## Development results
 
+- 2026-09-27: 55 startup/visibility checks passed. Installed Btrfs with stale
+  MISO arguments is accepted; live detection and GIO launcher hiding/restoration
+  are covered. The patched installed app started and exported window actions
+  on the native session bus. A real live ISO remains untested. The full suite
+  has 29 localization failures also reproduced from the unchanged HEAD.
+- 2026-10-09: On a BigCommunity GNOME live ISO (MISO overlay root, `/run/miso`),
+  the shipped package left the launcher visible. With the patched code,
+  `comm-welcome --autostart` wrote the hidden override and GIO no longer
+  resolved the entry. Desktop-entry strings are now marked in Python so the
+  translation workflow keeps them; 27 failures remain until it translates 24
+  new catalog descriptions.
+
 - 53 pytest cases passed; desktop entries, Ruff and shell syntax checks passed.
 - PyGObject itself reports a `GLib.unix_signal_add_full` deprecation during
   import. No project code calls that API.

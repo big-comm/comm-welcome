@@ -35,11 +35,20 @@ for administrators enabling all accounts. The package does not create it.
 
 ## Live sessions
 
-Both manual launch and autostart exit successfully before importing GTK when
-`/usr/bin/startbiglive`, `/run/miso`, or MISO/archiso boot arguments indicate
-live media. The live account's skeleton marker cannot bypass this guard.
-No preference is written. Verify the installer removes live-only components,
-including `startbiglive`, from the destination system.
+Both manual launch and autostart exit before importing GTK when `/run/miso`
+or `/run/archiso` identifies a live runtime. Otherwise, MISO/archiso boot
+arguments or `startbiglive` require a live-style root filesystem (overlay,
+aufs, squashfs, tmpfs or rootfs). ISO arguments retained by an installed
+bootloader do not block a Btrfs/ext4 installation. The live account's skeleton
+marker cannot bypass this guard. No preference is written.
+
+At session autostart, live accounts receive a hidden desktop override at
+`$XDG_DATA_HOME/applications/org.bigcommunity.CommWelcome.desktop` (default:
+`~/.local/share/applications/`). The launcher also synchronizes visibility on
+manual invocation. Installed sessions remove only the exact override created
+by Welcome, including one copied from a live home, before checking autostart
+eligibility. Existing custom user launchers are preserved. System desktop
+entries and other packages remain untouched.
 
 ## Session integration
 
