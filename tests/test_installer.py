@@ -104,3 +104,48 @@ def test_unsafe_preparation_never_applies(installer):
     installer._prepared(("ours", {"preparation_interactions": [{"kind": "cascade-removal"}]}))
     assert installer._call.call_args.args[0] == "CancelTransaction"
     assert not installer.busy
+
+
+def test_runtime_question_without_id_cancels_instead_of_hanging(installer):
+    event(installer, "interaction-requested", {"kind": GLib.Variant("s", "import-key")})
+    assert installer._call.call_args.args[0] == "CancelTransaction"
+    assert not installer.busy and not installer.success
+
+
+def test_apply_waits_for_finished_event(installer, monkeypatch):
+    installer.references = {"firefox": "alpm:extra/firefox"}
+    monkeypatch.setattr("comm_welcome.installer.validate_plan", lambda *_: True)
+    installer._prepared(("ours", {}))
+    method, _, _, timeout = installer._call.call_args.args
+    assert method == "ApplyTransaction"
+    assert timeout == GLib.MAXINT
+    assert installer.busy
+
+
+def test_service_reactivation_restores_availability(installer):
+    proxy = Mock()
+    installer.proxy = proxy
+    proxy.get_cached_property.return_value = GLib.Variant("u", 1)
+    installer.busy = False
+    proxy.get_name_owner.return_value = None
+    installer._owner_changed(proxy, None)
+    assert not installer.available
+    proxy.get_name_owner.return_value = ":1.42"
+    installer._owner_changed(proxy, None)
+    assert installer.available
+
+
+def test_outcomes_are_noticed_once_and_network_changes_are_silent(installer):
+    notices = []
+    installer.connect("notice", lambda _source, message: notices.append(message))
+    event(installer, "finished", {"ok": GLib.Variant("b", True)})
+    installer.emit("changed")
+    assert notices == [installer.message]
+
+
+def test_blocked_start_is_not_persisted(installer):
+    notices = []
+    installer.connect("notice", lambda _source, message: notices.append(message))
+    installer.message = ""
+    installer.start(BROWSERS[1])
+    assert notices and installer.message == ""

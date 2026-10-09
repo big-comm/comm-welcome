@@ -35,7 +35,11 @@ def repository_browsers() -> dict[str, str]:
 
 
 class Installer(GObject.Object):
-    __gsignals__ = {"changed": (GObject.SignalFlags.RUN_LAST, None, ())}
+    __gsignals__ = {
+        "changed": (GObject.SignalFlags.RUN_LAST, None, ()),
+        # One-shot user-facing outcome; "changed" also fires on network changes.
+        "notice": (GObject.SignalFlags.RUN_LAST, None, (str,)),
+    }
 
     def __init__(self):
         super().__init__()
@@ -86,22 +90,29 @@ class Installer(GObject.Object):
     def _connected(self, _source, result) -> None:
         try:
             self.proxy = Gio.DBusProxy.new_for_bus_finish(result)
-            version = self.proxy.get_cached_property("Version")
-            self.available = version is not None and version.unpack() >= 1
+            self._read_version()
             self.proxy.connect("g-signal", self._event)
             self.proxy.connect("notify::g-name-owner", self._owner_changed)
         except GLib.Error as exc:
             self.details = exc.message
         self.emit("changed")
 
+    def _read_version(self) -> None:
+        version = self.proxy.get_cached_property("Version")
+        self.available = version is not None and version.unpack() >= 1
+
     def _owner_changed(self, proxy, _property) -> None:
-        if not proxy.get_name_owner():
+        if proxy.get_name_owner():
+            # The session service may exit when idle and be activated again.
+            self._read_version()
+        else:
             self.available = False
             if self.busy:
                 self._finish(
                     False, _("The installer connection was lost. Check Software before retrying.")
                 )
-            self.emit("changed")
+                return
+        self.emit("changed")
 
     def blocked_reason(self) -> str:
         if self.busy:
@@ -119,11 +130,13 @@ class Installer(GObject.Object):
     def start(self, browser) -> None:
         reason = self.blocked_reason()
         if reason:
-            self.message = reason
-            self.emit("changed")
+            self.emit("notice", reason)
             return
         reference = self.references.get(browser.key, "")
         if not browser_reference(reference):
+            self.emit(
+                "notice", _("This installation needs additional review. Open Software to continue.")
+            )
             return
         self.browser, self.busy, self.success = browser, True, False
         self.tx_id, self.ratio, self.last_seq = None, None, -1
@@ -134,17 +147,18 @@ class Installer(GObject.Object):
         request = {"install": GLib.Variant("as", [reference])}
         self._call("PrepareTransaction", GLib.Variant("(a{sv})", (request,)), self._prepared)
 
-    def _call(self, method: str, arguments, done) -> None:
+    def _call(self, method: str, arguments, done, timeout: int = 120000) -> None:
         def finished(proxy, result):
             try:
                 value = proxy.call_finish(result)
             except GLib.Error as exc:
-                self.details = exc.message
-                self._finish(False, _("The installation could not be completed."))
+                if self.busy:
+                    self.details = exc.message
+                    self._finish(False, _("The installation could not be completed."))
                 return
             done(value.unpack() if value else ())
 
-        self.proxy.call(method, arguments, Gio.DBusCallFlags.NONE, 120000, None, finished)
+        self.proxy.call(method, arguments, Gio.DBusCallFlags.NONE, timeout, None, finished)
 
     def _prepared(self, result: tuple) -> None:
         self.tx_id, plan = result
@@ -152,7 +166,11 @@ class Installer(GObject.Object):
         interactions = plan.get("preparation_interactions", [])
         if interactions and self.preparation_rounds < 20:
             question = interactions[0]
-            if question.get("kind") == "optdep-choose" and question.get("source") == "alpm":
+            if (
+                question.get("kind") == "optdep-choose"
+                and question.get("source") == "alpm"
+                and isinstance(question.get("request_id"), str)
+            ):
                 self.preparation_rounds += 1
                 # Install the browser and required dependencies only.
                 response = {"selected": GLib.Variant("as", [])}
@@ -173,7 +191,11 @@ class Installer(GObject.Object):
             return
         self.message = _("Complete any authentication requested by the system.")
         self.emit("changed")
-        self._call("ApplyTransaction", GLib.Variant("(s)", (self.tx_id,)), lambda _: None)
+        # Downloads and polkit prompts can take longer than any fixed timeout;
+        # completion is reported by the "finished" event.
+        self._call(
+            "ApplyTransaction", GLib.Variant("(s)", (self.tx_id,)), lambda _: None, GLib.MAXINT
+        )
 
     def _event(self, _proxy, _sender, signal: str, parameters) -> None:
         if signal != "TransactionEvent" or not self.busy:
@@ -193,8 +215,13 @@ class Installer(GObject.Object):
             self.details = (self.details + "\n" + str(values))[-12000:]
         elif kind == "interaction-requested":
             # Never accept removals, key imports, or unknown questions silently.
+            request_id = values.get("request_id")
+            if not isinstance(request_id, str):
+                self._call("CancelTransaction", GLib.Variant("(s)", (self.tx_id,)), lambda _: None)
+                self._finish(False, _("The installation could not be completed."))
+                return
             response = {"cancel": GLib.Variant("b", True)}
-            args = GLib.Variant("(ssa{sv})", (self.tx_id, values["request_id"], response))
+            args = GLib.Variant("(ssa{sv})", (self.tx_id, request_id, response))
             self._call("Respond", args, lambda _: None)
             self.message = _(
                 "Additional review is required. Open Software after this operation finishes."
@@ -216,3 +243,4 @@ class Installer(GObject.Object):
         self.message = message
         self.ratio = None
         self.emit("changed")
+        self.emit("notice", message)

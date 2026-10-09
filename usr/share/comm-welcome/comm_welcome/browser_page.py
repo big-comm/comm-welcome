@@ -152,13 +152,13 @@ class BrowserPage:
             state.set_text(
                 _("Not installed") if available else _("Not available in your repositories.")
             )
-            if (
+            failed = (
                 installer.browser
                 and installer.browser.key == key
                 and not installer.busy
                 and not installer.success
-            ):
-                action.get_child().set_text(_("Try again"))
+            )
+            action.get_child().set_text(_("Try again") if failed else _("Choose and install"))
         if installer.success:
             apps = tuple(
                 (b.key, a.get_id() if (a := launchers.browser_app(b)) else None) for b in BROWSERS

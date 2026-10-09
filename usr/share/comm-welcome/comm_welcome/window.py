@@ -87,6 +87,7 @@ class WelcomeWindow(Adw.ApplicationWindow):
         body.append(self.status)
         self.status.set_visible(False)
         installer.connect("changed", self._installation_changed)
+        installer.connect("notice", lambda _installer, message: self.toast(message))
         self.connect("close-request", self._close_requested)
         self.connect("notify::is-active", self._activated)
         self.monitor = Gio.AppInfoMonitor.get()
@@ -121,8 +122,6 @@ class WelcomeWindow(Adw.ApplicationWindow):
     def _installation_changed(self, *_args) -> None:
         self.status.set_visible(self.installer.busy)
         self.status_label.set_text(self.installer.message)
-        if not self.installer.busy and self.installer.message:
-            self.toast(self.installer.message)
 
     def _close_requested(self, *_args) -> bool:
         if self.installer.busy:
