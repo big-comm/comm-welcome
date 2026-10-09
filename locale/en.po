@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-17 02:56+0000\n"
+"POT-Creation-Date: 2026-09-18 03:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "Welcome"
 # #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
 # 
 # File: scripts/check_actions.py, line: 78
-# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 136
+# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 104
 msgid "Open"
 msgstr "Open"
@@ -41,14 +41,14 @@ msgstr "Open"
 # 
 # File: scripts/check_actions.py, line: 80
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 39
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 218
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 226
 msgid "Support the project"
 msgstr "Support the project"
 
 # #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
 # 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 14
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 24
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 26
 msgid "Welcome to BigCommunity"
 msgstr "Welcome to BigCommunity"
 
@@ -319,7 +319,7 @@ msgid "Installed"
 msgstr "Installed"
 
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 93
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 152
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 153
 msgid "Not installed"
 msgstr "Not installed"
 
