@@ -1,6 +1,9 @@
+usr/share/comm-welcome/comm_welcome/app_preview.py
 usr/share/comm-welcome/comm_welcome/browser_page.py
 usr/share/comm-welcome/comm_welcome/catalog.py
 usr/share/comm-welcome/comm_welcome/donations.py
+usr/share/comm-welcome/comm_welcome/help_page.py
+usr/share/comm-welcome/comm_welcome/insights.py
 usr/share/comm-welcome/comm_welcome/installer.py
 usr/share/comm-welcome/comm_welcome/pages.py
 usr/share/comm-welcome/comm_welcome/widgets.py

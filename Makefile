@@ -17,6 +17,7 @@ install: all
 	install -d $(DESTDIR)$(PREFIX)/share/comm-welcome/comm_welcome $(DESTDIR)$(PREFIX)/share/comm-welcome/assets
 	install -m644 usr/share/comm-welcome/comm_welcome/*.py $(DESTDIR)$(PREFIX)/share/comm-welcome/comm_welcome/
 	install -m644 usr/share/comm-welcome/assets/*.svg $(DESTDIR)$(PREFIX)/share/comm-welcome/assets/
+	install -m644 usr/share/comm-welcome/assets/*.jpg $(DESTDIR)$(PREFIX)/share/comm-welcome/assets/
 	install -Dm644 usr/share/applications/org.bigcommunity.CommWelcome.desktop $(DESTDIR)$(PREFIX)/share/applications/org.bigcommunity.CommWelcome.desktop
 	for size in 16 24 32 48 64 128 256 512 1024; do \
 		install -Dm644 usr/share/icons/hicolor/$${size}x$${size}/apps/org.bigcommunity.CommWelcome.png \
