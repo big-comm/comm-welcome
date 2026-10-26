@@ -1,116 +1,195 @@
-.welcome-header {
-  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .16), alpha(@accent_bg_color, .03));
-  box-shadow: none;
+/* Keep Adwaita in charge of surfaces, controls, and theme colors. */
+.welcome-content { padding: 28px 32px 32px; }
+.welcome-subtitle { font-size: 1.07em; }
+/* An editorial opening: original artwork, generous type, native actions. */
+.welcome-home-content { padding: 24px 36px 18px; }
+.welcome-artboard { border-radius: 22px; background: #05091a; }
+.welcome-editorial { padding: 8px 0; }
+.welcome-wordmark { font-size: 1.32em; font-weight: 800; letter-spacing: -.3px; }
+.welcome-edition { margin-top: 10px; font-size: .8em; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; }
+.welcome-headline { margin-top: 26px; font-size: 3em; font-weight: 800; line-height: 1.02; letter-spacing: -1.6px; }
+.welcome-hero-subtitle { margin-top: 18px; font-size: 1.08em; line-height: 1.5; }
+/* The app index: typography and hairlines, no boxed cards. */
+.welcome-featured { margin-top: 26px; padding-top: 18px; border-top: 1px solid alpha(@window_fg_color, .09); }
+.welcome-overline { font-size: .78em; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: alpha(@window_fg_color, .72); }
+.welcome-section-lede { font-size: .92em; }
+button.welcome-link { padding: 4px 10px; color: @accent_color; font-weight: 600; }
+.welcome-index { margin: 0 -10px; }
+.welcome-index > flowboxchild { padding: 0; }
+button.welcome-entry { padding: 10px; border-radius: 14px; font-weight: normal; }
+button.welcome-entry:hover { background: alpha(@window_fg_color, .045); }
+button.welcome-entry:active { background: alpha(@window_fg_color, .08); }
+.welcome-entry-name { font-size: 1em; }
+.welcome-entry-benefit { font-size: .9em; line-height: 1.35; }
+.welcome-entry-status { margin-top: 3px; color: alpha(@window_fg_color, .68); }
+button.welcome-entry-absent image { opacity: .55; }
+.welcome-catalog-section .welcome-index { margin-top: 2px; }
+/* Help: a dark brand band, then one topic at a time with a live reading. */
+.welcome-help-hero {
+  padding: 22px 36px 22px 18px;
+  border-radius: 26px;
+  color: white;
+  background-image:
+    radial-gradient(circle at 16% 50%, alpha(#42c8f5, .18), transparent 42%),
+    radial-gradient(circle at 92% 0%, alpha(#cf12f6, .22), transparent 48%),
+    linear-gradient(135deg, #070a18, #10173a 55%, #1c0f36);
 }
-.welcome-home {
-  background-image: linear-gradient(to bottom, alpha(@accent_bg_color, .10), alpha(@accent_bg_color, 0) 260px);
-  background-repeat: no-repeat;
-}
-.welcome-content { padding: 24px; }
-.welcome-title { font-size: 28px; font-weight: 800; }
-.welcome-subtitle { font-size: 17px; }
-.welcome-page-heading {
-  padding: 18px;
-  border-radius: 18px;
-  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .12), alpha(@accent_bg_color, .02));
-}
-.welcome-home .welcome-page-heading { padding: 0; background-image: none; }
-.welcome-feature {
-  padding: 20px;
-  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .20), alpha(@accent_bg_color, .06));
-  border: 1px solid alpha(@accent_color, .26);
-  border-radius: 20px;
-  box-shadow: inset 0 1px alpha(@window_fg_color, .04), 0 4px 14px alpha(@shade_color, .12);
-}
-.welcome-feature .title-2 { font-size: 23px; }
-.welcome-eyebrow { font-size: 11px; font-weight: 700; color: @accent_color; }
-.welcome-card { padding: 18px; border-radius: 18px; }
-button.welcome-shortcut { padding: 10px 14px; border-radius: 16px; }
-.welcome-icon {
-  padding: 8px;
-  border-radius: 13px;
-  color: @accent_color;
-  background-image: linear-gradient(145deg, alpha(@accent_bg_color, .24), alpha(@accent_bg_color, .08));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .20), 0 2px 5px alpha(@shade_color, .08);
-}
-dialog.welcome-dialog sheet,
-window.welcome-dialog {
-  background-color: @dialog_bg_color;
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .07), alpha(@accent_bg_color, 0) 60%);
-  color: @dialog_fg_color;
-}
-.welcome-dialog headerbar { background: transparent; box-shadow: none; }
-.welcome-donation-hero { padding: 4px 0; }
-.welcome-donation-hero .welcome-page-heading { padding: 0; background-image: none; }
-.donation-address {
-  padding: 6px 10px;
-  border-radius: 8px;
-  color: @accent_color;
-  background-color: alpha(@accent_bg_color, .10);
-}
-.welcome-surface,
-.welcome-card,
-button.welcome-shortcut {
-  border-radius: 16px;
-  background-color: alpha(@card_bg_color, .76);
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .07), alpha(@accent_bg_color, .01) 75%);
-  box-shadow: inset 0 0 0 1px alpha(@window_fg_color, .09), 0 3px 10px alpha(@shade_color, .14);
-}
-button.welcome-shortcut:hover {
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .07));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .42), 0 4px 12px alpha(@shade_color, .18);
-}
-button.welcome-shortcut:active {
-  background-image: linear-gradient(alpha(@accent_bg_color, .24), alpha(@accent_bg_color, .24));
-}
-button.welcome-shortcut:focus-visible { outline: 2px solid @accent_color; outline-offset: 2px; }
-viewswitcher button:checked,
-.welcome-categories toggle:checked {
-  color: @accent_color;
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .24), alpha(@accent_bg_color, .12));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .22);
-}
-.welcome-categories { padding: 4px; border-radius: 14px; }
+.welcome-help-hero .welcome-overline.welcome-hero-overline { color: #5fe8f0; }
+.welcome-hero-title { margin-top: 10px; font-size: 2.15em; font-weight: 800; line-height: 1.05; letter-spacing: -1px; color: white; }
+.welcome-hero-lede { margin-top: 10px; color: alpha(white, .8); }
+.welcome-hero-stats { margin-top: 18px; padding-top: 16px; border-top: 1px solid alpha(white, .12); }
+.welcome-hero-value { font-size: 1.55em; font-weight: 800; color: white; font-feature-settings: "tnum"; }
+.welcome-hero-caption { font-size: .74em; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; color: alpha(white, .72); }
+@keyframes welcome-breathe { from { transform: scale(1); } to { transform: scale(1.035); } }
+.welcome-orbit-owl { animation: welcome-breathe 2.6s ease-in-out infinite alternate; }
+.welcome-topic-list { background: none; min-width: 176px; }
+.welcome-topic-list > row { padding: 7px 12px; min-height: 0; border-radius: 10px; margin-bottom: 1px; }
+.welcome-topic-list > row:selected { background: alpha(@accent_bg_color, .16); color: @accent_color; }
+button.welcome-topic { padding: 6px 14px; border-radius: 999px; font-weight: 600; background: alpha(@window_fg_color, .06); }
+button.welcome-topic:checked { background: @accent_bg_color; color: @accent_fg_color; }
+.welcome-topics > flowboxchild { padding: 0; }
+.welcome-insight { padding: 4px 0 0; }
+.welcome-insight-badge { border-radius: 11px; background: alpha(@accent_bg_color, .14); color: @accent_color; }
+.welcome-insight-value { margin-top: 14px; font-size: 3.1em; font-weight: 800; letter-spacing: -1.6px; color: @accent_color; font-feature-settings: "tnum"; }
+.welcome-insight-caption { font-size: .95em; }
+.welcome-insight-title { margin-top: 20px; font-size: 1.32em; font-weight: 800; letter-spacing: -.3px; }
+.welcome-insight-text { margin-top: 8px; font-size: 1.02em; line-height: 1.5; }
+.welcome-insight-facts { margin-top: 20px; padding-top: 16px; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-insight-detail,
+.welcome-insight-live { font-size: .9em; }
+.welcome-insight-live { color: @accent_color; font-weight: 600; }
+.welcome-brand-badge { border-radius: 12px; }
+.welcome-brand-telegram { border-radius: 999px; background: #2aabee; color: white; }
+.welcome-brand-heart { background: alpha(#e2456f, .14); color: #e2456f; }
+.welcome-brand-forum { background: alpha(@accent_bg_color, .12); color: @accent_color; }
+.welcome-footer { padding: 6px 24px 14px; }
+.welcome-footer-bar { padding: 8px 24px 12px; }
+.welcome-scheme togglegroup { min-height: 0; }
+.welcome-footer checkbutton { font-size: .9em; }
+.welcome-card { padding: 18px; }
 .welcome-row { padding: 16px; }
-.welcome-resource { padding: 16px; }
-.welcome-resource .welcome-row { padding: 0; }
-.welcome-grid { padding: 0; }
-.welcome-grid > flowboxchild { padding: 0; }
-.welcome-current-browser {
-  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .17), alpha(@accent_bg_color, .03));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .30), 0 3px 10px alpha(@shade_color, .14);
+.welcome-small { font-size: .86em; }
+.welcome-icon {
+  padding: 4px;
+  border-radius: 12px;
+  color: @accent_color;
+  background: alpha(@accent_bg_color, .08);
 }
-.welcome-badge { padding: 4px 9px; border-radius: 7px; font-size: 11px; font-weight: 600; }
+.welcome-icon-pix,
+.welcome-icon-usdt { color: mix(@window_fg_color, #26b89e, .65); }
+.welcome-icon-bitcoin { color: mix(@window_fg_color, #f7931a, .65); }
+.welcome-icon-telegram { color: mix(@window_fg_color, #37a9e8, .65); }
+.welcome-icon-patreon { color: mix(@window_fg_color, #ef6685, .65); }
+.welcome-dialog-content { background-color: @dialog_bg_color; color: @dialog_fg_color; }
+.welcome-dialog headerbar { background: transparent; box-shadow: none; }
+.welcome-wallpaper-preview { border-radius: 10px; background: @view_bg_color; }
+.welcome-preview-footer { padding: 14px 24px; background: @dialog_bg_color; }
+/* App introductions: same editorial voice as the opening. */
+.welcome-intro { padding: 8px 32px 32px; }
+.welcome-intro-name { font-size: 2em; font-weight: 800; letter-spacing: -.8px; }
+.welcome-intro-lead { font-size: 1.12em; font-weight: 600; color: @accent_color; }
+.welcome-intro-summary { margin-top: 22px; font-size: 1.04em; line-height: 1.5; }
+.welcome-intro-note { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: alpha(@window_fg_color, .05); }
+.welcome-intro-gallery { margin-top: 22px; }
+.welcome-intro .welcome-overline { margin-top: 28px; }
+.welcome-intro-point { padding: 12px 0; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-badge {
+  padding: 4px 9px;
+  border-radius: 7px;
+  font-size: .8em;
+  font-weight: 600;
+}
 .welcome-badge.installed { background: alpha(@success_color, .12); color: @success_color; }
-.welcome-badge.default { background: alpha(@accent_bg_color, .12); color: @accent_color; }
+.welcome-badge.default { background: alpha(@accent_bg_color, .10); color: @accent_color; }
+.welcome-notice { padding: 12px 16px; background: alpha(@warning_bg_color, .10); border-radius: 10px; }
 .welcome-status { padding: 12px 18px; background: alpha(@accent_bg_color, .08); }
-.welcome-footer { padding: 12px 24px; }
-.welcome-small { font-size: 12px; }
-window.narrow .welcome-title { font-size: 24px; }
-window.narrow .welcome-content { padding: 18px; }
-window.narrow .welcome-feature { padding: 18px; }
-.welcome-contrast .welcome-header,
-.welcome-contrast .welcome-home,
-.welcome-contrast .welcome-page-heading,
-.welcome-contrast .welcome-feature,
-.welcome-contrast .welcome-surface,
-.welcome-contrast .welcome-card,
-.welcome-contrast button.welcome-shortcut,
-.welcome-contrast viewswitcher button:checked,
-.welcome-contrast .welcome-categories toggle:checked {
-  background-image: none;
-}
-.welcome-contrast .welcome-surface,
-.welcome-contrast .welcome-card,
-.welcome-contrast button.welcome-shortcut {
-  background-color: @card_bg_color;
-  box-shadow: inset 0 0 0 1px alpha(currentColor, .5);
-}
-.welcome-contrast .welcome-feature { border-color: @accent_color; }
-.welcome-contrast .welcome-dialog sheet { background: @dialog_bg_color; }
+window.narrow .welcome-content { padding: 20px; }
+window.narrow .welcome-home-content { padding: 16px 24px 24px; }
+window.narrow .welcome-headline { margin-top: 18px; font-size: 2.2em; letter-spacing: -1px; }
+window.narrow .welcome-featured { margin-top: 20px; }
+window.narrow .welcome-help-hero { padding: 20px 22px 24px; }
+window.narrow .welcome-hero-title { font-size: 1.75em; }
+window.narrow .welcome-footer { padding: 8px 20px 16px; }
 .welcome-contrast .welcome-icon,
-.welcome-contrast .donation-address {
-  background: @view_bg_color;
-  color: @view_fg_color;
-  box-shadow: inset 0 0 0 1px alpha(currentColor, .5);
+.welcome-contrast .welcome-contrast button.welcome-entry { box-shadow: inset 0 0 0 1px alpha(@window_fg_color, .5); }
+.welcome-contrast .welcome-overline,
+.welcome-contrast .welcome-entry-status { color: @window_fg_color; }
+.welcome-contrast .welcome-featured { border-top-color: @window_fg_color; }
+.welcome-contrast button.welcome-topic { box-shadow: inset 0 0 0 1px @window_fg_color; }
+.welcome-contrast .welcome-help-hero { background-image: none; background-color: black; box-shadow: inset 0 0 0 2px white; }
+.welcome-contrast .welcome-hero-lede,
+.welcome-contrast .welcome-hero-caption { color: white; }
+
+/* Support: warm brand bands; Patreon leads, one-time gifts follow. */
+.welcome-support {
+  padding: 26px 30px;
+  border-radius: 24px;
+  color: white;
+  background-image:
+    radial-gradient(circle at 9% 50%, alpha(#ff6fa3, .32), transparent 38%),
+    linear-gradient(120deg, #24093a, #521449 55%, #84204b);
 }
+.welcome-support-mark,
+.welcome-brand-hero { border-radius: 999px; background: alpha(white, .14); color: #ffa3c4; }
+.welcome-support .welcome-overline.welcome-support-overline { color: #ffb3cd; }
+.welcome-support-title { margin-top: 8px; font-size: 1.6em; font-weight: 800; letter-spacing: -.6px; color: white; }
+.welcome-support-text { margin-top: 6px; line-height: 1.45; color: alpha(white, .8); }
+.welcome-support-actions { margin-top: 16px; }
+button.welcome-patreon { padding: 8px 22px; font-weight: 700; color: white; background: #e8323e; }
+button.welcome-patreon:hover { background: #f2414d; }
+button.welcome-patreon:active { background: #c92833; }
+button.welcome-support-secondary { color: white; background: alpha(white, .14); }
+button.welcome-support-secondary:hover { background: alpha(white, .22); }
+.welcome-donate { padding: 0 28px 28px; }
+.welcome-donate-hero {
+  padding: 22px;
+  border-radius: 20px;
+  color: white;
+  background-image:
+    radial-gradient(circle at 12% 40%, alpha(#ff6fa3, .34), transparent 46%),
+    linear-gradient(130deg, #24093a, #521449 60%, #84204b);
+}
+.welcome-donate-title { font-size: 1.45em; font-weight: 800; letter-spacing: -.5px; color: white; }
+.welcome-donate-lede { line-height: 1.4; color: alpha(white, .8); }
+.welcome-donate-featured {
+  margin-top: 18px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: alpha(#e8323e, .07);
+  box-shadow: inset 0 0 0 1px alpha(#e8323e, .28);
+}
+.welcome-donate-name { margin-top: 4px; margin-bottom: 4px; font-size: 1.6em; font-weight: 800; letter-spacing: -.5px; }
+.welcome-donate-featured button.welcome-patreon { margin-top: 14px; }
+.welcome-donate > .welcome-overline { margin-top: 28px; margin-bottom: 4px; }
+.welcome-donate-method { padding: 16px 0; border-top: 1px solid alpha(@window_fg_color, .08); }
+.donation-address {
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: .95em;
+  color: @window_fg_color;
+  background-color: alpha(@window_fg_color, .06);
+}
+button.welcome-copy { min-width: 36px; min-height: 36px; }
+.welcome-donate-telegram { padding-top: 16px; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-brand-pix { background: #32bcad; color: white; }
+.welcome-brand-usdt { background: #26a17b; color: white; }
+.welcome-brand-bitcoin { background: #f7931a; color: white; }
+.welcome-contrast .welcome-support,
+.welcome-contrast .welcome-donate-hero { background-image: none; background-color: black; box-shadow: inset 0 0 0 2px white; }
+.welcome-contrast .welcome-support-text,
+.welcome-contrast .welcome-donate-lede { color: white; }
+.welcome-contrast .donation-address { box-shadow: inset 0 0 0 1px currentColor; }
+window.narrow .welcome-support { padding: 22px; }
+
+/* Browsers: the default as a feature, the rest as one list. */
+.welcome-browser-feature {
+  padding: 22px 26px;
+  border-radius: 22px;
+  background: alpha(@accent_bg_color, .08);
+  box-shadow: inset 0 0 0 1px alpha(@accent_bg_color, .22);
+}
+.welcome-browser-name { font-size: 1.7em; font-weight: 800; letter-spacing: -.6px; }
+.welcome-browser-row { padding: 14px 4px; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-browser-list > .welcome-browser-row:first-child { border-top: none; }
+.welcome-browser-notice { padding: 10px 14px; border-radius: 10px; background: alpha(@warning_bg_color, .12); }
+.welcome-contrast .welcome-browser-feature { box-shadow: inset 0 0 0 1px @window_fg_color; }

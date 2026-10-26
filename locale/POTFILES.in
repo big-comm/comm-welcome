@@ -1,9 +1,13 @@
+data/org.bigcommunity.CommWelcome-autostart.desktop.in
+data/org.bigcommunity.CommWelcome.desktop.in
+usr/share/comm-welcome/comm_welcome/app_preview.py
 usr/share/comm-welcome/comm_welcome/browser_page.py
 usr/share/comm-welcome/comm_welcome/catalog.py
 usr/share/comm-welcome/comm_welcome/donations.py
+usr/share/comm-welcome/comm_welcome/help_page.py
+usr/share/comm-welcome/comm_welcome/i18n.py
+usr/share/comm-welcome/comm_welcome/insights.py
 usr/share/comm-welcome/comm_welcome/installer.py
 usr/share/comm-welcome/comm_welcome/pages.py
 usr/share/comm-welcome/comm_welcome/widgets.py
 usr/share/comm-welcome/comm_welcome/window.py
-data/org.bigcommunity.CommWelcome.desktop.in
-data/org.bigcommunity.CommWelcome-autostart.desktop.in

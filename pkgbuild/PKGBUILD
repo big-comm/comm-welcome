@@ -3,10 +3,10 @@
 pkgname=comm-welcome
 pkgdesc="Adaptive BigCommunity welcome and application discovery"
 # Uncomment and edit the following lines as needed
-depends=('python' 'python-gobject' 'glib2>=2.80' 'gtk4>=4.14' 'libadwaita>=1.7'
+depends=('python' 'python-gobject' 'python-cairo' 'glib2>=2.80' 'gtk4>=4.14' 'libadwaita>=1.7'
          'gdk-pixbuf2' 'librsvg' 'pacman' 'pamac-cli')
 makedepends=('git' 'gettext')
-optdepends=('pamac-gtk: software management and advanced installation review'
+optdepends=('pamac-gtk: install browsers, including from the AUR, through the Pamac window'
             'big-gnome-center: GNOME personalization')
 #conflicts=('')
 #provides=('')
@@ -34,8 +34,7 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}"
-    # Add build steps here, if needed
-    # For example: make
+    # Compiled gettext catalogs are committed under usr/share/locale.
 }
 
 check() {
@@ -61,6 +60,8 @@ package() {
             cp -a "${srcdir}/${dir}" "${pkgdir}/"
         fi
     done
+
+    install -Dm644 docs/ASSETS.md "${pkgdir}/usr/share/licenses/${pkgname}/ASSETS.md"
 
     # Install license file if present
     if [ -f "LICENSE" ]; then

@@ -7,23 +7,91 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 03:08+0000\n"
+"Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
+"POT-Creation-Date: 2026-10-26 14:15-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
-# 
-# File: tests/test_localization.py, line: 59
-# File: usr/share/comm-welcome/comm_welcome/window.py, line: 34
-# File: usr/share/comm-welcome/comm_welcome/window.py, line: 58
-msgid "Welcome"
-msgstr "Welcome"
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:10
+msgid "Owl in low light"
+msgstr "Owl in low light"
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:11
+msgid "Feather"
+msgstr "Feather"
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:12
+msgid "Aurora"
+msgstr "Aurora"
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:49
+msgid "What you can do"
+msgstr "What you can do"
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:101
+msgid "Big Shot is part of GNOME's screenshot tool. Press Print Screen to use it."
+msgstr "Big Shot is part of GNOME's screenshot tool. Press Print Screen to use it."
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:104
+msgid "Big Shot is installed as a GNOME extension, but it is disabled. Enable it in Extensions, then press Print Screen."
+msgstr "Big Shot is installed as a GNOME extension, but it is disabled. Enable it in Extensions, then press Print Screen."
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:112
+msgid "This app is not installed. Its project page explains how to get it."
+msgstr "This app is not installed. Its project page explains how to get it."
+
+# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:131 usr/share/comm-welcome/comm_welcome/browser_page.py:124 usr/share/comm-welcome/comm_welcome/browser_page.py:157 usr/share/comm-welcome/comm_welcome/widgets.py:138
+#, python-brace-format
+msgid "Open {app}"
+msgstr "Open {app}"
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:133
+msgid "Open Extensions"
+msgstr "Open Extensions"
+
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:135 usr/share/comm-welcome/comm_welcome/app_preview.py:141
+msgid "View project"
+msgstr "View project"
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 17
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:37
+msgid "Which browser suits you?"
+msgstr "Which browser suits you?"
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 18
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:38
+msgid "Keep your current browser or choose another one to install."
+msgstr "Keep your current browser or choose another one to install."
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 39
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:47
+msgid "Other options"
+msgstr "Other options"
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 44
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:55
+msgid "Installing another browser keeps your existing browsers."
+msgstr "Installing another browser keeps your existing browsers."
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 31
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:61
+msgid "View details"
+msgstr "View details"
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 51
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:67
+msgid "Open Software"
+msgstr "Open Software"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:116
+msgid "Your default browser"
+msgstr "Your default browser"
 
 # #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
 # 
@@ -32,8 +100,1274 @@ msgstr "Welcome"
 # File: scripts/check_actions.py, line: 78
 # File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 104
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:120 usr/share/comm-welcome/comm_welcome/browser_page.py:155 usr/share/comm-welcome/comm_welcome/donations.py:142 usr/share/comm-welcome/comm_welcome/widgets.py:137
 msgid "Open"
 msgstr "Open"
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 106
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:154
+msgid "Set as default"
+msgstr "Set as default"
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 93
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:160
+msgid "Installed"
+msgstr "Installed"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:162 usr/share/comm-welcome/comm_welcome/browser_page.py:257
+msgid "Install"
+msgstr "Install"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:164
+#, python-brace-format
+msgid "Install {app}"
+msgstr "Install {app}"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:168 usr/share/comm-welcome/comm_welcome/browser_page.py:258
+msgid "Install from the AUR"
+msgstr "Install from the AUR"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:171
+#, python-brace-format
+msgid "Install {app} from the AUR"
+msgstr "Install {app} from the AUR"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:174
+msgid "Find in Software"
+msgstr "Find in Software"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:182
+#, python-brace-format
+msgid "Install {app} from the AUR?"
+msgstr "Install {app} from the AUR?"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:184
+#, python-brace-format
+msgid "{app} is not in the official repositories. Pamac will download the build recipe from the AUR, maintained by the Arch community rather than by BigCommunity, and build the package on this computer. Pamac shows the recipe and asks for your password before installing."
+msgstr "{app} is not in the official repositories. Pamac will download the build recipe from the AUR, maintained by the Arch community rather than by BigCommunity, and build the package on this computer. Pamac shows the recipe and asks for your password before installing."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:191
+msgid "Cancel"
+msgstr "Cancel"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:192
+msgid "Continue in Pamac"
+msgstr "Continue in Pamac"
+
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 137
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:212 usr/share/comm-welcome/comm_welcome/window.py:218
+msgid "The application could not be opened."
+msgstr "The application could not be opened."
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 124
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:218
+msgid "The default browser could not be changed."
+msgstr "The default browser could not be changed."
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 127
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:221
+#, python-brace-format
+msgid "{browser} is now your default browser."
+msgstr "{browser} is now your default browser."
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:249
+msgid "Available in the official repositories"
+msgstr "Available in the official repositories"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:251
+msgid "Available in the AUR, built by Pamac on this computer"
+msgstr "Available in the AUR, built by Pamac on this computer"
+
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:253
+msgid "Not in the official repositories; Software can search the AUR"
+msgstr "Not in the official repositories; Software can search the AUR"
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 114
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:255 usr/share/comm-welcome/comm_welcome/installer.py:147
+msgid "Checking available browsers…"
+msgstr "Checking available browsers…"
+
+# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 160
+#: usr/share/comm-welcome/comm_welcome/browser_page.py:257 usr/share/comm-welcome/comm_welcome/browser_page.py:258
+msgid "Try again"
+msgstr "Try again"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:21
+msgid "Everyday"
+msgstr "Everyday"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:21
+msgid "Audio and video"
+msgstr "Audio and video"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:21
+msgid "System and family"
+msgstr "System and family"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:21
+msgid "Development"
+msgstr "Development"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:38
+msgid "Generate passwords and organize them in an encrypted vault."
+msgstr "Generate passwords and organize them in an encrypted vault."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:41
+msgid "Create passwords and passphrases without leaving the desktop."
+msgstr "Create passwords and passphrases without leaving the desktop."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:42
+msgid "Keep accounts organized with categories, favorites, and search."
+msgstr "Keep accounts organized with categories, favorites, and search."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:43
+msgid "Bring existing passwords with the import tools."
+msgstr "Bring existing passwords with the import tools."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:47
+msgid "Your passwords, encrypted."
+msgstr "Your passwords, encrypted."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:52
+msgid "View, convert, and resize images, individually or in batches."
+msgstr "View, convert, and resize images, individually or in batches."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:55
+msgid "Browse a folder of photos with zoom and a slideshow."
+msgstr "Browse a folder of photos with zoom and a slideshow."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:56
+msgid "Convert formats and resize several images in one operation."
+msgstr "Convert formats and resize several images in one operation."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:57
+msgid "Access image tools from your file manager."
+msgstr "Access image tools from your file manager."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:61
+msgid "View and convert images."
+msgstr "View and convert images."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:66
+msgid "Find wallpapers and give your desktop a personal touch."
+msgstr "Find wallpapers and give your desktop a personal touch."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:70
+msgid "Preview system wallpapers and images from folders you choose."
+msgstr "Preview system wallpapers and images from folders you choose."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:71
+msgid "Organize favorites and collections without duplicating your images."
+msgstr "Organize favorites and collections without duplicating your images."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:72
+msgid "Choose wallpapers for light and dark styles, or rotate them automatically."
+msgstr "Choose wallpapers for light and dark styles, or rotate them automatically."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:75
+msgid "Wallpapers to your taste."
+msgstr "Wallpapers to your taste."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:80
+msgid "Use your favorite websites as apps."
+msgstr "Use your favorite websites as apps."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:83
+msgid "Give a website its own window and application launcher."
+msgstr "Give a website its own window and application launcher."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:84
+msgid "Choose which installed browser opens each web app."
+msgstr "Choose which installed browser opens each web app."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:85
+msgid "Organize your web apps with categories and search."
+msgstr "Organize your web apps with categories and search."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:89
+msgid "Favorite websites as apps."
+msgstr "Favorite websites as apps."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:94
+msgid "Make scanned documents searchable and copyable."
+msgstr "Make scanned documents searchable and copyable."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:97
+msgid "Add searchable, copyable text to scanned PDFs and keep the original pages."
+msgstr "Add searchable, copyable text to scanned PDFs and keep the original pages."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:98
+msgid "Export the recognized text as plain text, Markdown, or ODT."
+msgstr "Export the recognized text as plain text, Markdown, or ODT."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:99
+msgid "Reorder, rotate, merge, split, and compress pages in the PDF editor."
+msgstr "Reorder, rotate, merge, split, and compress pages in the PDF editor."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:103
+msgid "Searchable text in scanned PDFs."
+msgstr "Searchable text in scanned PDFs."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:108
+msgid "Extract editable text from images and screenshots."
+msgstr "Extract editable text from images and screenshots."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:111
+msgid "Open an image, drop it on the window, or paste it from the clipboard."
+msgstr "Open an image, drop it on the window, or paste it from the clipboard."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:112
+msgid "Capture a region of the screen and read the text in it."
+msgstr "Capture a region of the screen and read the text in it."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:113
+msgid "Edit the recognized text and copy it to the clipboard."
+msgstr "Edit the recognized text and copy it to the clipboard."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:117
+msgid "Copy the text from any image."
+msgstr "Copy the text from any image."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:121
+msgid "Text to speech"
+msgstr "Text to speech"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:122
+msgid "Hear any selected text read aloud."
+msgstr "Hear any selected text read aloud."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:125
+msgid "Select text anywhere and press Alt+V to hear it."
+msgstr "Select text anywhere and press Alt+V to hear it."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:126
+msgid "Choose a voice and adjust its speed and pitch."
+msgstr "Choose a voice and adjust its speed and pitch."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:127
+msgid "Save readings as audio files and find them in the history."
+msgstr "Save readings as audio files and find them in the history."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:131
+msgid "Listen instead of reading."
+msgstr "Listen instead of reading."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:136
+msgid "Use a terminal that saves and organizes your local and SSH sessions."
+msgstr "Use a terminal that saves and organizes your local and SSH sessions."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:139
+msgid "Save local and SSH sessions and organize them in folders."
+msgstr "Save local and SSH sessions and organize them in folders."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:140
+msgid "Split the window into panes and group tabs by color."
+msgstr "Split the window into panes and group tabs by color."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:141
+msgid "See command output colored automatically, without changing your shell."
+msgstr "See command output colored automatically, without changing your shell."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:145
+msgid "Your terminal sessions, organized."
+msgstr "Your terminal sessions, organized."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:151
+msgid "Play a falling-block puzzle themed on Linux distributions."
+msgstr "Play a falling-block puzzle themed on Linux distributions."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:154
+msgid "Stack pieces themed after seven Linux distributions."
+msgstr "Stack pieces themed after seven Linux distributions."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:155
+msgid "Clear lines to charge the BigLinux power, then release it with Space."
+msgstr "Clear lines to charge the BigLinux power, then release it with Space."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:156
+msgid "Hold a piece for later and chase your top five scores."
+msgstr "Hold a piece for later and chase your top five scores."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:160
+msgid "A block puzzle with Linux pieces."
+msgstr "A block puzzle with Linux pieces."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:166
+msgid "Annotate and record from GNOME's own screenshot tool."
+msgstr "Annotate and record from GNOME's own screenshot tool."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:169
+msgid "Capture an area, a window, or the entire screen."
+msgstr "Capture an area, a window, or the entire screen."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:170
+msgid "Add arrows, text, and highlights to explain what is on screen."
+msgstr "Add arrows, text, and highlights to explain what is on screen."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:171
+msgid "Record the screen with microphone or desktop audio."
+msgstr "Record the screen with microphone or desktop audio."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:175
+msgid "Capture, annotate, and record."
+msgstr "Capture, annotate, and record."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:179
+msgid "Noise filter"
+msgstr "Noise filter"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:180
+msgid "Reduce noise from your microphone and audio."
+msgstr "Reduce noise from your microphone and audio."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:183
+msgid "Reduce background noise from your microphone during calls and recordings."
+msgstr "Reduce background noise from your microphone during calls and recordings."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:184
+msgid "Filter playback audio as well as microphone input."
+msgstr "Filter playback audio as well as microphone input."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:185
+msgid "Adjust the filters in a dedicated desktop app."
+msgstr "Adjust the filters in a dedicated desktop app."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:189
+msgid "Less noise in your calls."
+msgstr "Less noise in your calls."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:194
+msgid "Enhance the sound of every app with ready-made profiles."
+msgstr "Enhance the sound of every app with ready-made profiles."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:197
+msgid "Choose a profile for music, games, movies, or dialogue."
+msgstr "Choose a profile for music, games, movies, or dialogue."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:198
+msgid "Adjust bass, treble clarity, stereo width, and compression."
+msgstr "Adjust bass, treble clarity, stereo width, and compression."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:199
+msgid "Keep processing on when you switch speakers or connect Bluetooth."
+msgstr "Keep processing on when you switch speakers or connect Bluetooth."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:203
+msgid "Sound profiles for the whole system."
+msgstr "Sound profiles for the whole system."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:207
+msgid "Audio converter"
+msgstr "Audio converter"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:208
+msgid "Convert audio, cut segments, and remove pauses from speech."
+msgstr "Convert audio, cut segments, and remove pauses from speech."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:211
+msgid "Convert to MP3, FLAC, Opus, and more, or extract the audio from a video."
+msgstr "Convert to MP3, FLAC, Opus, and more, or extract the audio from a video."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:212
+msgid "Mark the parts to keep or remove directly on the waveform."
+msgstr "Mark the parts to keep or remove directly on the waveform."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:213
+msgid "Remove pauses from speech and reduce background noise."
+msgstr "Remove pauses from speech and reduce background noise."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:217
+msgid "Convert and trim your audio."
+msgstr "Convert and trim your audio."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:221
+msgid "Video converter"
+msgstr "Video converter"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:222
+msgid "Convert, trim, and optimize your videos."
+msgstr "Convert, trim, and optimize your videos."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:225
+msgid "Convert a whole queue of videos to MP4, MKV, MOV, or WebM."
+msgstr "Convert a whole queue of videos to MP4, MKV, MOV, or WebM."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:226
+msgid "Trim, crop, and rotate a video, with a preview before exporting."
+msgstr "Trim, crop, and rotate a video, with a preview before exporting."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:227
+msgid "Fit a video under a target size or split it into parts."
+msgstr "Fit a video under a target size or split it into parts."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:231
+msgid "Convert and trim your videos."
+msgstr "Convert and trim your videos."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:236
+msgid "Record and edit voice notes on your computer."
+msgstr "Record and edit voice notes on your computer."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:239
+msgid "Record from the microphone and pause or resume at any time."
+msgstr "Record from the microphone and pause or resume at any time."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:240
+msgid "Trim, merge, or change the speed and pitch of a recording."
+msgstr "Trim, merge, or change the speed and pitch of a recording."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:241
+msgid "Export recordings as WAV, MP3, Opus, or FLAC."
+msgstr "Export recordings as WAV, MP3, Opus, or FLAC."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:245
+msgid "Voice notes, recorded locally."
+msgstr "Voice notes, recorded locally."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:250
+msgid "Use a phone, USB camera, or DSLR as a webcam."
+msgstr "Use a phone, USB camera, or DSLR as a webcam."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:253
+msgid "Connect a phone through the browser, Wi-Fi, USB, or AirPlay."
+msgstr "Connect a phone through the browser, Wi-Fi, USB, or AirPlay."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:254
+msgid "Send the image to video calls through a virtual camera."
+msgstr "Send the image to video calls through a virtual camera."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:255
+msgid "Apply real-time effects, take photos, and record videos."
+msgstr "Apply real-time effects, take photos, and record videos."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:259
+msgid "Any camera as your webcam."
+msgstr "Any camera as your webcam."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:265
+msgid "Choose your desktop layout, theme, panels, and effects."
+msgstr "Choose your desktop layout, theme, panels, and effects."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:269
+msgid "Switch the desktop layout and undo the change if needed."
+msgstr "Switch the desktop layout and undo the change if needed."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:270
+msgid "Choose fonts, accent colors, and icon themes."
+msgstr "Choose fonts, accent colors, and icon themes."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:271
+msgid "Find and install GNOME extensions without opening a browser."
+msgstr "Find and install GNOME extensions without opening a browser."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:275
+msgid "Your GNOME, your layout."
+msgstr "Your GNOME, your layout."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:280
+msgid "Share your screen with a TV, projector or Chromecast."
+msgstr "Share your screen with a TV, projector or Chromecast."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:285
+msgid "General settings"
+msgstr "General settings"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:286
+msgid "Adjust power, performance, devices, and services in one place."
+msgstr "Adjust power, performance, devices, and services in one place."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:289
+msgid "Turn common system tweaks on or off with a single switch."
+msgstr "Turn common system tweaks on or off with a single switch."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:290
+msgid "Read what each option does before you change it."
+msgstr "Read what each option does before you change it."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:291
+msgid "Search settings with everyday words and jump straight to them."
+msgstr "Search settings with everyday words and jump straight to them."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:295
+msgid "System tweaks, one switch each."
+msgstr "System tweaks, one switch each."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:299
+msgid "Hardware management"
+msgstr "Hardware management"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:300
+msgid "Install drivers, kernels, and Mesa versions for your hardware."
+msgstr "Install drivers, kernels, and Mesa versions for your hardware."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:303
+msgid "Detect your hardware and install the drivers it needs."
+msgstr "Detect your hardware and install the drivers it needs."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:304
+msgid "Install a kernel together with the modules your system already uses."
+msgstr "Install a kernel together with the modules your system already uses."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:305
+msgid "Switch between Mesa graphics versions, such as stable or legacy."
+msgstr "Switch between Mesa graphics versions, such as stable or legacy."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:309
+msgid "Drivers and kernels for your hardware."
+msgstr "Drivers and kernels for your hardware."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:313
+msgid "Hardware information"
+msgstr "Hardware information"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:314
+msgid "Get to know your computer's components."
+msgstr "Get to know your computer's components."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:317
+msgid "Check the processor, graphics, memory, disks, and sensors in one place."
+msgstr "Check the processor, graphics, memory, disks, and sensors in one place."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:318
+msgid "Save a complete hardware report as an HTML page."
+msgstr "Save a complete hardware report as an HTML page."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:319
+msgid "Share a report online when asking for help on a forum."
+msgstr "Share a report online when asking for help on a forum."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:323
+msgid "Your hardware, in detail."
+msgstr "Your hardware, in detail."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:327
+msgid "Network information"
+msgstr "Network information"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:328
+msgid "Diagnose your connection and find devices on your network."
+msgstr "Diagnose your connection and find devices on your network."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:331
+msgid "Check your connection, gateway, DNS, and internet access."
+msgstr "Check your connection, gateway, DNS, and internet access."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:332
+msgid "Find devices on your network and the services they offer."
+msgstr "Find devices on your network and the services they offer."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:333
+msgid "Compare nearby Wi-Fi networks by signal strength."
+msgstr "Compare nearby Wi-Fi networks by signal strength."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:337
+msgid "Understand your network."
+msgstr "Understand your network."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:341
+msgid "Parental controls"
+msgstr "Parental controls"
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:342
+msgid "Set up supervised accounts for children and teenagers."
+msgstr "Set up supervised accounts for children and teenagers."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:345
+msgid "Create a supervised account or add supervision to an existing one."
+msgstr "Create a supervised account or add supervision to an existing one."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:346
+msgid "Set allowed hours and a daily usage limit."
+msgstr "Set allowed hours and a daily usage limit."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:347
+msgid "Choose which apps a child can open and filter websites."
+msgstr "Choose which apps a child can open and filter websites."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:351
+msgid "Safer accounts for children."
+msgstr "Safer accounts for children."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:356
+msgid "Apply a performance profile to each game you play."
+msgstr "Apply a performance profile to each game you play."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:359
+msgid "Turn on Turbo to optimize each game when it starts."
+msgstr "Turn on Turbo to optimize each game when it starts."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:360
+msgid "See ProtonDB ratings and anti-cheat status for your games."
+msgstr "See ProtonDB ratings and anti-cheat status for your games."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:361
+msgid "Measure whether a change helped with repeated A/B runs."
+msgstr "Measure whether a change helped with repeated A/B runs."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:365
+msgid "Performance profiles for your games."
+msgstr "Performance profiles for your games."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:371
+msgid "Build a portable AppImage from an executable."
+msgstr "Build a portable AppImage from an executable."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:374
+msgid "Pick an executable and let it detect the app type, icon, and files."
+msgstr "Pick an executable and let it detect the app type, icon, and files."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:375
+msgid "Build in a container so the AppImage runs on more systems."
+msgstr "Build in a container so the AppImage runs on more systems."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:376
+msgid "Offer optional update notifications to the people who use your app."
+msgstr "Offer optional update notifications to the people who use your app."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:380
+msgid "Package apps as AppImages."
+msgstr "Package apps as AppImages."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:385
+msgid "Build BigCommunity and BigLinux installation images."
+msgstr "Build BigCommunity and BigLinux installation images."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:388
+msgid "Choose the distribution, desktop edition, and kernel for the image."
+msgstr "Choose the distribution, desktop edition, and kernel for the image."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:389
+msgid "Build the image in an isolated Docker or Podman container."
+msgstr "Build the image in an isolated Docker or Podman container."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:390
+msgid "Review past builds with their outcome, duration, and log."
+msgstr "Review past builds with their outcome, duration, and log."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:395
+msgid "Your own installation image."
+msgstr "Your own installation image."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:400
+msgid "Manage Git repositories and build Linux packages."
+msgstr "Manage Git repositories and build Linux packages."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:403
+msgid "Review changed files and publish a commit to your branch."
+msgstr "Review changed files and publish a commit to your branch."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:404
+msgid "Create, switch, and clean up branches, and open pull requests."
+msgstr "Create, switch, and clean up branches, and open pull requests."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:405
+msgid "Start package builds on GitHub Actions or build one from the AUR."
+msgstr "Start package builds on GitHub Actions or build one from the AUR."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:409
+msgid "Git and packages, step by step."
+msgstr "Git and packages, step by step."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:414
+msgid "Translate gettext projects into 29 languages with AI services."
+msgstr "Translate gettext projects into 29 languages with AI services."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:417
+msgid "Extract a project's translatable strings into a .pot template."
+msgstr "Extract a project's translatable strings into a .pot template."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:418
+msgid "Translate into 29 languages with DeepL, Gemini, Groq, and others."
+msgstr "Translate into 29 languages with DeepL, Gemini, Groq, and others."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:419
+msgid "Compile the translations into .mo files ready to ship."
+msgstr "Compile the translations into .mo files ready to ship."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:423
+msgid "Translate your project with AI."
+msgstr "Translate your project with AI."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:455
+msgid "Blocks ads and trackers by default."
+msgstr "Blocks ads and trackers by default."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:463
+msgid "Mozilla's open-source browser."
+msgstr "Mozilla's open-source browser."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:471
+msgid "Google's browser, synced with your Google account."
+msgstr "Google's browser, synced with your Google account."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:480
+msgid "The open-source project behind Chrome."
+msgstr "The open-source project behind Chrome."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:488
+msgid "Highly customizable, with built-in mail and notes."
+msgstr "Highly customizable, with built-in mail and notes."
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:496
+msgid "Comes with a built-in VPN and ad blocker."
+msgstr "Comes with a built-in VPN and ad blocker."
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 17
+#: usr/share/comm-welcome/comm_welcome/donations.py:45 usr/share/comm-welcome/comm_welcome/help_page.py:310
+msgid "Support BigCommunity"
+msgstr "Support BigCommunity"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 24
+#: usr/share/comm-welcome/comm_welcome/donations.py:64 usr/share/comm-welcome/comm_welcome/help_page.py:311
+msgid "Your support makes a difference"
+msgstr "Your support makes a difference"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 25
+#: usr/share/comm-welcome/comm_welcome/donations.py:69 usr/share/comm-welcome/comm_welcome/help_page.py:314
+msgid "Help maintain our servers, develop new features, and support the community."
+msgstr "Help maintain our servers, develop new features, and support the community."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:78
+msgid "Monthly support"
+msgstr "Monthly support"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 71
+#: usr/share/comm-welcome/comm_welcome/donations.py:81
+msgid "Monthly support. Continue on Patreon in your browser."
+msgstr "Monthly support. Continue on Patreon in your browser."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:83 usr/share/comm-welcome/comm_welcome/help_page.py:320
+msgid "Support on Patreon"
+msgstr "Support on Patreon"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:92
+msgid "One-time donation"
+msgstr "One-time donation"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:99
+msgid "Email key"
+msgstr "Email key"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+#: usr/share/comm-welcome/comm_welcome/donations.py:101
+msgid "Copy PIX key"
+msgstr "Copy PIX key"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
+#: usr/share/comm-welcome/comm_welcome/donations.py:102
+msgid "PIX key copied"
+msgstr "PIX key copied"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 38
+#: usr/share/comm-welcome/comm_welcome/donations.py:105
+msgid "Paste this key into your banking app and choose the amount."
+msgstr "Paste this key into your banking app and choose the amount."
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:109
+msgid "TRC20 network"
+msgstr "TRC20 network"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 46
+#: usr/share/comm-welcome/comm_welcome/donations.py:111
+msgid "Copy USDT address"
+msgstr "Copy USDT address"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 47
+#: usr/share/comm-welcome/comm_welcome/donations.py:112
+msgid "USDT address copied"
+msgstr "USDT address copied"
+
+#: usr/share/comm-welcome/comm_welcome/donations.py:119
+msgid "BTC network"
+msgstr "BTC network"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 53
+#: usr/share/comm-welcome/comm_welcome/donations.py:121
+msgid "Copy Bitcoin address"
+msgstr "Copy Bitcoin address"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 54
+#: usr/share/comm-welcome/comm_welcome/donations.py:122
+msgid "Bitcoin address copied"
+msgstr "Bitcoin address copied"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 63
+#: usr/share/comm-welcome/comm_welcome/donations.py:139 usr/share/comm-welcome/comm_welcome/donations.py:146
+msgid "Telegram donation bot"
+msgstr "Telegram donation bot"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 64
+#: usr/share/comm-welcome/comm_welcome/donations.py:140
+msgid "Continue in Telegram."
+msgstr "Continue in Telegram."
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:43 usr/share/comm-welcome/comm_welcome/help_page.py:143
+msgid "Inside BigCommunity"
+msgstr "Inside BigCommunity"
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:44
+msgid ""
+"What runs beneath\n"
+"your desktop."
+msgstr ""
+"What runs beneath\n"
+"your desktop."
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:49
+msgid "Every number here was read from this computer, just now."
+msgstr "Every number here was read from this computer, just now."
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:111
+msgid "Technical detail"
+msgstr "Technical detail"
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:118
+msgid "On this computer"
+msgstr "On this computer"
+
+# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 60
+#: usr/share/comm-welcome/comm_welcome/help_page.py:326
+msgid "Other ways to give"
+msgstr "Other ways to give"
+
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 61
+#: usr/share/comm-welcome/comm_welcome/help_page.py:340 usr/share/comm-welcome/comm_welcome/window.py:101
+msgid "Help"
+msgstr "Help"
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:341
+msgid "Questions, community, and ways to support the project."
+msgstr "Questions, community, and ways to support the project."
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:347
+msgid "Talk to the community"
+msgstr "Talk to the community"
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 192
+#: usr/share/comm-welcome/comm_welcome/help_page.py:351
+msgid "BigCommunity website"
+msgstr "BigCommunity website"
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:352
+msgid "News, releases, and the project's history."
+msgstr "News, releases, and the project's history."
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 198
+#: usr/share/comm-welcome/comm_welcome/help_page.py:358
+msgid "Community on Telegram"
+msgstr "Community on Telegram"
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 199
+#: usr/share/comm-welcome/comm_welcome/help_page.py:359
+msgid "Talk with other members of the community."
+msgstr "Talk with other members of the community."
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 204
+#: usr/share/comm-welcome/comm_welcome/help_page.py:365
+msgid "Ask the forum"
+msgstr "Ask the forum"
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:366
+msgid "Support, tips, and news for both editions in one place."
+msgstr "Support, tips, and news for both editions in one place."
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:374
+msgid "Links open in your browser and need internet access."
+msgstr "Links open in your browser and need internet access."
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:393
+msgid "When asking for help"
+msgstr "When asking for help"
+
+#: usr/share/comm-welcome/comm_welcome/help_page.py:396
+msgid "A hardware or network report answers most first questions."
+msgstr "A hardware or network report answers most first questions."
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 243
+#: usr/share/comm-welcome/comm_welcome/help_page.py:404
+msgid "Opening these apps does not send your information to anyone."
+msgstr "Opening these apps does not send your information to anyone."
+
+#: usr/share/comm-welcome/comm_welcome/i18n.py:26 data/org.bigcommunity.CommWelcome.desktop.in:4
+msgid "Discover your desktop and applications"
+msgstr "Discover your desktop and applications"
+
+#: usr/share/comm-welcome/comm_welcome/i18n.py:27 data/org.bigcommunity.CommWelcome.desktop.in:10
+msgid "welcome;getting started;community;browser;"
+msgstr "welcome;getting started;community;browser;"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:42
+#, python-brace-format
+msgid "Running {kernel}. linux-big is available in the community repository."
+msgstr "Running {kernel}. linux-big is available in the community repository."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:57
+msgid "You are running a snapshot right now."
+msgstr "You are running a snapshot right now."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:62
+#, python-brace-format
+msgid "{count} snapshots in the boot menu; latest {date}"
+msgstr "{count} snapshots in the boot menu; latest {date}"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:83
+#, python-brace-format
+msgid "{size} of compressed memory, unused right now"
+msgstr "{size} of compressed memory, unused right now"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:86
+#, python-brace-format
+msgid "{original} kept in {compressed} of RAM"
+msgstr "{original} kept in {compressed} of RAM"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:100
+#, python-brace-format
+msgid "NVIDIA driver {version} loaded"
+msgstr "NVIDIA driver {version} loaded"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:134
+#, python-brace-format
+msgid "{count} BigCommunity extensions installed"
+msgstr "{count} BigCommunity extensions installed"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:135
+#, python-brace-format
+msgid "{active} of {count} BigCommunity extensions active"
+msgstr "{active} of {count} BigCommunity extensions active"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:144
+msgid "linux-big, with BORE active"
+msgstr "linux-big, with BORE active"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:145
+msgid "linux-big in use"
+msgstr "linux-big in use"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:146
+msgid "kernel in use"
+msgstr "kernel in use"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:151
+msgid "now"
+msgstr "now"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:151
+msgid "you are running a snapshot"
+msgstr "you are running a snapshot"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:153
+msgid "snapshots ready in the boot menu"
+msgstr "snapshots ready in the boot menu"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:166
+msgid "compression on the system disk"
+msgstr "compression on the system disk"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:167
+msgid "file system of the system disk"
+msgstr "file system of the system disk"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:173
+msgid "how much zram is compressing now"
+msgstr "how much zram is compressing now"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:175
+msgid "of compressed memory available"
+msgstr "of compressed memory available"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:181
+msgid "network congestion control"
+msgstr "network congestion control"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:183
+msgid "disk scheduler"
+msgstr "disk scheduler"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:188
+msgid "NVIDIA driver loaded"
+msgstr "NVIDIA driver loaded"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:198
+msgid "BigLinux and BigCommunity repositories"
+msgstr "BigLinux and BigCommunity repositories"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:206
+msgid "BigCommunity extensions installed"
+msgstr "BigCommunity extensions installed"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:207
+msgid "BigCommunity extensions active"
+msgstr "BigCommunity extensions active"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:213
+msgid "Kernel"
+msgstr "Kernel"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:214
+msgid "A kernel built by the community"
+msgstr "A kernel built by the community"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:216
+msgid "linux-big is BigCommunity's own kernel. Its BORE scheduler favors what you are interacting with over long background jobs, and it is compiled with Clang and link-time optimization. It installs next to the standard kernel, which stays in the boot menu as a fallback."
+msgstr "linux-big is BigCommunity's own kernel. Its BORE scheduler favors what you are interacting with over long background jobs, and it is compiled with Clang and link-time optimization. It installs next to the standard kernel, which stays in the boot menu as a fallback."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:228
+msgid "Snapshots"
+msgstr "Snapshots"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:229
+msgid "Go back in time from the boot menu"
+msgstr "Go back in time from the boot menu"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:231
+msgid "Timeshift saves daily snapshots of the system, and each one appears in the boot menu. If an update goes wrong, start the computer as it was before; a helper then offers to restore that state for good."
+msgstr "Timeshift saves daily snapshots of the system, and each one appears in the boot menu. If an update goes wrong, start the computer as it was before; a helper then offers to restore that state for good."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:242
+msgid "Compression"
+msgstr "Compression"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:243
+msgid "Files compressed as they are written"
+msgstr "Files compressed as they are written"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:245
+msgid "The system partition uses Btrfs with zstd compression. Files take less room and the SSD receives fewer writes, with nothing to configure."
+msgstr "The system partition uses Btrfs with zstd compression. Files take less room and the SSD receives fewer writes, with nothing to configure."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:255
+msgid "Memory"
+msgstr "Memory"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:256
+msgid "More room in the same memory"
+msgstr "More room in the same memory"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:258
+msgid "There is no swap partition. When memory runs short, pages are first compressed inside the RAM with zram, which is far faster than writing them to disk. A swapfile on Btrfs covers overflow and hibernation."
+msgstr "There is no swap partition. When memory runs short, pages are first compressed inside the RAM with zram, which is far faster than writing them to disk. A swapfile on Btrfs covers overflow and hibernation."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:269
+msgid "Tuning"
+msgstr "Tuning"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:270
+msgid "Tuned for each disk and connection"
+msgstr "Tuned for each disk and connection"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:272
+msgid "Small BigLinux packages adjust the system automatically: each disk gets a suitable I/O scheduler and the network uses the BBR congestion algorithm. They are ordinary packages you can inspect or remove."
+msgstr "Small BigLinux packages adjust the system automatically: each disk gets a suitable I/O scheduler and the network uses the BBR congestion algorithm. They are ordinary packages you can inspect or remove."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:283
+msgid "Drivers"
+msgstr "Drivers"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:284
+msgid "Graphics drivers that follow the kernel"
+msgstr "Graphics drivers that follow the kernel"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:286
+msgid "Big Driver Manager installs the graphics drivers your hardware needs. For BigCommunity kernels, NVIDIA modules come prebuilt and pinned to their kernel, so an update waits for its driver instead of leaving you without graphics."
+msgstr "Big Driver Manager installs the graphics drivers your hardware needs. For BigCommunity kernels, NVIDIA modules come prebuilt and pinned to their kernel, so an update waits for its driver instead of leaving you without graphics."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:297
+msgid "Software"
+msgstr "Software"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:298
+msgid "More software, no extra setup"
+msgstr "More software, no extra setup"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:300
+msgid "Besides the Arch and Manjaro repositories, you get BigLinux and BigCommunity repositories. The Software app can also use Flathub and the AUR, and Big Pkg Installer converts .deb and .rpm packages."
+msgstr "Besides the Arch and Manjaro repositories, you get BigLinux and BigCommunity repositories. The Software app can also use Flathub and the AUR, and Big Pkg Installer converts .deb and .rpm packages."
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:311
+msgid "Desktop"
+msgstr "Desktop"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:312
+msgid "GNOME, curated and ready"
+msgstr "GNOME, curated and ready"
+
+#: usr/share/comm-welcome/comm_welcome/insights.py:314
+msgid "Big Gnome Center switches between complete desktop layouts in one click. The dock, panel, menu, glass effect, screenshots and clipboard history are BigCommunity's own extensions rather than third-party ones."
+msgstr "Big Gnome Center switches between complete desktop layouts in one click. The dock, panel, menu, glass effect, screenshots and clipboard history are BigCommunity's own extensions rather than third-party ones."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 102
+#: usr/share/comm-welcome/comm_welcome/installer.py:134
+msgid "The installer connection was lost. Check Software before retrying."
+msgstr "The installer connection was lost. Check Software before retrying."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 108
+#: usr/share/comm-welcome/comm_welcome/installer.py:141
+msgid "Another installation is in progress."
+msgstr "Another installation is in progress."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 110
+#: usr/share/comm-welcome/comm_welcome/installer.py:143
+msgid "Connect to the internet to install another browser."
+msgstr "Connect to the internet to install another browser."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 112
+#: usr/share/comm-welcome/comm_welcome/installer.py:145
+msgid "Another package operation is in progress. Try again when it finishes."
+msgstr "Another package operation is in progress. Try again when it finishes."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:149
+msgid "Browser installation requires Pamac. Open Software to install a browser."
+msgstr "Browser installation requires Pamac. Open Software to install a browser."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 171
+#: usr/share/comm-welcome/comm_welcome/installer.py:178 usr/share/comm-welcome/comm_welcome/installer.py:259
+msgid "This installation needs additional review. Open Software to continue."
+msgstr "This installation needs additional review. Open Software to continue."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 132
+#: usr/share/comm-welcome/comm_welcome/installer.py:185
+msgid "Preparing installation…"
+msgstr "Preparing installation…"
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:195
+#, python-brace-format
+msgid "Continue in the Pamac window to install {browser}."
+msgstr "Continue in the Pamac window to install {browser}."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 143
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 207
+#: usr/share/comm-welcome/comm_welcome/installer.py:204 usr/share/comm-welcome/comm_welcome/installer.py:227 usr/share/comm-welcome/comm_welcome/installer.py:291 usr/share/comm-welcome/comm_welcome/installer.py:304
+msgid "The installation could not be completed."
+msgstr "The installation could not be completed."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 205
+#: usr/share/comm-welcome/comm_welcome/installer.py:214 usr/share/comm-welcome/comm_welcome/installer.py:302
+#, python-brace-format
+msgid "{browser} installed."
+msgstr "{browser} installed."
+
+#: usr/share/comm-welcome/comm_welcome/installer.py:216
+msgid "The installation was canceled or did not finish."
+msgstr "The installation was canceled or did not finish."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 174
+#: usr/share/comm-welcome/comm_welcome/installer.py:262
+msgid "Complete any authentication requested by the system."
+msgstr "Complete any authentication requested by the system."
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 188
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 190
+#: usr/share/comm-welcome/comm_welcome/installer.py:280 usr/share/comm-welcome/comm_welcome/installer.py:282
+#, python-brace-format
+msgid "Installing {browser}…"
+msgstr "Installing {browser}…"
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 200
+#: usr/share/comm-welcome/comm_welcome/installer.py:297
+msgid "Additional review is required. Open Software after this operation finishes."
+msgstr "Additional review is required. Open Software after this operation finishes."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:17
+msgid "Built into GNOME. Press Print Screen."
+msgstr "Built into GNOME. Press Print Screen."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:18
+msgid "GNOME extension, currently disabled."
+msgstr "GNOME extension, currently disabled."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:19
+msgid "Not installed. See the project."
+msgstr "Not installed. See the project."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:51 usr/share/comm-welcome/comm_welcome/pages.py:54
+#, python-brace-format
+msgid "Meet {app}"
+msgstr "Meet {app}"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:106
+msgid "GNOME. Made by a community."
+msgstr "GNOME. Made by a community."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:108
+msgid ""
+"Make yourself\n"
+"at home."
+msgstr ""
+"Make yourself\n"
+"at home."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:111
+msgid "A GNOME desktop with the community's apps close at hand."
+msgstr "A GNOME desktop with the community's apps close at hand."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:118
+msgid "Personalize your desktop"
+msgstr "Personalize your desktop"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:135
+msgid "Made by the community, ready to use."
+msgstr "Made by the community, ready to use."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:138
+msgid "Explore all apps"
+msgstr "Explore all apps"
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 119
+#: usr/share/comm-welcome/comm_welcome/pages.py:152
+msgid "Do not show again"
+msgstr "Do not show again"
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 133
+#: usr/share/comm-welcome/comm_welcome/pages.py:154
+msgid "You can reopen Welcome from the application menu."
+msgstr "You can reopen Welcome from the application menu."
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 128
+#: usr/share/comm-welcome/comm_welcome/pages.py:163 usr/share/comm-welcome/comm_welcome/window.py:169
+msgid "Your preference could not be saved."
+msgstr "Your preference could not be saved."
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:169 usr/share/comm-welcome/comm_welcome/window.py:69
+msgid "Appearance"
+msgstr "Appearance"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:176 usr/share/comm-welcome/comm_welcome/window.py:57
+msgid "Follow system"
+msgstr "Follow system"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:177 usr/share/comm-welcome/comm_welcome/window.py:58
+msgid "Light"
+msgstr "Light"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:178 usr/share/comm-welcome/comm_welcome/window.py:59
+msgid "Dark"
+msgstr "Dark"
+
+#: usr/share/comm-welcome/comm_welcome/pages.py:207
+msgid "Tools from BigLinux and BigCommunity. Open any of them to see what it does."
+msgstr "Tools from BigLinux and BigCommunity. Open any of them to see what it does."
+
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 176
+#: usr/share/comm-welcome/comm_welcome/pages.py:226
+msgid "Install more apps"
+msgstr "Install more apps"
+
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 14
+# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 26
+#: usr/share/comm-welcome/comm_welcome/window.py:23
+msgid "Welcome to BigCommunity"
+msgstr "Welcome to BigCommunity"
+
+# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
+# 
+# File: tests/test_localization.py, line: 59
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 34
+# File: usr/share/comm-welcome/comm_welcome/window.py, line: 58
+#: usr/share/comm-welcome/comm_welcome/window.py:44 usr/share/comm-welcome/comm_welcome/window.py:97
+msgid "Welcome"
+msgstr "Welcome"
 
 # #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
 # 
@@ -42,475 +1376,233 @@ msgstr "Open"
 # File: scripts/check_actions.py, line: 80
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 39
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 226
+#: usr/share/comm-welcome/comm_welcome/window.py:65
 msgid "Support the project"
 msgstr "Support the project"
 
-# #-#-#-#-#  comm-welcome.pot (comm-welcome)  #-#-#-#-#
-# 
-# File: usr/share/comm-welcome/comm_welcome/window.py, line: 14
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 26
-msgid "Welcome to BigCommunity"
-msgstr "Welcome to BigCommunity"
-
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 40
+#: usr/share/comm-welcome/comm_welcome/window.py:66
 msgid "About Welcome"
 msgstr "About Welcome"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 41
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 157
+#: usr/share/comm-welcome/comm_welcome/window.py:67 usr/share/comm-welcome/comm_welcome/window.py:241
 msgid "Close"
 msgstr "Close"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 43
+#: usr/share/comm-welcome/comm_welcome/window.py:72
 msgid "Main menu"
 msgstr "Main menu"
 
+#: usr/share/comm-welcome/comm_welcome/window.py:98
+msgid "Inside"
+msgstr "Inside"
+
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 59
+#: usr/share/comm-welcome/comm_welcome/window.py:99
 msgid "Apps"
 msgstr "Apps"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 60
+#: usr/share/comm-welcome/comm_welcome/window.py:100
 msgid "Browsers"
 msgstr "Browsers"
 
-# File: usr/share/comm-welcome/comm_welcome/window.py, line: 61
-msgid "Help"
-msgstr "Help"
+#: usr/share/comm-welcome/comm_welcome/window.py:119
+msgid "What runs beneath your desktop."
+msgstr "What runs beneath your desktop."
+
+#: usr/share/comm-welcome/comm_welcome/window.py:132
+msgid "Make yourself at home."
+msgstr "Make yourself at home."
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 86
+#: usr/share/comm-welcome/comm_welcome/window.py:144
 msgid "View installation"
 msgstr "View installation"
 
-# File: usr/share/comm-welcome/comm_welcome/window.py, line: 137
-msgid "The application could not be opened."
-msgstr "The application could not be opened."
-
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 146
+#: usr/share/comm-welcome/comm_welcome/window.py:230
 msgid "The link could not be opened."
 msgstr "The link could not be opened."
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 165
+#: usr/share/comm-welcome/comm_welcome/window.py:249 data/org.bigcommunity.CommWelcome-autostart.desktop.in:3 data/org.bigcommunity.CommWelcome.desktop.in:3
 msgid "BigCommunity Welcome"
 msgstr "BigCommunity Welcome"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 171
+#: usr/share/comm-welcome/comm_welcome/window.py:255
 msgid "Discover your desktop and the apps that come with it."
 msgstr "Discover your desktop and the apps that come with it."
 
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 102
-msgid "The installer connection was lost. Check Software before retrying."
-msgstr "The installer connection was lost. Check Software before retrying."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 108
-msgid "Another installation is in progress."
-msgstr "Another installation is in progress."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 110
-msgid "Connect to the internet to install another browser."
-msgstr "Connect to the internet to install another browser."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 112
-msgid "Another package operation is in progress. Try again when it finishes."
-msgstr "Another package operation is in progress. Try again when it finishes."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 114
-msgid "Checking available browsers…"
-msgstr "Checking available browsers…"
-
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 116
-msgid "Browser installation requires a compatible Pamac session service."
-msgstr "Browser installation requires a compatible Pamac session service."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 132
-msgid "Preparing installation…"
-msgstr "Preparing installation…"
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 143
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 207
-msgid "The installation could not be completed."
-msgstr "The installation could not be completed."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 171
-msgid "This installation needs additional review. Open Software to continue."
-msgstr "This installation needs additional review. Open Software to continue."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 174
-msgid "Complete any authentication requested by the system."
-msgstr "Complete any authentication requested by the system."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 188
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 190
-#, python-brace-format
-msgid "Installing {browser}…"
-msgstr "Installing {browser}…"
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 200
-msgid "Additional review is required. Open Software after this operation finishes."
-msgstr "Additional review is required. Open Software after this operation finishes."
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 205
-#, python-brace-format
-msgid "{browser} installed."
-msgstr "{browser} installed."
+#~ msgid "Browser installation requires a compatible Pamac session service."
+#~ msgstr "Browser installation requires a compatible Pamac session service."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 25
-msgid "Your new system, your way."
-msgstr "Your new system, your way."
+#~ msgid "Your new system, your way."
+#~ msgstr "Your new system, your way."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 36
-msgid "Discover apps, personalize your desktop, and find what you need to get started."
-msgstr "Discover apps, personalize your desktop, and find what you need to get started."
+#~ msgid "Discover apps, personalize your desktop, and find what you need to get started."
+#~ msgstr "Discover apps, personalize your desktop, and find what you need to get started."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 47
-msgid "PERSONALIZE YOUR DESKTOP"
-msgstr "PERSONALIZE YOUR DESKTOP"
+#~ msgid "PERSONALIZE YOUR DESKTOP"
+#~ msgstr "PERSONALIZE YOUR DESKTOP"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 48
-msgid "Make yourself at home"
-msgstr "Make yourself at home"
+#~ msgid "Make yourself at home"
+#~ msgstr "Make yourself at home"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 52
-msgid "Explore layouts, themes, panels, docks, and personalization."
-msgstr "Explore layouts, themes, panels, docks, and personalization."
+#~ msgid "Explore layouts, themes, panels, docks, and personalization."
+#~ msgstr "Explore layouts, themes, panels, docks, and personalization."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 54
-msgid "Explore the personalization options for your desktop."
-msgstr "Explore the personalization options for your desktop."
+#~ msgid "Explore the personalization options for your desktop."
+#~ msgstr "Explore the personalization options for your desktop."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 59
-msgid "Open Big Gnome Center"
-msgstr "Open Big Gnome Center"
+#~ msgid "Open Big Gnome Center"
+#~ msgstr "Open Big Gnome Center"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 59
-msgid "Open settings"
-msgstr "Open settings"
+#~ msgid "Open settings"
+#~ msgstr "Open settings"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 73
-msgid "Start here"
-msgstr "Start here"
+#~ msgid "Start here"
+#~ msgstr "Start here"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 76
-msgid "Discover apps"
-msgstr "Discover apps"
+#~ msgid "Discover apps"
+#~ msgstr "Discover apps"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 77
-msgid "Choose a browser"
-msgstr "Choose a browser"
+#~ msgid "Choose a browser"
+#~ msgstr "Choose a browser"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 78
-msgid "Find help"
-msgstr "Find help"
+#~ msgid "Find help"
+#~ msgstr "Find help"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 96
-msgid "Made for your everyday life"
-msgstr "Made for your everyday life"
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 119
-msgid "Do not show again"
-msgstr "Do not show again"
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 128
-msgid "Your preference could not be saved."
-msgstr "Your preference could not be saved."
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 133
-msgid "You can reopen Welcome from the application menu."
-msgstr "You can reopen Welcome from the application menu."
+#~ msgid "Made for your everyday life"
+#~ msgstr "Made for your everyday life"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 145
-msgid "Find what you need"
-msgstr "Find what you need"
+#~ msgid "Find what you need"
+#~ msgstr "Find what you need"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 146
-msgid "System apps, ready for you to explore."
-msgstr "System apps, ready for you to explore."
+#~ msgid "System apps, ready for you to explore."
+#~ msgstr "System apps, ready for you to explore."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 171
-msgid "No compatible apps are installed in this category."
-msgstr "No compatible apps are installed in this category."
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 176
-msgid "Install more apps"
-msgstr "Install more apps"
+#~ msgid "No compatible apps are installed in this category."
+#~ msgstr "No compatible apps are installed in this category."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 184
-msgid "A community ready to help"
-msgstr "A community ready to help"
+#~ msgid "A community ready to help"
+#~ msgstr "A community ready to help"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 185
-msgid "Find guidance and share your questions."
-msgstr "Find guidance and share your questions."
+#~ msgid "Find guidance and share your questions."
+#~ msgstr "Find guidance and share your questions."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 188
-msgid "These links open in your browser and need internet access."
-msgstr "These links open in your browser and need internet access."
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 192
-msgid "BigCommunity website"
-msgstr "BigCommunity website"
+#~ msgid "These links open in your browser and need internet access."
+#~ msgstr "These links open in your browser and need internet access."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 193
-msgid "Get to know the project and its news."
-msgstr "Get to know the project and its news."
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 198
-msgid "Community on Telegram"
-msgstr "Community on Telegram"
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 199
-msgid "Talk with other members of the community."
-msgstr "Talk with other members of the community."
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 204
-msgid "Ask the forum"
-msgstr "Ask the forum"
+#~ msgid "Get to know the project and its news."
+#~ msgstr "Get to know the project and its news."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 205
-msgid "Search for answers and share your questions."
-msgstr "Search for answers and share your questions."
+#~ msgid "Search for answers and share your questions."
+#~ msgstr "Search for answers and share your questions."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 219
-msgid "Discover ways to donate to BigCommunity."
-msgstr "Discover ways to donate to BigCommunity."
+#~ msgid "Discover ways to donate to BigCommunity."
+#~ msgstr "Discover ways to donate to BigCommunity."
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 226
-msgid "Useful information when asking for help"
-msgstr "Useful information when asking for help"
-
-# File: usr/share/comm-welcome/comm_welcome/pages.py, line: 243
-msgid "Opening these apps does not send your information to anyone."
-msgstr "Opening these apps does not send your information to anyone."
-
-# File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
-#, python-brace-format
-msgid "Open {app}"
-msgstr "Open {app}"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 17
-msgid "Which browser suits you?"
-msgstr "Which browser suits you?"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 18
-msgid "Keep your current browser or choose another one to install."
-msgstr "Keep your current browser or choose another one to install."
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 31
-msgid "View details"
-msgstr "View details"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 39
-msgid "Other options"
-msgstr "Other options"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 44
-msgid "Installing another browser keeps your existing browsers."
-msgstr "Installing another browser keeps your existing browsers."
+#~ msgid "Useful information when asking for help"
+#~ msgstr "Useful information when asking for help"
 
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 48
-msgid "Continue with my current browser"
-msgstr "Continue with my current browser"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 51
-msgid "Open Software"
-msgstr "Open Software"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 93
-msgid "Installed"
-msgstr "Installed"
+#~ msgid "Continue with my current browser"
+#~ msgstr "Continue with my current browser"
 
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 93
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 153
-msgid "Not installed"
-msgstr "Not installed"
+#~ msgid "Not installed"
+#~ msgstr "Not installed"
 
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 97
-msgid "Current default"
-msgstr "Current default"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 106
-msgid "Set as default"
-msgstr "Set as default"
+#~ msgid "Current default"
+#~ msgstr "Current default"
 
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 108
-msgid "Choose and install"
-msgstr "Choose and install"
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 124
-msgid "The default browser could not be changed."
-msgstr "The default browser could not be changed."
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 127
-#, python-brace-format
-msgid "{browser} is now your default browser."
-msgstr "{browser} is now your default browser."
+#~ msgid "Choose and install"
+#~ msgstr "Choose and install"
 
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 149
 # File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 152
-msgid "Not available in your repositories."
-msgstr "Not available in your repositories."
-
-# File: usr/share/comm-welcome/comm_welcome/browser_page.py, line: 160
-msgid "Try again"
-msgstr "Try again"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 17
-msgid "Support BigCommunity"
-msgstr "Support BigCommunity"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 24
-msgid "Your support makes a difference"
-msgstr "Your support makes a difference"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 25
-msgid "Help maintain our servers, develop new features, and support the community."
-msgstr "Help maintain our servers, develop new features, and support the community."
+#~ msgid "Not available in your repositories."
+#~ msgstr "Not available in your repositories."
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 28
-msgid "Choose how you would like to contribute."
-msgstr "Choose how you would like to contribute."
+#~ msgid "Choose how you would like to contribute."
+#~ msgstr "Choose how you would like to contribute."
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
-msgid "PIX — email key"
-msgstr "PIX — email key"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
-msgid "Copy PIX key"
-msgstr "Copy PIX key"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 32
-msgid "PIX key copied"
-msgstr "PIX key copied"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 38
-msgid "Paste this key into your banking app and choose the amount."
-msgstr "Paste this key into your banking app and choose the amount."
+#~ msgid "PIX — email key"
+#~ msgstr "PIX — email key"
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 40
-msgid "Cryptocurrency"
-msgstr "Cryptocurrency"
+#~ msgid "Cryptocurrency"
+#~ msgstr "Cryptocurrency"
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 44
-msgid "USDT — TRC20 network"
-msgstr "USDT — TRC20 network"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 46
-msgid "Copy USDT address"
-msgstr "Copy USDT address"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 47
-msgid "USDT address copied"
-msgstr "USDT address copied"
+#~ msgid "USDT — TRC20 network"
+#~ msgstr "USDT — TRC20 network"
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 51
-msgid "Bitcoin — BTC network"
-msgstr "Bitcoin — BTC network"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 53
-msgid "Copy Bitcoin address"
-msgstr "Copy Bitcoin address"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 54
-msgid "Bitcoin address copied"
-msgstr "Bitcoin address copied"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 60
-msgid "Other ways to give"
-msgstr "Other ways to give"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 63
-msgid "Telegram donation bot"
-msgstr "Telegram donation bot"
-
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 64
-msgid "Continue in Telegram."
-msgstr "Continue in Telegram."
+#~ msgid "Bitcoin — BTC network"
+#~ msgstr "Bitcoin — BTC network"
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 70
-msgid "Patreon"
-msgstr "Patreon"
+#~ msgid "Patreon"
+#~ msgstr "Patreon"
 
-# File: usr/share/comm-welcome/comm_welcome/donations.py, line: 71
-msgid "Monthly support. Continue on Patreon in your browser."
-msgstr "Monthly support. Continue on Patreon in your browser."
+#~ msgid "Explore a terminal that helps organize your sessions."
+#~ msgstr "Explore a terminal that helps organize your sessions."
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:65
-msgid "Share your screen with a TV, projector or Chromecast."
-msgstr "Share your screen with a TV, projector or Chromecast."
+#~ msgid "Enjoy a block puzzle game."
+#~ msgstr "Enjoy a block puzzle game."
 
-msgid "Everyday"
-msgstr "Everyday"
+#~ msgid "Convert audio files to other formats."
+#~ msgstr "Convert audio files to other formats."
 
-msgid "Audio and video"
-msgstr "Audio and video"
+#~ msgid "Convert your videos to other formats."
+#~ msgstr "Convert your videos to other formats."
 
-msgid "System and family"
-msgstr "System and family"
+#~ msgid "Record and organize voice notes."
+#~ msgstr "Record and organize voice notes."
 
-msgid "Use your favorite websites as apps."
-msgstr "Use your favorite websites as apps."
+#~ msgid "Explore your system settings."
+#~ msgstr "Explore your system settings."
 
-msgid "Make scanned documents searchable and copyable."
-msgstr "Make scanned documents searchable and copyable."
+#~ msgid "Access driver and kernel options."
+#~ msgstr "Access driver and kernel options."
 
-msgid "Explore a terminal that helps organize your sessions."
-msgstr "Explore a terminal that helps organize your sessions."
+#~ msgid "Explore controls for computer use."
+#~ msgstr "Explore controls for computer use."
 
-msgid "Enjoy a block puzzle game."
-msgstr "Enjoy a block puzzle game."
-
-msgid "Noise filter"
-msgstr "Noise filter"
-
-msgid "Reduce noise from your microphone and audio."
-msgstr "Reduce noise from your microphone and audio."
-
-msgid "Audio converter"
-msgstr "Audio converter"
-
-msgid "Convert audio files to other formats."
-msgstr "Convert audio files to other formats."
-
-msgid "Video converter"
-msgstr "Video converter"
-
-msgid "Convert your videos to other formats."
-msgstr "Convert your videos to other formats."
-
-msgid "Record and organize voice notes."
-msgstr "Record and organize voice notes."
-
-msgid "General settings"
-msgstr "General settings"
-
-msgid "Explore your system settings."
-msgstr "Explore your system settings."
-
-msgid "Hardware information"
-msgstr "Hardware information"
-
-msgid "Get to know your computer's components."
-msgstr "Get to know your computer's components."
-
-msgid "Hardware management"
-msgstr "Hardware management"
-
-msgid "Access driver and kernel options."
-msgstr "Access driver and kernel options."
-
-msgid "Parental controls"
-msgstr "Parental controls"
-
-msgid "Explore controls for computer use."
-msgstr "Explore controls for computer use."
-
-msgid "Network information"
-msgstr "Network information"
-
-msgid "View details about your network connections."
-msgstr "View details about your network connections."
-
-msgid "Discover your desktop and applications"
-msgstr "Discover your desktop and applications"
-
-msgid "welcome;getting started;community;browser;"
-msgstr "welcome;getting started;community;browser;"
+#~ msgid "View details about your network connections."
+#~ msgstr "View details about your network connections."

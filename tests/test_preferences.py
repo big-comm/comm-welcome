@@ -44,3 +44,16 @@ def test_xdg_config_home(monkeypatch, tmp_path):
     prefs = Preferences()
     prefs.set_suppressed(True)
     assert prefs.path == tmp_path / "comm-welcome/settings.json"
+
+
+def test_color_scheme_defaults_to_system_and_keeps_other_keys(tmp_path):
+    prefs = Preferences(tmp_path)
+    assert prefs.color_scheme() == "system"
+    prefs.set_suppressed(True)
+    prefs.set_color_scheme("dark")
+    again = Preferences(tmp_path)
+    assert again.color_scheme() == "dark" and again.suppressed()
+    prefs.path.write_text(json.dumps({"color_scheme": "purple"}))
+    assert prefs.color_scheme() == "system"
+    with pytest.raises(ValueError):
+        prefs.set_color_scheme("purple")
