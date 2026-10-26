@@ -104,3 +104,67 @@ def test_unsafe_preparation_never_applies(installer):
     installer._prepared(("ours", {"preparation_interactions": [{"kind": "cascade-removal"}]}))
     assert installer._call.call_args.args[0] == "CancelTransaction"
     assert not installer.busy
+
+
+def test_pamac_window_is_used_without_the_session_service(installer, monkeypatch):
+    calls = []
+
+    class Process:
+        def wait_async(self, _cancellable, callback):
+            calls.append("wait")
+            self.callback = callback
+
+        def wait_finish(self, _result):
+            return True
+
+    process = Process()
+    monkeypatch.setattr(
+        "comm_welcome.installer.Gio.Subprocess.new",
+        lambda argv, _flags: calls.append(argv) or process,
+    )
+    monkeypatch.setattr("comm_welcome.installer.Path.exists", lambda _self: False)
+    installer.busy = False
+    installer.session = False
+    installer.helper = "/usr/bin/pamac-installer"
+    installer.references = {BROWSERS[1].key: "alpm:extra/firefox"}
+    installer.start(BROWSERS[1])
+    assert calls == [["/usr/bin/pamac-installer", "firefox"], "wait"]
+    assert installer.busy
+    installer._call.assert_not_called()
+    monkeypatch.setattr("comm_welcome.installer.package_installed", lambda name: False)
+    process.callback(process, None)
+    assert not installer.busy and not installer.success
+    installer.start(BROWSERS[1])
+    monkeypatch.setattr("comm_welcome.installer.package_installed", lambda name: True)
+    process.callback(process, None)
+    assert installer.success and "Firefox" in installer.message
+
+
+def test_aur_build_only_for_browsers_outside_the_repositories(installer, monkeypatch):
+    chrome = next(b for b in BROWSERS if b.key == "chrome")
+    firefox = next(b for b in BROWSERS if b.key == "firefox")
+    calls = []
+
+    class Process:
+        def wait_async(self, _cancellable, callback):
+            self.callback = callback
+
+        def wait_finish(self, _result):
+            return True
+
+    monkeypatch.setattr(
+        "comm_welcome.installer.Gio.Subprocess.new",
+        lambda argv, _flags: calls.append(argv) or Process(),
+    )
+    monkeypatch.setattr("comm_welcome.installer.Path.exists", lambda _self: False)
+    installer.busy = False
+    installer.helper = "/usr/bin/pamac-installer"
+    installer.references = {"firefox": "alpm:extra/firefox"}
+    assert installer.aur_package(firefox) == ""
+    assert installer.aur_package(chrome) == "google-chrome"
+    installer.start_aur(firefox)
+    assert calls == [] and not installer.busy
+    installer.start_aur(chrome)
+    assert calls == [["/usr/bin/pamac-installer", "--build", "google-chrome"]]
+    installer.helper = None
+    assert installer.aur_package(chrome) == ""
