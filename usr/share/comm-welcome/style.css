@@ -1,9 +1,100 @@
-/* Keep Adwaita in charge of surfaces, controls, and theme colors. */
+/* BigCommunity theme: one continuous, translucent purple surface.
+ *
+ * libadwaita's own color tokens are redefined, so headerbar, pages, dialogs,
+ * menus and cards share the same material. Light and dark both follow the
+ * system; the provider's prefers-color-scheme is synced in application.py.
+ */
+:root {
+  --welcome-bg: #140b29;
+  --welcome-window-alpha: .94;
+  --welcome-glow-1: rgba(155, 89, 255, .24);
+  --welcome-glow-2: rgba(207, 18, 246, .13);
+  --welcome-glow-3: rgba(66, 200, 245, .06);
+  --welcome-panel: rgba(255, 255, 255, .05);
+  --welcome-panel-strong: rgba(255, 255, 255, .09);
+  --welcome-border: rgba(214, 190, 255, .12);
+
+  --window-bg-color: color-mix(in srgb, var(--welcome-bg) calc(var(--welcome-window-alpha) * 100%), transparent);
+  --window-fg-color: #efe9fb;
+  --view-bg-color: rgba(255, 255, 255, .04);
+  --view-fg-color: #efe9fb;
+  --headerbar-bg-color: transparent;
+  --headerbar-fg-color: #efe9fb;
+  --headerbar-backdrop-color: transparent;
+  --headerbar-shade-color: transparent;
+  --card-bg-color: var(--welcome-panel);
+  --card-fg-color: #efe9fb;
+  --dialog-bg-color: #1b1034;
+  --dialog-fg-color: #efe9fb;
+  --popover-bg-color: #21143f;
+  --popover-fg-color: #efe9fb;
+  --sidebar-bg-color: rgba(10, 5, 24, .45);
+  --accent-bg-color: #8b3ff0;
+  --accent-fg-color: #ffffff;
+  --accent-color: #c9a2ff;
+  /* libadwaita derives its own --accent-color; Welcome text uses this token. */
+  --welcome-accent: #c9a2ff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --welcome-bg: #f6f1fd;
+    --welcome-glow-1: rgba(145, 65, 245, .15);
+    --welcome-glow-2: rgba(207, 18, 246, .08);
+    --welcome-glow-3: rgba(66, 160, 245, .05);
+    --welcome-panel: rgba(255, 255, 255, .62);
+    --welcome-panel-strong: rgba(255, 255, 255, .85);
+    --welcome-border: rgba(74, 30, 140, .10);
+
+    --window-fg-color: #1d1430;
+    --view-bg-color: rgba(255, 255, 255, .55);
+    --view-fg-color: #1d1430;
+    --headerbar-fg-color: #1d1430;
+    --card-fg-color: #1d1430;
+    --dialog-bg-color: #fbf8ff;
+    --dialog-fg-color: #1d1430;
+    --popover-bg-color: #fdfbff;
+    --popover-fg-color: #1d1430;
+    --sidebar-bg-color: rgba(255, 255, 255, .45);
+    --accent-bg-color: #7c2fe0;
+    --accent-color: #6a22c8;
+    --welcome-accent: #6a22c8;
+  }
+}
+
+window.comm-welcome {
+  background-color: var(--window-bg-color);
+  background-image:
+    radial-gradient(ellipse at 88% 0%, var(--welcome-glow-1), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, var(--welcome-glow-2), transparent 50%),
+    radial-gradient(ellipse at 40% 45%, var(--welcome-glow-3), transparent 60%);
+  color: var(--window-fg-color);
+}
+window.comm-welcome headerbar,
+window.comm-welcome viewswitcherbar actionbar,
+window.comm-welcome toolbarview > .top-bar,
+window.comm-welcome toolbarview > .bottom-bar {
+  background: transparent;
+  box-shadow: none;
+}
+dialog.welcome-dialog sheet {
+  background-color: var(--dialog-bg-color);
+  background-image:
+    radial-gradient(ellipse at 100% 0%, var(--welcome-glow-1), transparent 60%),
+    radial-gradient(ellipse at 0% 100%, var(--welcome-glow-2), transparent 55%);
+}
+/* High contrast: an opaque, plain surface keeps text legible. */
+window.comm-welcome.welcome-contrast {
+  --window-bg-color: var(--welcome-bg);
+  background-image: none;
+}
+.welcome-contrast dialog.welcome-dialog sheet { background-image: none; }
+
 .welcome-content { padding: 28px 32px 32px; }
 .welcome-subtitle { font-size: 1.07em; }
 /* An editorial opening: original artwork, generous type, native actions. */
 .welcome-home-content { padding: 24px 36px 18px; }
-.welcome-artboard { border-radius: 22px; background: #05091a; }
+.welcome-artboard { border-radius: 22px; background: #0b0618; }
 .welcome-editorial { padding: 8px 0; }
 .welcome-wordmark { font-size: 1.32em; font-weight: 800; letter-spacing: -.3px; }
 .welcome-edition { margin-top: 10px; font-size: .8em; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; }
@@ -13,7 +104,7 @@
 .welcome-featured { margin-top: 26px; padding-top: 18px; border-top: 1px solid alpha(@window_fg_color, .09); }
 .welcome-overline { font-size: .78em; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: alpha(@window_fg_color, .72); }
 .welcome-section-lede { font-size: .92em; }
-button.welcome-link { padding: 4px 10px; color: @accent_color; font-weight: 600; }
+button.welcome-link { padding: 4px 10px; color: var(--welcome-accent); font-weight: 600; }
 .welcome-index { margin: 0 -10px; }
 .welcome-index > flowboxchild { padding: 0; }
 button.welcome-entry { padding: 10px; border-radius: 14px; font-weight: normal; }
@@ -32,7 +123,7 @@ button.welcome-entry-absent image { opacity: .55; }
   background-image:
     radial-gradient(circle at 16% 50%, alpha(#42c8f5, .18), transparent 42%),
     radial-gradient(circle at 92% 0%, alpha(#cf12f6, .22), transparent 48%),
-    linear-gradient(135deg, #070a18, #10173a 55%, #1c0f36);
+    linear-gradient(135deg, #0d0820, #1d1140 55%, #2a0f45);
 }
 .welcome-help-hero .welcome-overline.welcome-hero-overline { color: #5fe8f0; }
 .welcome-hero-title { margin-top: 10px; font-size: 2.15em; font-weight: 800; line-height: 1.05; letter-spacing: -1px; color: white; }
@@ -44,24 +135,24 @@ button.welcome-entry-absent image { opacity: .55; }
 .welcome-orbit-owl { animation: welcome-breathe 2.6s ease-in-out infinite alternate; }
 .welcome-topic-list { background: none; min-width: 176px; }
 .welcome-topic-list > row { padding: 7px 12px; min-height: 0; border-radius: 10px; margin-bottom: 1px; }
-.welcome-topic-list > row:selected { background: alpha(@accent_bg_color, .16); color: @accent_color; }
+.welcome-topic-list > row:selected { background: alpha(var(--accent-bg-color), .16); color: var(--welcome-accent); }
 button.welcome-topic { padding: 6px 14px; border-radius: 999px; font-weight: 600; background: alpha(@window_fg_color, .06); }
-button.welcome-topic:checked { background: @accent_bg_color; color: @accent_fg_color; }
+button.welcome-topic:checked { background: var(--accent-bg-color); color: var(--accent-fg-color); }
 .welcome-topics > flowboxchild { padding: 0; }
 .welcome-insight { padding: 4px 0 0; }
-.welcome-insight-badge { border-radius: 11px; background: alpha(@accent_bg_color, .14); color: @accent_color; }
-.welcome-insight-value { margin-top: 14px; font-size: 3.1em; font-weight: 800; letter-spacing: -1.6px; color: @accent_color; font-feature-settings: "tnum"; }
+.welcome-insight-badge { border-radius: 11px; background: alpha(var(--accent-bg-color), .14); color: var(--welcome-accent); }
+.welcome-insight-value { margin-top: 14px; font-size: 3.1em; font-weight: 800; letter-spacing: -1.6px; color: var(--welcome-accent); font-feature-settings: "tnum"; }
 .welcome-insight-caption { font-size: .95em; }
 .welcome-insight-title { margin-top: 20px; font-size: 1.32em; font-weight: 800; letter-spacing: -.3px; }
 .welcome-insight-text { margin-top: 8px; font-size: 1.02em; line-height: 1.5; }
 .welcome-insight-facts { margin-top: 20px; padding-top: 16px; border-top: 1px solid alpha(@window_fg_color, .08); }
 .welcome-insight-detail,
 .welcome-insight-live { font-size: .9em; }
-.welcome-insight-live { color: @accent_color; font-weight: 600; }
+.welcome-insight-live { color: var(--welcome-accent); font-weight: 600; }
 .welcome-brand-badge { border-radius: 12px; }
 .welcome-brand-telegram { border-radius: 999px; background: #2aabee; color: white; }
 .welcome-brand-heart { background: alpha(#e2456f, .14); color: #e2456f; }
-.welcome-brand-forum { background: alpha(@accent_bg_color, .12); color: @accent_color; }
+.welcome-brand-forum { background: alpha(var(--accent-bg-color), .12); color: var(--welcome-accent); }
 .welcome-footer { padding: 6px 24px 14px; }
 .welcome-footer-bar { padding: 8px 24px 12px; }
 .welcome-footer checkbutton { font-size: .9em; }
@@ -71,24 +162,24 @@ button.welcome-topic:checked { background: @accent_bg_color; color: @accent_fg_c
 .welcome-icon {
   padding: 4px;
   border-radius: 12px;
-  color: @accent_color;
-  background: alpha(@accent_bg_color, .08);
+  color: var(--welcome-accent);
+  background: alpha(var(--accent-bg-color), .08);
 }
 .welcome-icon-pix,
 .welcome-icon-usdt { color: mix(@window_fg_color, #26b89e, .65); }
 .welcome-icon-bitcoin { color: mix(@window_fg_color, #f7931a, .65); }
 .welcome-icon-telegram { color: mix(@window_fg_color, #37a9e8, .65); }
 .welcome-icon-patreon { color: mix(@window_fg_color, #ef6685, .65); }
-.welcome-dialog-content { background-color: @dialog_bg_color; color: @dialog_fg_color; }
+.welcome-dialog-content { background: transparent; color: @dialog_fg_color; }
 .welcome-dialog headerbar { background: transparent; box-shadow: none; }
 .welcome-wallpaper-preview { border-radius: 10px; background: @view_bg_color; }
-.welcome-preview-footer { padding: 14px 24px; background: @dialog_bg_color; }
+.welcome-preview-footer { padding: 14px 24px; background: transparent; border-top: 1px solid var(--welcome-border); }
 /* App introductions: same editorial voice as the opening. */
 .welcome-intro { padding: 8px 32px 32px; }
 .welcome-intro-name { font-size: 2em; font-weight: 800; letter-spacing: -.8px; }
-.welcome-intro-lead { font-size: 1.12em; font-weight: 600; color: @accent_color; }
+.welcome-intro-lead { font-size: 1.12em; font-weight: 600; color: var(--welcome-accent); }
 .welcome-intro-summary { margin-top: 22px; font-size: 1.04em; line-height: 1.5; }
-.welcome-intro-note { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: alpha(@window_fg_color, .05); }
+.welcome-intro-note { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: var(--welcome-panel-strong); box-shadow: inset 0 0 0 1px var(--welcome-border); }
 .welcome-intro-gallery { margin-top: 22px; }
 .welcome-intro .welcome-overline { margin-top: 28px; }
 .welcome-intro-point { padding: 12px 0; border-top: 1px solid alpha(@window_fg_color, .08); }
@@ -99,9 +190,9 @@ button.welcome-topic:checked { background: @accent_bg_color; color: @accent_fg_c
   font-weight: 600;
 }
 .welcome-badge.installed { background: alpha(@success_color, .12); color: @success_color; }
-.welcome-badge.default { background: alpha(@accent_bg_color, .10); color: @accent_color; }
+.welcome-badge.default { background: alpha(var(--accent-bg-color), .10); color: var(--welcome-accent); }
 .welcome-notice { padding: 12px 16px; background: alpha(@warning_bg_color, .10); border-radius: 10px; }
-.welcome-status { padding: 12px 18px; background: alpha(@accent_bg_color, .08); }
+.welcome-status { padding: 12px 18px; background: alpha(var(--accent-bg-color), .08); }
 window.narrow .welcome-content { padding: 20px; }
 window.narrow .welcome-home-content { padding: 16px 24px 24px; }
 window.narrow .welcome-headline { margin-top: 18px; font-size: 2.2em; letter-spacing: -1px; }
@@ -184,8 +275,8 @@ window.narrow .welcome-support { padding: 22px; }
 .welcome-browser-feature {
   padding: 22px 26px;
   border-radius: 22px;
-  background: alpha(@accent_bg_color, .08);
-  box-shadow: inset 0 0 0 1px alpha(@accent_bg_color, .22);
+  background: var(--welcome-panel);
+  box-shadow: inset 0 0 0 1px alpha(var(--accent-bg-color), .22);
 }
 .welcome-browser-name { font-size: 1.7em; font-weight: 800; letter-spacing: -.6px; }
 .welcome-browser-row { padding: 14px 4px; border-top: 1px solid alpha(@window_fg_color, .08); }
