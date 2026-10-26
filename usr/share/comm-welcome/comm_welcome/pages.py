@@ -163,29 +163,9 @@ def welcome_page(window):
             window.show_error(_("Your preference could not be saved."), str(exc))
 
     handler = check.connect("toggled", save)
-    # Appearance stays with the system unless the person picks light or dark here.
-    scheme_box = box(10, horizontal=True)
-    scheme_box.add_css_class("welcome-scheme")
-    caption = label(_("Appearance"), "dim-label", "welcome-small")
-    caption.set_hexpand(False)
-    caption.set_wrap(False)
-    scheme_box.append(caption)
-    scheme_group = Adw.ToggleGroup()
-    scheme_group.add_css_class("round")
-    for name, title, symbol in (
-        ("system", _("Follow system"), "computer-symbolic"),
-        ("light", _("Light"), "weather-clear-symbolic"),
-        ("dark", _("Dark"), "weather-clear-night-symbolic"),
-    ):
-        toggle = Adw.Toggle(name=name, icon_name=symbol, tooltip=title)
-        scheme_group.add(toggle)
-    scheme_box.append(scheme_group)
     footer.add_css_class("welcome-footer-bar")
     footer.set_orientation(Gtk.Orientation.HORIZONTAL)
-    footer.append(scheme_box)
-    spacer = box(0, horizontal=True)
-    spacer.set_hexpand(True)
-    footer.append(spacer)
+    check.set_hexpand(True)
     check.set_halign(Gtk.Align.END)
     footer.append(check)
     outer = box(0)
@@ -196,8 +176,6 @@ def welcome_page(window):
     outer.headline = headline
     outer.lede = lede
     outer.grids = [grid]
-    outer.scheme_group = scheme_group
-    outer.scheme_box = scheme_box
     return outer
 
 

@@ -42,8 +42,8 @@ accessibility-bus or GNOME-shell integration correctness.
   visible topic, and every visual scenario asserts that no visible label ends
   past the window edge (checked to fail on the old code).
 - Donations: brand band, Patreon card, one-time methods with copy buttons and
-  high-contrast addresses. Appearance: follow system, light or dark, from the
-  menu or the footer, saved in settings.json.
+  high-contrast addresses. Appearance always follows the system theme; the
+  light/dark override was removed in October 2026.
 - Browsers never installed: the Pamac session service does not exist on
   BigCommunity (pamac 11.7). Welcome now uses `pamac-installer` and verifies the
   result with `pacman -Q`. A real install was not run here; it needs the user's
@@ -51,7 +51,7 @@ accessibility-bus or GNOME-shell integration correctness.
 - AUR browsers (Chrome, Opera) install through `pamac-installer --build` after
   a confirmation that names the AUR; names checked on the AUR RPC on
   2026-10-25. The forum card uses the forum's current mark.
-- Default size 900×720 with no vertical scrolling on the opening. 74 pytest
+- Default size 950×730 (was 900×720) with no vertical scrolling on the opening. 74 pytest
   cases, the action audit and 41 Broadway scenarios pass.
 
 ### Help, second pass (October 2026)

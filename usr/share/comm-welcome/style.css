@@ -64,7 +64,6 @@ button.welcome-topic:checked { background: @accent_bg_color; color: @accent_fg_c
 .welcome-brand-forum { background: alpha(@accent_bg_color, .12); color: @accent_color; }
 .welcome-footer { padding: 6px 24px 14px; }
 .welcome-footer-bar { padding: 8px 24px 12px; }
-.welcome-scheme togglegroup { min-height: 0; }
 .welcome-footer checkbutton { font-size: .9em; }
 .welcome-card { padding: 18px; }
 .welcome-row { padding: 16px; }

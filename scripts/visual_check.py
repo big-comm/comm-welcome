@@ -35,20 +35,20 @@ app.installer.available = True
 app.installer.references = {b.key: "alpm:extra/" + b.packages[0] for b in BROWSERS if not b.aur}
 app.installer.helper = "/usr/bin/pamac-installer"
 SCENARIOS = [
-    ("welcome-light", "welcome", False, 900, 720, "idle"),
+    ("welcome-light", "welcome", False, 950, 730, "idle"),
     ("apps-light", "apps", False, 820, 700, "idle"),
     ("browsers-light", "browsers", False, 820, 700, "idle"),
     ("help-light", "help", False, 820, 700, "idle"),
-    ("help-dark", "help", True, 900, 720, "idle"),
+    ("help-dark", "help", True, 950, 730, "idle"),
     ("help-narrow", "help", False, 460, 700, "idle"),
-    ("help-dark-bottom", "help", True, 900, 720, "bottom"),
-    ("inside-dark", "inside", True, 900, 720, "idle"),
-    ("inside-light", "inside", False, 900, 720, "idle"),
+    ("help-dark-bottom", "help", True, 950, 730, "bottom"),
+    ("inside-dark", "inside", True, 950, 730, "idle"),
+    ("inside-light", "inside", False, 950, 730, "idle"),
     ("inside-narrow", "inside", False, 460, 700, "idle"),
-    ("inside-compression", "inside:compression", True, 900, 720, "bottom"),
-    ("inside-memory", "inside:memory", False, 900, 720, "bottom"),
-    ("welcome-dark", "welcome", True, 900, 720, "idle"),
-    ("welcome-features", "welcome", False, 900, 720, "bottom"),
+    ("inside-compression", "inside:compression", True, 950, 730, "bottom"),
+    ("inside-memory", "inside:memory", False, 950, 730, "bottom"),
+    ("welcome-dark", "welcome", True, 950, 730, "idle"),
+    ("welcome-features", "welcome", False, 950, 730, "bottom"),
     ("browsers-dark", "browsers", True, 820, 700, "idle"),
     ("welcome-narrow", "welcome", False, 460, 700, "idle"),
     ("welcome-small", "welcome", True, 360, 600, "idle"),
@@ -61,22 +61,22 @@ SCENARIOS = [
     ("browsers-installing", "browsers", False, 820, 700, "installing"),
     ("welcome-installing", "welcome", True, 820, 700, "installing"),
     ("browsers-failure", "browsers", False, 820, 700, "failure"),
-    ("browsers-aur", "aur:chrome", True, 900, 720, "idle"),
+    ("browsers-aur", "aur:chrome", True, 950, 730, "idle"),
     ("apps-dark", "apps", True, 820, 700, "idle"),
     ("apps-development", "apps", False, 820, 700, "bottom"),
-    ("preview-bigshot", "preview:org.bigcommunity.BigShot.desktop", False, 900, 720, "idle"),
-    ("preview-langforge", "preview:org.communitybig.langforge.desktop", True, 900, 720, "idle"),
-    ("preview-ashypass", "preview:com.bigcommunity.ashypass.desktop", False, 900, 720, "idle"),
-    ("preview-bigiris", "preview:com.biglinux.Iris.desktop", True, 900, 720, "idle"),
+    ("preview-bigshot", "preview:org.bigcommunity.BigShot.desktop", False, 950, 730, "idle"),
+    ("preview-langforge", "preview:org.communitybig.langforge.desktop", True, 950, 730, "idle"),
+    ("preview-ashypass", "preview:com.bigcommunity.ashypass.desktop", False, 950, 730, "idle"),
+    ("preview-bigiris", "preview:com.biglinux.Iris.desktop", True, 950, 730, "idle"),
     ("preview-ashywall", "preview:org.communitybig.ashywall.desktop", False, 460, 700, "idle"),
     ("preview-noise", "preview:br.com.biglinux.microphone.desktop", True, 360, 600, "idle"),
-    ("donations-light", "donate", False, 900, 720, "idle"),
-    ("donations-dark", "donate", True, 900, 720, "idle"),
+    ("donations-light", "donate", False, 950, 730, "idle"),
+    ("donations-dark", "donate", True, 950, 730, "idle"),
     ("donations-narrow", "donate", False, 360, 600, "idle"),
-    ("donations-methods", "donate", False, 900, 720, "bottom"),
+    ("donations-methods", "donate", False, 950, 730, "bottom"),
     ("donations-methods-narrow", "donate", True, 360, 600, "bottom"),
-    ("about-light", "about", False, 900, 720, "idle"),
-    ("about-dark", "about", True, 900, 720, "idle"),
+    ("about-light", "about", False, 950, 730, "idle"),
+    ("about-dark", "about", True, 950, 730, "idle"),
 ]
 if "--dialogs-only" in sys.argv[1:]:
     SCENARIOS = [scenario for scenario in SCENARIOS if scenario[1] in {"donate", "about"}]
@@ -114,19 +114,8 @@ def configure():
         assert not app.held
         assert app.window.child_focus(Gtk.DirectionType.TAB_FORWARD)
         print("lifecycle: close, reopen, hold/release, focus passed", flush=True)
-        manager = app.get_style_manager()
-        for scheme, expected in (
-            ("dark", Adw.ColorScheme.FORCE_DARK),
-            ("light", Adw.ColorScheme.FORCE_LIGHT),
-            ("system", Adw.ColorScheme.DEFAULT),
-        ):
-            app.window.activate_action("win.color-scheme", GLib.Variant("s", scheme))
-            assert manager.get_color_scheme() == expected, scheme
-            assert app.window.scheme_group.get_active_name() == scheme
-            assert app.window.preferences.color_scheme() == scheme
-        app.window.scheme_group.set_active_name("dark")
-        assert manager.get_color_scheme() == Adw.ColorScheme.FORCE_DARK
-        print("appearance: menu action, footer toggle and saved preference agree", flush=True)
+        assert app.window.lookup_action("color-scheme") is None
+        print("appearance: follows the system theme, no override offered", flush=True)
         app.window.destroy()
         app.quit()
         return GLib.SOURCE_REMOVE

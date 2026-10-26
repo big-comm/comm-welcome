@@ -65,7 +65,7 @@ def _highlights(item) -> Gtk.Box:
 
 class AppPreviewDialog(Adw.Dialog):
     def __init__(self, window, item, app):
-        super().__init__(title=_(item.name), content_width=560, content_height=580)
+        super().__init__(title=_(item.name), content_width=560, content_height=585)
         self.add_css_class("welcome-dialog")
         toolbar = Adw.ToolbarView()
         toolbar.add_css_class("welcome-dialog-content")

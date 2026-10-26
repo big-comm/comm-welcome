@@ -10,19 +10,13 @@ from .i18n import _
 from .pages import apps_page, welcome_page
 from .widgets import box, button, label
 
-SCHEMES = {
-    "system": Adw.ColorScheme.DEFAULT,
-    "light": Adw.ColorScheme.FORCE_LIGHT,
-    "dark": Adw.ColorScheme.FORCE_DARK,
-}
-
 
 class WelcomeWindow(Adw.ApplicationWindow):
     def __init__(self, application, preferences, installer):
         super().__init__(application=application, title=_("Welcome to BigCommunity"))
         self.preferences = preferences
         self.installer = installer
-        self.set_default_size(900, 720)
+        self.set_default_size(950, 730)
         self.set_size_request(360, 320)
         self.add_css_class("comm-welcome")
         application.get_style_manager().connect_object(
@@ -44,29 +38,11 @@ class WelcomeWindow(Adw.ApplicationWindow):
         self.bottom_switcher = Adw.ViewSwitcherBar(stack=self.stack)
         self.toolbar.add_top_bar(self.header)
         self.toolbar.add_bottom_bar(self.bottom_switcher)
-        scheme = preferences.color_scheme()
-        self.scheme_action = Gio.SimpleAction.new_stateful(
-            "color-scheme", GLib.VariantType.new("s"), GLib.Variant("s", scheme)
-        )
-        self.scheme_action.connect("change-state", self._scheme_requested)
-        self.add_action(self.scheme_action)
-        self._apply_scheme(scheme)
-        appearance = Gio.Menu()
-        for title, value in (
-            (_("Follow system"), "system"),
-            (_("Light"), "light"),
-            (_("Dark"), "dark"),
-        ):
-            item = Gio.MenuItem.new(title, None)
-            item.set_action_and_target_value("win.color-scheme", GLib.Variant("s", value))
-            appearance.append_item(item)
-        actions = Gio.Menu()
-        actions.append(_("Support the project"), "win.donate")
-        actions.append(_("About Welcome"), "win.about")
-        actions.append(_("Close"), "win.close")
+        # The color scheme is never set, so Welcome always follows the system theme.
         menu = Gio.Menu()
-        menu.append_section(_("Appearance"), appearance)
-        menu.append_section(None, actions)
+        menu.append(_("Support the project"), "win.donate")
+        menu.append(_("About Welcome"), "win.about")
+        menu.append(_("Close"), "win.close")
         menu_button = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         menu_button.set_tooltip_text(_("Main menu"))
         self.header.pack_end(menu_button)
@@ -80,14 +56,6 @@ class WelcomeWindow(Adw.ApplicationWindow):
             self.add_action(action)
         application.set_accels_for_action("win.close", ["<Control>q", "<Control>w"])
         welcome = welcome_page(self)
-        self.scheme_group = welcome.scheme_group
-        self.scheme_group.set_active_name(scheme)
-        self.scheme_group.connect(
-            "notify::active-name",
-            lambda group, _pspec: self.activate_action(
-                "win.color-scheme", GLib.Variant("s", group.get_active_name())
-            ),
-        )
         apps = apps_page(self)
         inside = inside_page(self)
         support = help_page(self)
@@ -111,7 +79,6 @@ class WelcomeWindow(Adw.ApplicationWindow):
         narrow.add_setter(welcome.art, "height-request", 168)
         narrow.add_setter(welcome.art, "width-request", -1)
         narrow.add_setter(welcome.lede, "visible", False)
-        narrow.add_setter(welcome.scheme_box, "visible", False)
         narrow.add_setter(inside.hero, "orientation", Gtk.Orientation.VERTICAL)
         narrow.add_setter(inside.hero.art, "width-request", 168)
         narrow.add_setter(inside.hero.art, "height-request", 168)
@@ -149,23 +116,6 @@ class WelcomeWindow(Adw.ApplicationWindow):
         self.connect("notify::is-active", self._activated)
         self.monitor = Gio.AppInfoMonitor.get()
         self.monitor.connect("changed", self._apps_changed)
-
-    def _apply_scheme(self, scheme: str) -> None:
-        self.get_application().get_style_manager().set_color_scheme(SCHEMES[scheme])
-
-    def _scheme_requested(self, action, value) -> None:
-        scheme = value.get_string()
-        if scheme not in SCHEMES or scheme == action.get_state().get_string():
-            return
-        action.set_state(value)
-        self._apply_scheme(scheme)
-        group = getattr(self, "scheme_group", None)
-        if group and group.get_active_name() != scheme:
-            group.set_active_name(scheme)
-        try:
-            self.preferences.set_color_scheme(scheme)
-        except OSError as exc:
-            self.show_error(_("Your preference could not be saved."), str(exc))
 
     def _narrow(self, narrow: bool) -> None:
         if narrow:

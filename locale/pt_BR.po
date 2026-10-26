@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
-"POT-Creation-Date: 2026-10-26 14:15-0300\n"
+"POT-Creation-Date: 2026-10-26 15:23-0300\n"
 "PO-Revision-Date: 2026-10-25 18:30-0300\n"
 "Last-Translator: BigCommunity\n"
 "Language-Team: Brazilian Portuguese\n"
@@ -145,7 +145,7 @@ msgid "Continue in Pamac"
 msgstr "Continuar no Pamac"
 
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:212
-#: usr/share/comm-welcome/comm_welcome/window.py:218
+#: usr/share/comm-welcome/comm_welcome/window.py:167
 msgid "The application could not be opened."
 msgstr "Não foi possível abrir o aplicativo."
 
@@ -801,17 +801,17 @@ msgid "Comes with a built-in VPN and ad blocker."
 msgstr "Vem com VPN e bloqueador de anúncios embutidos."
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:45
-#: usr/share/comm-welcome/comm_welcome/help_page.py:310
+#: usr/share/comm-welcome/comm_welcome/help_page.py:309
 msgid "Support BigCommunity"
 msgstr "Apoie o BigCommunity"
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:64
-#: usr/share/comm-welcome/comm_welcome/help_page.py:311
+#: usr/share/comm-welcome/comm_welcome/help_page.py:310
 msgid "Your support makes a difference"
 msgstr "Seu apoio faz a diferença"
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:69
-#: usr/share/comm-welcome/comm_welcome/help_page.py:314
+#: usr/share/comm-welcome/comm_welcome/help_page.py:313
 msgid "Help maintain our servers, develop new features, and support the community."
 msgstr "Ajude a manter nossos servidores, desenvolver novos recursos e apoiar a comunidade."
 
@@ -824,7 +824,7 @@ msgid "Monthly support. Continue on Patreon in your browser."
 msgstr "Apoio mensal. Continue no Patreon pelo navegador."
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:83
-#: usr/share/comm-welcome/comm_welcome/help_page.py:320
+#: usr/share/comm-welcome/comm_welcome/help_page.py:319
 msgid "Support on Patreon"
 msgstr "Apoiar no Patreon"
 
@@ -906,60 +906,60 @@ msgstr "Detalhe técnico"
 msgid "On this computer"
 msgstr "Neste computador"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:326
+#: usr/share/comm-welcome/comm_welcome/help_page.py:325
 msgid "Other ways to give"
 msgstr "Outras formas de contribuir"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:340
-#: usr/share/comm-welcome/comm_welcome/window.py:101
+#: usr/share/comm-welcome/comm_welcome/help_page.py:339
+#: usr/share/comm-welcome/comm_welcome/window.py:68
 msgid "Help"
 msgstr "Ajuda"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:341
+#: usr/share/comm-welcome/comm_welcome/help_page.py:340
 msgid "Questions, community, and ways to support the project."
 msgstr "Dúvidas, comunidade e formas de apoiar o projeto."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:347
+#: usr/share/comm-welcome/comm_welcome/help_page.py:346
 msgid "Talk to the community"
 msgstr "Fale com a comunidade"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:351
+#: usr/share/comm-welcome/comm_welcome/help_page.py:350
 msgid "BigCommunity website"
 msgstr "Site do BigCommunity"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:352
+#: usr/share/comm-welcome/comm_welcome/help_page.py:351
 msgid "News, releases, and the project's history."
 msgstr "Novidades, versões e a história do projeto."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:358
+#: usr/share/comm-welcome/comm_welcome/help_page.py:357
 msgid "Community on Telegram"
 msgstr "Comunidade no Telegram"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:359
+#: usr/share/comm-welcome/comm_welcome/help_page.py:358
 msgid "Talk with other members of the community."
 msgstr "Converse com outros membros da comunidade."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:365
+#: usr/share/comm-welcome/comm_welcome/help_page.py:364
 msgid "Ask the forum"
 msgstr "Consultar o fórum"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:366
+#: usr/share/comm-welcome/comm_welcome/help_page.py:365
 msgid "Support, tips, and news for both editions in one place."
 msgstr "Suporte, dicas e novidades das duas edições num só lugar."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:374
+#: usr/share/comm-welcome/comm_welcome/help_page.py:373
 msgid "Links open in your browser and need internet access."
 msgstr "Os links abrem no navegador e precisam de internet."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:393
+#: usr/share/comm-welcome/comm_welcome/help_page.py:392
 msgid "When asking for help"
 msgstr "Ao pedir ajuda"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:396
+#: usr/share/comm-welcome/comm_welcome/help_page.py:395
 msgid "A hardware or network report answers most first questions."
 msgstr "Um relatório de hardware ou de rede responde à maioria das primeiras perguntas."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:404
+#: usr/share/comm-welcome/comm_welcome/help_page.py:403
 msgid "Opening these apps does not send your information to anyone."
 msgstr "Abrir estes aplicativos não envia suas informações a ninguém."
 
@@ -1012,163 +1012,163 @@ msgstr "{count} extensões do BigCommunity instaladas"
 msgid "{active} of {count} BigCommunity extensions active"
 msgstr "{active} de {count} extensões do BigCommunity ativas"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:144
+#: usr/share/comm-welcome/comm_welcome/insights.py:145
 msgid "linux-big, with BORE active"
 msgstr "linux-big, com o BORE ativo"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:145
+#: usr/share/comm-welcome/comm_welcome/insights.py:146
 msgid "linux-big in use"
 msgstr "linux-big em uso"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:146
+#: usr/share/comm-welcome/comm_welcome/insights.py:147
 msgid "kernel in use"
 msgstr "kernel em uso"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:151
+#: usr/share/comm-welcome/comm_welcome/insights.py:152
 msgid "now"
 msgstr "agora"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:151
+#: usr/share/comm-welcome/comm_welcome/insights.py:152
 msgid "you are running a snapshot"
 msgstr "você está usando um snapshot"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:153
+#: usr/share/comm-welcome/comm_welcome/insights.py:154
 msgid "snapshots ready in the boot menu"
 msgstr "snapshots prontos no menu de inicialização"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:166
+#: usr/share/comm-welcome/comm_welcome/insights.py:167
 msgid "compression on the system disk"
 msgstr "compressão no disco do sistema"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:167
+#: usr/share/comm-welcome/comm_welcome/insights.py:168
 msgid "file system of the system disk"
 msgstr "sistema de arquivos do disco do sistema"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:173
+#: usr/share/comm-welcome/comm_welcome/insights.py:174
 msgid "how much zram is compressing now"
 msgstr "quanto o zram está comprimindo agora"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:175
+#: usr/share/comm-welcome/comm_welcome/insights.py:176
 msgid "of compressed memory available"
 msgstr "de memória comprimida disponível"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:181
+#: usr/share/comm-welcome/comm_welcome/insights.py:182
 msgid "network congestion control"
 msgstr "controle de congestionamento da rede"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:183
+#: usr/share/comm-welcome/comm_welcome/insights.py:184
 msgid "disk scheduler"
 msgstr "escalonador de disco"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:188
+#: usr/share/comm-welcome/comm_welcome/insights.py:189
 msgid "NVIDIA driver loaded"
 msgstr "driver NVIDIA carregado"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:198
+#: usr/share/comm-welcome/comm_welcome/insights.py:199
 msgid "BigLinux and BigCommunity repositories"
 msgstr "repositórios do BigLinux e do BigCommunity"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:206
+#: usr/share/comm-welcome/comm_welcome/insights.py:207
 msgid "BigCommunity extensions installed"
 msgstr "extensões do BigCommunity instaladas"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:207
+#: usr/share/comm-welcome/comm_welcome/insights.py:208
 msgid "BigCommunity extensions active"
 msgstr "extensões do BigCommunity ativas"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:213
+#: usr/share/comm-welcome/comm_welcome/insights.py:214
 msgid "Kernel"
 msgstr "Kernel"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:214
+#: usr/share/comm-welcome/comm_welcome/insights.py:215
 msgid "A kernel built by the community"
 msgstr "Um kernel feito pela comunidade"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:216
+#: usr/share/comm-welcome/comm_welcome/insights.py:217
 msgid "linux-big is BigCommunity's own kernel. Its BORE scheduler favors what you are interacting with over long background jobs, and it is compiled with Clang and link-time optimization. It installs next to the standard kernel, which stays in the boot menu as a fallback."
 msgstr "O linux-big é o kernel próprio do BigCommunity. O escalonador BORE dá prioridade ao que você está usando em vez de tarefas longas em segundo plano, e ele é compilado com Clang e otimização na ligação. Ele é instalado ao lado do kernel padrão, que continua no menu de inicialização como alternativa."
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:228
+#: usr/share/comm-welcome/comm_welcome/insights.py:229
 msgid "Snapshots"
 msgstr "Snapshots"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:229
+#: usr/share/comm-welcome/comm_welcome/insights.py:230
 msgid "Go back in time from the boot menu"
 msgstr "Volte no tempo pelo menu de inicialização"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:231
+#: usr/share/comm-welcome/comm_welcome/insights.py:232
 msgid "Timeshift saves daily snapshots of the system, and each one appears in the boot menu. If an update goes wrong, start the computer as it was before; a helper then offers to restore that state for good."
 msgstr "O Timeshift guarda snapshots diários do sistema, e cada um aparece no menu de inicialização. Se uma atualização der errado, inicie o computador como ele estava antes; um assistente oferece restaurar aquele estado de vez."
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:242
+#: usr/share/comm-welcome/comm_welcome/insights.py:243
 msgid "Compression"
 msgstr "Compressão"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:243
+#: usr/share/comm-welcome/comm_welcome/insights.py:244
 msgid "Files compressed as they are written"
 msgstr "Arquivos comprimidos ao serem gravados"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:245
+#: usr/share/comm-welcome/comm_welcome/insights.py:246
 msgid "The system partition uses Btrfs with zstd compression. Files take less room and the SSD receives fewer writes, with nothing to configure."
 msgstr "A partição do sistema usa Btrfs com compressão zstd. Os arquivos ocupam menos espaço e o SSD recebe menos gravações, sem nada a configurar."
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:255
+#: usr/share/comm-welcome/comm_welcome/insights.py:256
 msgid "Memory"
 msgstr "Memória"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:256
+#: usr/share/comm-welcome/comm_welcome/insights.py:257
 msgid "More room in the same memory"
 msgstr "Mais espaço na mesma memória"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:258
+#: usr/share/comm-welcome/comm_welcome/insights.py:259
 msgid "There is no swap partition. When memory runs short, pages are first compressed inside the RAM with zram, which is far faster than writing them to disk. A swapfile on Btrfs covers overflow and hibernation."
 msgstr "Não há partição de swap. Quando a memória aperta, as páginas são primeiro comprimidas dentro da própria RAM com o zram, o que é muito mais rápido do que gravá-las no disco. Um arquivo de swap no Btrfs cobre o excedente e a hibernação."
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:269
+#: usr/share/comm-welcome/comm_welcome/insights.py:270
 msgid "Tuning"
 msgstr "Ajustes"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:270
+#: usr/share/comm-welcome/comm_welcome/insights.py:271
 msgid "Tuned for each disk and connection"
 msgstr "Ajustado para cada disco e conexão"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:272
+#: usr/share/comm-welcome/comm_welcome/insights.py:273
 msgid "Small BigLinux packages adjust the system automatically: each disk gets a suitable I/O scheduler and the network uses the BBR congestion algorithm. They are ordinary packages you can inspect or remove."
 msgstr "Pequenos pacotes do BigLinux ajustam o sistema sozinhos: cada disco recebe o escalonador de E/S adequado e a rede usa o algoritmo de congestionamento BBR. São pacotes comuns, que você pode examinar ou remover."
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:283
+#: usr/share/comm-welcome/comm_welcome/insights.py:284
 msgid "Drivers"
 msgstr "Drivers"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:284
+#: usr/share/comm-welcome/comm_welcome/insights.py:285
 msgid "Graphics drivers that follow the kernel"
 msgstr "Drivers de vídeo que acompanham o kernel"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:286
+#: usr/share/comm-welcome/comm_welcome/insights.py:287
 msgid "Big Driver Manager installs the graphics drivers your hardware needs. For BigCommunity kernels, NVIDIA modules come prebuilt and pinned to their kernel, so an update waits for its driver instead of leaving you without graphics."
 msgstr "O Big Driver Manager instala os drivers de vídeo de que o seu hardware precisa. Nos kernels do BigCommunity, os módulos NVIDIA vêm prontos e presos ao kernel correspondente, então a atualização espera pelo driver em vez de deixar você sem vídeo."
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:297
+#: usr/share/comm-welcome/comm_welcome/insights.py:298
 msgid "Software"
 msgstr "Programas"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:298
+#: usr/share/comm-welcome/comm_welcome/insights.py:299
 msgid "More software, no extra setup"
 msgstr "Mais programas, sem configuração extra"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:300
+#: usr/share/comm-welcome/comm_welcome/insights.py:301
 msgid "Besides the Arch and Manjaro repositories, you get BigLinux and BigCommunity repositories. The Software app can also use Flathub and the AUR, and Big Pkg Installer converts .deb and .rpm packages."
 msgstr "Além dos repositórios do Arch e do Manjaro, você tem os repositórios do BigLinux e do BigCommunity. A loja de aplicativos também pode usar o Flathub e o AUR, e o Big Pkg Installer converte pacotes .deb e .rpm."
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:311
+#: usr/share/comm-welcome/comm_welcome/insights.py:312
 msgid "Desktop"
 msgstr "Desktop"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:312
+#: usr/share/comm-welcome/comm_welcome/insights.py:313
 msgid "GNOME, curated and ready"
 msgstr "GNOME com curadoria, pronto para usar"
 
-#: usr/share/comm-welcome/comm_welcome/insights.py:314
+#: usr/share/comm-welcome/comm_welcome/insights.py:315
 msgid "Big Gnome Center switches between complete desktop layouts in one click. The dock, panel, menu, glass effect, screenshots and clipboard history are BigCommunity's own extensions rather than third-party ones."
 msgstr "O Big Gnome Center troca entre layouts completos do desktop com um clique. A dock, o painel, o menu, o efeito de vidro, as capturas de tela e o histórico da área de transferência são extensões do próprio BigCommunity, não de terceiros."
 
@@ -1292,101 +1292,92 @@ msgid "You can reopen Welcome from the application menu."
 msgstr "Você pode abrir as boas-vindas pelo menu de aplicativos."
 
 #: usr/share/comm-welcome/comm_welcome/pages.py:163
-#: usr/share/comm-welcome/comm_welcome/window.py:169
 msgid "Your preference could not be saved."
 msgstr "Não foi possível salvar sua preferência."
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:169
-#: usr/share/comm-welcome/comm_welcome/window.py:69
-msgid "Appearance"
-msgstr "Aparência"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:176
-#: usr/share/comm-welcome/comm_welcome/window.py:57
-msgid "Follow system"
-msgstr "Seguir o sistema"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:177
-#: usr/share/comm-welcome/comm_welcome/window.py:58
-msgid "Light"
-msgstr "Claro"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:178
-#: usr/share/comm-welcome/comm_welcome/window.py:59
-msgid "Dark"
-msgstr "Escuro"
-
-#: usr/share/comm-welcome/comm_welcome/pages.py:207
+#: usr/share/comm-welcome/comm_welcome/pages.py:185
 msgid "Tools from BigLinux and BigCommunity. Open any of them to see what it does."
 msgstr "Ferramentas do BigLinux e do BigCommunity. Abra qualquer uma para ver o que ela faz."
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:226
+#: usr/share/comm-welcome/comm_welcome/pages.py:204
 msgid "Install more apps"
 msgstr "Instalar mais aplicativos"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:23
+#: usr/share/comm-welcome/comm_welcome/window.py:16
 msgid "Welcome to BigCommunity"
 msgstr "Boas-vindas ao BigCommunity"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:44
-#: usr/share/comm-welcome/comm_welcome/window.py:97
+#: usr/share/comm-welcome/comm_welcome/window.py:37
+#: usr/share/comm-welcome/comm_welcome/window.py:64
 msgid "Welcome"
 msgstr "Boas-vindas"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:65
+#: usr/share/comm-welcome/comm_welcome/window.py:43
 msgid "Support the project"
 msgstr "Apoiar o projeto"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:66
+#: usr/share/comm-welcome/comm_welcome/window.py:44
 msgid "About Welcome"
 msgstr "Sobre as boas-vindas"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:67
-#: usr/share/comm-welcome/comm_welcome/window.py:241
+#: usr/share/comm-welcome/comm_welcome/window.py:45
+#: usr/share/comm-welcome/comm_welcome/window.py:190
 msgid "Close"
 msgstr "Fechar"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:72
+#: usr/share/comm-welcome/comm_welcome/window.py:47
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:98
+#: usr/share/comm-welcome/comm_welcome/window.py:65
 msgid "Inside"
 msgstr "Por dentro"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:99
+#: usr/share/comm-welcome/comm_welcome/window.py:66
 msgid "Apps"
 msgstr "Aplicativos"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:100
+#: usr/share/comm-welcome/comm_welcome/window.py:67
 msgid "Browsers"
 msgstr "Navegadores"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:119
+#: usr/share/comm-welcome/comm_welcome/window.py:85
 msgid "What runs beneath your desktop."
 msgstr "O que roda por baixo do seu desktop."
 
-#: usr/share/comm-welcome/comm_welcome/window.py:132
+#: usr/share/comm-welcome/comm_welcome/window.py:98
 msgid "Make yourself at home."
 msgstr "Sinta-se em casa."
 
-#: usr/share/comm-welcome/comm_welcome/window.py:144
+#: usr/share/comm-welcome/comm_welcome/window.py:110
 msgid "View installation"
 msgstr "Ver instalação"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:230
+#: usr/share/comm-welcome/comm_welcome/window.py:179
 msgid "The link could not be opened."
 msgstr "Não foi possível abrir o link."
 
-#: usr/share/comm-welcome/comm_welcome/window.py:249
+#: usr/share/comm-welcome/comm_welcome/window.py:198
 #: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
 #: data/org.bigcommunity.CommWelcome.desktop.in:3
 msgid "BigCommunity Welcome"
 msgstr "Boas-vindas do BigCommunity"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:255
+#: usr/share/comm-welcome/comm_welcome/window.py:204
 msgid "Discover your desktop and the apps that come with it."
 msgstr "Conheça seu ambiente e os aplicativos que o acompanham."
+
+#~ msgid "Appearance"
+#~ msgstr "Aparência"
+
+#~ msgid "Follow system"
+#~ msgstr "Seguir o sistema"
+
+#~ msgid "Light"
+#~ msgstr "Claro"
+
+#~ msgid "Dark"
+#~ msgstr "Escuro"
 
 #~ msgid "Continue with my current browser"
 #~ msgstr "Continuar usando meu navegador atual"
