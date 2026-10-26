@@ -1,5 +1,6 @@
 """Pamac session transactions. Authentication remains in the system agent."""
 
+import shutil
 import subprocess
 import threading
 from pathlib import Path
@@ -12,6 +13,20 @@ from .install_policy import browser_reference, validate_plan
 BUS_NAME = "org.manjaro.pamac.session"
 BUS_PATH = "/org/manjaro/pamac/session"
 INTERFACE = BUS_NAME + ".Transactions2"
+# Pamac's own installation window: it shows the plan, asks for authentication
+# through polkit and reports progress. Used when the session service is absent.
+PAMAC_INSTALLER = "pamac-installer"
+
+
+def package_installed(package: str) -> bool:
+    """Read the local package database; never changes anything."""
+    try:
+        result = subprocess.run(
+            ["pacman", "-Q", package], capture_output=True, text=True, timeout=10, check=False
+        )
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return result.returncode == 0
 
 
 def repository_browsers() -> dict[str, str]:
@@ -52,6 +67,9 @@ class Installer(GObject.Object):
         self.success = False
         self.last_seq = -1
         self.preparation_rounds = 0
+        self.session = False
+        self.helper = shutil.which(PAMAC_INSTALLER)
+        self.process = None
         self.network = Gio.NetworkMonitor.get_default()
         self.network.connect("network-changed", lambda *_: self.emit("changed"))
 
@@ -87,16 +105,18 @@ class Installer(GObject.Object):
         try:
             self.proxy = Gio.DBusProxy.new_for_bus_finish(result)
             version = self.proxy.get_cached_property("Version")
-            self.available = version is not None and version.unpack() >= 1
+            self.session = version is not None and version.unpack() >= 1
             self.proxy.connect("g-signal", self._event)
             self.proxy.connect("notify::g-name-owner", self._owner_changed)
         except GLib.Error as exc:
             self.details = exc.message
+        self.available = self.session or bool(self.helper)
         self.emit("changed")
 
     def _owner_changed(self, proxy, _property) -> None:
         if not proxy.get_name_owner():
-            self.available = False
+            self.session = False
+            self.available = bool(self.helper)
             if self.busy:
                 self._finish(
                     False, _("The installer connection was lost. Check Software before retrying.")
@@ -113,8 +133,26 @@ class Installer(GObject.Object):
         if not self.checked:
             return _("Checking available browsers…")
         if not self.available:
-            return _("Browser installation requires a compatible Pamac session service.")
+            return _("Browser installation requires Pamac. Open Software to install a browser.")
         return ""
+
+    def aur_package(self, browser) -> str:
+        """AUR build is offered only for browsers missing from the official repositories."""
+        if browser.aur and self.helper and browser.key not in self.references:
+            return browser.aur
+        return ""
+
+    def start_aur(self, browser) -> None:
+        reason = self.blocked_reason()
+        package = self.aur_package(browser)
+        if reason or not package:
+            self.message = reason
+            self.emit("changed")
+            return
+        self.browser, self.busy, self.success = browser, True, False
+        self.tx_id, self.ratio, self.last_seq = None, None, -1
+        self.details = ""
+        self._start_helper(package, build=True)
 
     def start(self, browser) -> None:
         reason = self.blocked_reason()
@@ -131,8 +169,38 @@ class Installer(GObject.Object):
         self.details = ""
         self.message = _("Preparing installation…")
         self.emit("changed")
+        if not self.session:
+            self._start_helper(reference.rsplit("/", 1)[1])
+            return
         request = {"install": GLib.Variant("as", [reference])}
         self._call("PrepareTransaction", GLib.Variant("(a{sv})", (request,)), self._prepared)
+
+    def _start_helper(self, package: str, build: bool = False) -> None:
+        """Hand the transaction to Pamac's window and check the result afterwards."""
+        self.message = _("Continue in the Pamac window to install {browser}.").format(
+            browser=self.browser.name
+        )
+        self.emit("changed")
+        try:
+            argv = [self.helper, "--build", package] if build else [self.helper, package]
+            self.process = Gio.Subprocess.new(argv, Gio.SubprocessFlags.NONE)
+        except GLib.Error as exc:
+            self.details = exc.message
+            self._finish(False, _("The installation could not be completed."))
+            return
+
+        def finished(process, result):
+            try:
+                process.wait_finish(result)
+            except GLib.Error as exc:
+                self.details = exc.message
+            self.process = None
+            if package_installed(package):
+                self._finish(True, _("{browser} installed.").format(browser=self.browser.name))
+            else:
+                self._finish(False, _("The installation was canceled or did not finish."))
+
+        self.process.wait_async(None, finished)
 
     def _call(self, method: str, arguments, done) -> None:
         def finished(proxy, result):

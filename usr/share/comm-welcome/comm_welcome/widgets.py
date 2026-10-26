@@ -103,13 +103,14 @@ def wrap(children: list, spacing: int = 12) -> Adw.WrapBox:
 
 
 def page(title: str, subtitle: str) -> tuple[Gtk.ScrolledWindow, Gtk.Box]:
-    content = box(22)
+    content = box(24)
     content.add_css_class("welcome-content")
     heading = box(8)
-    heading.append(label(title, "welcome-title"))
+    heading.add_css_class("welcome-page-heading")
+    heading.append(label(title, "title-1", "welcome-title"))
     heading.append(label(subtitle, "welcome-subtitle", "dim-label"))
     content.append(heading)
-    clamp = Adw.Clamp(maximum_size=1000, tightening_threshold=820, child=content)
+    clamp = Adw.Clamp(maximum_size=960, tightening_threshold=800, child=content)
     scroll = Gtk.ScrolledWindow(hscrollbar_policy=Gtk.PolicyType.NEVER, child=clamp)
     scroll.set_vexpand(True)
     return scroll, content

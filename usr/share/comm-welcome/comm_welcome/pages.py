@@ -1,122 +1,157 @@
-"""Welcome, curated applications, and help pages."""
+"""Welcome and curated applications pages."""
 
 from . import launchers
-from .catalog import CATEGORIES, GNOME_CENTER, SOFTWARE
+from .branding import wordmark
+from .catalog import CATEGORIES, CATEGORY_KEYS, SOFTWARE
 from .gtk import Adw, Gio, Gtk
 from .i18n import _
-from .widgets import (
-    DATA_DIR,
-    app_row,
-    box,
-    button,
-    group,
-    group_append,
-    icon,
-    icon_badge,
-    label,
-    page,
-    wrap,
-)
+from .widgets import DATA_DIR, box, button, icon, label, page
+
+
+def availability(item, app) -> str:
+    """Short status; installed apps need none."""
+    if app:
+        return ""
+    if launchers.is_shell_extension(item):
+        if launchers.extension_enabled(item):
+            return _("Built into GNOME. Press Print Screen.")
+        return _("GNOME extension, currently disabled.")
+    return _("Not installed. See the project.")
+
+
+def app_entry(window, item, app, spotlight=False):
+    """One application in the index: icon, name and benefit; opens its introduction."""
+    tile = box(12 if spotlight else 14, horizontal=True)
+    tile.add_css_class("welcome-entry-body")
+    tile.set_hexpand(True)
+    app_icon = icon(launchers.app_icon(item, app), 36 if spotlight else 44)
+    app_icon.set_valign(Gtk.Align.CENTER if spotlight else Gtk.Align.START)
+    app_icon.set_accessible_role(Gtk.AccessibleRole.PRESENTATION)
+    tile.append(app_icon)
+    texts = box(2)
+    texts.set_hexpand(True)
+    texts.set_valign(Gtk.Align.CENTER if spotlight else Gtk.Align.START)
+    name_label = label(_(item.name), "heading", "welcome-entry-name")
+    texts.append(name_label)
+    benefit = _(item.teaser or item.summary) if spotlight else _(item.summary)
+    benefit_label = label(benefit, "dim-label", "welcome-entry-benefit")
+    benefit_label.set_max_width_chars(40)
+    texts.append(benefit_label)
+    status = availability(item, app)
+    if status and not spotlight:
+        texts.append(label(status, "caption", "welcome-entry-status"))
+    tile.append(texts)
+    action = Gtk.Button(child=tile, hexpand=True, halign=Gtk.Align.FILL)
+    action.add_css_class("flat")
+    action.add_css_class("welcome-entry")
+    action.add_css_class("welcome-app-preview")
+    if not app and not launchers.is_shell_extension(item):
+        action.add_css_class("welcome-entry-absent")
+    name = _(item.name)
+    action.set_tooltip_text(_("Meet {app}").format(app=name))
+    action.update_property(
+        [Gtk.AccessibleProperty.LABEL],
+        [". ".join(filter(None, (_("Meet {app}").format(app=name), benefit, status)))],
+    )
+    action.connect("clicked", lambda _button: window.preview_app(item, app))
+    return action
+
+
+def index(entries, columns):
+    """A quiet typographic grid; adapts from three columns down to one."""
+    grid = Gtk.FlowBox(selection_mode=Gtk.SelectionMode.NONE, homogeneous=False)
+    # Columns follow the window (see the narrow breakpoint), not the text length.
+    grid.set_max_children_per_line(columns)
+    grid.set_min_children_per_line(columns)
+    grid.set_column_spacing(6)
+    grid.set_row_spacing(2)
+    grid.set_activate_on_single_click(False)
+    grid.add_css_class("welcome-index")
+    for entry in entries:
+        grid.append(entry)
+        entry.get_parent().set_focusable(False)
+    return grid
 
 
 def welcome_page(window):
-    scroll, content = page(
-        _("Welcome to BigCommunity"),
-        _("Your new system, your way."),
+    content = box(0)
+    content.add_css_class("welcome-home-content")
+    content.set_valign(Gtk.Align.CENTER)
+    scene = box(44, horizontal=True)
+    scene.add_css_class("welcome-scene")
+    picture = Gtk.Picture.new_for_filename(str(DATA_DIR / "assets/welcome-portrait.jpg"))
+    picture.set_can_shrink(True)
+    picture.set_content_fit(Gtk.ContentFit.COVER)
+    picture.set_accessible_role(Gtk.AccessibleRole.PRESENTATION)
+    art = Gtk.Overlay(child=box(0))
+    art.add_overlay(picture)
+    art.set_size_request(340, 362)
+    art.add_css_class("welcome-artboard")
+    art.set_overflow(Gtk.Overflow.HIDDEN)
+    art.set_valign(Gtk.Align.FILL)
+    scene.append(art)
+    introduction = box(0)
+    introduction.set_hexpand(True)
+    introduction.set_valign(Gtk.Align.CENTER)
+    introduction.add_css_class("welcome-editorial")
+    brand = box(8, horizontal=True)
+    brand.set_halign(Gtk.Align.START)
+    symbol = icon(
+        Gio.FileIcon.new(Gio.File.new_for_path(str(DATA_DIR / "assets/community-owl.svg"))), 22
     )
-    content.set_spacing(14)
-    heading = content.get_first_child()
-    heading_row = box(18, horizontal=True)
-    content.remove(heading)
-    heading_row.append(icon(Gio.ThemedIcon.new("org.bigcommunity.CommWelcome"), 64))
-    heading_row.append(heading)
-    content.prepend(heading_row)
-    content.append(
-        label(
-            _("Discover apps, personalize your desktop, and find what you need to get started."),
-            "welcome-subtitle",
-            "dim-label",
-        )
+    symbol.set_accessible_role(Gtk.AccessibleRole.PRESENTATION)
+    brand.append(symbol)
+    brand.append(wordmark())
+    introduction.append(brand)
+    edition = label(_("GNOME. Made by a community."), "dim-label", "welcome-edition")
+    introduction.append(edition)
+    headline = label(_("Make yourself\nat home."), "welcome-headline")
+    introduction.append(headline)
+    subtitle = label(
+        _("A GNOME desktop with the community's apps close at hand."),
+        "welcome-hero-subtitle",
+        "dim-label",
     )
-    illustration = None
+    introduction.append(subtitle)
     if app := launchers.settings_app():
-        feature = box(18, horizontal=True)
-        feature.add_css_class("welcome-feature")
-        texts = box(12)
-        texts.set_hexpand(True)
-        texts.append(label(_("PERSONALIZE YOUR DESKTOP"), "welcome-eyebrow"))
-        texts.append(label(_("Make yourself at home"), "title-2"))
-        is_center = app.get_id() == GNOME_CENTER
-        texts.append(
-            label(
-                _("Explore layouts, themes, panels, docks, and personalization.")
-                if is_center
-                else _("Explore the personalization options for your desktop."),
-                "dim-label",
-            )
-        )
         action = button(
-            _("Open Big Gnome Center") if is_center else _("Open settings"),
-            lambda target=app: window.open_app(target),
-            True,
+            _("Personalize your desktop"), lambda target=app: window.open_app(target), True
         )
+        action.add_css_class("pill")
         action.set_halign(Gtk.Align.START)
-        texts.append(action)
-        feature.append(texts)
-        if is_center:
-            illustration = Gtk.Picture.new_for_filename(str(DATA_DIR / "assets/desktop.svg"))
-            illustration.set_size_request(180, 110)
-            illustration.set_can_shrink(True)
-            illustration.set_accessible_role(Gtk.AccessibleRole.PRESENTATION)
-            feature.append(illustration)
-        content.append(feature)
-    content.append(label(_("Start here"), "title-2"))
-    shortcuts = []
-    for name, title, symbol in (
-        ("apps", _("Discover apps"), "view-grid-symbolic"),
-        ("browsers", _("Choose a browser"), "web-browser-symbolic"),
-        ("help", _("Find help"), "help-browser-symbolic"),
-    ):
-        child = box(6)
-        child.append(icon_badge(symbol))
-        child.get_first_child().set_halign(Gtk.Align.START)
-        child.append(label(title, "heading"))
-        action = Gtk.Button(child=child, hexpand=True)
-        action.add_css_class("card")
-        action.add_css_class("welcome-shortcut")
-        action.set_size_request(180, -1)
-        action.connect("clicked", lambda _, key=name: window.show_page(key))
-        shortcuts.append(action)
-    shortcuts_box = box(12, horizontal=True)
-    shortcuts_box.set_homogeneous(True)
-    for shortcut in shortcuts:
-        shortcuts_box.append(shortcut)
-    content.append(shortcuts_box)
-    sample = box(12)
-    sample.append(label(_("Made for your everyday life"), "heading", "dim-label"))
-    sample_group = wrap([])
-    chosen = {
-        "br.com.biglinux.webapps.desktop",
-        "br.com.biglinux.bigocrpdf.desktop",
-        "org.communitybig.bigrecorder.desktop",
-    }
-    for item, app in launchers.available_apps():
-        if item.desktop_id in chosen:
-            tile = box(12, horizontal=True)
-            tile.append(icon(app.get_icon() or "application-x-executable-symbolic", 30))
-            tile.append(label(_(item.name), "heading"))
-            action = Gtk.Button(child=tile, hexpand=True)
-            action.add_css_class("card")
-            action.add_css_class("welcome-shortcut")
-            action.set_size_request(180, -1)
-            action.connect("clicked", lambda _, a=app: window.open_app(a))
-            sample_group.append(action)
-    sample.append(sample_group)
-    if sample_group.get_first_child():
-        content.append(sample)
-    footer = box(8)
-    footer.append(Gtk.Separator())
+        action.set_margin_top(22)
+        introduction.append(action)
+    scene.append(introduction)
+    content.append(scene)
+    entries = [app_entry(window, item, app, True) for item, app in launchers.spotlight_apps()]
+    featured = box(10)
+    featured.add_css_class("welcome-featured")
+    section_header = box(12, horizontal=True)
+    title = label("BigApps", "welcome-overline")
+    title.set_wrap(False)
+    title.set_hexpand(False)
+    title.set_valign(Gtk.Align.CENTER)
+    section_header.append(title)
+    lede = label(_("Made by the community, ready to use."), "dim-label", "welcome-section-lede")
+    lede.set_valign(Gtk.Align.CENTER)
+    section_header.append(lede)
+    more = button(_("Explore all apps"), lambda: window.show_page("apps"))
+    more.add_css_class("flat")
+    more.add_css_class("welcome-link")
+    section_header.append(more)
+    featured.append(section_header)
+    grid = index(entries, 3)
+    grid.set_visible(bool(entries))
+    featured.append(grid)
+    content.append(featured)
+    clamp = Adw.Clamp(maximum_size=1040, tightening_threshold=940, child=content)
+    scroll = Gtk.ScrolledWindow(hscrollbar_policy=Gtk.PolicyType.NEVER, child=clamp)
+    scroll.set_vexpand(True)
+    footer = box(0)
+    footer.add_css_class("welcome-footer")
     check = Gtk.CheckButton(label=_("Do not show again"), active=window.preferences.suppressed())
+    check.set_halign(Gtk.Align.CENTER)
+    check.set_tooltip_text(_("You can reopen Welcome from the application menu."))
 
     def save(toggle):
         try:
@@ -128,121 +163,68 @@ def welcome_page(window):
             window.show_error(_("Your preference could not be saved."), str(exc))
 
     handler = check.connect("toggled", save)
+    # Appearance stays with the system unless the person picks light or dark here.
+    scheme_box = box(10, horizontal=True)
+    scheme_box.add_css_class("welcome-scheme")
+    caption = label(_("Appearance"), "dim-label", "welcome-small")
+    caption.set_hexpand(False)
+    caption.set_wrap(False)
+    scheme_box.append(caption)
+    scheme_group = Adw.ToggleGroup()
+    scheme_group.add_css_class("round")
+    for name, title, symbol in (
+        ("system", _("Follow system"), "computer-symbolic"),
+        ("light", _("Light"), "weather-clear-symbolic"),
+        ("dark", _("Dark"), "weather-clear-night-symbolic"),
+    ):
+        toggle = Adw.Toggle(name=name, icon_name=symbol, tooltip=title)
+        scheme_group.add(toggle)
+    scheme_box.append(scheme_group)
+    footer.add_css_class("welcome-footer-bar")
+    footer.set_orientation(Gtk.Orientation.HORIZONTAL)
+    footer.append(scheme_box)
+    spacer = box(0, horizontal=True)
+    spacer.set_hexpand(True)
+    footer.append(spacer)
+    check.set_halign(Gtk.Align.END)
     footer.append(check)
-    footer.append(
-        label(_("You can reopen Welcome from the application menu."), "dim-label", "welcome-small")
-    )
-    footer.add_css_class("welcome-footer")
     outer = box(0)
-    outer.add_css_class("welcome-home")
     outer.append(scroll)
     outer.append(footer)
-    return outer, illustration, sample, shortcuts_box
+    outer.scene = scene
+    outer.art = art
+    outer.headline = headline
+    outer.lede = lede
+    outer.grids = [grid]
+    outer.scheme_group = scheme_group
+    outer.scheme_box = scheme_box
+    return outer
 
 
 def apps_page(window):
     scroll, content = page(
-        _("Find what you need"),
-        _("System apps, ready for you to explore."),
+        "BigApps",
+        _("Tools from BigLinux and BigCommunity. Open any of them to see what it does."),
     )
-    stack = Adw.ViewStack()
-    switcher = Adw.InlineViewSwitcher(stack=stack)
-    content.append(switcher)
-    available = launchers.available_apps()
-    for key, title in zip(("everyday", "media", "system"), CATEGORIES):
-        category = box(14)
-        category.append(label(_(title), "title-2"))
-        rows = group()
-        for item, app in available:
-            if item.category == key:
-                group_append(
-                    rows,
-                    app_row(
-                        _(item.name),
-                        _(item.summary),
-                        app.get_icon(),
-                        lambda a=app: window.open_app(a),
-                    ),
-                )
-        if rows.get_first_child():
-            category.append(rows)
-        else:
-            category.append(
-                label(_("No compatible apps are installed in this category."), "dim-label")
-            )
-        stack.add_titled(category, key, _(title))
-    content.append(stack)
+    content.set_spacing(34)
+    scroll.grids = []
+    catalog = launchers.catalog_apps()
+    for key, title in zip(CATEGORY_KEYS, CATEGORIES):
+        entries = [app_entry(window, item, app) for item, app in catalog if item.category == key]
+        if not entries:
+            continue
+        section = box(12)
+        section.add_css_class("welcome-catalog-section")
+        heading = label(_(title), "welcome-overline")
+        heading.set_accessible_role(Gtk.AccessibleRole.HEADING)
+        section.append(heading)
+        grid = index(entries, 2)
+        scroll.grids.append(grid)
+        section.append(grid)
+        content.append(section)
     if app := launchers.find(SOFTWARE):
         action = button(_("Install more apps"), lambda: window.open_app(app))
+        action.add_css_class("pill")
         action.set_halign(Gtk.Align.START)
         content.append(action)
-    return scroll, switcher
-
-
-def help_page(window):
-    scroll, content = page(
-        _("A community ready to help"),
-        _("Find guidance and share your questions."),
-    )
-    content.append(
-        label(_("These links open in your browser and need internet access."), "dim-label")
-    )
-    for title, subtitle, uri, symbol in (
-        (
-            _("BigCommunity website"),
-            _("Get to know the project and its news."),
-            "https://communitybig.org/",
-            "web-browser-symbolic",
-        ),
-        (
-            _("Community on Telegram"),
-            _("Talk with other members of the community."),
-            "https://t.me/BigLinuxCommunity",
-            Gio.FileIcon.new(Gio.File.new_for_path(str(DATA_DIR / "assets/telegram-symbolic.svg"))),
-        ),
-        (
-            _("Ask the forum"),
-            _("Search for answers and share your questions."),
-            "https://forum.biglinux.com.br/t/biglinuxcommunity",
-            "help-browser-symbolic",
-        ),
-    ):
-        card = group()
-        row = app_row(title, subtitle, symbol, lambda url=uri: window.open_uri(url), decorated=True)
-        row.get_last_child().set_tooltip_text(uri)
-        card.append(row)
-        content.append(card)
-    donation = group()
-    donation.append(
-        app_row(
-            _("Support the project"),
-            _("Discover ways to donate to BigCommunity."),
-            Gio.FileIcon.new(Gio.File.new_for_path(str(DATA_DIR / "assets/heart-symbolic.svg"))),
-            window.donate,
-            decorated=True,
-        )
-    )
-    content.append(donation)
-    content.append(label(_("Useful information when asking for help"), "title-2"))
-    rows = group()
-    for item, app in launchers.available_apps():
-        if item.desktop_id in {
-            "br.com.biglinux.bighardwareinfo.desktop",
-            "br.com.biglinux.networkinfo.desktop",
-        }:
-            group_append(
-                rows,
-                app_row(
-                    _(item.name), _(item.summary), app.get_icon(), lambda a=app: window.open_app(a)
-                ),
-            )
-    if rows.get_first_child():
-        content.append(rows)
-    content.append(
-        label(
-            _("Opening these apps does not send your information to anyone."),
-            "dim-label",
-            "welcome-small",
-        )
-    )
     return scroll
