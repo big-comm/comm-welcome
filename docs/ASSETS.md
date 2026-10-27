@@ -1,10 +1,15 @@
 # Assets
 
-- `artwork/comm-welcome.png`: approved owl icon, generated with OpenAI imagegen
-  and edited to remove the decorative star. Original 1254×1254 RGBA PNG.
-- `usr/share/icons/hicolor/*/apps/org.bigcommunity.CommWelcome.png`: resized
-  derivatives, 16–1024 pixels. Shared by the launcher and About.
-  Transparency is preserved. The source is raster, not SVG.
+- `artwork/comm-welcome.png`: app icon (October 2026). A refined version of
+  the previous owl, waving one wing, on a navy-to-violet squircle with a cyan
+  corner band, matching the BigCommunity app family. Painted with OpenAI image
+  generation from the previous icon and family icons as references; the white
+  "big" mark in the corner is the original BigLinux lettering from
+  `/usr/share/pixmaps/biglinux-launcher5.svg` (biglinux-base-icons), added
+  afterwards. Trimmed and centered at 88% of a 1254×1254 RGBA canvas.
+- `usr/share/icons/hicolor/*/apps/org.bigcommunity.CommWelcome.png`: derived
+  sizes 16–1024. Sizes up to 32 px use a 94% fill with extra contrast and
+  sharpening so the eyes stay readable; 48–64 px get light sharpening.
 - `assets/desktop.svg`: original local desktop illustration, MIT.
 - `assets/community-owl.svg`: new community owl, copied unchanged from
   `community-release/usr/share/icons/hicolor/scalable/apps/about.svg` in the
@@ -38,7 +43,8 @@
 
 ## Regenerate icon sizes
 
-Requires ImageMagick for development only.
+The October 2026 set was produced with size-specific finishing (see above);
+the plain resize below is only a fallback. Requires ImageMagick.
 
 ```sh
 for size in 16 24 32 48 64 128 256 512 1024; do
