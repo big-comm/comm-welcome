@@ -75,33 +75,6 @@ def icon(name: str | Gio.Icon, size: int = 40) -> Gtk.Image:
     return widget
 
 
-def icon_badge(name: str | Gio.Icon, tone: str = "accent") -> Gtk.Box:
-    badge = box(0)
-    badge.add_css_class("welcome-icon")
-    badge.add_css_class(f"welcome-icon-{tone}")
-    badge.set_halign(Gtk.Align.START)
-    badge.set_valign(Gtk.Align.CENTER)
-    badge.set_size_request(40, 40)
-    badge.set_vexpand(False)
-    image = icon(name, 16 if isinstance(name, str) else 24)
-    image.set_halign(Gtk.Align.CENTER)
-    image.set_valign(Gtk.Align.CENTER)
-    image.set_vexpand(True)
-    image.set_accessible_role(Gtk.AccessibleRole.PRESENTATION)
-    badge.append(image)
-    return badge
-
-
-def wrap(children: list, spacing: int = 12) -> Adw.WrapBox:
-    widget = Adw.WrapBox()
-    widget.set_child_spacing(spacing)
-    widget.set_line_spacing(spacing)
-    widget.set_justify(Adw.JustifyMode.FILL)
-    for child in children:
-        widget.append(child)
-    return widget
-
-
 def page(title: str, subtitle: str) -> tuple[Gtk.ScrolledWindow, Gtk.Box]:
     content = box(24)
     content.add_css_class("welcome-content")
@@ -119,38 +92,3 @@ def page(title: str, subtitle: str) -> tuple[Gtk.ScrolledWindow, Gtk.Box]:
 def clear(widget: Gtk.Box) -> None:
     while child := widget.get_first_child():
         widget.remove(child)
-
-
-def app_row(name: str, summary: str, app_icon, callback, decorated: bool = False) -> Gtk.Box:
-    row = box(14, horizontal=True)
-    row.add_css_class("welcome-row")
-    row.append(
-        icon_badge(app_icon) if decorated else icon(app_icon or "application-x-executable-symbolic")
-    )
-    texts = box(5)
-    texts.set_hexpand(True)
-    texts.append(label(name, "heading"))
-    texts.append(label(summary, "dim-label"))
-    row.append(texts)
-    from .i18n import _
-
-    action = button(_("Open"), callback)
-    action.update_property([Gtk.AccessibleProperty.LABEL], [_("Open {app}").format(app=name)])
-    row.append(action)
-    return row
-
-
-def group() -> Gtk.Box:
-    widget = box(0)
-    widget.add_css_class("card")
-    widget.add_css_class("welcome-surface")
-    return widget
-
-
-def group_append(widget: Gtk.Box, row: Gtk.Widget) -> None:
-    if widget.get_first_child():
-        separator = Gtk.Separator()
-        separator.set_margin_start(64)
-        separator.set_margin_end(16)
-        widget.append(separator)
-    widget.append(row)

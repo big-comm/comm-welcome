@@ -31,6 +31,14 @@ def _metric(topic):
         return None
 
 
+def _live(topic) -> str:
+    """A reading that cannot be taken leaves the topic without it, never the window."""
+    try:
+        return topic.live() if topic.live else ""
+    except (OSError, ValueError, ZeroDivisionError):
+        return ""
+
+
 def _hero() -> Gtk.Box:
     """A dark brand band: the installer's orbit motif and three live readings."""
     hero = box(28, horizontal=True)
@@ -113,7 +121,7 @@ def _topic_view(topic, facts_boxes) -> Gtk.Box:
     technical.set_selectable(True)
     detail.append(technical)
     facts.append(detail)
-    if topic.live and (reading := topic.live()):
+    if reading := _live(topic):
         here = box(4)
         here.append(label(_("On this computer"), "welcome-overline"))
         live = label(reading, "monospace", "welcome-insight-live")

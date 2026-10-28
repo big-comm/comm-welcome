@@ -36,7 +36,7 @@ class WelcomeApplication(Adw.Application):
 
     def _sync_scheme(self, *_args) -> None:
         if self.css.find_property("prefers-color-scheme") is None:
-            return  # GTK < 4.20 resolves the media query from its own settings.
+            return  # Older GTK cannot follow the scheme here; PKGBUILD requires 4.20.
         dark = self.get_style_manager().get_dark()
         scheme = Gtk.InterfaceColorScheme.DARK if dark else Gtk.InterfaceColorScheme.LIGHT
         self.css.set_property("prefers-color-scheme", scheme)

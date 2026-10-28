@@ -43,7 +43,22 @@ class OrbitArt(Gtk.Overlay):
         owl.set_valign(Gtk.Align.CENTER)
         owl.add_css_class("welcome-orbit-owl")
         self.add_overlay(owl)
-        self.add_tick_callback(self._tick)
+        # Animate only while on screen: hidden stack pages stay realized, and a
+        # tick callback would keep the frame clock running for nothing.
+        self.tick_id = 0
+        self.connect("map", self._mapped)
+        self.connect("unmap", self._unmapped)
+
+    def _mapped(self, *_args) -> None:
+        if not self.tick_id:
+            self.tick_id = self.add_tick_callback(self._tick)
+
+    def _unmapped(self, *_args) -> None:
+        if self.tick_id:
+            self.remove_tick_callback(self.tick_id)
+            self.tick_id = 0
+        # Resume from the same point of the orbit next time.
+        self.started = None
 
     def _tick(self, widget, clock):
         if not Gtk.Settings.get_default().get_property("gtk-enable-animations"):

@@ -19,7 +19,7 @@ def kernel_config() -> dict[str, str]:
     try:
         with gzip.open(PROC / "config.gz", "rt", encoding="utf-8", errors="replace") as source:
             lines = source.read().splitlines()
-    except OSError:
+    except (OSError, EOFError):  # truncated archives raise EOFError
         return {}
     options = {}
     for line in lines:
@@ -32,7 +32,7 @@ def kernel_config() -> dict[str, str]:
 def root_mount() -> tuple[str, list[str]] | None:
     """Filesystem type and options of /, from mountinfo."""
     try:
-        lines = (PROC / "self/mountinfo").read_text().splitlines()
+        lines = (PROC / "self/mountinfo").read_text(errors="replace").splitlines()
     except OSError:
         return None
     for line in lines:
@@ -49,14 +49,15 @@ def root_mount() -> tuple[str, list[str]] | None:
 def zram_swap_bytes() -> int:
     """Total size of compressed swap in RAM."""
     try:
-        lines = (PROC / "swaps").read_text().splitlines()[1:]
+        lines = (PROC / "swaps").read_text(errors="replace").splitlines()[1:]
     except OSError:
         return 0
     total = 0
     for line in lines:
         fields = line.split()
         if fields and fields[0].startswith("/dev/zram") and len(fields) > 2:
-            total += int(fields[2]) * 1024
+            if fields[2].isdigit():
+                total += int(fields[2]) * 1024
     return total
 
 
@@ -71,7 +72,7 @@ def io_schedulers() -> dict[str, str]:
         if device.name.startswith(("loop", "zram", "ram", "dm-", "sr")):
             continue
         try:
-            text = (device / "queue/scheduler").read_text()
+            text = (device / "queue/scheduler").read_text(errors="replace")
         except OSError:
             continue
         if "[" in text:
@@ -90,7 +91,7 @@ def human_size(size: int) -> str:
 
 def _read(path: Path) -> str:
     try:
-        return path.read_text().strip()
+        return path.read_text(errors="replace").strip()
     except OSError:
         return ""
 
@@ -140,7 +141,7 @@ def boot_snapshots(path: Path = Path("/boot/grub/grub-btrfs.cfg")) -> list[str]:
 
 def booted_from_snapshot() -> bool:
     try:
-        lines = (PROC / "self/mountinfo").read_text().splitlines()
+        lines = (PROC / "self/mountinfo").read_text(errors="replace").splitlines()
     except OSError:
         return False
     return any(

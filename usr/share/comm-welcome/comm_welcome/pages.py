@@ -163,7 +163,6 @@ def welcome_page(window):
             window.show_error(_("Your preference could not be saved."), str(exc))
 
     handler = check.connect("toggled", save)
-    footer.add_css_class("welcome-footer-bar")
     footer.set_orientation(Gtk.Orientation.HORIZONTAL)
     check.set_hexpand(True)
     check.set_halign(Gtk.Align.END)

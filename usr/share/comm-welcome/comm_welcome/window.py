@@ -110,12 +110,17 @@ class WelcomeWindow(Adw.ApplicationWindow):
         self.status.append(button(_("View installation"), lambda: self.show_page("browsers")))
         body.append(self.status)
         self.status.set_visible(False)
-        installer.connect("changed", self._installation_changed)
-        installer.connect("notice", lambda _installer, message: self.toast(message))
         self.connect("close-request", self._close_requested)
         self.connect("notify::is-active", self._activated)
         self.monitor = Gio.AppInfoMonitor.get()
-        self.monitor.connect("changed", self._apps_changed)
+        # The installer and the app monitor outlive this window; drop our handlers with it.
+        self.handlers = [
+            (installer, installer.connect("changed", self._installation_changed)),
+            (installer, installer.connect("notice", lambda _i, message: self.toast(message))),
+            (self.monitor, self.monitor.connect("changed", self._apps_changed)),
+            *self.browser_page.handlers,
+        ]
+        self.connect("destroy", self._destroyed)
 
     def _narrow(self, narrow: bool) -> None:
         if narrow:
@@ -153,6 +158,11 @@ class WelcomeWindow(Adw.ApplicationWindow):
     def _installation_changed(self, *_args) -> None:
         self.status.set_visible(self.installer.busy)
         self.status_label.set_text(self.installer.message)
+
+    def _destroyed(self, *_args) -> None:
+        for source, handler in self.handlers:
+            source.disconnect(handler)
+        self.handlers.clear()
 
     def _close_requested(self, *_args) -> bool:
         if self.installer.busy:

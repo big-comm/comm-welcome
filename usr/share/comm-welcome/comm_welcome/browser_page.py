@@ -71,7 +71,7 @@ class BrowserPage:
         self.compact = False
         self.signature = None
         self.refresh()
-        installer.connect("changed", lambda *_: self.update())
+        self.handlers = [(installer, installer.connect("changed", lambda *_: self.update()))]
 
     def refresh(self) -> None:
         apps = {b.key: launchers.browser_app(b) for b in BROWSERS}

@@ -46,3 +46,26 @@ def test_io_schedulers_skip_virtual_devices(monkeypatch, tmp_path):
         (tmp_path / name / "queue/scheduler").write_text(text)
     monkeypatch.setattr(facts, "SYS_BLOCK", tmp_path)
     assert facts.io_schedulers() == {"nvme0n1": "kyber", "sda": "bfq"}
+
+
+def test_unexpected_bytes_and_fields_never_raise(monkeypatch, tmp_path):
+    # A reading that cannot be parsed must not keep the window from opening.
+    (tmp_path / "self").mkdir()
+    (tmp_path / "self/mountinfo").write_bytes(MOUNTINFO.encode() + b"\xff\xfe broken\n")
+    (tmp_path / "swaps").write_text(
+        "Filename Type Size Used Priority\n/dev/zram0 partition unknown 0 100\n"
+    )
+    monkeypatch.setattr(facts, "PROC", tmp_path)
+    assert facts.root_mount()[0] == "btrfs"
+    assert facts.zram_swap_bytes() == 0
+
+
+def test_truncated_kernel_config_is_ignored(monkeypatch, tmp_path):
+    facts.kernel_config.cache_clear()
+    with gzip.open(tmp_path / "config.gz", "wt") as target:
+        target.write("CONFIG_HZ=1000\n" * 2000)
+    data = (tmp_path / "config.gz").read_bytes()
+    (tmp_path / "config.gz").write_bytes(data[: len(data) // 2])
+    monkeypatch.setattr(facts, "PROC", tmp_path)
+    assert facts.kernel_config() == {}
+    facts.kernel_config.cache_clear()
