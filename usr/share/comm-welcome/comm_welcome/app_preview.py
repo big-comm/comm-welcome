@@ -127,18 +127,27 @@ class AppPreviewDialog(Adw.Dialog):
         footer = Adw.WrapBox(child_spacing=10, line_spacing=8, align=1.0, hexpand=True)
         bar.append(footer)
         extensions = launchers.find(EXTENSIONS_APP) if extension and not enabled else None
+
+        def leaving(open_target):
+            # The person is moving on to the app or the project; do not leave this behind.
+            return lambda: (open_target(), self.close())
+
         if app:
-            action = _action(_("Open {app}").format(app=_(item.name)), lambda: window.open_app(app))
+            action = _action(
+                _("Open {app}").format(app=_(item.name)), leaving(lambda: window.open_app(app))
+            )
         elif extensions:
-            action = _action(_("Open Extensions"), lambda: window.open_app(extensions))
+            action = _action(_("Open Extensions"), leaving(lambda: window.open_app(extensions)))
         elif item.project_url and not extension:
-            action = _action(_("View project"), lambda: window.open_uri(item.project_url))
+            action = _action(_("View project"), leaving(lambda: window.open_uri(item.project_url)))
             action.set_tooltip_text(item.project_url)
         else:
             action = None
         if item.project_url and (app or extension):
             secondary = _action(
-                _("View project"), lambda: window.open_uri(item.project_url), primary=False
+                _("View project"),
+                leaving(lambda: window.open_uri(item.project_url)),
+                primary=False,
             )
             secondary.set_tooltip_text(item.project_url)
             footer.append(secondary)
