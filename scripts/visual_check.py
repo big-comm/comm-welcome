@@ -30,9 +30,8 @@ app.installer.start = lambda *_: (_ for _ in ()).throw(
     AssertionError("Installation disabled in audit")
 )
 app.installer.checked = True
-app.installer.available = True
 # Mirror the real repositories: Chrome and Opera are only in the AUR.
-app.installer.references = {b.key: "alpm:extra/" + b.packages[0] for b in BROWSERS if not b.aur}
+app.installer.references = {b.key: b.packages[0] for b in BROWSERS if not b.aur}
 app.installer.helper = "/usr/bin/pamac-installer"
 SCENARIOS = [
     ("welcome-light", "welcome", False, 950, 730, "idle"),
@@ -163,11 +162,10 @@ def configure():
     app.installer.busy = state == "installing"
     app.installer.browser = BROWSERS[1] if state in {"installing", "failure"} else None
     app.installer.message = (
-        _("Installing {browser}…").format(browser="Firefox")
+        _("Continue in the Pamac window to install {browser}.").format(browser="Firefox")
         if state == "installing"
         else (_("The installation could not be completed.") if state == "failure" else "")
     )
-    app.installer.ratio = 0.35 if state == "installing" else None
     app.window.browser_page.update()
     app.window._installation_changed()
     # Allow allocation and transitions to finish before snapshotting.

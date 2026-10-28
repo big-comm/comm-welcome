@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
-"POT-Creation-Date: 2026-10-26 15:23-0300\n"
+"POT-Creation-Date: 2026-10-27 20:57-0300\n"
 "PO-Revision-Date: 2026-10-25 18:30-0300\n"
 "Last-Translator: BigCommunity\n"
 "Language-Team: Brazilian Portuguese\n"
@@ -45,7 +45,6 @@ msgstr "Este aplicativo não está instalado. A página do projeto explica como 
 #: usr/share/comm-welcome/comm_welcome/app_preview.py:131
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:124
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:157
-#: usr/share/comm-welcome/comm_welcome/widgets.py:138
 #, python-brace-format
 msgid "Open {app}"
 msgstr "Abrir {app}"
@@ -90,7 +89,6 @@ msgstr "Seu navegador padrão"
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:120
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:155
 #: usr/share/comm-welcome/comm_welcome/donations.py:142
-#: usr/share/comm-welcome/comm_welcome/widgets.py:137
 msgid "Open"
 msgstr "Abrir"
 
@@ -145,7 +143,7 @@ msgid "Continue in Pamac"
 msgstr "Continuar no Pamac"
 
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:212
-#: usr/share/comm-welcome/comm_welcome/window.py:167
+#: usr/share/comm-welcome/comm_welcome/window.py:177
 msgid "The application could not be opened."
 msgstr "Não foi possível abrir o aplicativo."
 
@@ -171,7 +169,7 @@ msgid "Not in the official repositories; Software can search the AUR"
 msgstr "Fora dos repositórios oficiais; a loja pode procurar no AUR"
 
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:255
-#: usr/share/comm-welcome/comm_welcome/installer.py:147
+#: usr/share/comm-welcome/comm_welcome/installer.py:111
 msgid "Checking available browsers…"
 msgstr "Verificando os navegadores disponíveis…"
 
@@ -801,17 +799,17 @@ msgid "Comes with a built-in VPN and ad blocker."
 msgstr "Vem com VPN e bloqueador de anúncios embutidos."
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:45
-#: usr/share/comm-welcome/comm_welcome/help_page.py:309
+#: usr/share/comm-welcome/comm_welcome/help_page.py:317
 msgid "Support BigCommunity"
 msgstr "Apoie o BigCommunity"
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:64
-#: usr/share/comm-welcome/comm_welcome/help_page.py:310
+#: usr/share/comm-welcome/comm_welcome/help_page.py:318
 msgid "Your support makes a difference"
 msgstr "Seu apoio faz a diferença"
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:69
-#: usr/share/comm-welcome/comm_welcome/help_page.py:313
+#: usr/share/comm-welcome/comm_welcome/help_page.py:321
 msgid "Help maintain our servers, develop new features, and support the community."
 msgstr "Ajude a manter nossos servidores, desenvolver novos recursos e apoiar a comunidade."
 
@@ -824,7 +822,7 @@ msgid "Monthly support. Continue on Patreon in your browser."
 msgstr "Apoio mensal. Continue no Patreon pelo navegador."
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:83
-#: usr/share/comm-welcome/comm_welcome/help_page.py:319
+#: usr/share/comm-welcome/comm_welcome/help_page.py:327
 msgid "Support on Patreon"
 msgstr "Apoiar no Patreon"
 
@@ -881,12 +879,12 @@ msgstr "Bot de doações no Telegram"
 msgid "Continue in Telegram."
 msgstr "Continue no Telegram."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:43
-#: usr/share/comm-welcome/comm_welcome/help_page.py:143
+#: usr/share/comm-welcome/comm_welcome/help_page.py:51
+#: usr/share/comm-welcome/comm_welcome/help_page.py:151
 msgid "Inside BigCommunity"
 msgstr "Por dentro do BigCommunity"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:44
+#: usr/share/comm-welcome/comm_welcome/help_page.py:52
 msgid ""
 "What runs beneath\n"
 "your desktop."
@@ -894,72 +892,72 @@ msgstr ""
 "O que roda por baixo\n"
 "do seu desktop."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:49
+#: usr/share/comm-welcome/comm_welcome/help_page.py:57
 msgid "Every number here was read from this computer, just now."
 msgstr "Cada número aqui foi lido deste computador, agora mesmo."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:111
+#: usr/share/comm-welcome/comm_welcome/help_page.py:119
 msgid "Technical detail"
 msgstr "Detalhe técnico"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:118
+#: usr/share/comm-welcome/comm_welcome/help_page.py:126
 msgid "On this computer"
 msgstr "Neste computador"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:325
+#: usr/share/comm-welcome/comm_welcome/help_page.py:333
 msgid "Other ways to give"
 msgstr "Outras formas de contribuir"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:339
+#: usr/share/comm-welcome/comm_welcome/help_page.py:347
 #: usr/share/comm-welcome/comm_welcome/window.py:68
 msgid "Help"
 msgstr "Ajuda"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:340
+#: usr/share/comm-welcome/comm_welcome/help_page.py:348
 msgid "Questions, community, and ways to support the project."
 msgstr "Dúvidas, comunidade e formas de apoiar o projeto."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:346
+#: usr/share/comm-welcome/comm_welcome/help_page.py:354
 msgid "Talk to the community"
 msgstr "Fale com a comunidade"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:350
+#: usr/share/comm-welcome/comm_welcome/help_page.py:358
 msgid "BigCommunity website"
 msgstr "Site do BigCommunity"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:351
+#: usr/share/comm-welcome/comm_welcome/help_page.py:359
 msgid "News, releases, and the project's history."
 msgstr "Novidades, versões e a história do projeto."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:357
+#: usr/share/comm-welcome/comm_welcome/help_page.py:365
 msgid "Community on Telegram"
 msgstr "Comunidade no Telegram"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:358
+#: usr/share/comm-welcome/comm_welcome/help_page.py:366
 msgid "Talk with other members of the community."
 msgstr "Converse com outros membros da comunidade."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:364
+#: usr/share/comm-welcome/comm_welcome/help_page.py:372
 msgid "Ask the forum"
 msgstr "Consultar o fórum"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:365
+#: usr/share/comm-welcome/comm_welcome/help_page.py:373
 msgid "Support, tips, and news for both editions in one place."
 msgstr "Suporte, dicas e novidades das duas edições num só lugar."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:373
+#: usr/share/comm-welcome/comm_welcome/help_page.py:381
 msgid "Links open in your browser and need internet access."
 msgstr "Os links abrem no navegador e precisam de internet."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:392
+#: usr/share/comm-welcome/comm_welcome/help_page.py:400
 msgid "When asking for help"
 msgstr "Ao pedir ajuda"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:395
+#: usr/share/comm-welcome/comm_welcome/help_page.py:403
 msgid "A hardware or network report answers most first questions."
 msgstr "Um relatório de hardware ou de rede responde à maioria das primeiras perguntas."
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:403
+#: usr/share/comm-welcome/comm_welcome/help_page.py:411
 msgid "Opening these apps does not send your information to anyone."
 msgstr "Abrir estes aplicativos não envia suas informações a ninguém."
 
@@ -1172,70 +1170,44 @@ msgstr "GNOME com curadoria, pronto para usar"
 msgid "Big Gnome Center switches between complete desktop layouts in one click. The dock, panel, menu, glass effect, screenshots and clipboard history are BigCommunity's own extensions rather than third-party ones."
 msgstr "O Big Gnome Center troca entre layouts completos do desktop com um clique. A dock, o painel, o menu, o efeito de vidro, as capturas de tela e o histórico da área de transferência são extensões do próprio BigCommunity, não de terceiros."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:134
-msgid "The installer connection was lost. Check Software before retrying."
-msgstr "A conexão com o instalador foi perdida. Confira a loja de aplicativos antes de tentar novamente."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:141
+#: usr/share/comm-welcome/comm_welcome/installer.py:105
 msgid "Another installation is in progress."
 msgstr "Outra instalação está em andamento."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:107
 msgid "Connect to the internet to install another browser."
 msgstr "Conecte-se à internet para instalar outro navegador."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:145
+#: usr/share/comm-welcome/comm_welcome/installer.py:109
 msgid "Another package operation is in progress. Try again when it finishes."
 msgstr "Outra operação com pacotes está em andamento. Tente novamente quando ela terminar."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:149
+#: usr/share/comm-welcome/comm_welcome/installer.py:113
 msgid "Browser installation requires Pamac. Open Software to install a browser."
 msgstr "A instalação de navegadores precisa do Pamac. Abra a loja para instalar um navegador."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:178
-#: usr/share/comm-welcome/comm_welcome/installer.py:259
+#: usr/share/comm-welcome/comm_welcome/installer.py:135
 msgid "This installation needs additional review. Open Software to continue."
 msgstr "Esta instalação precisa de uma revisão adicional. Abra a loja de aplicativos para continuar."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:185
-msgid "Preparing installation…"
-msgstr "Preparando instalação…"
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:195
+#: usr/share/comm-welcome/comm_welcome/installer.py:140
 #, python-brace-format
 msgid "Continue in the Pamac window to install {browser}."
 msgstr "Continue na janela do Pamac para instalar o {browser}."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:204
-#: usr/share/comm-welcome/comm_welcome/installer.py:227
-#: usr/share/comm-welcome/comm_welcome/installer.py:291
-#: usr/share/comm-welcome/comm_welcome/installer.py:304
+#: usr/share/comm-welcome/comm_welcome/installer.py:150
+#: usr/share/comm-welcome/comm_welcome/installer.py:170
 msgid "The installation could not be completed."
 msgstr "Não foi possível concluir a instalação."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:214
-#: usr/share/comm-welcome/comm_welcome/installer.py:302
+#: usr/share/comm-welcome/comm_welcome/installer.py:164
 #, python-brace-format
 msgid "{browser} installed."
 msgstr "{browser} instalado."
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:216
+#: usr/share/comm-welcome/comm_welcome/installer.py:168
 msgid "The installation was canceled or did not finish."
 msgstr "A instalação foi cancelada ou não terminou."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:262
-msgid "Complete any authentication requested by the system."
-msgstr "Conclua a autenticação solicitada pelo sistema."
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:280
-#: usr/share/comm-welcome/comm_welcome/installer.py:282
-#, python-brace-format
-msgid "Installing {browser}…"
-msgstr "Instalando {browser}…"
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:297
-msgid "Additional review is required. Open Software after this operation finishes."
-msgstr "É necessária uma revisão adicional. Abra a loja de aplicativos quando esta operação terminar."
 
 #: usr/share/comm-welcome/comm_welcome/pages.py:17
 msgid "Built into GNOME. Press Print Screen."
@@ -1295,11 +1267,11 @@ msgstr "Você pode abrir as boas-vindas pelo menu de aplicativos."
 msgid "Your preference could not be saved."
 msgstr "Não foi possível salvar sua preferência."
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:185
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
 msgid "Tools from BigLinux and BigCommunity. Open any of them to see what it does."
 msgstr "Ferramentas do BigLinux e do BigCommunity. Abra qualquer uma para ver o que ela faz."
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:204
+#: usr/share/comm-welcome/comm_welcome/pages.py:203
 msgid "Install more apps"
 msgstr "Instalar mais aplicativos"
 
@@ -1321,7 +1293,7 @@ msgid "About Welcome"
 msgstr "Sobre as boas-vindas"
 
 #: usr/share/comm-welcome/comm_welcome/window.py:45
-#: usr/share/comm-welcome/comm_welcome/window.py:190
+#: usr/share/comm-welcome/comm_welcome/window.py:200
 msgid "Close"
 msgstr "Fechar"
 
@@ -1353,19 +1325,35 @@ msgstr "Sinta-se em casa."
 msgid "View installation"
 msgstr "Ver instalação"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:179
+#: usr/share/comm-welcome/comm_welcome/window.py:189
 msgid "The link could not be opened."
 msgstr "Não foi possível abrir o link."
 
-#: usr/share/comm-welcome/comm_welcome/window.py:198
+#: usr/share/comm-welcome/comm_welcome/window.py:208
 #: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
 #: data/org.bigcommunity.CommWelcome.desktop.in:3
 msgid "BigCommunity Welcome"
 msgstr "Boas-vindas do BigCommunity"
 
-#: usr/share/comm-welcome/comm_welcome/window.py:204
+#: usr/share/comm-welcome/comm_welcome/window.py:214
 msgid "Discover your desktop and the apps that come with it."
 msgstr "Conheça seu ambiente e os aplicativos que o acompanham."
+
+#~ msgid "The installer connection was lost. Check Software before retrying."
+#~ msgstr "A conexão com o instalador foi perdida. Confira a loja de aplicativos antes de tentar novamente."
+
+#~ msgid "Preparing installation…"
+#~ msgstr "Preparando instalação…"
+
+#~ msgid "Complete any authentication requested by the system."
+#~ msgstr "Conclua a autenticação solicitada pelo sistema."
+
+#, python-brace-format
+#~ msgid "Installing {browser}…"
+#~ msgstr "Instalando {browser}…"
+
+#~ msgid "Additional review is required. Open Software after this operation finishes."
+#~ msgstr "É necessária uma revisão adicional. Abra a loja de aplicativos quando esta operação terminar."
 
 #~ msgid "Appearance"
 #~ msgstr "Aparência"

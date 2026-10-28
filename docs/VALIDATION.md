@@ -19,6 +19,20 @@ accessibility-bus or GNOME-shell integration correctness.
 
 ## Development results
 
+### Browser installs through Pamac (October 2026)
+
+- No browser could be installed: Pamac 11.99 ships the session service with
+  `Transactions2` version 2, whose `ApplyTransaction` takes capability and
+  refusal arguments and adds a preflight step. Welcome still sent the version
+  1 calls, so every transaction failed with invalid arguments.
+- Installs now always run `pamac-installer <package>` (or `--build` for the
+  AUR) and are confirmed with `pacman -Q`; the D-Bus engine, its plan
+  validation and `scripts/check_pamac.py` were removed. pamac-gtk became a
+  hard dependency; pamac-cli is no longer used.
+- Unit tests cover the exact Pamac command lines, success, cancel, failure
+  details, blocked starts and rejected package names. A real install needs
+  the user's authentication in the Pamac window and was not run here.
+
 ### Live session launcher (September–October 2026)
 
 - 2026-09-27: 55 startup/visibility checks passed. Installed Btrfs with stale

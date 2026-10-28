@@ -63,5 +63,5 @@ share one application instance.
   implementation was unavailable locally. Avoid duplicate welcome screens.
 - Check live boot, fresh install, upgrade, retained home and new users.
 - Verify both GNOME versions, plus Cinnamon, Xfce and KDE.
-- Verify Pamac Transactions2 availability in each target ISO.
+- Verify `pamac-installer` (pamac-gtk) in each target ISO; browser installs use it.
 - Confirm a documentation URL before adding that link.

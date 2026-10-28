@@ -58,29 +58,29 @@ the hardware and network reports to share when asking for help.
 ## Browsers
 
 Brave, Firefox, Chrome, Chromium, Vivaldi and Opera are catalog candidates.
-Only packages in configured native repository databases can be installed.
-No AUR builds, repository changes, shell commands or custom root helper.
+Repository browsers are found in the local package databases (`pacman -Sl`);
+the AUR is used only for browsers missing from them, never refreshed or queried.
 
 The default browser leads the page; the others form one list with a short
 description and the fitting action: install, set as default, or install from
 the AUR for browsers outside the official repositories (Chrome as
 `google-chrome`, Opera as `opera`). An AUR install first explains that the
-recipe is maintained by the Arch community, not BigCommunity, then runs
-`pamac-installer --build <package>`; Pamac shows the recipe and asks for
-authentication. Without Pamac, those browsers offer a search in Software.
+recipe is maintained by the Arch community, not BigCommunity. Without Pamac,
+those browsers offer a search in Software.
 
-Pamac 11.7, shipped by BigCommunity, has no session transaction service, so
-Welcome hands the install to `pamac-installer <package>`: Pamac's own window
-shows the plan, asks for authentication through polkit and reports progress.
-Afterwards Welcome reads the local package database (`pacman -Q`) to tell a
-finished install from a canceled one. When a Pamac with
-`org.manjaro.pamac.session.Transactions2` is present, that path is used instead:
-Pamac owns resolution, authentication and package operations. Optional
-dependencies are declined; required dependencies remain in the plan. Welcome accepts
-native installation plans without removals, downgrades or unresolved
-interactions. Plans requiring additional review are discarded before apply.
-Runtime questions are declined. No automatic replacement, key import, reboot
-or service restart is requested.
+Every install goes through Pamac's own window: `pamac-installer <package>`,
+or `pamac-installer --build <package>` for the AUR. Pamac shows the plan,
+asks for authentication through polkit and reports progress; Welcome runs no
+transaction, shell command or root helper itself. When the window closes,
+Welcome reads the local package database (`pacman -Q`) to tell a finished
+install from a canceled one, and keeps Pamac's error output as details.
+Package names are validated so they can never be read as Pamac options.
+
+Welcome used to drive `org.manjaro.pamac.session.Transactions2` directly.
+Pamac 11.99 changed that interface (version 2: `PreflightTransaction`,
+`ResolvePreparations`, and `ApplyTransaction` with capability and refusal
+arguments), so every install failed. The documented `pamac-installer` command
+line is the stable contract instead.
 
 Installed launchers and effective HTTP/HTTPS defaults determine the UI.
 Installing does not change the default; that is a separate user action.

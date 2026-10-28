@@ -203,7 +203,7 @@ class BrowserPage:
         """Open Pamac on a search; it handles the AUR and its own review."""
         try:
             app = Gio.AppInfo.create_from_commandline(
-                f"pamac-manager --search={GLib.shell_quote(browser.packages[0])}",
+                f"pamac-manager --search {GLib.shell_quote(browser.packages[0])}",
                 "Pamac",
                 Gio.AppInfoCreateFlags.NONE,
             )

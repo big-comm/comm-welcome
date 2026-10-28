@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
-"POT-Creation-Date: 2026-10-26 15:23-0300\n"
+"POT-Creation-Date: 2026-10-27 20:57-0300\n"
 "PO-Revision-Date: 2026-09-16 23:40-0300\n"
 "Last-Translator: BigCommunity contributors\n"
 "Language-Team: ja <https://github.com/big-comm/comm-welcome>\n"
@@ -48,7 +48,6 @@ msgstr ""
 #: usr/share/comm-welcome/comm_welcome/app_preview.py:131
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:124
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:157
-#: usr/share/comm-welcome/comm_welcome/widgets.py:138
 #, python-brace-format
 msgid "Open {app}"
 msgstr "{app}を開く"
@@ -106,7 +105,6 @@ msgstr ""
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:120
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:155
 #: usr/share/comm-welcome/comm_welcome/donations.py:142
-#: usr/share/comm-welcome/comm_welcome/widgets.py:137
 msgid "Open"
 msgstr "開く"
 
@@ -164,7 +162,7 @@ msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 137
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:212
-#: usr/share/comm-welcome/comm_welcome/window.py:167
+#: usr/share/comm-welcome/comm_welcome/window.py:177
 msgid "The application could not be opened."
 msgstr "アプリケーションを開けませんでした。"
 
@@ -193,7 +191,7 @@ msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 114
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:255
-#: usr/share/comm-welcome/comm_welcome/installer.py:147
+#: usr/share/comm-welcome/comm_welcome/installer.py:111
 msgid "Checking available browsers…"
 msgstr "利用可能なブラウザーを確認しています…"
 
@@ -825,19 +823,19 @@ msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 17
 #: usr/share/comm-welcome/comm_welcome/donations.py:45
-#: usr/share/comm-welcome/comm_welcome/help_page.py:309
+#: usr/share/comm-welcome/comm_welcome/help_page.py:317
 msgid "Support BigCommunity"
 msgstr "BigCommunityを支援"
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 24
 #: usr/share/comm-welcome/comm_welcome/donations.py:64
-#: usr/share/comm-welcome/comm_welcome/help_page.py:310
+#: usr/share/comm-welcome/comm_welcome/help_page.py:318
 msgid "Your support makes a difference"
 msgstr "ご支援が大きな力になります"
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 25
 #: usr/share/comm-welcome/comm_welcome/donations.py:69
-#: usr/share/comm-welcome/comm_welcome/help_page.py:313
+#: usr/share/comm-welcome/comm_welcome/help_page.py:321
 msgid "Help maintain our servers, develop new features, and support the community."
 msgstr "サーバーの保守、新機能の開発、コミュニティの支援にご協力ください。"
 
@@ -851,7 +849,7 @@ msgid "Monthly support. Continue on Patreon in your browser."
 msgstr "継続的な支援。ブラウザーでPatreonに進んでください。"
 
 #: usr/share/comm-welcome/comm_welcome/donations.py:83
-#: usr/share/comm-welcome/comm_welcome/help_page.py:319
+#: usr/share/comm-welcome/comm_welcome/help_page.py:327
 msgid "Support on Patreon"
 msgstr ""
 
@@ -917,90 +915,90 @@ msgstr "Telegram寄付ボット"
 msgid "Continue in Telegram."
 msgstr "Telegramで続行します。"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:43
-#: usr/share/comm-welcome/comm_welcome/help_page.py:143
+#: usr/share/comm-welcome/comm_welcome/help_page.py:51
+#: usr/share/comm-welcome/comm_welcome/help_page.py:151
 msgid "Inside BigCommunity"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:44
+#: usr/share/comm-welcome/comm_welcome/help_page.py:52
 msgid ""
 "What runs beneath\n"
 "your desktop."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:49
+#: usr/share/comm-welcome/comm_welcome/help_page.py:57
 msgid "Every number here was read from this computer, just now."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:111
+#: usr/share/comm-welcome/comm_welcome/help_page.py:119
 msgid "Technical detail"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:118
+#: usr/share/comm-welcome/comm_welcome/help_page.py:126
 msgid "On this computer"
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/donations.py, line: 60
-#: usr/share/comm-welcome/comm_welcome/help_page.py:325
+#: usr/share/comm-welcome/comm_welcome/help_page.py:333
 msgid "Other ways to give"
 msgstr "その他の寄付方法"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 61
-#: usr/share/comm-welcome/comm_welcome/help_page.py:339
+#: usr/share/comm-welcome/comm_welcome/help_page.py:347
 #: usr/share/comm-welcome/comm_welcome/window.py:68
 msgid "Help"
 msgstr "ヘルプ"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:340
+#: usr/share/comm-welcome/comm_welcome/help_page.py:348
 msgid "Questions, community, and ways to support the project."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:346
+#: usr/share/comm-welcome/comm_welcome/help_page.py:354
 msgid "Talk to the community"
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 192
-#: usr/share/comm-welcome/comm_welcome/help_page.py:350
+#: usr/share/comm-welcome/comm_welcome/help_page.py:358
 msgid "BigCommunity website"
 msgstr "BigCommunityのウェブサイト"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:351
+#: usr/share/comm-welcome/comm_welcome/help_page.py:359
 msgid "News, releases, and the project's history."
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 198
-#: usr/share/comm-welcome/comm_welcome/help_page.py:357
+#: usr/share/comm-welcome/comm_welcome/help_page.py:365
 msgid "Community on Telegram"
 msgstr "Telegramのコミュニティ"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 199
-#: usr/share/comm-welcome/comm_welcome/help_page.py:358
+#: usr/share/comm-welcome/comm_welcome/help_page.py:366
 msgid "Talk with other members of the community."
 msgstr "コミュニティのメンバーと交流しましょう。"
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 204
-#: usr/share/comm-welcome/comm_welcome/help_page.py:364
+#: usr/share/comm-welcome/comm_welcome/help_page.py:372
 msgid "Ask the forum"
 msgstr "フォーラムで質問"
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:365
+#: usr/share/comm-welcome/comm_welcome/help_page.py:373
 msgid "Support, tips, and news for both editions in one place."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:373
+#: usr/share/comm-welcome/comm_welcome/help_page.py:381
 msgid "Links open in your browser and need internet access."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:392
+#: usr/share/comm-welcome/comm_welcome/help_page.py:400
 msgid "When asking for help"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/help_page.py:395
+#: usr/share/comm-welcome/comm_welcome/help_page.py:403
 msgid "A hardware or network report answers most first questions."
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 243
-#: usr/share/comm-welcome/comm_welcome/help_page.py:403
+#: usr/share/comm-welcome/comm_welcome/help_page.py:411
 msgid "Opening these apps does not send your information to anyone."
 msgstr "これらのアプリを開いても、情報が誰かに送信されることはありません。"
 
@@ -1213,83 +1211,51 @@ msgstr ""
 msgid "Big Gnome Center switches between complete desktop layouts in one click. The dock, panel, menu, glass effect, screenshots and clipboard history are BigCommunity's own extensions rather than third-party ones."
 msgstr ""
 
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 102
-#: usr/share/comm-welcome/comm_welcome/installer.py:134
-msgid "The installer connection was lost. Check Software before retrying."
-msgstr "インストーラーとの接続が切れました。再試行する前にソフトウェアを確認してください。"
-
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 108
-#: usr/share/comm-welcome/comm_welcome/installer.py:141
+#: usr/share/comm-welcome/comm_welcome/installer.py:105
 msgid "Another installation is in progress."
 msgstr "別のインストールが進行中です。"
 
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 110
-#: usr/share/comm-welcome/comm_welcome/installer.py:143
+#: usr/share/comm-welcome/comm_welcome/installer.py:107
 msgid "Connect to the internet to install another browser."
 msgstr "別のブラウザーをインストールするにはインターネットに接続してください。"
 
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 112
-#: usr/share/comm-welcome/comm_welcome/installer.py:145
+#: usr/share/comm-welcome/comm_welcome/installer.py:109
 msgid "Another package operation is in progress. Try again when it finishes."
 msgstr "別のパッケージ操作が進行中です。完了後に再試行してください。"
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:149
+#: usr/share/comm-welcome/comm_welcome/installer.py:113
 msgid "Browser installation requires Pamac. Open Software to install a browser."
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 171
-#: usr/share/comm-welcome/comm_welcome/installer.py:178
-#: usr/share/comm-welcome/comm_welcome/installer.py:259
+#: usr/share/comm-welcome/comm_welcome/installer.py:135
 msgid "This installation needs additional review. Open Software to continue."
 msgstr "このインストールには追加の確認が必要です。続行するにはソフトウェアを開いてください。"
 
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 132
-#: usr/share/comm-welcome/comm_welcome/installer.py:185
-msgid "Preparing installation…"
-msgstr "インストールを準備しています…"
-
-#: usr/share/comm-welcome/comm_welcome/installer.py:195
+#: usr/share/comm-welcome/comm_welcome/installer.py:140
 #, python-brace-format
 msgid "Continue in the Pamac window to install {browser}."
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 143
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 207
-#: usr/share/comm-welcome/comm_welcome/installer.py:204
-#: usr/share/comm-welcome/comm_welcome/installer.py:227
-#: usr/share/comm-welcome/comm_welcome/installer.py:291
-#: usr/share/comm-welcome/comm_welcome/installer.py:304
+#: usr/share/comm-welcome/comm_welcome/installer.py:150
+#: usr/share/comm-welcome/comm_welcome/installer.py:170
 msgid "The installation could not be completed."
 msgstr "インストールを完了できませんでした。"
 
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 205
-#: usr/share/comm-welcome/comm_welcome/installer.py:214
-#: usr/share/comm-welcome/comm_welcome/installer.py:302
+#: usr/share/comm-welcome/comm_welcome/installer.py:164
 #, python-brace-format
 msgid "{browser} installed."
 msgstr "{browser}をインストールしました。"
 
-#: usr/share/comm-welcome/comm_welcome/installer.py:216
+#: usr/share/comm-welcome/comm_welcome/installer.py:168
 msgid "The installation was canceled or did not finish."
 msgstr ""
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 174
-#: usr/share/comm-welcome/comm_welcome/installer.py:262
-msgid "Complete any authentication requested by the system."
-msgstr "システムから求められた認証をすべて完了してください。"
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 188
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 190
-#: usr/share/comm-welcome/comm_welcome/installer.py:280
-#: usr/share/comm-welcome/comm_welcome/installer.py:282
-#, python-brace-format
-msgid "Installing {browser}…"
-msgstr "{browser}をインストールしています…"
-
-# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 200
-#: usr/share/comm-welcome/comm_welcome/installer.py:297
-msgid "Additional review is required. Open Software after this operation finishes."
-msgstr "追加の確認が必要です。この操作の完了後にソフトウェアを開いてください。"
 
 #: usr/share/comm-welcome/comm_welcome/pages.py:17
 msgid "Built into GNOME. Press Print Screen."
@@ -1350,12 +1316,12 @@ msgstr "アプリケーションメニューから「ようこそ」を再度開
 msgid "Your preference could not be saved."
 msgstr "設定を保存できませんでした。"
 
-#: usr/share/comm-welcome/comm_welcome/pages.py:185
+#: usr/share/comm-welcome/comm_welcome/pages.py:184
 msgid "Tools from BigLinux and BigCommunity. Open any of them to see what it does."
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/pages.py, line: 176
-#: usr/share/comm-welcome/comm_welcome/pages.py:204
+#: usr/share/comm-welcome/comm_welcome/pages.py:203
 msgid "Install more apps"
 msgstr "アプリを追加でインストール"
 
@@ -1396,7 +1362,7 @@ msgstr "「ようこそ」について"
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 41
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 157
 #: usr/share/comm-welcome/comm_welcome/window.py:45
-#: usr/share/comm-welcome/comm_welcome/window.py:190
+#: usr/share/comm-welcome/comm_welcome/window.py:200
 msgid "Close"
 msgstr "閉じる"
 
@@ -1433,21 +1399,43 @@ msgid "View installation"
 msgstr "インストールを表示"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 146
-#: usr/share/comm-welcome/comm_welcome/window.py:179
+#: usr/share/comm-welcome/comm_welcome/window.py:189
 msgid "The link could not be opened."
 msgstr "リンクを開けませんでした。"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 165
-#: usr/share/comm-welcome/comm_welcome/window.py:198
+#: usr/share/comm-welcome/comm_welcome/window.py:208
 #: data/org.bigcommunity.CommWelcome-autostart.desktop.in:3
 #: data/org.bigcommunity.CommWelcome.desktop.in:3
 msgid "BigCommunity Welcome"
 msgstr "BigCommunity ようこそ"
 
 # File: usr/share/comm-welcome/comm_welcome/window.py, line: 171
-#: usr/share/comm-welcome/comm_welcome/window.py:204
+#: usr/share/comm-welcome/comm_welcome/window.py:214
 msgid "Discover your desktop and the apps that come with it."
 msgstr "デスクトップと付属アプリを確認できます。"
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 102
+#~ msgid "The installer connection was lost. Check Software before retrying."
+#~ msgstr "インストーラーとの接続が切れました。再試行する前にソフトウェアを確認してください。"
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 132
+#~ msgid "Preparing installation…"
+#~ msgstr "インストールを準備しています…"
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 174
+#~ msgid "Complete any authentication requested by the system."
+#~ msgstr "システムから求められた認証をすべて完了してください。"
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 188
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 190
+#, python-brace-format
+#~ msgid "Installing {browser}…"
+#~ msgstr "{browser}をインストールしています…"
+
+# File: usr/share/comm-welcome/comm_welcome/installer.py, line: 200
+#~ msgid "Additional review is required. Open Software after this operation finishes."
+#~ msgstr "追加の確認が必要です。この操作の完了後にソフトウェアを開いてください。"
 
 # File: usr/share/comm-welcome/comm_welcome/installer.py, line: 116
 #~ msgid "Browser installation requires a compatible Pamac session service."
