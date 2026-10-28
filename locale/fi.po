@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: comm-welcome 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/big-comm/comm-welcome/issues\n"
-"POT-Creation-Date: 2026-10-27 20:57-0300\n"
+"POT-Creation-Date: 2026-10-28 20:37-0300\n"
 "PO-Revision-Date: 2026-09-16 23:37-0300\n"
 "Last-Translator: BigCommunity contributors\n"
 "Language-Team: fi <https://github.com/big-comm/comm-welcome>\n"
@@ -45,19 +45,19 @@ msgid "This app is not installed. Its project page explains how to get it."
 msgstr ""
 
 # File: usr/share/comm-welcome/comm_welcome/widgets.py, line: 137
-#: usr/share/comm-welcome/comm_welcome/app_preview.py:131
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:137
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:124
 #: usr/share/comm-welcome/comm_welcome/browser_page.py:157
 #, python-brace-format
 msgid "Open {app}"
 msgstr "Avaa {app}"
 
-#: usr/share/comm-welcome/comm_welcome/app_preview.py:133
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:140
 msgid "Open Extensions"
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/app_preview.py:135
-#: usr/share/comm-welcome/comm_welcome/app_preview.py:141
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:142
+#: usr/share/comm-welcome/comm_welcome/app_preview.py:148
 msgid "View project"
 msgstr ""
 
@@ -337,384 +337,380 @@ msgstr ""
 msgid "Copy the text from any image."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:121
-msgid "Text to speech"
-msgstr ""
-
 #: usr/share/comm-welcome/comm_welcome/catalog.py:122
-msgid "Hear any selected text read aloud."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:125
-msgid "Select text anywhere and press Alt+V to hear it."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:126
-msgid "Choose a voice and adjust its speed and pitch."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:127
-msgid "Save readings as audio files and find them in the history."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:131
-msgid "Listen instead of reading."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:136
 msgid "Use a terminal that saves and organizes your local and SSH sessions."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:139
+#: usr/share/comm-welcome/comm_welcome/catalog.py:125
 msgid "Save local and SSH sessions and organize them in folders."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:140
+#: usr/share/comm-welcome/comm_welcome/catalog.py:126
 msgid "Split the window into panes and group tabs by color."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:141
+#: usr/share/comm-welcome/comm_welcome/catalog.py:127
 msgid "See command output colored automatically, without changing your shell."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:145
+#: usr/share/comm-welcome/comm_welcome/catalog.py:131
 msgid "Your terminal sessions, organized."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:151
+#: usr/share/comm-welcome/comm_welcome/catalog.py:137
 msgid "Play a falling-block puzzle themed on Linux distributions."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:154
+#: usr/share/comm-welcome/comm_welcome/catalog.py:140
 msgid "Stack pieces themed after seven Linux distributions."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:155
+#: usr/share/comm-welcome/comm_welcome/catalog.py:141
 msgid "Clear lines to charge the BigLinux power, then release it with Space."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:156
+#: usr/share/comm-welcome/comm_welcome/catalog.py:142
 msgid "Hold a piece for later and chase your top five scores."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:160
+#: usr/share/comm-welcome/comm_welcome/catalog.py:146
 msgid "A block puzzle with Linux pieces."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:166
-msgid "Annotate and record from GNOME's own screenshot tool."
+#: usr/share/comm-welcome/comm_welcome/catalog.py:151
+msgid "Play your music, internet radio, and podcasts."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:154
+msgid "Play MP3, FLAC, Ogg, Opus, AAC, and WAV from a library with playlists."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:155
+msgid "Listen to internet radio and podcasts, with song lyrics on screen."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:156
+msgid "Control playback with the media keys and from the desktop."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:160
+msgid "Your music, radio, and podcasts."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:165
+msgid "Watch videos with hardware-accelerated playback."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:168
+msgid "Play MP4, MKV, WebM, MOV, and AVI files."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:169
-msgid "Capture an area, a window, or the entire screen."
+msgid "Decode video on the graphics card with VA-API, VDPAU, or NVDEC."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:170
-msgid "Add arrows, text, and highlights to explain what is on screen."
+msgid "Choose subtitle tracks and control playback with the media keys."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:171
-msgid "Record the screen with microphone or desktop audio."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:175
-msgid "Capture, annotate, and record."
+#: usr/share/comm-welcome/comm_welcome/catalog.py:174
+msgid "Smooth video, decoded by your graphics card."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:179
-msgid "Noise filter"
+msgid "Watch the IPTV playlists you already have, from M3U or Xtream Codes."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:180
-msgid "Reduce noise from your microphone and audio."
+#: usr/share/comm-welcome/comm_welcome/catalog.py:182
+msgid "Browse live channels by category, with favorites and what is on now."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:183
-msgid "Reduce background noise from your microphone during calls and recordings."
+msgid "Follow the program guide and resume movies and series where you left off."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:184
-msgid "Filter playback audio as well as microphone input."
+msgid "Record and watch in picture-in-picture, with hardware decoding."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:185
-msgid "Adjust the filters in a dedicated desktop app."
+#: usr/share/comm-welcome/comm_welcome/catalog.py:188
+msgid "Your own IPTV lists, organized."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:189
-msgid "Less noise in your calls."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:194
-msgid "Enhance the sound of every app with ready-made profiles."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:197
-msgid "Choose a profile for music, games, movies, or dialogue."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:198
-msgid "Adjust bass, treble clarity, stereo width, and compression."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:199
-msgid "Keep processing on when you switch speakers or connect Bluetooth."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:203
-msgid "Sound profiles for the whole system."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:207
-msgid "Audio converter"
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:208
-msgid "Convert audio, cut segments, and remove pauses from speech."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:211
-msgid "Convert to MP3, FLAC, Opus, and more, or extract the audio from a video."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:212
-msgid "Mark the parts to keep or remove directly on the waveform."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:213
-msgid "Remove pauses from speech and reduce background noise."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:217
-msgid "Convert and trim your audio."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:221
-msgid "Video converter"
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:222
-msgid "Convert, trim, and optimize your videos."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:225
-msgid "Convert a whole queue of videos to MP4, MKV, MOV, or WebM."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:226
-msgid "Trim, crop, and rotate a video, with a preview before exporting."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:227
-msgid "Fit a video under a target size or split it into parts."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:231
-msgid "Convert and trim your videos."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:236
-msgid "Record and edit voice notes on your computer."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:239
-msgid "Record from the microphone and pause or resume at any time."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:240
-msgid "Trim, merge, or change the speed and pitch of a recording."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:241
-msgid "Export recordings as WAV, MP3, Opus, or FLAC."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:245
-msgid "Voice notes, recorded locally."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:250
-msgid "Use a phone, USB camera, or DSLR as a webcam."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:253
-msgid "Connect a phone through the browser, Wi-Fi, USB, or AirPlay."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:254
-msgid "Send the image to video calls through a virtual camera."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:255
-msgid "Apply real-time effects, take photos, and record videos."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:259
-msgid "Any camera as your webcam."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:265
-msgid "Choose your desktop layout, theme, panels, and effects."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:269
-msgid "Switch the desktop layout and undo the change if needed."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:270
-msgid "Choose fonts, accent colors, and icon themes."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:271
-msgid "Find and install GNOME extensions without opening a browser."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:275
-msgid "Your GNOME, your layout."
-msgstr ""
-
-#: usr/share/comm-welcome/comm_welcome/catalog.py:280
+#: usr/share/comm-welcome/comm_welcome/catalog.py:193
 msgid "Share your screen with a TV, projector or Chromecast."
 msgstr "Jaa näyttösi televisioon, projektoriin tai Chromecastiin."
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:285
-msgid "General settings"
+#: usr/share/comm-welcome/comm_welcome/catalog.py:200
+msgid "Annotate and record from GNOME's own screenshot tool."
 msgstr ""
 
-#: usr/share/comm-welcome/comm_welcome/catalog.py:286
-msgid "Adjust power, performance, devices, and services in one place."
+#: usr/share/comm-welcome/comm_welcome/catalog.py:203
+msgid "Capture an area, a window, or the entire screen."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:204
+msgid "Add arrows, text, and highlights to explain what is on screen."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:205
+msgid "Record the screen with microphone or desktop audio."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:209
+msgid "Capture, annotate, and record."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:214
+msgid "Record and edit voice notes on your computer."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:217
+msgid "Record from the microphone and pause or resume at any time."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:218
+msgid "Trim, merge, or change the speed and pitch of a recording."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:219
+msgid "Export recordings as WAV, MP3, Opus, or FLAC."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:223
+msgid "Voice notes, recorded locally."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:228
+msgid "Use a phone, USB camera, or DSLR as a webcam."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:231
+msgid "Connect a phone through the browser, Wi-Fi, USB, or AirPlay."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:232
+msgid "Send the image to video calls through a virtual camera."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:233
+msgid "Apply real-time effects, take photos, and record videos."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:237
+msgid "Any camera as your webcam."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:241
+msgid "Noise filter"
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:242
+msgid "Reduce noise from your microphone and audio."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:245
+msgid "Reduce background noise from your microphone during calls and recordings."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:246
+msgid "Filter playback audio as well as microphone input."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:247
+msgid "Adjust the filters in a dedicated desktop app."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:251
+msgid "Less noise in your calls."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:255
+msgid "Audio converter"
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:256
+msgid "Convert audio, cut segments, and remove pauses from speech."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:259
+msgid "Convert to MP3, FLAC, Opus, and more, or extract the audio from a video."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:260
+msgid "Mark the parts to keep or remove directly on the waveform."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:261
+msgid "Remove pauses from speech and reduce background noise."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:265
+msgid "Convert and trim your audio."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:269
+msgid "Video converter"
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:270
+msgid "Convert, trim, and optimize your videos."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:273
+msgid "Convert a whole queue of videos to MP4, MKV, MOV, or WebM."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:274
+msgid "Trim, crop, and rotate a video, with a preview before exporting."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:275
+msgid "Fit a video under a target size or split it into parts."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:279
+msgid "Convert and trim your videos."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:285
+msgid "Choose your desktop layout, theme, panels, and effects."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:289
-msgid "Turn common system tweaks on or off with a single switch."
+msgid "Switch the desktop layout and undo the change if needed."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:290
-msgid "Read what each option does before you change it."
+msgid "Choose fonts, accent colors, and icon themes."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:291
-msgid "Search settings with everyday words and jump straight to them."
+msgid "Find and install GNOME extensions without opening a browser."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:295
-msgid "System tweaks, one switch each."
+msgid "Your GNOME, your layout."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:299
-msgid "Hardware management"
+msgid "General settings"
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:300
-msgid "Install drivers, kernels, and Mesa versions for your hardware."
+msgid "Adjust power, performance, devices, and services in one place."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:303
-msgid "Detect your hardware and install the drivers it needs."
+msgid "Turn common system tweaks on or off with a single switch."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:304
-msgid "Install a kernel together with the modules your system already uses."
+msgid "Read what each option does before you change it."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:305
-msgid "Switch between Mesa graphics versions, such as stable or legacy."
+msgid "Search settings with everyday words and jump straight to them."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:309
-msgid "Drivers and kernels for your hardware."
+msgid "System tweaks, one switch each."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:313
-msgid "Hardware information"
+msgid "Hardware management"
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:314
-msgid "Get to know your computer's components."
+msgid "Install drivers, kernels, and Mesa versions for your hardware."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:317
-msgid "Check the processor, graphics, memory, disks, and sensors in one place."
+msgid "Detect your hardware and install the drivers it needs."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:318
-msgid "Save a complete hardware report as an HTML page."
+msgid "Install a kernel together with the modules your system already uses."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:319
-msgid "Share a report online when asking for help on a forum."
+msgid "Switch between Mesa graphics versions, such as stable or legacy."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:323
-msgid "Your hardware, in detail."
+msgid "Drivers and kernels for your hardware."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:327
-msgid "Network information"
+msgid "Hardware information"
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:328
-msgid "Diagnose your connection and find devices on your network."
+msgid "Get to know your computer's components."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:331
-msgid "Check your connection, gateway, DNS, and internet access."
+msgid "Check the processor, graphics, memory, disks, and sensors in one place."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:332
-msgid "Find devices on your network and the services they offer."
+msgid "Save a complete hardware report as an HTML page."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:333
-msgid "Compare nearby Wi-Fi networks by signal strength."
+msgid "Share a report online when asking for help on a forum."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:337
-msgid "Understand your network."
+msgid "Your hardware, in detail."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:341
-msgid "Parental controls"
+msgid "Network information"
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:342
-msgid "Set up supervised accounts for children and teenagers."
+msgid "Diagnose your connection and find devices on your network."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:345
-msgid "Create a supervised account or add supervision to an existing one."
+msgid "Check your connection, gateway, DNS, and internet access."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:346
-msgid "Set allowed hours and a daily usage limit."
+msgid "Find devices on your network and the services they offer."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:347
-msgid "Choose which apps a child can open and filter websites."
+msgid "Compare nearby Wi-Fi networks by signal strength."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:351
-msgid "Safer accounts for children."
+msgid "Understand your network."
+msgstr ""
+
+#: usr/share/comm-welcome/comm_welcome/catalog.py:355
+msgid "Parental controls"
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:356
-msgid "Apply a performance profile to each game you play."
+msgid "Set up supervised accounts for children and teenagers."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:359
-msgid "Turn on Turbo to optimize each game when it starts."
+msgid "Create a supervised account or add supervision to an existing one."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:360
-msgid "See ProtonDB ratings and anti-cheat status for your games."
+msgid "Set allowed hours and a daily usage limit."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:361
-msgid "Measure whether a change helped with repeated A/B runs."
+msgid "Choose which apps a child can open and filter websites."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:365
-msgid "Performance profiles for your games."
+msgid "Safer accounts for children."
 msgstr ""
 
 #: usr/share/comm-welcome/comm_welcome/catalog.py:371
