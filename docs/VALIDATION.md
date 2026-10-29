@@ -65,7 +65,7 @@ accessibility-bus or GNOME-shell integration correctness.
 - AUR browsers (Chrome, Opera) install through `pamac-installer --build` after
   a confirmation that names the AUR; names checked on the AUR RPC on
   2026-10-25. The forum card uses the forum's current mark.
-- Default size 950×730 (was 900×720) with no vertical scrolling on the opening. 74 pytest
+- Default size 1024×740 (was 950×730, before that 900×720) with no vertical scrolling on the opening. 74 pytest
   cases, the action audit and 41 Broadway scenarios pass.
 
 ### Help, second pass (October 2026)

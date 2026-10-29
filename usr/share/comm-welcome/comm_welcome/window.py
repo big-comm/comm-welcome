@@ -16,7 +16,7 @@ class WelcomeWindow(Adw.ApplicationWindow):
         super().__init__(application=application, title=_("Welcome to BigCommunity"))
         self.preferences = preferences
         self.installer = installer
-        self.set_default_size(950, 730)
+        self.set_default_size(1024, 740)
         self.set_size_request(360, 320)
         self.add_css_class("comm-welcome")
         application.get_style_manager().connect_object(
