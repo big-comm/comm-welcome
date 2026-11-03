@@ -26,6 +26,9 @@ class Preferences:
             return True
 
     def set_suppressed(self, value: bool) -> None:
+        self._write("suppress_autostart", bool(value))
+
+    def _write(self, key: str, value) -> None:
         self.path.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
         values = {}
         try:
@@ -34,7 +37,7 @@ class Preferences:
                 values.update(existing)
         except (OSError, ValueError):
             pass
-        values["suppress_autostart"] = bool(value)
+        values[key] = value
         fd, temporary = tempfile.mkstemp(dir=self.path.parent, prefix=".settings-")
         try:
             with os.fdopen(fd, "w") as stream:

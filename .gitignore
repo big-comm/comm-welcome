@@ -20,6 +20,8 @@ build/
 dist/
 *.egg-info/
 *.mo
+# Runtime catalogs are shipped by the package template.
+!usr/share/locale/*/LC_MESSAGES/comm-welcome.mo
 
 # makepkg work directories, source cache and archives
 pkgbuild/src/

@@ -2,6 +2,7 @@
 
 from . import APP_ID
 from .gtk import Adw, Gdk, Gio, Gtk
+from .i18n import IS_RTL
 from .installer import Installer
 from .preferences import Preferences
 from .widgets import DATA_DIR
@@ -19,15 +20,26 @@ class WelcomeApplication(Adw.Application):
 
     def do_startup(self):
         Adw.Application.do_startup(self)
-        provider = Gtk.CssProvider()
-        provider.load_from_path(str(DATA_DIR / "style.css"))
+        Gtk.Widget.set_default_direction(Gtk.TextDirection.RTL if IS_RTL else Gtk.TextDirection.LTR)
+        self.css = Gtk.CssProvider()
+        self.css.load_from_path(str(DATA_DIR / "style.css"))
         display = Gdk.Display.get_default()
         Gtk.StyleContext.add_provider_for_display(
-            display, provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            display, self.css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         )
+        # The stylesheet's light/dark tokens follow libadwaita's effective scheme.
+        self.get_style_manager().connect("notify::dark", self._sync_scheme)
+        self._sync_scheme()
         theme = Gtk.IconTheme.get_for_display(display)
         theme.add_search_path(str(DATA_DIR.parent / "icons"))
         self.installer.discover()
+
+    def _sync_scheme(self, *_args) -> None:
+        if self.css.find_property("prefers-color-scheme") is None:
+            return  # Older GTK cannot follow the scheme here; PKGBUILD requires 4.20.
+        dark = self.get_style_manager().get_dark()
+        scheme = Gtk.InterfaceColorScheme.DARK if dark else Gtk.InterfaceColorScheme.LIGHT
+        self.css.set_property("prefers-color-scheme", scheme)
 
     def do_activate(self):
         if self.window is None:

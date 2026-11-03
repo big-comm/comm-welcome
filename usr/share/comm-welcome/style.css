@@ -1,119 +1,260 @@
-.welcome-header {
-  background-image: linear-gradient(120deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .06) 58%, alpha(#8b5cf6, .10));
+/* BigCommunity theme: one continuous, translucent purple surface.
+ *
+ * libadwaita's own color tokens are redefined, so headerbar, pages, dialogs,
+ * menus and cards share the same material. Light and dark both follow the
+ * system; the provider's prefers-color-scheme is synced in application.py.
+ */
+:root {
+  --welcome-bg: #140b29;
+  --welcome-window-alpha: .94;
+  --welcome-glow-1: rgba(155, 89, 255, .24);
+  --welcome-glow-2: rgba(207, 18, 246, .13);
+  --welcome-glow-3: rgba(66, 200, 245, .06);
+  --welcome-panel: rgba(255, 255, 255, .05);
+  --welcome-panel-strong: rgba(255, 255, 255, .09);
+  --welcome-border: rgba(214, 190, 255, .12);
+
+  --window-bg-color: color-mix(in srgb, var(--welcome-bg) calc(var(--welcome-window-alpha) * 100%), transparent);
+  --window-fg-color: #efe9fb;
+  --view-bg-color: rgba(255, 255, 255, .04);
+  --view-fg-color: #efe9fb;
+  --headerbar-bg-color: transparent;
+  --headerbar-fg-color: #efe9fb;
+  --headerbar-backdrop-color: transparent;
+  --headerbar-shade-color: transparent;
+  --card-bg-color: var(--welcome-panel);
+  --card-fg-color: #efe9fb;
+  --dialog-bg-color: #1b1034;
+  --dialog-fg-color: #efe9fb;
+  --popover-bg-color: #21143f;
+  --popover-fg-color: #efe9fb;
+  --sidebar-bg-color: rgba(10, 5, 24, .45);
+  --accent-bg-color: #8b3ff0;
+  --accent-fg-color: #ffffff;
+  --accent-color: #c9a2ff;
+  /* libadwaita derives its own --accent-color; Welcome text uses this token. */
+  --welcome-accent: #c9a2ff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --welcome-bg: #f6f1fd;
+    --welcome-glow-1: rgba(145, 65, 245, .15);
+    --welcome-glow-2: rgba(207, 18, 246, .08);
+    --welcome-glow-3: rgba(66, 160, 245, .05);
+    --welcome-panel: rgba(255, 255, 255, .62);
+    --welcome-panel-strong: rgba(255, 255, 255, .85);
+    --welcome-border: rgba(74, 30, 140, .10);
+
+    --window-fg-color: #1d1430;
+    --view-bg-color: rgba(255, 255, 255, .55);
+    --view-fg-color: #1d1430;
+    --headerbar-fg-color: #1d1430;
+    --card-fg-color: #1d1430;
+    --dialog-bg-color: #fbf8ff;
+    --dialog-fg-color: #1d1430;
+    --popover-bg-color: #fdfbff;
+    --popover-fg-color: #1d1430;
+    --sidebar-bg-color: rgba(255, 255, 255, .45);
+    --accent-bg-color: #7c2fe0;
+    --accent-color: #6a22c8;
+    --welcome-accent: #6a22c8;
+  }
+}
+
+window.comm-welcome {
+  background-color: var(--window-bg-color);
+  background-image:
+    radial-gradient(ellipse at 88% 0%, var(--welcome-glow-1), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, var(--welcome-glow-2), transparent 50%),
+    radial-gradient(ellipse at 40% 45%, var(--welcome-glow-3), transparent 60%);
+  color: var(--window-fg-color);
+}
+window.comm-welcome headerbar,
+window.comm-welcome viewswitcherbar actionbar,
+window.comm-welcome toolbarview > .top-bar,
+window.comm-welcome toolbarview > .bottom-bar {
+  background: transparent;
   box-shadow: none;
 }
-.welcome-home {
+dialog.welcome-dialog sheet {
+  background-color: var(--dialog-bg-color);
   background-image:
-    linear-gradient(to bottom, alpha(@window_bg_color, 0), @window_bg_color 210px),
-    linear-gradient(120deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .06) 58%, alpha(#8b5cf6, .10));
-  background-size: 100% 210px;
-  background-repeat: no-repeat;
+    radial-gradient(ellipse at 100% 0%, var(--welcome-glow-1), transparent 60%),
+    radial-gradient(ellipse at 0% 100%, var(--welcome-glow-2), transparent 55%);
 }
-.welcome-content { padding: 24px; }
-.welcome-title { font-size: 28px; font-weight: 800; }
-.welcome-subtitle { font-size: 17px; }
-.welcome-feature {
-  padding: 22px;
-  background: linear-gradient(120deg, alpha(@accent_bg_color, .16), alpha(@accent_bg_color, .06) 62%, alpha(#8b5cf6, .10));
-  border: 1px solid alpha(@accent_color, .24);
-  border-radius: 16px;
-  box-shadow: 0 3px 12px alpha(black, .04);
-}
-.welcome-feature .title-2 { font-size: 23px; }
-.welcome-eyebrow { font-size: 11px; font-weight: 700; color: @accent_color; }
-.welcome-card { padding: 18px; border-radius: 14px; }
-button.welcome-shortcut { padding: 10px 14px; border-radius: 14px; }
-.welcome-icon {
-  padding: 8px;
-  border-radius: 12px;
-  color: @accent_color;
-  background: linear-gradient(135deg, alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .07));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .13);
-}
-.welcome-icon-pix,
-.welcome-icon-usdt {
-  color: mix(@window_fg_color, #26b89e, .65);
-  background: linear-gradient(135deg, alpha(#26b89e, .22), alpha(#26b89e, .08));
-  box-shadow: inset 0 0 0 1px alpha(#26b89e, .22);
-}
-.welcome-icon-bitcoin {
-  color: mix(@window_fg_color, #f7931a, .65);
-  background: linear-gradient(135deg, alpha(#f7931a, .22), alpha(#f7931a, .08));
-  box-shadow: inset 0 0 0 1px alpha(#f7931a, .22);
-}
-.welcome-icon-telegram {
-  color: mix(@window_fg_color, #37a9e8, .65);
-  background: linear-gradient(135deg, alpha(#37a9e8, .22), alpha(#37a9e8, .08));
-  box-shadow: inset 0 0 0 1px alpha(#37a9e8, .22);
-}
-.welcome-icon-patreon {
-  color: mix(@window_fg_color, #ef6685, .65);
-  background: linear-gradient(135deg, alpha(#ef6685, .22), alpha(#ef6685, .08));
-  box-shadow: inset 0 0 0 1px alpha(#ef6685, .22);
-}
-dialog.welcome-dialog sheet,
-window.welcome-dialog {
-  background-color: alpha(@dialog_bg_color, .96);
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .045), alpha(@accent_bg_color, 0) 60%);
-  color: @dialog_fg_color;
-}
-.welcome-dialog headerbar { background: transparent; box-shadow: none; }
-.welcome-dialog .welcome-surface { background-color: alpha(@card_bg_color, .95); }
-.donation-address {
-  padding: 6px 10px;
-  border-radius: 8px;
-  color: @accent_color;
-  background-color: alpha(@accent_bg_color, .10);
-}
-.welcome-surface,
-.welcome-card,
-button.welcome-shortcut {
-  background-color: alpha(@card_bg_color, .82);
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .045), alpha(@accent_bg_color, 0) 65%);
-  box-shadow: inset 0 0 0 1px alpha(currentColor, .07), 0 2px 8px alpha(black, .06);
-}
-button.welcome-shortcut:hover {
-  background-image: linear-gradient(135deg, alpha(@accent_bg_color, .13), alpha(@accent_bg_color, .04));
-  box-shadow: inset 0 0 0 1px alpha(@accent_color, .35), 0 4px 12px alpha(black, .08);
-}
-button.welcome-shortcut:active {
-  background-image: linear-gradient(alpha(@accent_bg_color, .18), alpha(@accent_bg_color, .18));
-}
-button.welcome-shortcut:focus-visible {
-  outline: 2px solid @accent_color;
-  outline-offset: 2px;
-}
-.welcome-row { padding: 16px; }
-.welcome-badge { padding: 4px 9px; border-radius: 7px; font-size: 11px; font-weight: 600; }
-.welcome-badge.installed { background: alpha(@success_color, .12); color: @success_color; }
-.welcome-badge.default { background: alpha(@accent_bg_color, .12); color: @accent_color; }
-.welcome-status { padding: 12px 18px; background: alpha(@accent_bg_color, .08); }
-.welcome-footer { padding: 12px 24px; }
-.welcome-small { font-size: 12px; }
-window.narrow .welcome-title { font-size: 24px; }
-window.narrow .welcome-content { padding: 18px; }
-window.narrow .welcome-feature { padding: 18px; }
-.welcome-contrast .welcome-header,
-.welcome-contrast .welcome-home,
-.welcome-contrast .welcome-feature,
-.welcome-contrast .welcome-surface,
-.welcome-contrast .welcome-card,
-.welcome-contrast button.welcome-shortcut {
+/* High contrast: an opaque, plain surface keeps text legible. */
+window.comm-welcome.welcome-contrast {
+  --window-bg-color: var(--welcome-bg);
   background-image: none;
 }
-.welcome-contrast .welcome-surface,
-.welcome-contrast .welcome-card,
-.welcome-contrast button.welcome-shortcut {
-  background-color: @card_bg_color;
-  box-shadow: inset 0 0 0 1px alpha(currentColor, .5);
+.welcome-contrast dialog.welcome-dialog sheet { background-image: none; }
+
+.welcome-content { padding: 28px 32px 32px; }
+.welcome-subtitle { font-size: 1.07em; }
+/* An editorial opening: original artwork, generous type, native actions. */
+.welcome-home-content { padding: 24px 36px 18px; }
+.welcome-artboard { border-radius: 22px; background: #0b0618; }
+.welcome-editorial { padding: 8px 0; }
+.welcome-wordmark { font-size: 1.32em; font-weight: 800; letter-spacing: -.3px; }
+.welcome-edition { margin-top: 10px; font-size: .8em; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; }
+.welcome-headline { margin-top: 26px; font-size: 3em; font-weight: 800; line-height: 1.02; letter-spacing: -1.6px; }
+.welcome-hero-subtitle { margin-top: 18px; font-size: 1.08em; line-height: 1.5; }
+/* The app index: typography and hairlines, no boxed cards. */
+.welcome-featured { margin-top: 26px; padding-top: 18px; border-top: 1px solid alpha(@window_fg_color, .09); }
+.welcome-overline { font-size: .78em; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: alpha(@window_fg_color, .72); }
+.welcome-section-lede { font-size: .92em; }
+button.welcome-link { padding: 4px 10px; color: var(--welcome-accent); font-weight: 600; }
+.welcome-index { margin: 0 -10px; }
+.welcome-index > flowboxchild { padding: 0; }
+button.welcome-entry { padding: 10px; border-radius: 14px; font-weight: normal; }
+button.welcome-entry:hover { background: alpha(@window_fg_color, .045); }
+button.welcome-entry:active { background: alpha(@window_fg_color, .08); }
+.welcome-entry-name { font-size: 1em; }
+.welcome-entry-benefit { font-size: .9em; line-height: 1.35; }
+.welcome-entry-status { margin-top: 3px; color: alpha(@window_fg_color, .68); }
+button.welcome-entry-absent image { opacity: .55; }
+.welcome-catalog-section .welcome-index { margin-top: 2px; }
+/* Help: a dark brand band, then one topic at a time with a live reading. */
+.welcome-help-hero {
+  padding: 22px 36px 22px 18px;
+  border-radius: 26px;
+  color: white;
+  background-image:
+    radial-gradient(circle at 16% 50%, alpha(#42c8f5, .18), transparent 42%),
+    radial-gradient(circle at 92% 0%, alpha(#cf12f6, .22), transparent 48%),
+    linear-gradient(135deg, #0d0820, #1d1140 55%, #2a0f45);
 }
-.welcome-contrast .welcome-feature { border-color: @accent_color; }
-.welcome-contrast .welcome-dialog sheet {
-  background: @dialog_bg_color;
+.welcome-help-hero .welcome-overline.welcome-hero-overline { color: #5fe8f0; }
+.welcome-hero-title { margin-top: 10px; font-size: 2.15em; font-weight: 800; line-height: 1.05; letter-spacing: -1px; color: white; }
+.welcome-hero-lede { margin-top: 10px; color: alpha(white, .8); }
+.welcome-hero-stats { margin-top: 18px; padding-top: 16px; border-top: 1px solid alpha(white, .12); }
+.welcome-hero-value { font-size: 1.55em; font-weight: 800; color: white; font-feature-settings: "tnum"; }
+.welcome-hero-caption { font-size: .74em; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; color: alpha(white, .72); }
+@keyframes welcome-breathe { from { transform: scale(1); } to { transform: scale(1.035); } }
+.welcome-orbit-owl { animation: welcome-breathe 2.6s ease-in-out infinite alternate; }
+.welcome-topic-list { background: none; min-width: 176px; }
+.welcome-topic-list > row { padding: 7px 12px; min-height: 0; border-radius: 10px; margin-bottom: 1px; }
+.welcome-topic-list > row:selected { background: alpha(var(--accent-bg-color), .16); color: var(--welcome-accent); }
+button.welcome-topic { padding: 6px 14px; border-radius: 999px; font-weight: 600; background: alpha(@window_fg_color, .06); }
+button.welcome-topic:checked { background: var(--accent-bg-color); color: var(--accent-fg-color); }
+.welcome-topics > flowboxchild { padding: 0; }
+.welcome-insight { padding: 4px 0 0; }
+.welcome-insight-badge { border-radius: 11px; background: alpha(var(--accent-bg-color), .14); color: var(--welcome-accent); }
+.welcome-insight-value { margin-top: 14px; font-size: 3.1em; font-weight: 800; letter-spacing: -1.6px; color: var(--welcome-accent); font-feature-settings: "tnum"; }
+.welcome-insight-caption { font-size: .95em; }
+.welcome-insight-title { margin-top: 20px; font-size: 1.32em; font-weight: 800; letter-spacing: -.3px; }
+.welcome-insight-text { margin-top: 8px; font-size: 1.02em; line-height: 1.5; }
+.welcome-insight-facts { margin-top: 20px; padding-top: 16px; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-insight-detail,
+.welcome-insight-live { font-size: .9em; }
+.welcome-insight-live { color: var(--welcome-accent); font-weight: 600; }
+.welcome-brand-badge { border-radius: 12px; }
+.welcome-brand-telegram { border-radius: 999px; background: #2aabee; color: white; }
+.welcome-brand-forum { background: alpha(var(--accent-bg-color), .12); color: var(--welcome-accent); }
+.welcome-footer { padding: 8px 24px 12px; }
+.welcome-footer checkbutton { font-size: .9em; }
+.welcome-small { font-size: .86em; }
+.welcome-dialog-content { background: transparent; color: @dialog_fg_color; }
+.welcome-dialog headerbar { background: transparent; box-shadow: none; }
+.welcome-wallpaper-preview { border-radius: 10px; background: @view_bg_color; }
+.welcome-preview-footer { padding: 14px 24px; background: transparent; border-top: 1px solid var(--welcome-border); }
+/* App introductions: same editorial voice as the opening. */
+.welcome-intro { padding: 8px 32px 32px; }
+.welcome-intro-name { font-size: 2em; font-weight: 800; letter-spacing: -.8px; }
+.welcome-intro-lead { font-size: 1.12em; font-weight: 600; color: var(--welcome-accent); }
+.welcome-intro-summary { margin-top: 22px; font-size: 1.04em; line-height: 1.5; }
+.welcome-intro-note { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: var(--welcome-panel-strong); box-shadow: inset 0 0 0 1px var(--welcome-border); }
+.welcome-intro-gallery { margin-top: 22px; }
+.welcome-intro .welcome-overline { margin-top: 28px; }
+.welcome-intro-point { padding: 12px 0; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-status { padding: 12px 18px; background: alpha(var(--accent-bg-color), .08); }
+window.narrow .welcome-content { padding: 20px; }
+window.narrow .welcome-home-content { padding: 16px 24px 24px; }
+window.narrow .welcome-headline { margin-top: 18px; font-size: 2.2em; letter-spacing: -1px; }
+window.narrow .welcome-featured { margin-top: 20px; }
+window.narrow .welcome-help-hero { padding: 20px 22px 24px; }
+window.narrow .welcome-hero-title { font-size: 1.75em; }
+window.narrow .welcome-footer { padding: 8px 20px 16px; }
+.welcome-contrast button.welcome-entry { box-shadow: inset 0 0 0 1px alpha(@window_fg_color, .5); }
+.welcome-contrast .welcome-overline,
+.welcome-contrast .welcome-entry-status { color: @window_fg_color; }
+.welcome-contrast .welcome-featured { border-top-color: @window_fg_color; }
+.welcome-contrast button.welcome-topic { box-shadow: inset 0 0 0 1px @window_fg_color; }
+.welcome-contrast .welcome-help-hero { background-image: none; background-color: black; box-shadow: inset 0 0 0 2px white; }
+.welcome-contrast .welcome-hero-lede,
+.welcome-contrast .welcome-hero-caption { color: white; }
+
+/* Support: warm brand bands; Patreon leads, one-time gifts follow. */
+.welcome-support {
+  padding: 26px 30px;
+  border-radius: 24px;
+  color: white;
+  background-image:
+    radial-gradient(circle at 9% 50%, alpha(#ff6fa3, .32), transparent 38%),
+    linear-gradient(120deg, #24093a, #521449 55%, #84204b);
 }
-.welcome-contrast .welcome-icon,
-.welcome-contrast .donation-address {
-  background: @view_bg_color;
-  color: @view_fg_color;
-  box-shadow: inset 0 0 0 1px alpha(currentColor, .5);
+.welcome-support-mark,
+.welcome-brand-hero { border-radius: 999px; background: alpha(white, .14); color: #ffa3c4; }
+.welcome-support .welcome-overline.welcome-support-overline { color: #ffb3cd; }
+.welcome-support-title { margin-top: 8px; font-size: 1.6em; font-weight: 800; letter-spacing: -.6px; color: white; }
+.welcome-support-text { margin-top: 6px; line-height: 1.45; color: alpha(white, .8); }
+.welcome-support-actions { margin-top: 16px; }
+button.welcome-patreon { padding: 8px 22px; font-weight: 700; color: white; background: #e8323e; }
+button.welcome-patreon:hover { background: #f2414d; }
+button.welcome-patreon:active { background: #c92833; }
+button.welcome-support-secondary { color: white; background: alpha(white, .14); }
+button.welcome-support-secondary:hover { background: alpha(white, .22); }
+.welcome-donate { padding: 0 28px 28px; }
+.welcome-donate-hero {
+  padding: 22px;
+  border-radius: 20px;
+  color: white;
+  background-image:
+    radial-gradient(circle at 12% 40%, alpha(#ff6fa3, .34), transparent 46%),
+    linear-gradient(130deg, #24093a, #521449 60%, #84204b);
 }
+.welcome-donate-title { font-size: 1.45em; font-weight: 800; letter-spacing: -.5px; color: white; }
+.welcome-donate-lede { line-height: 1.4; color: alpha(white, .8); }
+.welcome-donate-featured {
+  margin-top: 18px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: alpha(#e8323e, .07);
+  box-shadow: inset 0 0 0 1px alpha(#e8323e, .28);
+}
+.welcome-donate-name { margin-top: 4px; margin-bottom: 4px; font-size: 1.6em; font-weight: 800; letter-spacing: -.5px; }
+.welcome-donate-featured button.welcome-patreon { margin-top: 14px; }
+.welcome-donate > .welcome-overline { margin-top: 28px; margin-bottom: 4px; }
+.welcome-donate-method { padding: 16px 0; border-top: 1px solid alpha(@window_fg_color, .08); }
+.donation-address {
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: .95em;
+  color: @window_fg_color;
+  background-color: alpha(@window_fg_color, .06);
+}
+button.welcome-copy { min-width: 36px; min-height: 36px; }
+.welcome-donate-telegram { padding-top: 16px; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-brand-pix { background: #32bcad; color: white; }
+.welcome-brand-usdt { background: #26a17b; color: white; }
+.welcome-brand-bitcoin { background: #f7931a; color: white; }
+.welcome-contrast .welcome-support,
+.welcome-contrast .welcome-donate-hero { background-image: none; background-color: black; box-shadow: inset 0 0 0 2px white; }
+.welcome-contrast .welcome-support-text,
+.welcome-contrast .welcome-donate-lede { color: white; }
+.welcome-contrast .donation-address { box-shadow: inset 0 0 0 1px currentColor; }
+window.narrow .welcome-support { padding: 22px; }
+
+/* Browsers: the default as a feature, the rest as one list. */
+.welcome-browser-feature {
+  padding: 22px 26px;
+  border-radius: 22px;
+  background: var(--welcome-panel);
+  box-shadow: inset 0 0 0 1px alpha(var(--accent-bg-color), .22);
+}
+.welcome-browser-name { font-size: 1.7em; font-weight: 800; letter-spacing: -.6px; }
+.welcome-browser-row { padding: 14px 4px; border-top: 1px solid alpha(@window_fg_color, .08); }
+.welcome-browser-list > .welcome-browser-row:first-child { border-top: none; }
+.welcome-browser-notice { padding: 10px 14px; border-radius: 10px; background: alpha(@warning_bg_color, .12); }
+.welcome-contrast .welcome-browser-feature { box-shadow: inset 0 0 0 1px @window_fg_color; }

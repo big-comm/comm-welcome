@@ -1,17 +1,25 @@
 #!/usr/bin/env python3
-"""Launch Welcome; autostart policy is evaluated before importing GTK."""
+"""Check live and autostart policy before importing GTK."""
 
 import argparse
 import sys
 
-from comm_welcome.environment import eligible
+from comm_welcome.environment import eligible, is_live
 from comm_welcome.preferences import Preferences
+from comm_welcome.visibility import sync_launcher_visibility
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="BigCommunity Welcome")
     parser.add_argument("--autostart", action="store_true")
     args = parser.parse_args()
+    live = is_live()
+    try:
+        sync_launcher_visibility(live)
+    except OSError as exc:
+        print(f"Could not update launcher visibility: {exc}", file=sys.stderr)
+    if live:
+        return 0
     if args.autostart and (not eligible() or Preferences().suppressed()):
         return 0
     from comm_welcome.application import WelcomeApplication

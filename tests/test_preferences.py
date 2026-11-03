@@ -44,3 +44,14 @@ def test_xdg_config_home(monkeypatch, tmp_path):
     prefs = Preferences()
     prefs.set_suppressed(True)
     assert prefs.path == tmp_path / "comm-welcome/settings.json"
+
+
+def test_legacy_keys_are_kept_when_saving(tmp_path):
+    prefs = Preferences(tmp_path)
+    prefs.path.parent.mkdir(parents=True, exist_ok=True)
+    # Older builds stored a color scheme; Welcome now always follows the system.
+    prefs.path.write_text(json.dumps({"color_scheme": "light"}))
+    prefs.set_suppressed(True)
+    saved = json.loads(prefs.path.read_text())
+    assert saved == {"color_scheme": "light", "suppress_autostart": True}
+    assert not hasattr(prefs, "color_scheme")

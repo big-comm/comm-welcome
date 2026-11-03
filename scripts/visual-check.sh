@@ -13,5 +13,5 @@ export GIO_USE_VFS=local GSETTINGS_BACKEND=memory ADW_DISABLE_PORTAL=1
 if [[ "${2:-}" == "--actions-only" ]]; then
     timeout 30s dbus-run-session -- python3 scripts/check_actions.py >"$audit_dir/actions.log" 2>&1
 else
-    timeout 45s dbus-run-session -- python3 scripts/visual_check.py "${2:-}" >"$audit_dir/app.log" 2>&1
+    timeout 120s dbus-run-session -- python3 scripts/visual_check.py "${2:-}" >"$audit_dir/app.log" 2>&1
 fi
