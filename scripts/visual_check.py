@@ -91,6 +91,16 @@ retries = 0
 settled = 0
 
 
+class ScenarioError(Exception):
+    """A rendered scenario broke an expectation."""
+
+
+def check(condition, message: str = "expectation failed") -> None:
+    # Unlike assert, this still runs under python -O.
+    if not condition:
+        raise ScenarioError(message)
+
+
 def configure():
     global index, retries, failed, settled
     if app.window is None:
@@ -105,15 +115,15 @@ def configure():
         app.installer.busy = True
         app.installer.emit("changed")
         app.window.close()
-        assert app.held and not app.window.get_visible()
+        check(app.held and not app.window.get_visible())
         app.do_activate()
-        assert app.window.get_visible()
+        check(app.window.get_visible())
         app.installer.busy = False
         app.installer.emit("changed")
-        assert not app.held
-        assert app.window.child_focus(Gtk.DirectionType.TAB_FORWARD)
+        check(not app.held)
+        check(app.window.child_focus(Gtk.DirectionType.TAB_FORWARD))
         print("lifecycle: close, reopen, hold/release, focus passed", flush=True)
-        assert app.window.lookup_action("color-scheme") is None
+        check(app.window.lookup_action("color-scheme") is None)
         print("appearance: follows the system theme, no override offered", flush=True)
         app.window.destroy()
         app.quit()
@@ -178,7 +188,7 @@ def capture():
     name = SCENARIOS[index][0]
     try:
         window = app.window
-        assert (window.get_direction() == Gtk.TextDirection.RTL) == name.endswith("rtl")
+        check((window.get_direction() == Gtk.TextDirection.RTL) == name.endswith("rtl"))
         width, height = window.get_width(), window.get_height()
         text_scale = 1.4 if name.endswith("large-text") else 1
         narrow_expected = SCENARIOS[index][3] / text_scale <= 650
@@ -214,22 +224,22 @@ def capture():
             settled += 1
             window.queue_draw()
             return GLib.SOURCE_CONTINUE
-        assert narrow_ready == narrow_expected, "Adaptive navigation did not settle"
-        assert width == SCENARIOS[index][3], f"Window expanded beyond requested width: {width}"
+        check(narrow_ready == narrow_expected, "Adaptive navigation did not settle")
+        check(width == SCENARIOS[index][3], f"Window expanded beyond requested width: {width}")
         if name in {"welcome-light", "welcome-dark"}:
             scroll = window.stack.get_child_by_name("welcome").get_first_child()
             adjustment = scroll.get_vadjustment()
             overflow = adjustment.get_upper() - adjustment.get_page_size()
             print(f"{name}: vertical overflow={overflow:g}px", flush=True)
-            assert overflow <= 0, "Welcome page requires scrolling"
+            check(overflow <= 0, "Welcome page requires scrolling")
         if name == "welcome-narrow":
             pending = [window.stack.get_child_by_name("welcome")]
             while pending:
                 widget = pending.pop()
                 if widget.has_css_class("welcome-app-preview"):
                     valid, bounds = widget.compute_bounds(window)
-                    assert valid and bounds.get_x() >= 0
-                    assert bounds.get_x() + bounds.get_width() <= width
+                    check(valid and bounds.get_x() >= 0)
+                    check(bounds.get_x() + bounds.get_width() <= width)
                 child = widget.get_first_child()
                 while child:
                     pending.append(child)
@@ -244,7 +254,7 @@ def capture():
                 valid, bounds = widget.compute_bounds(window)
                 right = bounds.get_x() + bounds.get_width()
                 text = widget.get_text()[:40]
-                assert valid and right <= width + 1, f"text past the edge: {text!r}"
+                check(valid and right <= width + 1, f"text past the edge: {text!r}")
             child = widget.get_first_child()
             while child:
                 pending.append(child)
